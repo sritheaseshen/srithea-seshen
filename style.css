@@ -3,7 +3,7 @@
    MASTER SITE STYLESHEET
 
    Visual identity:
-   Espresso · Warm Ivory · Deep Teal
+   Dark Chocolate · Warm Ivory · Mocha
    ========================================================= */
 
 
@@ -13,25 +13,25 @@
 
 :root {
 
-    --espresso: #2B1B17;
+    --chocolate: #1C1210;
 
-    --espresso-soft: #35241F;
+    --chocolate-soft: #251714;
 
-    --espresso-light: #46352F;
+    --chocolate-light: #34231D;
 
-    --ivory: #F2E8D8;
+    --ivory: #F3E8D5;
 
-    --ivory-soft: #E8DCCB;
+    --ivory-soft: #E7D9C5;
 
-    --ivory-muted: #C9BBA8;
+    --ivory-muted: #CDBDA7;
 
-    --muted: #9D8F80;
+    --muted: #9D8A78;
 
-    --teal: #477276;
+    --mocha: #B88968;
 
-    --teal-light: #668C8F;
+    --mocha-bright: #D4A078;
 
-    --border: #57443A;
+    --border: #3A2923;
 
 }
 
@@ -52,7 +52,7 @@ body {
     margin: 0;
 
     background:
-        var(--espresso);
+        var(--chocolate);
 
     color:
         var(--ivory);
@@ -64,11 +64,13 @@ body {
 }
 
 img {
-    max-width: 100%;
+    max-width:
+        100%;
 }
 
 a {
-    color: inherit;
+    color:
+        inherit;
 }
 
 
@@ -80,7 +82,8 @@ nav {
     padding:
         28px 7%;
 
-    display: flex;
+    display:
+        flex;
 
     justify-content:
         space-between;
@@ -92,7 +95,7 @@ nav {
         1px solid var(--border);
 
     background:
-        var(--espresso);
+        var(--chocolate);
 
     position:
         relative;
@@ -153,12 +156,12 @@ nav a {
 
 nav a:hover {
     color:
-        var(--teal-light);
+        var(--mocha-bright);
 }
 
 
 /* =========================================================
-   GENERAL SECTION LABEL
+   SECTION LABEL
    ========================================================= */
 
 .section-label {
@@ -180,12 +183,12 @@ nav a:hover {
         uppercase;
 
     color:
-        var(--teal-light);
+        var(--mocha);
 }
 
 
 /* =========================================================
-   HOMEPAGE HERO
+   HERO
    ========================================================= */
 
 .hero {
@@ -232,7 +235,7 @@ nav a:hover {
         uppercase;
 
     color:
-        var(--teal-light);
+        var(--mocha);
 }
 
 h1 {
@@ -270,7 +273,7 @@ h1 {
         36px 0;
 
     background:
-        var(--teal);
+        var(--mocha);
 }
 
 .hero-text > p:last-child {
@@ -309,7 +312,7 @@ h1 {
         hidden;
 
     background:
-        var(--espresso-light);
+        var(--chocolate-light);
 }
 
 .hero-image img {
@@ -349,9 +352,9 @@ h1 {
 
     background:
         rgba(
-            43,
-            27,
-            23,
+            28,
+            18,
+            16,
             0.92
         );
 
@@ -455,7 +458,7 @@ h1 {
 
 
 /* =========================================================
-   BOOK GRIDS
+   BOOKS
    ========================================================= */
 
 .book-grid {
@@ -503,7 +506,7 @@ h1 {
         hidden;
 
     background:
-        var(--espresso-light);
+        var(--chocolate-light);
 }
 
 .alchemy-book .book-image {
@@ -604,7 +607,7 @@ h1 {
         uppercase;
 
     color:
-        var(--teal-light);
+        var(--mocha);
 }
 
 .book-arrow {
@@ -629,7 +632,7 @@ h1 {
         uppercase;
 
     color:
-        var(--teal-light);
+        var(--mocha-bright);
 
     transition:
         letter-spacing 0.25s ease;
@@ -654,7 +657,7 @@ h1 {
         1px solid var(--border);
 
     background:
-        var(--espresso-soft);
+        var(--chocolate-soft);
 }
 
 .about-grid {
@@ -873,7 +876,7 @@ h1 {
         uppercase;
 
     color:
-        var(--teal-light);
+        var(--mocha);
 }
 
 .entry-content {
@@ -1030,7 +1033,7 @@ h1 {
         1px solid var(--border);
 
     background:
-        var(--espresso-soft);
+        var(--chocolate-soft);
 }
 
 .contact h2 {
@@ -1090,10 +1093,10 @@ h1 {
         none;
 
     color:
-        var(--teal-light);
+        var(--mocha-bright);
 
     border-bottom:
-        1px solid var(--teal);
+        1px solid var(--mocha);
 
     padding-bottom:
         4px;
@@ -1108,7 +1111,7 @@ h1 {
         var(--ivory);
 
     border-color:
-        var(--teal-light);
+        var(--ivory);
 }
 
 
@@ -1133,7 +1136,7 @@ footer {
         1px solid var(--border);
 
     background:
-        var(--espresso);
+        var(--chocolate);
 
     font-family:
         Arial,
