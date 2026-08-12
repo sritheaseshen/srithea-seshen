@@ -1,1 +1,618 @@
+/* =========================================================
+   SRITHEA SESHEN — SHARED SITE STYLES
+   ========================================================= */
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f5f1ea;
+    color: #24211e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    padding: 28px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #d8d0c5;
+
+    background: #f5f1ea;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: #24211e;
+}
+
+nav a {
+    margin-left: 30px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.74rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: #4c4842;
+
+    transition:
+        color 0.25s ease;
+}
+
+nav a:hover {
+    color: #365c76;
+}
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+.section-label {
+    margin-bottom: 50px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    color: #536875;
+}
+
+.page-intro {
+    padding:
+        115px 8% 80px;
+
+    border-bottom:
+        1px solid #d8d0c5;
+}
+
+.page-intro h1 {
+    max-width: 1000px;
+
+    margin: 0;
+
+    font-size:
+        clamp(
+            3.5rem,
+            8vw,
+            7rem
+        );
+
+    line-height: 0.92;
+
+    font-weight: 400;
+
+    letter-spacing: -0.045em;
+}
+
+.page-intro p {
+    max-width: 650px;
+
+    margin-top: 38px;
+
+    font-size: 1.12rem;
+
+    line-height: 1.9;
+
+    color: #59534c;
+}
+
+
+/* =========================================================
+   WRITING DESK
+   ========================================================= */
+
+.writing-desk {
+    padding:
+        90px 8% 130px;
+}
+
+.desk-section {
+    margin-bottom: 105px;
+}
+
+.desk-section:last-child {
+    margin-bottom: 0;
+}
+
+.desk-section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+    gap: 30px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid #cfc8bd;
+}
+
+.desk-section-heading h2 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.4rem
+        );
+
+    font-weight: 400;
+}
+
+.desk-section-heading span {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.67rem;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    color: #777067;
+}
+
+
+/* =========================================================
+   DESK ENTRIES
+   ========================================================= */
+
+.desk-entry {
+    display: grid;
+
+    grid-template-columns:
+        0.3fr 1.7fr;
+
+    gap: 8%;
+
+    padding:
+        38px 0;
+
+    border-bottom:
+        1px solid #ddd6cc;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease;
+}
+
+.desk-entry:last-child {
+    border-bottom: none;
+}
+
+.desk-entry:hover {
+    background:
+        rgba(
+            216,
+            208,
+            197,
+            0.16
+        );
+}
+
+.entry-type {
+    padding-top: 7px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.63rem;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    color: #536875;
+}
+
+.entry-content {
+    max-width: 760px;
+}
+
+.entry-content h3 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            1.5rem,
+            3vw,
+            2.35rem
+        );
+
+    line-height: 1.15;
+
+    font-weight: 400;
+}
+
+.entry-description {
+    margin:
+        15px 0 0;
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+
+    color: #625c55;
+}
+
+.entry-status {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    color: #8a8278;
+}
+
+
+/* =========================================================
+   NOTEBOOK
+   ========================================================= */
+
+.notebook-intro {
+    max-width: 700px;
+
+    margin-bottom: 35px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.85;
+
+    color: #5f5952;
+}
+
+.notebook-note {
+    max-width: 850px;
+
+    padding:
+        30px 0;
+
+    border-bottom:
+        1px solid #ddd6cc;
+}
+
+.notebook-note p {
+    margin: 0;
+
+    font-size:
+        clamp(
+            1.25rem,
+            2.5vw,
+            1.75rem
+        );
+
+    line-height: 1.55;
+
+    color: #403b36;
+}
+
+.notebook-note span {
+    display: block;
+
+    margin-top: 14px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    color: #8a8278;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+    padding:
+        105px 8%;
+
+    border-top:
+        1px solid #d8d0c5;
+
+    background: #eae5dc;
+}
+
+.contact h2 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            2.5rem,
+            5vw,
+            5rem
+        );
+
+    font-weight: 400;
+}
+
+.contact p {
+    max-width: 600px;
+
+    margin-top: 25px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: #5b554e;
+}
+
+.contact-email {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.95rem;
+
+    letter-spacing: 0.03em;
+
+    text-decoration: none;
+
+    color: #365c76;
+
+    border-bottom:
+        1px solid #9ba9b1;
+
+    padding-bottom: 4px;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.contact-email:hover {
+    color: #203d50;
+
+    border-color:
+        #365c76;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding:
+        45px 8%;
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    border-top:
+        1px solid #d8d0c5;
+
+    background:
+        #f5f1ea;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.08em;
+
+    color: #777067;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    nav {
+        padding:
+            23px 6%;
+    }
+
+    nav a {
+        margin-left: 15px;
+
+        font-size: 0.68rem;
+    }
+
+    .page-intro {
+        padding:
+            85px 7% 65px;
+    }
+
+    .writing-desk {
+        padding:
+            70px 7% 95px;
+    }
+
+    .desk-section {
+        margin-bottom: 80px;
+    }
+
+    .desk-section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .desk-entry {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding:
+            30px 0;
+    }
+
+    .entry-type {
+        padding-top: 0;
+    }
+
+    .contact {
+        padding:
+            85px 7%;
+    }
+
+    footer {
+        padding:
+            35px 7%;
+
+        flex-direction: column;
+
+        align-items:
+            flex-start;
+
+        gap: 12px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    nav {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    nav div:last-child {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    nav a {
+        margin-left: 0;
+
+        margin-right: 12px;
+    }
+
+    .page-intro {
+        padding-top: 65px;
+    }
+
+    .page-intro h1 {
+        font-size:
+            clamp(
+                3.3rem,
+                17vw,
+                5rem
+            );
+    }
+
+    .writing-desk {
+        padding:
+            60px 7% 80px;
+    }
+
+    .desk-section {
+        margin-bottom: 70px;
+    }
+
+    .desk-entry:hover {
+        background: transparent;
+    }
+
+    .contact {
+        padding:
+            75px 7%;
+    }
+
+    .contact-email {
+        font-size: 0.82rem;
+    }
+}
