@@ -6,13 +6,38 @@
 
     <title>Srithea Seshen</title>
 
-    <meta name="description" content="Srithea Seshen — contemporary romance, literary fiction, and human stories.">
+    <meta
+        name="description"
+        content="Srithea Seshen — contemporary romance, literary fiction, and human stories."
+    >
+
+    <!-- Literary serif + clean sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
 
         /* =========================================================
-           RESET
+           FOUNDATION
         ========================================================= */
+
+        :root {
+            --ocean: #082F35;
+            --deep-green: #174A3C;
+            --botanical: #F3F5F1;
+            --soft-green: #E6EFEB;
+            --mist: #8FB0AE;
+            --ink: #102D30;
+            --muted: #587274;
+            --red: #A8324A;
+            --line: rgba(16, 45, 48, 0.16);
+            --dark-line: rgba(243, 245, 241, 0.18);
+        }
 
         * {
             box-sizing: border-box;
@@ -24,9 +49,16 @@
 
         body {
             margin: 0;
-            background: #F3F5F1;
-            color: #102D30;
-            font-family: Georgia, "Times New Roman", serif;
+
+            background: var(--botanical);
+            color: var(--ink);
+
+            font-family:
+                "DM Sans",
+                Arial,
+                sans-serif;
+
+            font-weight: 400;
         }
 
         a {
@@ -41,45 +73,78 @@
 
         nav {
             position: absolute;
+
             top: 0;
             left: 0;
+
             width: 100%;
 
-            padding: 30px 7%;
+            padding: 34px 7%;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            z-index: 10;
+            z-index: 20;
         }
 
         .logo {
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
+
             font-size: 0.95rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+
+            color: var(--ink);
         }
 
         .nav-links {
             display: flex;
-            gap: 32px;
+
+            gap: 34px;
         }
 
         .nav-links a {
-            font-size: 0.78rem;
-            letter-spacing: 0.14em;
+            position: relative;
+
+            font-size: 0.68rem;
+
+            letter-spacing: 0.18em;
+
             text-transform: uppercase;
 
-            opacity: 0.75;
+            color: var(--muted);
 
             transition:
-                opacity 0.3s ease,
                 color 0.3s ease;
         }
 
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -7px;
+
+            width: 0;
+            height: 1px;
+
+            background: var(--red);
+
+            transition:
+                width 0.3s ease;
+        }
+
         .nav-links a:hover {
-            opacity: 1;
-            color: #A8324A;
+            color: var(--red);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
 
@@ -92,30 +157,41 @@
 
             display: flex;
             align-items: center;
-            justify-content: center;
 
-            padding: 150px 8% 110px;
+            padding:
+                150px 8%
+                110px;
 
             position: relative;
-            overflow: hidden;
         }
 
         .hero-inner {
             width: 100%;
-            max-width: 1100px;
+            max-width: 1120px;
+
+            margin: 0 auto;
 
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
 
             align-items: center;
 
-            gap: 80px;
+            gap: 85px;
         }
+
+        /*
+            IMPORTANT:
+            The lotus image itself is NOT modified.
+            Your existing images/lotus.jpeg remains untouched.
+        */
 
         .hero-image-wrap {
             order: 2;
 
             display: flex;
+
             justify-content: center;
             align-items: center;
         }
@@ -124,16 +200,27 @@
             display: block;
 
             width: min(430px, 38vw);
+
             height: min(560px, 62vh);
 
             object-fit: cover;
 
-            border-radius: 220px 220px 18px 18px;
+            border-radius:
+                220px
+                220px
+                18px
+                18px;
 
             box-shadow:
-                0 30px 70px rgba(8, 47, 53, 0.15);
+                0 30px 70px
+                rgba(8, 47, 53, 0.15);
 
-            filter: saturate(0.88);
+            /*
+                No filter.
+                No colour alteration.
+                No overlay.
+                The photograph stays yours.
+            */
         }
 
         .hero-copy {
@@ -141,122 +228,177 @@
         }
 
         .eyebrow {
-            margin: 0 0 22px;
+            margin: 0 0 24px;
 
-            font-size: 0.75rem;
-            letter-spacing: 0.22em;
+            font-size: 0.68rem;
+
+            letter-spacing: 0.28em;
+
             text-transform: uppercase;
 
-            color: #587274;
+            color: var(--muted);
         }
 
         h1 {
             margin: 0;
 
-            font-size: clamp(4rem, 8vw, 7.5rem);
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
 
-            line-height: 0.9;
+            font-size:
+                clamp(
+                    4rem,
+                    8vw,
+                    7.4rem
+                );
+
+            line-height: 0.91;
+
+            font-weight: 400;
+
+            letter-spacing: -0.065em;
+
+            color: var(--ink);
+        }
+
+        .hero-line {
+            width: 48px;
+
+            height: 1px;
+
+            margin: 38px 0;
+
+            background: var(--red);
+        }
+
+        .hero-statement {
+            max-width: 470px;
+
+            margin: 0;
+
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    1.15rem,
+                    2vw,
+                    1.45rem
+                );
+
+            line-height: 1.65;
+
+            font-style: italic;
+
+            color: var(--deep-green);
+        }
+
+        .hero-symbol {
+            margin-top: 45px;
+
+            font-size: 1rem;
+
+            color: var(--red);
+
+            opacity: 0.85;
+        }
+
+
+        /* =========================================================
+           WORKS
+        ========================================================= */
+
+        .works {
+            background: var(--ocean);
+
+            color: var(--botanical);
+
+            padding:
+                135px 8%
+                145px;
+        }
+
+        .section-inner {
+            max-width: 1120px;
+
+            margin: 0 auto;
+        }
+
+        .section-label {
+            margin: 0 0 24px;
+
+            font-size: 0.66rem;
+
+            letter-spacing: 0.28em;
+
+            text-transform: uppercase;
+
+            color: var(--mist);
+        }
+
+        .works-title {
+            margin: 0 0 90px;
+
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    3rem,
+                    6vw,
+                    5.6rem
+                );
+
+            line-height: 0.95;
 
             font-weight: 400;
 
             letter-spacing: -0.055em;
         }
 
-        .hero-line {
-            width: 52px;
-            height: 1px;
+        .alchemy {
+            padding-top: 44px;
 
-            background: #A8324A;
-
-            margin: 38px 0;
+            border-top:
+                1px solid var(--dark-line);
         }
 
-        .hero-statement {
-            max-width: 480px;
+        .alchemy-label {
+            margin: 0 0 44px;
 
-            margin: 0;
+            font-size: 0.66rem;
 
-            font-size: clamp(1.2rem, 2vw, 1.55rem);
+            letter-spacing: 0.25em;
 
-            line-height: 1.55;
+            text-transform: uppercase;
 
-            font-style: italic;
-
-            color: #174A3C;
-        }
-
-        .hero-symbol {
-            margin-top: 42px;
-
-            font-size: 1.1rem;
-
-            color: #A8324A;
+            color: var(--mist);
         }
 
 
         /* =========================================================
-           WORKS — DEEP WATER
+           BOOK
         ========================================================= */
-
-        .works {
-            background: #082F35;
-            color: #F3F5F1;
-
-            padding: 125px 8% 135px;
-        }
-
-        .section-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            margin: 0 0 25px;
-
-            font-size: 0.72rem;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-
-            color: #8FB0AE;
-        }
-
-        .works-title {
-            margin: 0 0 85px;
-
-            font-size: clamp(2.8rem, 6vw, 5.5rem);
-
-            font-weight: 400;
-
-            letter-spacing: -0.04em;
-
-            line-height: 0.95;
-        }
-
-        .alchemy {
-            border-top: 1px solid rgba(243, 245, 241, 0.25);
-
-            padding-top: 45px;
-        }
-
-        .alchemy-label {
-            margin-bottom: 45px;
-
-            font-size: 0.8rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-
-            color: #8FB0AE;
-        }
 
         .book {
             display: grid;
-            grid-template-columns: 1fr 2fr;
 
-            gap: 60px;
+            grid-template-columns:
+                1fr 2fr;
 
-            padding: 38px 0;
+            gap: 65px;
 
-            border-top: 1px solid rgba(243, 245, 241, 0.13);
+            padding: 40px 0;
+
+            border-top:
+                1px solid
+                rgba(243, 245, 241, 0.11);
         }
 
         .book:first-of-type {
@@ -266,23 +408,33 @@
         .book-title {
             margin: 0;
 
-            font-size: clamp(1.7rem, 3vw, 2.5rem);
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    1.7rem,
+                    3vw,
+                    2.45rem
+                );
 
             font-weight: 400;
 
-            line-height: 1.1;
+            line-height: 1.15;
         }
 
         .book-meta {
-            margin-top: 12px;
+            margin: 14px 0 0;
 
-            font-size: 0.72rem;
+            font-size: 0.65rem;
 
-            letter-spacing: 0.14em;
+            letter-spacing: 0.18em;
 
             text-transform: uppercase;
 
-            color: #8FB0AE;
+            color: var(--mist);
         }
 
         .book-description {
@@ -290,27 +442,33 @@
 
             margin: 0;
 
-            font-size: 1.02rem;
+            font-size: 0.98rem;
 
-            line-height: 1.8;
+            line-height: 1.85;
 
             color: #D5E0DE;
         }
 
+
+        /* =========================================================
+           OAKHAVEN SERIES
+        ========================================================= */
+
         .series {
-            margin-top: 90px;
+            margin-top: 95px;
 
-            padding-top: 45px;
+            padding-top: 48px;
 
-            border-top: 1px solid rgba(243, 245, 241, 0.25);
+            border-top:
+                1px solid var(--dark-line);
         }
 
         .series-title {
             margin: 0 0 45px;
 
-            font-size: 1rem;
+            font-size: 0.72rem;
 
-            letter-spacing: 0.2em;
+            letter-spacing: 0.22em;
 
             text-transform: uppercase;
 
@@ -320,45 +478,59 @@
         .series-books {
             display: grid;
 
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns:
+                repeat(2, 1fr);
 
-            gap: 40px;
+            gap: 32px;
         }
 
         .series-book {
-            padding: 30px;
+            padding: 34px;
 
-            border: 1px solid rgba(243, 245, 241, 0.14);
+            border:
+                1px solid
+                rgba(243, 245, 241, 0.13);
 
             transition:
                 background 0.35s ease,
-                border-color 0.35s ease;
+                border-color 0.35s ease,
+                transform 0.35s ease;
         }
 
         .series-book:hover {
-            background: rgba(243, 245, 241, 0.05);
+            background:
+                rgba(243, 245, 241, 0.045);
 
-            border-color: rgba(243, 245, 241, 0.35);
+            border-color:
+                rgba(243, 245, 241, 0.35);
+
+            transform:
+                translateY(-3px);
         }
 
         .series-book h3 {
             margin: 0;
 
-            font-size: 1.55rem;
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
+
+            font-size: 1.5rem;
 
             font-weight: 400;
         }
 
         .series-book p {
-            margin: 14px 0 0;
+            margin: 15px 0 0;
 
-            color: #8FB0AE;
+            font-size: 0.64rem;
 
-            font-size: 0.78rem;
-
-            letter-spacing: 0.08em;
+            letter-spacing: 0.17em;
 
             text-transform: uppercase;
+
+            color: var(--mist);
         }
 
 
@@ -367,21 +539,23 @@
         ========================================================= */
 
         .about {
-            padding: 130px 8%;
+            padding:
+                140px 8%;
 
-            background: #F3F5F1;
+            background: var(--botanical);
         }
 
         .about-grid {
-            max-width: 1100px;
+            max-width: 1120px;
 
             margin: 0 auto;
 
             display: grid;
 
-            grid-template-columns: 0.7fr 1.3fr;
+            grid-template-columns:
+                0.7fr 1.3fr;
 
-            gap: 100px;
+            gap: 105px;
 
             align-items: start;
         }
@@ -389,33 +563,54 @@
         .about-title {
             margin: 0;
 
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    2.7rem,
+                    5vw,
+                    4.6rem
+                );
 
             font-weight: 400;
 
-            letter-spacing: -0.04em;
+            letter-spacing: -0.055em;
+
+            line-height: 1;
         }
 
         .about-text {
             max-width: 650px;
 
-            font-size: 1.15rem;
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
 
-            line-height: 1.9;
+            font-size: 1.05rem;
+
+            line-height: 2;
 
             color: #36585A;
         }
 
         .about-text p {
-            margin: 0 0 28px;
+            margin: 0 0 30px;
         }
 
         .about-mark {
-            margin-top: 45px;
+            margin-top: 48px;
 
-            color: #A8324A;
+            font-family:
+                Georgia,
+                serif;
 
-            font-size: 1.2rem;
+            color: var(--red);
+
+            font-size: 1rem;
         }
 
 
@@ -424,13 +619,14 @@
         ========================================================= */
 
         .contact {
-            background: #E6EFEB;
+            padding:
+                105px 8%;
 
-            padding: 100px 8%;
+            background: var(--soft-green);
         }
 
         .contact-inner {
-            max-width: 1100px;
+            max-width: 1120px;
 
             margin: 0 auto;
 
@@ -440,27 +636,39 @@
 
             align-items: flex-end;
 
-            gap: 60px;
+            gap: 70px;
         }
 
         .contact h2 {
             margin: 0;
 
-            font-size: clamp(2.4rem, 5vw, 4rem);
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    2.6rem,
+                    5vw,
+                    4.2rem
+                );
 
             font-weight: 400;
 
-            letter-spacing: -0.04em;
+            letter-spacing: -0.05em;
         }
 
         .contact p {
-            max-width: 380px;
+            max-width: 390px;
 
             margin: 0;
 
-            line-height: 1.8;
+            font-size: 0.92rem;
 
-            color: #587274;
+            line-height: 1.9;
+
+            color: var(--muted);
         }
 
 
@@ -469,15 +677,16 @@
         ========================================================= */
 
         footer {
-            padding: 35px 8%;
+            padding:
+                32px 8%;
 
-            background: #082F35;
+            background: var(--ocean);
 
-            color: #8FB0AE;
+            color: var(--mist);
 
-            font-size: 0.72rem;
+            font-size: 0.62rem;
 
-            letter-spacing: 0.1em;
+            letter-spacing: 0.16em;
 
             text-transform: uppercase;
 
@@ -497,26 +706,26 @@
 
             nav {
                 padding: 25px 6%;
-
-                align-items: flex-start;
             }
 
             .nav-links {
-                gap: 16px;
+                gap: 17px;
             }
 
             .nav-links a {
-                font-size: 0.68rem;
+                font-size: 0.61rem;
             }
 
             .hero {
-                padding: 130px 7% 90px;
+                padding:
+                    125px 7%
+                    90px;
             }
 
             .hero-inner {
                 grid-template-columns: 1fr;
 
-                gap: 55px;
+                gap: 58px;
             }
 
             .hero-image-wrap {
@@ -528,22 +737,30 @@
             }
 
             .hero-image {
-                width: min(330px, 75vw);
-                height: min(420px, 70vh);
+                width: min(330px, 78vw);
+
+                height: min(430px, 70vh);
             }
 
             h1 {
-                font-size: clamp(3.4rem, 17vw, 5.5rem);
+                font-size:
+                    clamp(
+                        3.4rem,
+                        17vw,
+                        5.5rem
+                    );
             }
 
             .works {
-                padding: 90px 7%;
+                padding:
+                    95px 7%
+                    105px;
             }
 
             .book {
                 grid-template-columns: 1fr;
 
-                gap: 20px;
+                gap: 22px;
             }
 
             .series-books {
@@ -551,17 +768,19 @@
             }
 
             .about {
-                padding: 90px 7%;
+                padding:
+                    95px 7%;
             }
 
             .about-grid {
                 grid-template-columns: 1fr;
 
-                gap: 45px;
+                gap: 48px;
             }
 
             .contact {
-                padding: 80px 7%;
+                padding:
+                    80px 7%;
             }
 
             .contact-inner {
@@ -573,9 +792,10 @@
             footer {
                 flex-direction: column;
 
-                gap: 12px;
+                gap: 13px;
 
-                padding: 30px 7%;
+                padding:
+                    30px 7%;
             }
         }
 
@@ -621,6 +841,7 @@
             <div class="hero-inner">
 
 
+                <!-- YOUR ORIGINAL LOTUS IMAGE -->
                 <div class="hero-image-wrap">
 
                     <img
@@ -700,6 +921,7 @@
                             </p>
 
                         </div>
+
 
                         <p class="book-description">
                             A novel in progress.
@@ -851,7 +1073,7 @@
         </span>
 
         <span>
-            Love · Memory · What Remains
+            Srithea Seshen
         </span>
 
     </footer>
