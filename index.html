@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -18,10 +19,6 @@
 
     <style>
 
-        /* =========================
-           GLOBAL
-        ========================= */
-
         * {
             box-sizing: border-box;
         }
@@ -32,9 +29,7 @@
 
         body {
             margin: 0;
-
             background: #f5f1ea;
-
             color: #24211e;
 
             font-family:
@@ -43,34 +38,31 @@
                 serif;
         }
 
+        a {
+            color: inherit;
+        }
+
 
         /* =========================
            NAVIGATION
         ========================= */
 
         nav {
-
             padding: 28px 7%;
 
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
 
-            border-bottom:
-                1px solid #d8d0c5;
+            border-bottom: 1px solid #d8d0c5;
 
             background: #f5f1ea;
 
             position: relative;
-
             z-index: 10;
         }
 
-
         .logo {
-
             font-family:
                 Arial,
                 Helvetica,
@@ -82,16 +74,12 @@
 
             text-transform: uppercase;
 
+            text-decoration: none;
+
             color: #24211e;
         }
 
-
         nav a {
-
-            color: #4c4842;
-
-            text-decoration: none;
-
             margin-left: 30px;
 
             font-family:
@@ -105,14 +93,16 @@
 
             text-transform: uppercase;
 
+            text-decoration: none;
+
+            color: #4c4842;
+
             transition:
                 color 0.25s ease;
         }
 
-
         nav a:hover {
-
-            color: #173f63;
+            color: #365c76;
         }
 
 
@@ -121,7 +111,6 @@
         ========================= */
 
         .hero {
-
             min-height: 88vh;
 
             display: grid;
@@ -137,15 +126,11 @@
                 70px 7% 90px;
         }
 
-
         .hero-text {
-
             max-width: 600px;
         }
 
-
         .eyebrow {
-
             margin:
                 0 0 24px;
 
@@ -163,9 +148,7 @@
             color: #536875;
         }
 
-
         h1 {
-
             margin: 0;
 
             font-size:
@@ -180,15 +163,10 @@
             font-weight: 400;
 
             letter-spacing: -0.055em;
-
-            color: #24211e;
         }
 
-
         .hero-rule {
-
             width: 60px;
-
             height: 2px;
 
             margin:
@@ -197,9 +175,7 @@
             background: #365c76;
         }
 
-
-        .hero-text p {
-
+        .hero-text > p:last-child {
             max-width: 500px;
 
             font-size: 1.08rem;
@@ -215,7 +191,6 @@
         ========================= */
 
         .hero-image {
-
             position: relative;
 
             width: 100%;
@@ -231,25 +206,26 @@
             background: #d9d6cf;
         }
 
-
         .hero-image img {
-
             width: 100%;
-
             height: 100%;
 
             display: block;
 
             object-fit: cover;
+
+            transition:
+                transform 1s ease;
         }
 
+        .hero-image:hover img {
+            transform: scale(1.015);
+        }
 
         .image-caption {
-
             position: absolute;
 
             left: 18px;
-
             bottom: 16px;
 
             padding:
@@ -283,7 +259,6 @@
         ========================= */
 
         .works {
-
             padding:
                 115px 8%;
 
@@ -291,9 +266,7 @@
                 1px solid #d8d0c5;
         }
 
-
         .section-label {
-
             margin-bottom: 50px;
 
             font-family:
@@ -310,26 +283,22 @@
             color: #536875;
         }
 
-
         .collection {
-
             margin-bottom: 105px;
         }
 
-
         .collection:last-child {
-
             margin-bottom: 0;
         }
 
-
         .collection-heading {
-
             display: flex;
 
-            justify-content: space-between;
+            justify-content:
+                space-between;
 
-            align-items: baseline;
+            align-items:
+                baseline;
 
             gap: 30px;
 
@@ -339,9 +308,7 @@
                 1px solid #cfc8bd;
         }
 
-
         .collection-heading h2 {
-
             margin: 0;
 
             font-size:
@@ -352,13 +319,9 @@
                 );
 
             font-weight: 400;
-
-            color: #24211e;
         }
 
-
         .collection-type {
-
             font-family:
                 Arial,
                 Helvetica,
@@ -375,11 +338,10 @@
 
 
         /* =========================
-           BOOK GRID
+           BOOKS
         ========================= */
 
         .book-grid {
-
             display: grid;
 
             grid-template-columns:
@@ -393,21 +355,21 @@
             margin-top: 45px;
         }
 
+        .alchemy-grid {
+            margin-top: 45px;
+        }
 
-        .book {
+        .book,
+        .alchemy-book {
+            display: block;
 
             text-decoration: none;
 
             color: inherit;
-
-            display: block;
         }
 
-
         .book-image {
-
             width: 100%;
-
             height: 440px;
 
             overflow: hidden;
@@ -415,42 +377,36 @@
             background: #dedbd4;
         }
 
+        .alchemy-book .book-image {
+            height: 560px;
+        }
 
         .book-image img {
-
             width: 100%;
-
             height: 100%;
 
-            object-fit: cover;
-
             display: block;
+
+            object-fit: cover;
 
             transition:
                 transform 0.7s ease;
         }
 
-
-        .book:hover .book-image img {
-
-            transform:
-                scale(1.025);
+        .book:hover .book-image img,
+        .alchemy-book:hover .book-image img {
+            transform: scale(1.025);
         }
 
-
         .book-info {
-
             padding-top: 23px;
+            padding-bottom: 25px;
 
             border-bottom:
                 1px solid #cfc8bd;
-
-            padding-bottom: 25px;
         }
 
-
         .book-number {
-
             display: block;
 
             margin-bottom: 10px;
@@ -467,9 +423,7 @@
             color: #777067;
         }
 
-
         .book h3 {
-
             margin: 0;
 
             font-size:
@@ -480,13 +434,9 @@
                 );
 
             font-weight: 400;
-
-            color: #24211e;
         }
 
-
         .book-meta {
-
             margin-top: 10px;
 
             font-family:
@@ -503,9 +453,7 @@
             color: #536875;
         }
 
-
         .book-arrow {
-
             display: inline-block;
 
             margin-top: 20px;
@@ -527,41 +475,9 @@
                 letter-spacing 0.25s ease;
         }
 
-
-        .book:hover .book-arrow {
-
+        .book:hover .book-arrow,
+        .alchemy-book:hover .book-arrow {
             letter-spacing: 0.17em;
-        }
-
-
-        /* =========================
-           ALTHEA / SINGLE WORK
-        ========================= */
-
-        .alchemy-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 45px;
-
-            margin-top: 45px;
-        }
-
-
-        .alchemy-book {
-
-            text-decoration: none;
-
-            color: inherit;
-        }
-
-
-        .alchemy-book .book-image {
-
-            height: 560px;
         }
 
 
@@ -570,7 +486,6 @@
         ========================= */
 
         .about {
-
             padding:
                 120px 8%;
 
@@ -578,22 +493,16 @@
                 1px solid #d8d0c5;
         }
 
-
         .about-grid {
-
             display: grid;
 
             grid-template-columns:
                 0.65fr 1.35fr;
 
             gap: 10%;
-
-            align-items: start;
         }
 
-
         .about h2 {
-
             margin: 0;
 
             font-size:
@@ -608,16 +517,13 @@
             line-height: 1.05;
         }
 
-
         .about-text {
-
             max-width: 720px;
         }
 
-
         .about-text p {
-
-            margin: 0 0 25px;
+            margin:
+                0 0 25px;
 
             font-size: 1.08rem;
 
@@ -632,7 +538,6 @@
         ========================= */
 
         .contact {
-
             padding:
                 105px 8%;
 
@@ -642,9 +547,7 @@
             background: #eae5dc;
         }
 
-
         .contact h2 {
-
             margin: 0;
 
             font-size:
@@ -657,9 +560,7 @@
             font-weight: 400;
         }
 
-
         .contact p {
-
             max-width: 600px;
 
             margin-top: 25px;
@@ -671,12 +572,8 @@
             color: #5b554e;
         }
 
-
         .contact-note {
-
             font-style: italic;
-
-            color: #777067;
         }
 
 
@@ -685,7 +582,6 @@
         ========================= */
 
         footer {
-
             padding:
                 45px 8%;
 
@@ -722,22 +618,16 @@
         @media (max-width: 850px) {
 
             nav {
-
                 padding:
                     23px 6%;
             }
 
-
             nav a {
-
                 margin-left: 15px;
-
                 font-size: 0.68rem;
             }
 
-
             .hero {
-
                 grid-template-columns: 1fr;
 
                 min-height: auto;
@@ -748,9 +638,7 @@
                 gap: 55px;
             }
 
-
             h1 {
-
                 font-size:
                     clamp(
                         4rem,
@@ -759,82 +647,55 @@
                     );
             }
 
-
             .hero-image {
-
                 height: 65vh;
-
                 min-height: 420px;
             }
 
-
             .works {
-
                 padding:
                     85px 7%;
             }
 
-
             .collection-heading {
-
-                align-items:
-                    flex-start;
-
-                flex-direction:
-                    column;
+                flex-direction: column;
+                align-items: flex-start;
 
                 gap: 12px;
             }
 
-
-            .book-grid,
-            .alchemy-grid {
-
+            .book-grid {
                 grid-template-columns: 1fr;
             }
 
-
             .book-image {
-
                 height: 420px;
             }
 
-
             .alchemy-book .book-image {
-
                 height: 460px;
             }
 
-
             .about {
-
                 padding:
                     90px 7%;
             }
 
-
             .about-grid {
-
                 grid-template-columns: 1fr;
-
                 gap: 45px;
             }
 
-
             .contact {
-
                 padding:
                     85px 7%;
             }
 
-
             footer {
-
                 padding:
                     35px 7%;
 
-                flex-direction:
-                    column;
+                flex-direction: column;
 
                 align-items:
                     flex-start;
@@ -847,65 +708,41 @@
         @media (max-width: 520px) {
 
             nav {
+                flex-direction: column;
 
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
+                align-items: flex-start;
 
                 gap: 18px;
             }
 
-
             nav div:last-child {
+                display: flex;
 
-                display:
-                    flex;
-
-                flex-wrap:
-                    wrap;
+                flex-wrap: wrap;
 
                 gap: 12px;
             }
 
-
             nav a {
-
                 margin-left: 0;
-
                 margin-right: 12px;
             }
 
-
             .hero {
-
-                padding-top:
-                    60px;
+                padding-top: 60px;
             }
-
 
             .hero-image {
-
-                height:
-                    55vh;
-
-                min-height:
-                    360px;
+                height: 55vh;
+                min-height: 360px;
             }
-
 
             .book-image {
-
-                height:
-                    350px;
+                height: 350px;
             }
 
-
             .alchemy-book .book-image {
-
-                height:
-                    390px;
+                height: 390px;
             }
         }
 
@@ -917,16 +754,16 @@
 <body>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <!-- NAVIGATION -->
 
     <nav>
 
-        <div class="logo">
+        <a
+            class="logo"
+            href="index.html"
+        >
             Srithea Seshen
-        </div>
-
+        </a>
 
         <div>
 
@@ -947,12 +784,10 @@
     </nav>
 
 
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
     <main>
+
+
+        <!-- HERO -->
 
         <section class="hero">
 
@@ -963,19 +798,16 @@
                     literary fiction, and human stories.
                 </p>
 
-
                 <h1>
                     Srithea<br>
                     Seshen
                 </h1>
 
-
                 <div class="hero-rule"></div>
 
-
                 <p>
-                    Here we talk about love, memory,
-                    and what remains.
+                    Here we talk about love,
+                    memory, and what remains.
                 </p>
 
             </div>
@@ -988,7 +820,6 @@
                     alt="Lotus floating on water"
                 >
 
-
                 <div class="image-caption">
                     Srithea Seshen
                 </div>
@@ -999,9 +830,7 @@
 
 
 
-        <!-- =========================
-             WORKS
-        ========================= -->
+        <!-- WORKS -->
 
         <section
             class="works"
@@ -1013,10 +842,7 @@
             </div>
 
 
-
-            <!-- =====================
-                 THE ALCHEMY
-            ====================== -->
+            <!-- THE ALCHEMY -->
 
             <div class="collection">
 
@@ -1026,7 +852,6 @@
                         The Alchemy
                     </h2>
 
-
                     <span class="collection-type">
                         A standalone work
                     </span>
@@ -1035,7 +860,6 @@
 
 
                 <div class="alchemy-grid">
-
 
                     <a
                         class="alchemy-book"
@@ -1058,16 +882,13 @@
                                 01
                             </span>
 
-
                             <h3>
                                 Two Brain Cells
                             </h3>
 
-
                             <div class="book-meta">
                                 Contemporary Romance
                             </div>
-
 
                             <span class="book-arrow">
                                 Enter the work →
@@ -1083,9 +904,7 @@
 
 
 
-            <!-- =====================
-                 OAKHAVEN
-            ====================== -->
+            <!-- OAKHAVEN -->
 
             <div class="collection">
 
@@ -1094,7 +913,6 @@
                     <h2>
                         The Oakhaven Series
                     </h2>
-
 
                     <span class="collection-type">
                         A series
@@ -1105,8 +923,6 @@
 
                 <div class="book-grid">
 
-
-                    <!-- HEARTH & HERITAGE -->
 
                     <a
                         class="book"
@@ -1129,16 +945,13 @@
                                 01
                             </span>
 
-
                             <h3>
                                 Hearth &amp; Heritage
                             </h3>
 
-
                             <div class="book-meta">
                                 The Oakhaven Series
                             </div>
-
 
                             <span class="book-arrow">
                                 Enter the work →
@@ -1149,8 +962,6 @@
                     </a>
 
 
-
-                    <!-- IN DEEP WATER -->
 
                     <a
                         class="book"
@@ -1173,16 +984,13 @@
                                 02
                             </span>
 
-
                             <h3>
                                 In Deep Water
                             </h3>
 
-
                             <div class="book-meta">
                                 The Oakhaven Series
                             </div>
-
 
                             <span class="book-arrow">
                                 Enter the work →
@@ -1200,9 +1008,7 @@
 
 
 
-        <!-- =========================
-             ABOUT
-        ========================= -->
+        <!-- ABOUT -->
 
         <section
             class="about"
@@ -1229,7 +1035,6 @@
                         spaces between them.
                     </p>
 
-
                     <p>
                         The stories move between contemporary
                         romance, literary fiction, and the
@@ -1245,9 +1050,7 @@
 
 
 
-        <!-- =========================
-             CONTACT
-        ========================= -->
+        <!-- CONTACT -->
 
         <section
             class="contact"
@@ -1258,12 +1061,10 @@
                 Contact
             </h2>
 
-
             <p>
                 For literary enquiries, collaborations,
                 or simply to say hello.
             </p>
-
 
             <p class="contact-note">
                 Email coming soon.
@@ -1274,17 +1075,13 @@
     </main>
 
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer>
 
         <span>
             © 2026 Srithea Seshen
         </span>
-
 
         <span>
             Love · Memory · What Remains
@@ -1294,4 +1091,5 @@
 
 
 </body>
+
 </html>
