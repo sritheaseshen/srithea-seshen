@@ -1,460 +1,796 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>In Deep Water — Srithea Seshen</title>
 
     <meta
         name="description"
-        content="In Deep Water — part of The Oakhaven Series by Srithea Seshen."
+        content="In Deep Water — Book Two of The Oakhaven Series by Srithea Seshen."
     >
 
     <style>
+
         * {
             box-sizing: border-box;
         }
+
 
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
             margin: 0;
-            background: #edf2ef;
-            color: #102b2b;
-            font-family: Georgia, "Times New Roman", serif;
+
+            background: #071f24;
+
+            color: #e8eee9;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
         }
+
+
+        a {
+            color: inherit;
+        }
+
+
 
         /* =========================
            NAVIGATION
         ========================= */
 
         nav {
-            padding: 27px 7%;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding:
+                27px 7%;
 
-            border-bottom: 1px solid #b9cbc8;
+            display:
+                flex;
 
-            background: #edf2ef;
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-bottom:
+                1px solid #23484d;
+
+            background:
+                #071f24;
+
+            position:
+                relative;
+
+            z-index:
+                10;
         }
+
 
         .logo {
-            font-family: Arial, Helvetica, sans-serif;
 
-            font-size: 0.85rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-            color: #123b3b;
+            font-size:
+                0.85rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #e8eee9;
         }
+
 
         nav a {
-            margin-left: 30px;
 
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+            margin-left:
+                30px;
 
-            color: #466363;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-            text-decoration: none;
+            font-size:
+                0.74rem;
 
-            transition: color 0.25s ease;
+            letter-spacing:
+                0.08em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #a9c0bf;
+
+            transition:
+                color 0.25s ease;
         }
+
 
         nav a:hover {
-            color: #a4423d;
+
+            color:
+                #d88d78;
         }
+
+
+
+        /* =========================
+           BACK
+        ========================= */
+
+        .back {
+
+            display:
+                block;
+
+            padding:
+                28px 7% 0;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                0.12em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #91aaa9;
+
+            transition:
+                color 0.25s ease;
+        }
+
+
+        .back:hover {
+
+            color:
+                #d88d78;
+        }
+
+
 
         /* =========================
            HERO
         ========================= */
 
         .hero {
-            min-height: 94vh;
 
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
+            min-height:
+                91vh;
 
-            align-items: center;
+            display:
+                grid;
 
-            gap: 7%;
+            grid-template-columns:
+                0.85fr 1.15fr;
 
-            padding: 70px 7% 90px;
+            align-items:
+                center;
 
-            background:
-                linear-gradient(
-                    180deg,
-                    #edf2ef 0%,
-                    #e3ece9 100%
-                );
+            gap:
+                8%;
+
+            padding:
+                55px 7% 95px;
         }
+
 
         .hero-text {
-            max-width: 560px;
+
+            max-width:
+                560px;
         }
 
-        .series {
-            margin: 0 0 24px;
 
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
+        .eyebrow {
 
-            color: #3f716e;
+            margin:
+                0 0 24px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.7rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #7da7a5;
         }
+
 
         h1 {
-            margin: 0;
 
-            font-size: clamp(4rem, 8vw, 8rem);
-            line-height: 0.86;
+            margin:
+                0;
 
-            font-weight: 400;
-            letter-spacing: -0.055em;
+            font-size:
+                clamp(
+                    4rem,
+                    8vw,
+                    7.5rem
+                );
 
-            color: #102b2b;
+            line-height:
+                0.86;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.06em;
+
+            color:
+                #edf2ed;
         }
 
-        .genre {
-            margin-top: 34px;
 
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.76rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
+        .subtitle {
 
-            color: #607676;
+            margin-top:
+                34px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.76rem;
+
+            letter-spacing:
+                0.13em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #91aaa9;
         }
+
 
         .hero-rule {
-            width: 68px;
-            height: 2px;
 
-            margin: 36px 0;
+            width:
+                65px;
 
-            background: #3f716e;
+            height:
+                2px;
+
+            margin:
+                36px 0;
+
+            background:
+                #c97967;
         }
 
-        .intro {
-            max-width: 500px;
 
-            font-size: 1.07rem;
-            line-height: 1.9;
+        .hero-text p:last-child {
 
-            color: #526565;
+            max-width:
+                500px;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #a9bbb9;
         }
+
+
 
         /* =========================
            HERO IMAGE
         ========================= */
 
         .hero-image {
-            position: relative;
 
-            width: 100%;
-            height: min(74vh, 730px);
+            width:
+                100%;
 
-            overflow: hidden;
-
-            background: #174b4a;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-
-            display: block;
-
-            object-fit: cover;
-
-            transition: transform 1.2s ease;
-        }
-
-        .hero-image:hover img {
-            transform: scale(1.025);
-        }
-
-        .image-caption {
-            position: absolute;
-
-            left: 18px;
-            bottom: 16px;
-
-            padding: 7px 10px;
-
-            background: rgba(237, 242, 239, 0.9);
-
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.62rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-
-            color: #244d4c;
-        }
-
-        /* =========================
-           BOOK SECTION
-        ========================= */
-
-        .book-section {
-            padding: 115px 8%;
-
-            border-top: 1px solid #b9cbc8;
-
-            background: #f5f7f5;
-        }
-
-        .section-label {
-            margin-bottom: 34px;
-
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-
-            color: #3f716e;
-        }
-
-        .book-section h2 {
-            max-width: 900px;
-
-            margin: 0;
-
-            font-size: clamp(2.1rem, 4vw, 3.7rem);
-            line-height: 1.15;
-
-            font-weight: 400;
-
-            color: #102b2b;
-        }
-
-        .book-section p {
-            max-width: 710px;
-
-            margin-top: 32px;
-
-            font-size: 1.05rem;
-            line-height: 1.9;
-
-            color: #586b6a;
-        }
-
-        /* =========================
-           WATER DETAILS
-        ========================= */
-
-        .water-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
-            margin-top: 90px;
-
-            border-top: 1px solid #b9cbc8;
-            border-bottom: 1px solid #b9cbc8;
-        }
-
-        .water-detail {
-            padding: 30px 24px;
-
-            border-right: 1px solid #b9cbc8;
-        }
-
-        .water-detail:last-child {
-            border-right: none;
-        }
-
-        .detail-number {
-            display: block;
-
-            margin-bottom: 13px;
-
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.67rem;
-            letter-spacing: 0.14em;
-
-            color: #78908e;
-        }
-
-        .water-detail strong {
-            font-size: 1rem;
-            font-weight: 400;
-
-            color: #234443;
-        }
-
-        /* =========================
-           DEEP WATER FEATURE
-        ========================= */
-
-        .deep-section {
-            position: relative;
-
-            min-height: 620px;
-
-            display: flex;
-            align-items: center;
-
-            padding: 120px 8%;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #103b3b 0%,
-                    #155c59 48%,
-                    #0c3435 100%
+            height:
+                min(
+                    75vh,
+                    730px
                 );
 
-            overflow: hidden;
+            overflow:
+                hidden;
 
-            color: #edf2ef;
+            background:
+                #123b40;
         }
 
-        .deep-section::after {
-            content: "";
 
-            position: absolute;
+        .hero-image img {
 
-            width: 420px;
-            height: 420px;
+            width:
+                100%;
 
-            right: -120px;
-            bottom: -180px;
+            height:
+                100%;
 
-            border: 1px solid rgba(180, 211, 204, 0.18);
+            display:
+                block;
 
-            border-radius: 50%;
+            object-fit:
+                cover;
+
+            transition:
+                transform 1.2s ease;
         }
 
-        .deep-inner {
-            position: relative;
-            z-index: 2;
 
-            max-width: 850px;
+        .hero-image:hover img {
+
+            transform:
+                scale(1.02);
         }
 
-        .deep-label {
-            margin-bottom: 30px;
 
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
 
-            color: #a8c8c2;
+        /* =========================
+           SERIES SECTION
+        ========================= */
+
+        .series {
+
+            padding:
+                120px 8%;
+
+            border-top:
+                1px solid #23484d;
+
+            background:
+                #0d3035;
         }
 
-        .deep-section h2 {
-            margin: 0;
 
-            max-width: 850px;
+        .section-label {
 
-            font-size: clamp(2.5rem, 5vw, 5rem);
-            line-height: 1;
+            margin-bottom:
+                40px;
 
-            font-weight: 400;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.7rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #7da7a5;
         }
 
-        .deep-section p {
-            max-width: 650px;
 
-            margin-top: 32px;
+        .series-heading {
 
-            font-size: 1.05rem;
-            line-height: 1.85;
+            display:
+                grid;
 
-            color: #d1e1dd;
+            grid-template-columns:
+                0.7fr 1.3fr;
+
+            gap:
+                10%;
         }
+
+
+        .series-heading h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.4rem,
+                    4.5vw,
+                    4.3rem
+                );
+
+            font-weight:
+                400;
+
+            line-height:
+                1.02;
+
+            color:
+                #edf2ed;
+        }
+
+
+        .series-heading p {
+
+            max-width:
+                690px;
+
+            margin:
+                0;
+
+            font-size:
+                1.08rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #aac0be;
+        }
+
+
+
+        /* =========================
+           DETAILS
+        ========================= */
+
+        .details {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            margin-top:
+                85px;
+
+            border-top:
+                1px solid #31585d;
+
+            border-bottom:
+                1px solid #31585d;
+        }
+
+
+        .detail {
+
+            padding:
+                30px 24px;
+
+            border-right:
+                1px solid #31585d;
+        }
+
+
+        .detail:last-child {
+
+            border-right:
+                none;
+        }
+
+
+        .detail-number {
+
+            display:
+                block;
+
+            margin-bottom:
+                12px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.65rem;
+
+            letter-spacing:
+                0.14em;
+
+            color:
+                #668988;
+        }
+
+
+        .detail strong {
+
+            font-weight:
+                400;
+
+            font-size:
+                0.98rem;
+
+            color:
+                #d6e1df;
+        }
+
+
+
+        /* =========================
+           CORAL FEATURE
+        ========================= */
+
+        .feature {
+
+            padding:
+                125px 8%;
+
+            background:
+                #b96859;
+
+            color:
+                #fff4ed;
+        }
+
+
+        .feature-inner {
+
+            max-width:
+                900px;
+        }
+
+
+        .feature-label {
+
+            margin-bottom:
+                30px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.7rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #f4d6cb;
+        }
+
+
+        .feature h2 {
+
+            margin:
+                0;
+
+            max-width:
+                850px;
+
+            font-size:
+                clamp(
+                    2.6rem,
+                    5vw,
+                    5rem
+                );
+
+            line-height:
+                1;
+
+            font-weight:
+                400;
+        }
+
+
+        .feature p {
+
+            max-width:
+                650px;
+
+            margin-top:
+                32px;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.85;
+
+            color:
+                #fae6df;
+        }
+
+
 
         /* =========================
            STATUS
         ========================= */
 
         .status {
-            padding: 100px 8%;
 
-            background: #dce8e4;
+            padding:
+                105px 8%;
 
-            border-top: 1px solid #b9cbc8;
+            background:
+                #071f24;
+
+            border-top:
+                1px solid #23484d;
         }
 
-        .status-inner {
-            max-width: 800px;
-        }
 
         .status-label {
-            margin-bottom: 25px;
 
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
+            margin-bottom:
+                25px;
 
-            color: #3f716e;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.7rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #7da7a5;
         }
+
 
         .status h2 {
-            margin: 0;
 
-            font-size: clamp(2.5rem, 5vw, 4.7rem);
-            line-height: 1;
+            margin:
+                0;
 
-            font-weight: 400;
+            font-size:
+                clamp(
+                    2.6rem,
+                    5vw,
+                    4.8rem
+                );
 
-            color: #102b2b;
+            line-height:
+                1;
+
+            font-weight:
+                400;
+
+            color:
+                #edf2ed;
         }
+
 
         .status p {
-            max-width: 620px;
 
-            margin-top: 30px;
+            max-width:
+                620px;
 
-            font-size: 1.05rem;
-            line-height: 1.8;
+            margin-top:
+                30px;
 
-            color: #5d6e6d;
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.8;
+
+            color:
+                #9fb3b1;
         }
+
+
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
-            padding: 45px 8%;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding:
+                45px 8%;
 
-            border-top: 1px solid #b9cbc8;
+            display:
+                flex;
 
-            background: #edf2ef;
+            justify-content:
+                space-between;
 
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.7rem;
-            letter-spacing: 0.08em;
+            align-items:
+                center;
 
-            color: #71817f;
+            border-top:
+                1px solid #23484d;
+
+            background:
+                #061a1e;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                #6f8887;
         }
+
 
         footer a {
-            color: #71817f;
 
-            text-decoration: none;
+            text-decoration:
+                none;
 
-            transition: color 0.25s ease;
+            color:
+                #6f8887;
+
+            transition:
+                color 0.25s ease;
         }
+
 
         footer a:hover {
-            color: #a4423d;
+
+            color:
+                #d88d78;
         }
+
+
 
         /* =========================
            MOBILE
@@ -463,141 +799,250 @@
         @media (max-width: 850px) {
 
             nav {
-                padding: 23px 6%;
+
+                padding:
+                    23px 6%;
             }
+
 
             nav a {
-                margin-left: 15px;
-                font-size: 0.68rem;
+
+                margin-left:
+                    15px;
+
+                font-size:
+                    0.68rem;
             }
+
+
+            .back {
+
+                padding:
+                    24px 7% 0;
+            }
+
 
             .hero {
-                grid-template-columns: 1fr;
 
-                min-height: auto;
+                grid-template-columns:
+                    1fr;
 
-                padding: 75px 7% 80px;
+                min-height:
+                    auto;
 
-                gap: 55px;
+                padding:
+                    55px 7% 80px;
+
+                gap:
+                    55px;
             }
 
-            h1 {
-                font-size: clamp(4rem, 17vw, 6.5rem);
-            }
 
             .hero-image {
-                height: 65vh;
-                min-height: 420px;
+
+                height:
+                    65vh;
+
+                min-height:
+                    420px;
             }
 
-            .book-section {
-                padding: 80px 7%;
+
+            .series {
+
+                padding:
+                    85px 7%;
             }
 
-            .water-grid {
-                grid-template-columns: 1fr;
+
+            .series-heading {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    40px;
             }
 
-            .water-detail {
-                border-right: none;
-                border-bottom: 1px solid #b9cbc8;
+
+            .details {
+
+                grid-template-columns:
+                    1fr;
             }
 
-            .water-detail:last-child {
-                border-bottom: none;
+
+            .detail {
+
+                border-right:
+                    none;
+
+                border-bottom:
+                    1px solid #31585d;
             }
 
-            .deep-section {
-                min-height: 520px;
 
-                padding: 85px 7%;
+            .detail:last-child {
+
+                border-bottom:
+                    none;
             }
+
+
+            .feature {
+
+                padding:
+                    90px 7%;
+            }
+
 
             .status {
-                padding: 80px 7%;
+
+                padding:
+                    80px 7%;
             }
+
 
             footer {
-                padding: 35px 7%;
 
-                flex-direction: column;
-                align-items: flex-start;
+                padding:
+                    35px 7%;
 
-                gap: 12px;
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    12px;
             }
         }
+
 
         @media (max-width: 520px) {
 
             nav {
-                flex-direction: column;
-                align-items: flex-start;
 
-                gap: 18px;
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    18px;
             }
+
 
             nav div:last-child {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 12px;
+
+                display:
+                    flex;
+
+                flex-wrap:
+                    wrap;
+
+                gap:
+                    12px;
             }
+
 
             nav a {
-                margin-left: 0;
-                margin-right: 12px;
+
+                margin-left:
+                    0;
+
+                margin-right:
+                    12px;
             }
 
-            .hero {
-                padding-top: 60px;
+
+            h1 {
+
+                font-size:
+                    clamp(
+                        4rem,
+                        16vw,
+                        6.3rem
+                    );
             }
+
 
             .hero-image {
-                height: 55vh;
-                min-height: 360px;
-            }
 
-            .intro {
-                font-size: 1rem;
+                height:
+                    55vh;
+
+                min-height:
+                    360px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+
+    <!-- NAVIGATION -->
 
     <nav>
 
-        <div class="logo">
+        <a
+            class="logo"
+            href="index.html"
+        >
             Srithea Seshen
-        </div>
+        </a>
+
 
         <div>
-            <a href="index.html">Home</a>
-            <a href="index.html#books">Works</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#contact">Contact</a>
+
+            <a href="index.html#works">
+                Works
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
         </div>
 
     </nav>
 
 
+
+    <!-- BACK -->
+
+    <a
+        class="back"
+        href="index.html#works"
+    >
+        ← All Works
+    </a>
+
+
+
     <main>
 
-        <!-- =========================
-             HERO
-        ========================= -->
+
+        <!-- HERO -->
 
         <section class="hero">
 
             <div class="hero-text">
 
-                <p class="series">
+                <p class="eyebrow">
                     The Oakhaven Series
                 </p>
+
 
                 <h1>
                     In<br>
@@ -605,15 +1050,19 @@
                     Water
                 </h1>
 
-                <p class="genre">
-                    The Oakhaven Series
+
+                <p class="subtitle">
+                    Book Two
                 </p>
+
 
                 <div class="hero-rule"></div>
 
-                <p class="intro">
-                    Some things are visible from the surface.
-                    Others become clear only after you go deep enough.
+
+                <p>
+                    The second book in The Oakhaven Series.
+                    Its world is deeper, darker, and
+                    considerably less still.
                 </p>
 
             </div>
@@ -623,42 +1072,45 @@
 
                 <img
                     src="images/in-deep-water.jpeg"
-                    alt="Teal blue-green water with coral and small black fish"
+                    alt="In Deep Water"
                 >
-
-                <div class="image-caption">
-                    The Oakhaven Series
-                </div>
 
             </div>
 
         </section>
 
 
-        <!-- =========================
-             THE WORK
-        ========================= -->
 
-        <section class="book-section">
+        <!-- SERIES -->
+
+        <section class="series">
 
             <div class="section-label">
-                The Work
+                The Oakhaven Series
             </div>
 
-            <h2>
-                The surface is rarely the whole story.
-            </h2>
 
-            <p>
-                In Deep Water belongs to The Oakhaven Series.
-                The details of the story are still being allowed
-                to settle into their final form.
-            </p>
+            <div class="series-heading">
+
+                <h2>
+                    In Deep Water
+                </h2>
 
 
-            <div class="water-grid">
+                <p>
+                    Book Two of The Oakhaven Series.
+                    More about the story, its characters,
+                    and its place within Oakhaven will appear
+                    here when the work is ready.
+                </p>
 
-                <div class="water-detail">
+            </div>
+
+
+            <div class="details">
+
+
+                <div class="detail">
 
                     <span class="detail-number">
                         01
@@ -671,57 +1123,59 @@
                 </div>
 
 
-                <div class="water-detail">
+                <div class="detail">
 
                     <span class="detail-number">
                         02
                     </span>
 
                     <strong>
-                        More Beneath the Surface
+                        Book Two
                     </strong>
 
                 </div>
 
 
-                <div class="water-detail">
+                <div class="detail">
 
                     <span class="detail-number">
                         03
                     </span>
 
                     <strong>
-                        More Soon
+                        In progress
                     </strong>
 
                 </div>
 
+
             </div>
 
         </section>
 
 
-        <!-- =========================
-             DEEP WATER FEATURE
-        ========================= -->
 
-        <section class="deep-section">
+        <!-- FEATURE -->
 
-            <div class="deep-inner">
+        <section class="feature">
 
-                <div class="deep-label">
-                    Beneath the Surface
+            <div class="feature-inner">
+
+                <div class="feature-label">
+                    Oakhaven
                 </div>
 
+
                 <h2>
-                    There is always
-                    something moving below.
+                    What lies beneath
+                    is rarely as simple
+                    as what we see.
                 </h2>
 
+
                 <p>
-                    Water carries what we cannot see:
-                    memory, distance, desire, danger,
-                    and the things we thought had disappeared.
+                    The second Oakhaven story moves
+                    into deeper water.
                 </p>
 
             </div>
@@ -729,37 +1183,34 @@
         </section>
 
 
-        <!-- =========================
-             STATUS
-        ========================= -->
+
+        <!-- STATUS -->
 
         <section class="status">
 
-            <div class="status-inner">
-
-                <div class="status-label">
-                    Current Status
-                </div>
-
-                <h2>
-                    More soon.
-                </h2>
-
-                <p>
-                    The story is still being written, revised,
-                    and allowed to find its own depth.
-                </p>
-
+            <div class="status-label">
+                Current Status
             </div>
+
+
+            <h2>
+                In progress.
+            </h2>
+
+
+            <p>
+                The manuscript is being developed.
+                More will come when the story is ready
+                to introduce itself.
+            </p>
 
         </section>
 
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -767,11 +1218,14 @@
             © 2026 Srithea Seshen
         </span>
 
-        <a href="index.html">
-            Back to Srithea Seshen
+
+        <a href="index.html#works">
+            ← All Works
         </a>
 
     </footer>
 
+
 </body>
+
 </html>
