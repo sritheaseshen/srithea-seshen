@@ -1548,3 +1548,357 @@ footer {
             0.82rem;
     }
 }
+```css
+/* =========================================================
+   5.5 — POLISH
+   Quiet motion, depth, and interaction
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL TRANSITIONS
+   ========================================================= */
+
+a {
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+nav a {
+    position: relative;
+}
+
+nav div a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 100%;
+    height: 1px;
+
+    background: currentColor;
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        right;
+
+    transition:
+        transform 0.3s ease;
+}
+
+nav div a:hover::after {
+    transform:
+        scaleX(1);
+
+    transform-origin:
+        left;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.hero-image {
+    overflow: hidden;
+}
+
+.hero-image img {
+    transition:
+        transform 1.2s cubic-bezier(
+            0.2,
+            0.7,
+            0.2,
+            1
+        ),
+        filter 0.8s ease;
+}
+
+.hero-image:hover img {
+    transform:
+        scale(1.025);
+
+    filter:
+        brightness(0.94);
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.hero-text {
+    animation:
+        heroTextIn 0.9s ease both;
+}
+
+.hero-image {
+    animation:
+        heroImageIn 1.1s ease both;
+}
+
+@keyframes heroTextIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes heroImageIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   SECTION LABELS
+   ========================================================= */
+
+.section-label {
+    transition:
+        letter-spacing 0.35s ease;
+}
+
+.section-label:hover {
+    letter-spacing:
+        0.25em;
+}
+
+
+/* =========================================================
+   BOOK CARDS
+   ========================================================= */
+
+.book,
+.alchemy-book {
+    position: relative;
+}
+
+.book-image {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.book-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.16),
+            transparent 35%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.5s ease;
+
+    pointer-events: none;
+}
+
+.book:hover .book-image::after,
+.alchemy-book:hover .book-image::after {
+    opacity: 1;
+}
+
+.book-image img {
+    transition:
+        transform 0.9s cubic-bezier(
+            0.2,
+            0.7,
+            0.2,
+            1
+        );
+}
+
+.book:hover .book-image img,
+.alchemy-book:hover .book-image img {
+    transform:
+        scale(1.035);
+}
+
+
+/* =========================================================
+   BOOK TITLES
+   ========================================================= */
+
+.book h3 {
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.book:hover h3,
+.alchemy-book:hover h3 {
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   BOOK ARROW
+   ========================================================= */
+
+.book-arrow {
+    transition:
+        letter-spacing 0.3s ease,
+        transform 0.3s ease;
+}
+
+.book:hover .book-arrow,
+.alchemy-book:hover .book-arrow {
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-text p {
+    transition:
+        opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-email {
+    position: relative;
+
+    display: inline-block;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        0.78rem;
+
+    letter-spacing:
+        0.08em;
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+}
+
+.contact-email::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        currentColor;
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        right;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.contact-email:hover::after {
+    transform:
+        scaleX(1);
+
+    transform-origin:
+        left;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer span:last-child {
+    transition:
+        opacity 0.3s ease;
+}
+
+footer:hover span:last-child {
+    opacity:
+        0.65;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   Respect the user's reduced-motion preference.
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior:
+            auto !important;
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+
+}
