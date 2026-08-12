@@ -10,59 +10,16 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Srithea Seshen</title>
+    <title>
+        Srithea Seshen — Writer
+    </title>
 
     <meta
         name="description"
-        content="Srithea Seshen — writer and scientist. Fiction about people before plots."
+        content="Srithea Seshen writes about love, memory, mythology, science, and the strange interior lives of people."
     >
 
     <style>
-
-        /* =====================================================
-           COLOUR SYSTEM
-           ===================================================== */
-
-        :root {
-
-            --bg:
-                #211610;
-
-            --bg-deep:
-                #160E0A;
-
-            --surface:
-                #281A13;
-
-            --surface-light:
-                #332219;
-
-            --text:
-                #F0E5D2;
-
-            --text-muted:
-                #CDBEAA;
-
-            --text-dim:
-                #806D5E;
-
-            --accent:
-                #D7B88A;
-
-            --accent-dark:
-                #B99568;
-
-            --line:
-                #4A3427;
-
-            --line-soft:
-                #604837;
-        }
-
-
-        /* =====================================================
-           RESET
-           ===================================================== */
 
         * {
             box-sizing:
@@ -79,15 +36,18 @@
                 0;
 
             background:
-                var(--bg);
+                #211610;
 
             color:
-                var(--text);
+                #F0E5D2;
 
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
+
+            line-height:
+                1.7;
 
             -webkit-font-smoothing:
                 antialiased;
@@ -102,9 +62,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            NAVIGATION
-           ===================================================== */
+        ========================= */
 
         nav {
             padding:
@@ -120,10 +80,10 @@
                 center;
 
             border-bottom:
-                1px solid var(--line);
+                1px solid #4A3427;
 
             background:
-                var(--bg);
+                #211610;
 
             position:
                 relative;
@@ -151,7 +111,7 @@
                 none;
 
             color:
-                var(--text);
+                #F0E5D2;
         }
 
         nav a {
@@ -176,7 +136,7 @@
                 none;
 
             color:
-                var(--text-muted);
+                #CDBEAA;
 
             transition:
                 color 0.25s ease;
@@ -184,251 +144,37 @@
 
         nav a:hover {
             color:
-                var(--accent);
+                #D7B88A;
         }
 
 
-        /* =====================================================
+        /* =========================
            HERO
-           ===================================================== */
+        ========================= */
 
         .hero {
             min-height:
                 88vh;
 
+            padding:
+                120px 8% 100px;
+
             display:
-                grid;
+                flex;
 
-            grid-template-columns:
-                0.9fr 1.1fr;
+            flex-direction:
+                column;
 
-            align-items:
+            justify-content:
                 center;
 
-            gap:
-                7%;
-
-            padding:
-                75px 7% 90px;
-
-            background:
-                var(--bg);
+            border-bottom:
+                1px solid #4A3427;
         }
 
-        .hero-text {
-            max-width:
-                600px;
-        }
-
-        .eyebrow {
-            margin:
-                0 0 25px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.67rem;
-
-            line-height:
-                1.7;
-
-            letter-spacing:
-                0.17em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                var(--accent-dark);
-        }
-
-        h1 {
-            margin:
-                0;
-
-            font-size:
-                clamp(
-                    4rem,
-                    9vw,
-                    8rem
-                );
-
-            line-height:
-                0.86;
-
-            font-weight:
-                400;
-
-            letter-spacing:
-                -0.055em;
-
-            color:
-                var(--text);
-        }
-
-        .hero-rule {
-            width:
-                62px;
-
-            height:
-                1px;
-
-            margin:
-                38px 0;
-
-            background:
-                var(--accent);
-        }
-
-        .hero-text > p:last-child {
-            max-width:
-                500px;
-
-            margin:
-                0;
-
-            font-size:
-                1.12rem;
-
-            line-height:
-                1.9;
-
-            color:
-                var(--text-muted);
-        }
-
-
-        /* =====================================================
-           HERO IMAGE
-           ===================================================== */
-
-        .hero-image {
-            position:
-                relative;
-
-            width:
-                100%;
-
-            height:
-                min(
-                    72vh,
-                    700px
-                );
-
-            overflow:
-                hidden;
-
-            background:
-                var(--surface);
-        }
-
-        .hero-image::after {
-            content:
-                "";
-
-            position:
-                absolute;
-
-            inset:
-                0;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(22,14,10,0.05),
-                    rgba(22,14,10,0.28)
-                );
-
-            pointer-events:
-                none;
-        }
-
-        .hero-image img {
-            width:
-                100%;
-
-            height:
-                100%;
-
-            display:
-                block;
-
-            object-fit:
-                cover;
-
-            transition:
-                transform 1s ease;
-        }
-
-        .hero-image:hover img {
-            transform:
-                scale(1.015);
-        }
-
-        .image-caption {
-            position:
-                absolute;
-
-            left:
-                18px;
-
-            bottom:
-                16px;
-
-            z-index:
-                2;
-
-            padding:
-                7px 10px;
-
-            background:
-                rgba(
-                    33,
-                    22,
-                    16,
-                    0.86
-                );
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.61rem;
-
-            letter-spacing:
-                0.1em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                var(--text-muted);
-        }
-
-
-        /* =====================================================
-           WORKS
-           ===================================================== */
-
-        .works {
-            padding:
-                115px 8%;
-
-            border-top:
-                1px solid var(--line);
-
-            background:
-                var(--bg);
-        }
-
-        .section-label {
+        .hero-label {
             margin-bottom:
-                50px;
+                30px;
 
             font-family:
                 Arial,
@@ -436,7 +182,7 @@
                 sans-serif;
 
             font-size:
-                0.67rem;
+                0.65rem;
 
             letter-spacing:
                 0.2em;
@@ -445,20 +191,61 @@
                 uppercase;
 
             color:
-                var(--accent-dark);
+                #B99568;
         }
 
-        .collection {
-            margin-bottom:
-                110px;
-        }
+        .hero h1 {
+            max-width:
+                1100px;
 
-        .collection:last-child {
-            margin-bottom:
+            margin:
                 0;
+
+            font-size:
+                clamp(
+                    4.2rem,
+                    10vw,
+                    9rem
+                );
+
+            line-height:
+                0.88;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.06em;
         }
 
-        .collection-heading {
+        .hero-intro {
+            max-width:
+                650px;
+
+            margin:
+                50px 0 0;
+
+            font-size:
+                1.12rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #CDBEAA;
+        }
+
+
+        /* =========================
+           WORKS
+        ========================= */
+
+        .works {
+            padding:
+                120px 8%;
+        }
+
+        .section-heading {
             display:
                 flex;
 
@@ -471,17 +258,116 @@
             gap:
                 30px;
 
+            margin-bottom:
+                60px;
+
             padding-bottom:
                 20px;
 
             border-bottom:
-                1px solid var(--line-soft);
+                1px solid #4A3427;
         }
 
-        .collection-heading h2 {
+        .section-heading h2 {
             margin:
                 0;
 
+            font-size:
+                clamp(
+                    2.4rem,
+                    5vw,
+                    4rem
+                );
+
+            font-weight:
+                400;
+        }
+
+        .section-heading span {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.62rem;
+
+            letter-spacing:
+                0.15em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #806D5E;
+        }
+
+
+        /* =========================
+           WORK LIST
+        ========================= */
+
+        .work-list {
+            max-width:
+                1150px;
+
+            margin:
+                0 auto;
+        }
+
+        .work-item {
+            padding:
+                45px 0;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                90px
+                1fr
+                180px;
+
+            gap:
+                35px;
+
+            align-items:
+                center;
+
+            border-bottom:
+                1px solid #4A3427;
+
+            text-decoration:
+                none;
+
+            transition:
+                padding 0.3s ease;
+        }
+
+        .work-item:hover {
+            padding-left:
+                15px;
+
+            padding-right:
+                15px;
+        }
+
+        .work-number {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.65rem;
+
+            letter-spacing:
+                0.15em;
+
+            color:
+                #806D5E;
+        }
+
+        .work-title {
             font-size:
                 clamp(
                     2rem,
@@ -494,143 +380,161 @@
 
             font-weight:
                 400;
-
-            color:
-                var(--text);
         }
 
-        .collection-type {
+        .work-description {
+            margin-top:
+                12px;
+
+            max-width:
+                650px;
+
+            font-size:
+                0.95rem;
+
+            line-height:
+                1.75;
+
+            color:
+                #BCAA98;
+        }
+
+        .work-type {
+            text-align:
+                right;
+
             font-family:
                 Arial,
                 Helvetica,
                 sans-serif;
 
             font-size:
-                0.64rem;
+                0.6rem;
 
             letter-spacing:
-                0.13em;
+                0.12em;
 
             text-transform:
                 uppercase;
 
             color:
-                var(--text-dim);
+                #B99568;
         }
 
 
-        /* =====================================================
-           BOOK GRIDS
-           ===================================================== */
+        /* =========================
+           SOUNDTRACK
+        ========================= */
 
-        .book-grid {
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(
-                    2,
-                    1fr
-                );
-
-            gap:
-                45px;
-
-            margin-top:
-                45px;
-        }
-
-        .alchemy-grid {
-            margin-top:
-                45px;
-        }
-
-        .book,
-        .alchemy-book {
-            display:
-                block;
-
-            text-decoration:
-                none;
-
-            color:
-                inherit;
-        }
-
-
-        /* =====================================================
-           BOOK IMAGES
-           ===================================================== */
-
-        .book-image {
-            width:
-                100%;
-
-            height:
-                440px;
-
-            overflow:
-                hidden;
+        .soundtrack {
+            padding:
+                125px 8%;
 
             background:
-                var(--surface);
-        }
+                #160E0A;
 
-        .alchemy-book .book-image {
-            height:
-                560px;
-        }
-
-        .book-image img {
-            width:
-                100%;
-
-            height:
-                100%;
-
-            display:
-                block;
-
-            object-fit:
-                cover;
-
-            transition:
-                transform 0.7s ease,
-                opacity 0.7s ease;
-        }
-
-        .book:hover .book-image img,
-        .alchemy-book:hover .book-image img {
-            transform:
-                scale(1.025);
-
-            opacity:
-                0.91;
-        }
-
-
-        /* =====================================================
-           BOOK INFORMATION
-           ===================================================== */
-
-        .book-info {
-            padding-top:
-                23px;
-
-            padding-bottom:
-                27px;
+            border-top:
+                1px solid #4A3427;
 
             border-bottom:
-                1px solid var(--line-soft);
+                1px solid #4A3427;
         }
 
-        .book-number {
-            display:
-                block;
+        .soundtrack-inner {
+            max-width:
+                1000px;
 
+            margin:
+                0 auto;
+        }
+
+        .soundtrack-label {
             margin-bottom:
-                10px;
+                28px;
 
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.63rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #B99568;
+        }
+
+        .soundtrack h2 {
+            max-width:
+                850px;
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    3rem,
+                    6vw,
+                    5.8rem
+                );
+
+            line-height:
+                0.98;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.045em;
+        }
+
+        .soundtrack-description {
+            max-width:
+                650px;
+
+            margin:
+                38px 0 0;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #CDBEAA;
+        }
+
+        .soundtrack-status {
+            margin-top:
+                45px;
+
+            padding-top:
+                25px;
+
+            border-top:
+                1px solid #4A3427;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                30px;
+        }
+
+        .soundtrack-status span {
             font-family:
                 Arial,
                 Helvetica,
@@ -642,60 +546,14 @@
             letter-spacing:
                 0.14em;
 
-            color:
-                var(--text-dim);
-        }
-
-        .book h3 {
-            margin:
-                0;
-
-            font-size:
-                clamp(
-                    1.6rem,
-                    3vw,
-                    2.5rem
-                );
-
-            line-height:
-                1.05;
-
-            font-weight:
-                400;
-
-            color:
-                var(--text);
-        }
-
-        .book-meta {
-            margin-top:
-                11px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.67rem;
-
-            letter-spacing:
-                0.1em;
-
             text-transform:
                 uppercase;
 
             color:
-                var(--accent-dark);
+                #806D5E;
         }
 
-        .book-arrow {
-            display:
-                inline-block;
-
-            margin-top:
-                21px;
-
+        .soundtrack-status strong {
             font-family:
                 Arial,
                 Helvetica,
@@ -703,6 +561,9 @@
 
             font-size:
                 0.65rem;
+
+            font-weight:
+                400;
 
             letter-spacing:
                 0.12em;
@@ -711,153 +572,51 @@
                 uppercase;
 
             color:
-                var(--accent);
-
-            transition:
-                letter-spacing 0.25s ease;
-        }
-
-        .book:hover .book-arrow,
-        .alchemy-book:hover .book-arrow {
-            letter-spacing:
-                0.17em;
+                #D7B88A;
         }
 
 
-        /* =====================================================
-           ABOUT PREVIEW
-           ===================================================== */
-
-        .about {
-            padding:
-                120px 8%;
-
-            border-top:
-                1px solid var(--line);
-
-            background:
-                var(--surface);
-        }
-
-        .about-grid {
-            display:
-                grid;
-
-            grid-template-columns:
-                0.65fr 1.35fr;
-
-            gap:
-                10%;
-        }
-
-        .about h2 {
-            margin:
-                0;
-
-            font-size:
-                clamp(
-                    2.2rem,
-                    4vw,
-                    3.7rem
-                );
-
-            font-weight:
-                400;
-
-            line-height:
-                1.05;
-
-            color:
-                var(--text);
-        }
-
-        .about-text {
-            max-width:
-                720px;
-        }
-
-        .about-text p {
-            margin:
-                0 0 25px;
-
-            font-size:
-                1.08rem;
-
-            line-height:
-                1.9;
-
-            color:
-                var(--text-muted);
-        }
-
-        .about-link {
-            display:
-                inline-block;
-
-            margin-top:
-                8px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.65rem;
-
-            letter-spacing:
-                0.13em;
-
-            text-transform:
-                uppercase;
-
-            text-decoration:
-                none;
-
-            color:
-                var(--accent);
-        }
-
-        .about-link:hover {
-            color:
-                #E4CFA9;
-        }
-
-
-        /* =====================================================
+        /* =========================
            WRITING DESK
-           ===================================================== */
+        ========================= */
 
         .writing-desk {
             padding:
-                120px 8%;
-
-            border-top:
-                1px solid var(--line);
-
-            background:
-                var(--bg-deep);
+                125px 8%;
         }
 
-        .writing-desk-grid {
+        .writing-desk-inner {
+            max-width:
+                1000px;
+
+            margin:
+                0 auto;
+
             display:
                 grid;
 
             grid-template-columns:
-                0.65fr 1.35fr;
+                1fr
+                1fr;
 
             gap:
-                10%;
+                80px;
+
+            align-items:
+                center;
         }
 
         .writing-desk-label {
+            margin-bottom:
+                25px;
+
             font-family:
                 Arial,
                 Helvetica,
                 sans-serif;
 
             font-size:
-                0.65rem;
+                0.63rem;
 
             letter-spacing:
                 0.18em;
@@ -866,23 +625,18 @@
                 uppercase;
 
             color:
-                var(--accent-dark);
+                #B99568;
         }
 
-        .writing-desk-text {
-            max-width:
-                760px;
-        }
-
-        .writing-desk-text h2 {
+        .writing-desk h2 {
             margin:
-                0 0 24px;
+                0;
 
             font-size:
                 clamp(
-                    2.3rem,
+                    2.7rem,
                     5vw,
-                    4.6rem
+                    5rem
                 );
 
             line-height:
@@ -890,18 +644,9 @@
 
             font-weight:
                 400;
-
-            letter-spacing:
-                -0.035em;
-
-            color:
-                var(--text);
         }
 
-        .writing-desk-text p {
-            max-width:
-                650px;
-
+        .writing-desk p {
             margin:
                 0;
 
@@ -912,10 +657,10 @@
                 1.9;
 
             color:
-                var(--text-muted);
+                #CDBEAA;
         }
 
-        .desk-link {
+        .writing-desk-link {
             display:
                 inline-block;
 
@@ -940,74 +685,44 @@
                 none;
 
             color:
-                var(--accent);
+                #D7B88A;
         }
 
-        .desk-link:hover {
+        .writing-desk-link:hover {
             color:
                 #E4CFA9;
         }
 
 
-        /* =====================================================
-           CONTACT
-           ===================================================== */
+        /* =========================
+           STATEMENT
+        ========================= */
 
-        .contact {
+        .statement {
             padding:
-                105px 8%;
-
-            border-top:
-                1px solid var(--line);
+                130px 8%;
 
             background:
-                var(--surface-light);
-        }
-
-        .contact h2 {
-            margin:
-                0;
-
-            font-size:
-                clamp(
-                    2.5rem,
-                    5vw,
-                    5rem
-                );
-
-            font-weight:
-                400;
-
-            line-height:
-                1;
+                #F0E5D2;
 
             color:
-                var(--text);
+                #261B15;
+
+            text-align:
+                center;
         }
 
-        .contact p {
+        .statement-inner {
             max-width:
-                600px;
+                850px;
 
-            margin-top:
-                25px;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.8;
-
-            color:
-                var(--text-muted);
+            margin:
+                0 auto;
         }
 
-        .contact-email {
-            display:
-                inline-block;
-
-            margin-top:
-                12px;
+        .statement-label {
+            margin-bottom:
+                28px;
 
             font-family:
                 Arial,
@@ -1015,31 +730,64 @@
                 sans-serif;
 
             font-size:
-                0.8rem;
+                0.63rem;
 
             letter-spacing:
-                0.06em;
+                0.18em;
 
-            text-decoration:
-                none;
+            text-transform:
+                uppercase;
 
             color:
-                var(--accent);
+                #876746;
         }
 
-        .contact-email:hover {
+        .statement h2 {
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.8rem,
+                    6vw,
+                    5.5rem
+                );
+
+            line-height:
+                1;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.04em;
+        }
+
+        .statement p {
+            max-width:
+                650px;
+
+            margin:
+                35px auto 0;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.9;
+
             color:
-                #E4CFA9;
+                #66574B;
         }
 
 
-        /* =====================================================
+        /* =========================
            FOOTER
-           ===================================================== */
+        ========================= */
 
         footer {
             padding:
-                45px 8%;
+                42px 8%;
 
             display:
                 flex;
@@ -1051,10 +799,10 @@
                 center;
 
             border-top:
-                1px solid var(--line);
+                1px solid #4A3427;
 
             background:
-                var(--bg);
+                #211610;
 
             font-family:
                 Arial,
@@ -1068,13 +816,13 @@
                 0.08em;
 
             color:
-                var(--text-dim);
+                #806D5E;
         }
 
 
-        /* =====================================================
+        /* =========================
            MOBILE
-           ===================================================== */
+        ========================= */
 
         @media (max-width: 850px) {
 
@@ -1092,96 +840,44 @@
             }
 
             .hero {
-                grid-template-columns:
-                    1fr;
-
                 min-height:
-                    auto;
+                    75vh;
 
-                padding:
-                    70px 7% 80px;
-
-                gap:
-                    55px;
-            }
-
-            h1 {
-                font-size:
-                    clamp(
-                        4rem,
-                        17vw,
-                        6.5rem
-                    );
-            }
-
-            .hero-image {
-                height:
-                    65vh;
-
-                min-height:
-                    420px;
-            }
-
-            .works {
-                padding:
-                    85px 7%;
-            }
-
-            .collection-heading {
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
-
-                gap:
-                    12px;
-            }
-
-            .book-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .book-image {
-                height:
-                    420px;
-            }
-
-            .alchemy-book .book-image {
-                height:
-                    460px;
-            }
-
-            .about {
                 padding:
                     90px 7%;
             }
 
-            .about-grid {
+            .works,
+            .soundtrack,
+            .writing-desk,
+            .statement {
+                padding:
+                    90px 7%;
+            }
+
+            .work-item {
+                grid-template-columns:
+                    55px
+                    1fr;
+
+                gap:
+                    20px;
+            }
+
+            .work-type {
+                grid-column:
+                    2;
+
+                text-align:
+                    left;
+            }
+
+            .writing-desk-inner {
                 grid-template-columns:
                     1fr;
 
                 gap:
                     45px;
-            }
-
-            .writing-desk {
-                padding:
-                    90px 7%;
-            }
-
-            .writing-desk-grid {
-                grid-template-columns:
-                    1fr;
-
-                gap:
-                    40px;
-            }
-
-            .contact {
-                padding:
-                    85px 7%;
             }
 
             footer {
@@ -1197,6 +893,7 @@
                 gap:
                     12px;
             }
+
         }
 
 
@@ -1232,38 +929,40 @@
                     12px;
             }
 
-            .hero {
-                padding-top:
-                    60px;
-            }
-
-            .hero-image {
-                height:
-                    55vh;
-
-                min-height:
-                    360px;
-            }
-
-            .book-image {
-                height:
-                    350px;
-            }
-
-            .alchemy-book .book-image {
-                height:
-                    390px;
-            }
-
-            .writing-desk-text h2 {
+            .hero h1 {
                 font-size:
-                    2.8rem;
+                    4.2rem;
             }
 
-            .contact-email {
-                overflow-wrap:
-                    anywhere;
+            .section-heading {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    10px;
             }
+
+            .work-item {
+                padding:
+                    35px 0;
+            }
+
+            .soundtrack h2 {
+                font-size:
+                    3.2rem;
+            }
+
+            .soundtrack-status {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+
         }
 
     </style>
@@ -1274,9 +973,9 @@
 <body>
 
 
-    <!-- =====================================================
+    <!-- =========================
          NAVIGATION
-         ===================================================== -->
+    ========================= -->
 
     <nav>
 
@@ -1313,220 +1012,159 @@
     <main>
 
 
-        <!-- =================================================
+        <!-- =========================
              HERO
-             ================================================= -->
+        ========================= -->
 
         <section class="hero">
 
-            <div class="hero-text">
-
-                <p class="eyebrow">
-                    Writer · Scientist
-                </p>
-
-                <h1>
-                    Srithea<br>
-                    Seshen
-                </h1>
-
-                <div class="hero-rule"></div>
-
-                <p>
-                    Fiction about people before plots.
-                    About the choices that shape us,
-                    the relationships that undo us,
-                    and the hope that asks us to begin again.
-                </p>
-
+            <div class="hero-label">
+                Writer · Researcher · Observer
             </div>
 
+            <h1>
+                Stories about
+                what remains.
+            </h1>
 
-            <div class="hero-image">
-
-                <img
-                    src="images/lotus.jpeg"
-                    alt="Lotus floating on dark water"
-                >
-
-                <div class="image-caption">
-                    Srithea Seshen
-                </div>
-
-            </div>
+            <p class="hero-intro">
+                I write about love, memory, mythology,
+                science, and the strange interior lives
+                of people—the things that happen beneath
+                the visible story.
+            </p>
 
         </section>
 
 
-        <!-- =================================================
+        <!-- =========================
              WORKS
-             ================================================= -->
+        ========================= -->
 
         <section
             class="works"
             id="works"
         >
 
-            <div class="section-label">
-                Works
-            </div>
+            <div class="section-heading">
 
+                <h2>
+                    Works
+                </h2>
 
-            <!-- THE ALCHEMY -->
-
-            <div class="collection">
-
-                <div class="collection-heading">
-
-                    <h2>
-                        The Alchemy
-                    </h2>
-
-                    <span class="collection-type">
-                        A standalone work
-                    </span>
-
-                </div>
-
-
-                <div class="alchemy-grid">
-
-                    <a
-                        class="alchemy-book"
-                        href="two-brain-cells.html"
-                    >
-
-                        <div class="book-image">
-
-                            <img
-                                src="images/two-brain-cells.jpeg"
-                                alt="Two Brain Cells"
-                            >
-
-                        </div>
-
-
-                        <div class="book-info">
-
-                            <span class="book-number">
-                                01
-                            </span>
-
-                            <h3>
-                                Two Brain Cells
-                            </h3>
-
-                            <div class="book-meta">
-                                Contemporary Romance
-                            </div>
-
-                            <span class="book-arrow">
-                                Enter the work →
-                            </span>
-
-                        </div>
-
-                    </a>
-
-                </div>
+                <span>
+                    Fiction · In progress
+                </span>
 
             </div>
 
 
-            <!-- OAKHAVEN -->
+            <div class="work-list">
 
-            <div class="collection">
 
-                <div class="collection-heading">
+                <a
+                    class="work-item"
+                    href="#"
+                >
 
-                    <h2>
-                        The Oakhaven Series
-                    </h2>
+                    <div class="work-number">
+                        01
+                    </div>
 
-                    <span class="collection-type">
-                        A series
-                    </span>
+                    <div>
 
+                        <div class="work-title">
+                            Two Brain Cells
+                        </div>
+
+                        <div class="work-description">
+                            A contemporary romance about
+                            intelligence, intimacy, friendship,
+                            and two people discovering that
+                            understanding someone is not the
+                            same thing as knowing them.
+                        </div>
+
+                    </div>
+
+                    <div class="work-type">
+                        Novel · In progress
+                    </div>
+
+                </a>
+
+
+                <a
+                    class="work-item"
+                    href="#"
+                >
+
+                    <div class="work-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <div class="work-title">
+                            The Shiva–Parvati Retelling
+                        </div>
+
+                        <div class="work-description">
+                            A contemporary love story shaped
+                            by Śākta Tantra, Kashmir Shaivism,
+                            Āgama and Nigama traditions, and
+                            the ancient question of what it
+                            means for consciousness and power
+                            to recognize one another.
+                        </div>
+
+                    </div>
+
+                    <div class="work-type">
+                        Novel · In progress
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOUNDTRACK
+        ========================= -->
+
+        <section class="soundtrack">
+
+            <div class="soundtrack-inner">
+
+                <div class="soundtrack-label">
+                    The Soundtrack
                 </div>
 
+                <h2>
+                    Some stories
+                    need music.
+                </h2>
 
-                <div class="book-grid">
+                <p class="soundtrack-description">
+                    There is a song behind almost every
+                    scene I write. Some belong to characters.
+                    Some belong to places. Some simply know
+                    how a particular moment is supposed to feel.
+                </p>
 
+                <div class="soundtrack-status">
 
-                    <a
-                        class="book"
-                        href="hearth-and-heritage.html"
-                    >
+                    <span>
+                        Playlist · Spotify
+                    </span>
 
-                        <div class="book-image">
-
-                            <img
-                                src="images/hearth-and-heritage.jpeg"
-                                alt="Hearth &amp; Heritage"
-                            >
-
-                        </div>
-
-
-                        <div class="book-info">
-
-                            <span class="book-number">
-                                01
-                            </span>
-
-                            <h3>
-                                Hearth &amp; Heritage
-                            </h3>
-
-                            <div class="book-meta">
-                                The Oakhaven Series
-                            </div>
-
-                            <span class="book-arrow">
-                                Enter the work →
-                            </span>
-
-                        </div>
-
-                    </a>
-
-
-                    <a
-                        class="book"
-                        href="in-deep-water.html"
-                    >
-
-                        <div class="book-image">
-
-                            <img
-                                src="images/in-deep-water.jpeg"
-                                alt="In Deep Water"
-                            >
-
-                        </div>
-
-
-                        <div class="book-info">
-
-                            <span class="book-number">
-                                02
-                            </span>
-
-                            <h3>
-                                In Deep Water
-                            </h3>
-
-                            <div class="book-meta">
-                                The Oakhaven Series
-                            </div>
-
-                            <span class="book-arrow">
-                                Enter the work →
-                            </span>
-
-                        </div>
-
-                    </a>
+                    <strong>
+                        Coming soon
+                    </strong>
 
                 </div>
 
@@ -1535,81 +1173,38 @@
         </section>
 
 
-        <!-- =================================================
-             ABOUT PREVIEW
-             ================================================= -->
-
-        <section class="about">
-
-            <div class="about-grid">
-
-                <div>
-
-                    <h2>
-                        About
-                    </h2>
-
-                </div>
-
-
-                <div class="about-text">
-
-                    <p>
-                        Srithea Seshen is a writer and scientist
-                        interested in intimacy, memory, mythology,
-                        ordinary life, and the complicated spaces
-                        between them.
-                    </p>
-
-                    <p>
-                        Her fiction moves between contemporary
-                        romance, literary fiction, and the quieter
-                        territories of family, inheritance,
-                        desire, identity, and choice.
-                    </p>
-
-                    <a
-                        class="about-link"
-                        href="about.html"
-                    >
-                        More about Srithea →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
+        <!-- =========================
              WRITING DESK
-             ================================================= -->
+        ========================= -->
 
         <section class="writing-desk">
 
-            <div class="writing-desk-grid">
+            <div class="writing-desk-inner">
 
-                <div class="writing-desk-label">
-                    The Writing Desk
-                </div>
+                <div>
 
-
-                <div class="writing-desk-text">
+                    <div class="writing-desk-label">
+                        The Writing Desk
+                    </div>
 
                     <h2>
-                        The questions behind
-                        the stories.
+                        Before the stories,
+                        there are people.
                     </h2>
 
+                </div>
+
+                <div>
+
                     <p>
-                        Notes on people, emotion, memory,
-                        science, mythology, and the strange
-                        ways humans find one another.
+                        Notes on emotion, behaviour,
+                        memory, science, mythology,
+                        and the strange ways humans
+                        find one another.
                     </p>
 
                     <a
-                        class="desk-link"
+                        class="writing-desk-link"
                         href="writing-desk.html"
                     >
                         Enter the Writing Desk →
@@ -1622,37 +1217,38 @@
         </section>
 
 
-        <!-- =================================================
-             CONTACT
-             ================================================= -->
+        <!-- =========================
+             STATEMENT
+        ========================= -->
 
-        <section class="contact">
+        <section class="statement">
 
-            <h2>
-                Contact
-            </h2>
+            <div class="statement-inner">
 
-            <p>
-                For literary enquiries, collaborations,
-                professional correspondence, or simply
-                to say hello.
-            </p>
+                <div class="statement-label">
+                    A working philosophy
+                </div>
 
-            <a
-                class="contact-email"
-                href="mailto:sritheaseshen@proton.me"
-            >
-                sritheaseshen@proton.me
-            </a>
+                <h2>
+                    Plot tells us
+                    what happened.
+                </h2>
+
+                <p>
+                    People tell us why it mattered.
+                </p>
+
+            </div>
 
         </section>
+
 
     </main>
 
 
-    <!-- =====================================================
+    <!-- =========================
          FOOTER
-         ===================================================== -->
+    ========================= -->
 
     <footer>
 
