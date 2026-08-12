@@ -10,53 +10,591 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Hearth &amp; Heritage — Srithea Seshen</title>
+    <title>Hearth &amp; Heritage · Srithea Seshen</title>
 
     <meta
         name="description"
-        content="Hearth & Heritage — part of The Oakhaven Series by Srithea Seshen."
+        content="Hearth &amp; Heritage — Book One of The Oakhaven Series by Srithea Seshen."
     >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =====================================================
+         HEARTH & HERITAGE — BOOK-SPECIFIC STYLES
+         ===================================================== -->
 
     <style>
 
-        * {
-            box-sizing: border-box;
+        :root {
+
+            --hh-black:
+                #100B08;
+
+            --hh-walnut:
+                #211510;
+
+            --hh-wood:
+                #342119;
+
+            --hh-brown:
+                #51382A;
+
+            --hh-gold:
+                #B08A57;
+
+            --hh-gold-soft:
+                #C4A878;
+
+            --hh-ivory:
+                #F0E3CE;
+
+            --hh-ivory-soft:
+                #D8C7AD;
+
+            --hh-muted:
+                #9B8875;
+
+            --hh-border:
+                #3A281D;
         }
 
 
-        html {
-            scroll-behavior: smooth;
+        /* =================================================
+           PAGE
+           ================================================= */
+
+        .hh-page {
+
+            min-height:
+                100vh;
+
+            background:
+                var(--hh-black);
+
+            color:
+                var(--hh-ivory);
         }
 
 
-        body {
-            margin: 0;
+        /* =================================================
+           NAVIGATION
+           ================================================= */
 
-            background: #f2eee5;
+        .hh-page nav {
 
-            color: #282c25;
+            background:
+                var(--hh-black);
+
+            border-color:
+                var(--hh-border);
+        }
+
+        .hh-page nav a {
+
+            color:
+                var(--hh-muted);
+        }
+
+        .hh-page nav a:hover {
+
+            color:
+                var(--hh-gold-soft);
+        }
+
+        .hh-page .logo {
+
+            color:
+                var(--hh-ivory);
+        }
+
+
+        /* =================================================
+           HERO
+           ================================================= */
+
+        .hh-hero {
+
+            min-height:
+                calc(100vh - 85px);
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items:
+                center;
+
+            gap:
+                8%;
+
+            padding:
+                80px 8% 100px;
+
+            background:
+                var(--hh-black);
+        }
+
+        .hh-hero-text {
+
+            max-width:
+                650px;
+        }
+
+        .hh-kicker {
+
+            margin:
+                0 0 28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--hh-gold);
+        }
+
+        .hh-hero h1 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    4rem,
+                    8vw,
+                    7.5rem
+                );
+
+            line-height:
+                0.86;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.055em;
+
+            color:
+                var(--hh-ivory);
+        }
+
+        .hh-rule {
+
+            width:
+                75px;
+
+            height:
+                2px;
+
+            margin:
+                40px 0;
+
+            background:
+                var(--hh-gold);
+        }
+
+        .hh-tagline {
+
+            max-width:
+                550px;
+
+            margin:
+                0;
+
+            font-size:
+                1.15rem;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--hh-ivory-soft);
+        }
+
+
+        /* =================================================
+           HERO IMAGE
+           ================================================= */
+
+        .hh-image {
+
+            position:
+                relative;
+
+            min-height:
+                650px;
+
+            overflow:
+                hidden;
+
+            background:
+                var(--hh-walnut);
+        }
+
+        .hh-image img {
+
+            width:
+                100%;
+
+            height:
+                650px;
+
+            display:
+                block;
+
+            object-fit:
+                cover;
+
+            transition:
+                transform 1s ease;
+        }
+
+        .hh-image:hover img {
+
+            transform:
+                scale(1.015);
+        }
+
+        .hh-image-caption {
+
+            position:
+                absolute;
+
+            left:
+                22px;
+
+            bottom:
+                20px;
+
+            padding:
+                8px 11px;
+
+            background:
+                rgba(
+                    16,
+                    11,
+                    8,
+                    0.92
+                );
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.61rem;
+
+            letter-spacing:
+                0.12em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--hh-ivory-soft);
+        }
+
+
+        /* =================================================
+           BOOK INTRO
+           ================================================= */
+
+        .hh-intro {
+
+            padding:
+                115px 8%;
+
+            border-top:
+                1px solid var(--hh-border);
+
+            background:
+                var(--hh-walnut);
+        }
+
+        .hh-intro-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.65fr 1.35fr;
+
+            gap:
+                10%;
+        }
+
+        .hh-intro h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.3rem,
+                    4vw,
+                    4rem
+                );
+
+            line-height:
+                1;
+
+            font-weight:
+                400;
+
+            color:
+                var(--hh-ivory);
+        }
+
+        .hh-intro-text {
+
+            max-width:
+                760px;
+        }
+
+        .hh-intro-text p {
+
+            margin:
+                0 0 25px;
+
+            font-size:
+                1.08rem;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--hh-ivory-soft);
+        }
+
+
+        /* =================================================
+           SERIES DETAILS
+           ================================================= */
+
+        .hh-details {
+
+            padding:
+                90px 8%;
+
+            border-top:
+                1px solid var(--hh-border);
+
+            background:
+                var(--hh-black);
+        }
+
+        .hh-details-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                1px;
+
+            background:
+                var(--hh-border);
+        }
+
+        .hh-detail {
+
+            padding:
+                35px;
+
+            background:
+                var(--hh-black);
+        }
+
+        .hh-detail-label {
+
+            display:
+                block;
+
+            margin-bottom:
+                15px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.62rem;
+
+            letter-spacing:
+                0.14em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--hh-gold);
+        }
+
+        .hh-detail-value {
+
+            font-size:
+                1.2rem;
+
+            line-height:
+                1.5;
+
+            color:
+                var(--hh-ivory);
+        }
+
+
+        /* =================================================
+           HERITAGE NOTE
+           ================================================= */
+
+        .hh-note {
+
+            padding:
+                125px 8%;
+
+            border-top:
+                1px solid var(--hh-border);
+
+            background:
+                var(--hh-wood);
+        }
+
+        .hh-note-inner {
+
+            max-width:
+                900px;
+
+            margin:
+                0 auto;
+
+            text-align:
+                center;
+        }
+
+        .hh-note-mark {
+
+            display:
+                block;
+
+            margin-bottom:
+                30px;
 
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
+
+            font-size:
+                3.2rem;
+
+            color:
+                var(--hh-gold);
+        }
+
+        .hh-note h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2rem,
+                    4vw,
+                    3.6rem
+                );
+
+            line-height:
+                1.1;
+
+            font-weight:
+                400;
+
+            color:
+                var(--hh-ivory);
+        }
+
+        .hh-note p {
+
+            max-width:
+                680px;
+
+            margin:
+                30px auto 0;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--hh-ivory-soft);
         }
 
 
-        a {
-            color: inherit;
-        }
+        /* =================================================
+           SERIES NAVIGATION
+           ================================================= */
 
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
+        .hh-series-nav {
 
             padding:
-                27px 7%;
+                75px 8%;
+
+            border-top:
+                1px solid var(--hh-border);
+
+            background:
+                var(--hh-black);
+        }
+
+        .hh-series-label {
+
+            margin-bottom:
+                25px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.63rem;
+
+            letter-spacing:
+                0.14em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--hh-muted);
+        }
+
+        .hh-series-links {
 
             display:
                 flex;
@@ -67,93 +605,11 @@
             align-items:
                 center;
 
-            border-bottom:
-                1px solid #c9c8bc;
-
-            background:
-                #f2eee5;
-
-            position:
-                relative;
-
-            z-index:
-                10;
-        }
-
-
-        .logo {
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.85rem;
-
-            letter-spacing:
-                0.18em;
-
-            text-transform:
-                uppercase;
-
-            text-decoration:
-                none;
-
-            color:
-                #282c25;
-        }
-
-
-        nav a {
-
-            margin-left:
+            gap:
                 30px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.74rem;
-
-            letter-spacing:
-                0.08em;
-
-            text-transform:
-                uppercase;
-
-            text-decoration:
-                none;
-
-            color:
-                #62675b;
-
-            transition:
-                color 0.25s ease;
         }
 
-
-        nav a:hover {
-
-            color:
-                #284b35;
-        }
-
-
-
-        /* =========================
-           BACK
-        ========================= */
-
-        .back {
-
-            display:
-                block;
-
-            padding:
-                28px 7% 0;
+        .hh-series-links a {
 
             font-family:
                 Arial,
@@ -173,650 +629,43 @@
                 none;
 
             color:
-                #687063;
+                var(--hh-gold-soft);
 
             transition:
                 color 0.25s ease;
         }
 
-
-        .back:hover {
-
-            color:
-                #284b35;
-        }
-
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-
-            min-height:
-                88vh;
-
-            display:
-                grid;
-
-            grid-template-columns:
-                0.9fr 1.1fr;
-
-            align-items:
-                center;
-
-            gap:
-                8%;
-
-            padding:
-                55px 7% 90px;
-        }
-
-
-        .hero-text {
-
-            max-width:
-                560px;
-        }
-
-
-        .eyebrow {
-
-            margin:
-                0 0 24px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
+        .hh-series-links a:hover {
 
             color:
-                #506b55;
+                var(--hh-ivory);
         }
 
 
-        h1 {
-
-            margin:
-                0;
-
-            font-size:
-                clamp(
-                    3.7rem,
-                    7.5vw,
-                    7rem
-                );
-
-            line-height:
-                0.9;
-
-            font-weight:
-                400;
-
-            letter-spacing:
-                -0.055em;
-
-            color:
-                #282c25;
-        }
-
-
-        .subtitle {
-
-            margin-top:
-                34px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.76rem;
-
-            letter-spacing:
-                0.13em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #6c7167;
-        }
-
-
-        .hero-rule {
-
-            width:
-                65px;
-
-            height:
-                2px;
-
-            margin:
-                36px 0;
-
-            background:
-                #3f6548;
-        }
-
-
-        .hero-text p:last-child {
-
-            max-width:
-                500px;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.9;
-
-            color:
-                #5d6158;
-        }
-
-
-
-        /* =========================
-           HERO IMAGE
-        ========================= */
-
-        .hero-image {
-
-            width:
-                100%;
-
-            height:
-                min(
-                    73vh,
-                    720px
-                );
-
-            overflow:
-                hidden;
-
-            background:
-                #d9d8ce;
-        }
-
-
-        .hero-image img {
-
-            width:
-                100%;
-
-            height:
-                100%;
-
-            display:
-                block;
-
-            object-fit:
-                cover;
-
-            transition:
-                transform 1s ease;
-        }
-
-
-        .hero-image:hover img {
-
-            transform:
-                scale(1.015);
-        }
-
-
-
-        /* =========================
-           SERIES SECTION
-        ========================= */
-
-        .series {
-
-            padding:
-                115px 8%;
-
-            border-top:
-                1px solid #c9c8bc;
-
-            background:
-                #ebe7dc;
-        }
-
-
-        .section-label {
-
-            margin-bottom:
-                38px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #506b55;
-        }
-
-
-        .series-heading {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                0.65fr 1.35fr;
-
-            gap:
-                10%;
-        }
-
-
-        .series-heading h2 {
-
-            margin:
-                0;
-
-            font-size:
-                clamp(
-                    2.3rem,
-                    4vw,
-                    4rem
-                );
-
-            font-weight:
-                400;
-
-            line-height:
-                1.05;
-        }
-
-
-        .series-heading p {
-
-            max-width:
-                680px;
-
-            margin:
-                0;
-
-            font-size:
-                1.08rem;
-
-            line-height:
-                1.9;
-
-            color:
-                #5c6057;
-        }
-
-
-
-        /* =========================
-           DETAILS
-        ========================= */
-
-        .details {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(
-                    3,
-                    1fr
-                );
-
-            margin-top:
-                85px;
-
-            border-top:
-                1px solid #c4c4b8;
-
-            border-bottom:
-                1px solid #c4c4b8;
-        }
-
-
-        .detail {
-
-            padding:
-                30px 24px;
-
-            border-right:
-                1px solid #c4c4b8;
-        }
-
-
-        .detail:last-child {
-
-            border-right:
-                none;
-        }
-
-
-        .detail-number {
-
-            display:
-                block;
-
-            margin-bottom:
-                12px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.65rem;
-
-            letter-spacing:
-                0.14em;
-
-            color:
-                #7b8076;
-        }
-
-
-        .detail strong {
-
-            font-weight:
-                400;
-
-            font-size:
-                0.98rem;
-
-            color:
-                #394638;
-        }
-
-
-
-        /* =========================
-           GREEN FEATURE
-        ========================= */
-
-        .feature {
-
-            padding:
-                120px 8%;
-
-            background:
-                #304c38;
-
-            color:
-                #f1eee4;
-        }
-
-
-        .feature-inner {
-
-            max-width:
-                900px;
-        }
-
-
-        .feature-label {
-
-            margin-bottom:
-                30px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #c4cfbd;
-        }
-
-
-        .feature h2 {
-
-            margin:
-                0;
-
-            max-width:
-                850px;
-
-            font-size:
-                clamp(
-                    2.5rem,
-                    5vw,
-                    5rem
-                );
-
-            line-height:
-                1;
-
-            font-weight:
-                400;
-        }
-
-
-        .feature p {
-
-            max-width:
-                650px;
-
-            margin-top:
-                32px;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.85;
-
-            color:
-                #d9dfd3;
-        }
-
-
-
-        /* =========================
-           STATUS
-        ========================= */
-
-        .status {
-
-            padding:
-                100px 8%;
-
-            background:
-                #f2eee5;
-
-            border-top:
-                1px solid #c9c8bc;
-        }
-
-
-        .status-label {
-
-            margin-bottom:
-                25px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #506b55;
-        }
-
-
-        .status h2 {
-
-            margin:
-                0;
-
-            font-size:
-                clamp(
-                    2.5rem,
-                    5vw,
-                    4.7rem
-                );
-
-            line-height:
-                1;
-
-            font-weight:
-                400;
-        }
-
-
-        .status p {
-
-            max-width:
-                620px;
-
-            margin-top:
-                30px;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.8;
-
-            color:
-                #61655c;
-        }
-
-
-
-        /* =========================
+        /* =================================================
            FOOTER
-        ========================= */
+           ================================================= */
 
-        footer {
-
-            padding:
-                45px 8%;
-
-            display:
-                flex;
-
-            justify-content:
-                space-between;
-
-            align-items:
-                center;
-
-            border-top:
-                1px solid #c9c8bc;
+        .hh-page footer {
 
             background:
-                #ebe7dc;
+                var(--hh-black);
 
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.68rem;
-
-            letter-spacing:
-                0.08em;
+            border-color:
+                var(--hh-border);
 
             color:
-                #73786e;
+                var(--hh-muted);
         }
 
 
-        footer a {
-
-            text-decoration:
-                none;
-
-            color:
-                #73786e;
-
-            transition:
-                color 0.25s ease;
-        }
-
-
-        footer a:hover {
-
-            color:
-                #284b35;
-        }
-
-
-
-        /* =========================
+        /* =================================================
            MOBILE
-        ========================= */
+           ================================================= */
 
         @media (max-width: 850px) {
 
-            nav {
-
-                padding:
-                    23px 6%;
-            }
-
-
-            nav a {
-
-                margin-left:
-                    15px;
-
-                font-size:
-                    0.68rem;
-            }
-
-
-            .back {
-
-                padding:
-                    24px 7% 0;
-            }
-
-
-            .hero {
+            .hh-hero {
 
                 grid-template-columns:
                     1fr;
@@ -825,98 +674,64 @@
                     auto;
 
                 padding:
-                    55px 7% 80px;
+                    75px 7% 85px;
 
                 gap:
                     55px;
             }
 
-
-            .hero-image {
-
-                height:
-                    65vh;
+            .hh-image {
 
                 min-height:
-                    420px;
+                    auto;
             }
 
+            .hh-image img {
 
-            .series {
+                height:
+                    560px;
+            }
+
+            .hh-intro {
 
                 padding:
-                    85px 7%;
+                    90px 7%;
             }
 
-
-            .series-heading {
+            .hh-intro-grid {
 
                 grid-template-columns:
                     1fr;
 
                 gap:
-                    40px;
+                    45px;
             }
 
+            .hh-details {
 
-            .details {
+                padding:
+                    75px 7%;
+            }
+
+            .hh-details-grid {
 
                 grid-template-columns:
                     1fr;
             }
 
-
-            .detail {
-
-                border-right:
-                    none;
-
-                border-bottom:
-                    1px solid #c4c4b8;
-            }
-
-
-            .detail:last-child {
-
-                border-bottom:
-                    none;
-            }
-
-
-            .feature {
+            .hh-note {
 
                 padding:
-                    85px 7%;
+                    90px 7%;
             }
 
-
-            .status {
+            .hh-series-nav {
 
                 padding:
-                    80px 7%;
+                    60px 7%;
             }
 
-
-            footer {
-
-                padding:
-                    35px 7%;
-
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
-
-                gap:
-                    12px;
-            }
-        }
-
-
-        @media (max-width: 520px) {
-
-            nav {
+            .hh-series-links {
 
                 flex-direction:
                     column;
@@ -927,49 +742,37 @@
                 gap:
                     18px;
             }
+        }
 
 
-            nav div:last-child {
+        @media (max-width: 520px) {
 
-                display:
-                    flex;
+            .hh-hero {
 
-                flex-wrap:
-                    wrap;
-
-                gap:
-                    12px;
+                padding:
+                    60px 7% 70px;
             }
 
-
-            nav a {
-
-                margin-left:
-                    0;
-
-                margin-right:
-                    12px;
-            }
-
-
-            h1 {
+            .hh-hero h1 {
 
                 font-size:
                     clamp(
-                        3.8rem,
-                        15vw,
-                        6rem
+                        3.5rem,
+                        17vw,
+                        5.5rem
                     );
             }
 
-
-            .hero-image {
+            .hh-image img {
 
                 height:
-                    55vh;
+                    460px;
+            }
 
-                min-height:
-                    360px;
+            .hh-detail {
+
+                padding:
+                    28px;
             }
         }
 
@@ -981,7 +784,12 @@
 <body>
 
 
-    <!-- NAVIGATION -->
+<div class="hh-page">
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
 
     <nav>
 
@@ -999,11 +807,15 @@
                 Works
             </a>
 
-            <a href="index.html#about">
+            <a href="about.html">
                 About
             </a>
 
-            <a href="index.html#contact">
+            <a href="writing-desk.html">
+                Writing Desk
+            </a>
+
+            <a href="contact.html">
                 Contact
             </a>
 
@@ -1013,28 +825,20 @@
 
 
 
-    <!-- BACK -->
-
-    <a
-        class="back"
-        href="index.html#works"
-    >
-        ← All Works
-    </a>
-
-
-
     <main>
 
 
-        <!-- HERO -->
+        <!-- =================================================
+             HERO
+             ================================================= -->
 
-        <section class="hero">
+        <section class="hh-hero">
 
-            <div class="hero-text">
 
-                <p class="eyebrow">
-                    The Oakhaven Series
+            <div class="hh-hero-text">
+
+                <p class="hh-kicker">
+                    The Oakhaven Series · Book One
                 </p>
 
 
@@ -1045,29 +849,30 @@
                 </h1>
 
 
-                <p class="subtitle">
-                    Book One
-                </p>
+                <div class="hh-rule"></div>
 
 
-                <div class="hero-rule"></div>
-
-
-                <p>
-                    A story rooted in family,
-                    place, memory, and the things
-                    we carry home with us.
+                <p class="hh-tagline">
+                    Some things are inherited.
+                    Some are chosen.
+                    And some have to be fought for.
                 </p>
 
             </div>
 
 
-            <div class="hero-image">
+
+            <div class="hh-image">
 
                 <img
                     src="images/hearth-and-heritage.jpeg"
-                    alt="Hearth & Heritage"
+                    alt="Hearth &amp; Heritage"
                 >
+
+
+                <div class="hh-image-caption">
+                    The Oakhaven Series
+                </div>
 
             </div>
 
@@ -1075,129 +880,184 @@
 
 
 
-        <!-- SERIES -->
+        <!-- =================================================
+             ABOUT THE BOOK
+             ================================================= -->
 
-        <section class="series">
+        <section class="hh-intro">
+
+
+            <div class="hh-intro-grid">
+
+
+                <div>
+
+                    <h2>
+                        The book
+                    </h2>
+
+                </div>
+
+
+
+                <div class="hh-intro-text">
+
+                    <p>
+                        Hearth &amp; Heritage begins with
+                        the things families leave behind:
+                        houses, names, expectations,
+                        loyalties, wounds, and stories
+                        everyone remembers differently.
+                    </p>
+
+
+                    <p>
+                        At the centre of Oakhaven is the
+                        complicated question of what it
+                        means to belong somewhere — and
+                        whether belonging is something
+                        inherited or something a person
+                        gets to choose.
+                    </p>
+
+
+                    <p>
+                        It is a story about family and
+                        intimacy, about old loyalties
+                        meeting new lives, and about the
+                        quiet courage required to decide
+                        which parts of the past deserve
+                        to survive.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DETAILS
+             ================================================= -->
+
+        <section class="hh-details">
+
 
             <div class="section-label">
+                At a glance
+            </div>
+
+
+
+            <div class="hh-details-grid">
+
+
+                <div class="hh-detail">
+
+                    <span class="hh-detail-label">
+                        Series
+                    </span>
+
+                    <div class="hh-detail-value">
+                        The Oakhaven Series
+                    </div>
+
+                </div>
+
+
+
+                <div class="hh-detail">
+
+                    <span class="hh-detail-label">
+                        Book
+                    </span>
+
+                    <div class="hh-detail-value">
+                        One
+                    </div>
+
+                </div>
+
+
+
+                <div class="hh-detail">
+
+                    <span class="hh-detail-label">
+                        At its heart
+                    </span>
+
+                    <div class="hh-detail-value">
+                        Family, belonging,
+                        memory, and choice.
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HERITAGE NOTE
+             ================================================= -->
+
+        <section class="hh-note">
+
+
+            <div class="hh-note-inner">
+
+                <span class="hh-note-mark">
+                    ❧
+                </span>
+
+
+                <h2>
+                    Home is not always
+                    where you came from.
+                </h2>
+
+
+                <p>
+                    Sometimes it is the place you
+                    build after deciding what you
+                    are willing to carry with you.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SERIES NAVIGATION
+             ================================================= -->
+
+        <section class="hh-series-nav">
+
+
+            <div class="hh-series-label">
                 The Oakhaven Series
             </div>
 
 
-            <div class="series-heading">
+            <div class="hh-series-links">
 
-                <h2>
-                    Hearth &amp; Heritage
-                </h2>
+                <a href="index.html#works">
+                    ← All works
+                </a>
 
 
-                <p>
-                    The first book in The Oakhaven Series.
-                    More about the story, its characters,
-                    and the world of Oakhaven will appear
-                    here when the work is ready.
-                </p>
+                <a href="in-deep-water.html">
+                    In Deep Water →
+                </a>
 
             </div>
-
-
-            <div class="details">
-
-
-                <div class="detail">
-
-                    <span class="detail-number">
-                        01
-                    </span>
-
-                    <strong>
-                        The Oakhaven Series
-                    </strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <span class="detail-number">
-                        02
-                    </span>
-
-                    <strong>
-                        Book One
-                    </strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <span class="detail-number">
-                        03
-                    </span>
-
-                    <strong>
-                        In progress
-                    </strong>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- FEATURE -->
-
-        <section class="feature">
-
-            <div class="feature-inner">
-
-                <div class="feature-label">
-                    Oakhaven
-                </div>
-
-
-                <h2>
-                    Some places become
-                    part of the people
-                    who leave them.
-                </h2>
-
-
-                <p>
-                    The Oakhaven Series is a world of
-                    family, food, landscape, memory,
-                    and inheritance.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- STATUS -->
-
-        <section class="status">
-
-            <div class="status-label">
-                Current Status
-            </div>
-
-
-            <h2>
-                In progress.
-            </h2>
-
-
-            <p>
-                The manuscript is being developed.
-                More will come when the story is ready
-                to introduce itself.
-            </p>
 
         </section>
 
@@ -1205,7 +1065,9 @@
 
 
 
-    <!-- FOOTER -->
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
 
     <footer>
 
@@ -1214,11 +1076,14 @@
         </span>
 
 
-        <a href="index.html#works">
-            ← All Works
-        </a>
+        <span>
+            The Oakhaven Series · Book One
+        </span>
 
     </footer>
+
+
+</div>
 
 
 </body>
