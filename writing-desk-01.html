@@ -28,124 +28,125 @@
 
         /* =====================================================
            WRITING DESK — ENTRY 01
+           Local styling only
         ===================================================== */
 
         .desk-entry-header {
             padding:
-                120px 8% 105px;
+                120px 8% 105px !important;
 
             border-bottom:
-                1px solid #4A3427;
+                1px solid #4A3427 !important;
         }
 
         .desk-entry-header-inner {
             max-width:
-                1500px;
+                1500px !important;
 
             margin:
-                0 auto;
+                0 auto !important;
         }
 
         .desk-entry-number {
             margin-bottom:
-                30px;
+                30px !important;
 
             font-family:
                 Arial,
                 Helvetica,
-                sans-serif;
+                sans-serif !important;
 
             font-size:
-                0.64rem;
+                0.64rem !important;
 
             letter-spacing:
-                0.2em;
+                0.2em !important;
 
             text-transform:
-                uppercase;
+                uppercase !important;
 
             color:
-                #B99568;
+                #B99568 !important;
         }
 
         .desk-entry-header h1 {
             max-width:
-                1150px;
+                1150px !important;
 
             margin:
-                0;
+                0 !important;
 
             font-size:
                 clamp(
                     4rem,
                     8vw,
                     8.5rem
-                );
+                ) !important;
 
             line-height:
-                0.9;
+                0.9 !important;
 
             font-weight:
-                400;
+                400 !important;
 
             letter-spacing:
-                -0.055em;
+                -0.055em !important;
 
             color:
-                #F0E5D2;
+                #F0E5D2 !important;
         }
 
         .desk-entry-rule {
             width:
-                55px;
+                55px !important;
 
             height:
-                1px;
+                1px !important;
 
             margin:
-                45px 0 30px;
+                45px 0 30px !important;
 
             background:
-                #B99568;
+                #B99568 !important;
         }
 
         .desk-entry-intro {
             max-width:
-                680px;
+                680px !important;
 
             margin:
-                0;
+                0 !important;
 
             font-size:
-                1.08rem;
+                1.08rem !important;
 
             line-height:
-                1.8;
+                1.8 !important;
 
             color:
-                #CDBEAA;
+                #CDBEAA !important;
         }
 
         .desk-entry-date {
             margin-top:
-                28px;
+                28px !important;
 
             font-family:
                 Arial,
                 Helvetica,
-                sans-serif;
+                sans-serif !important;
 
             font-size:
-                0.62rem;
+                0.62rem !important;
 
             letter-spacing:
-                0.13em;
+                0.13em !important;
 
             text-transform:
-                uppercase;
+                uppercase !important;
 
             color:
-                #806D5E;
+                #806D5E !important;
         }
 
 
@@ -154,155 +155,227 @@
         ===================================================== */
 
         .desk-entry {
-            padding:
-                0 8% 120px;
-        }
 
-
-        /* =====================================================
-           EACH MOVEMENT
-        ===================================================== */
-
-        .desk-entry-section {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                280px
-                minmax(0, 820px);
-
-            column-gap:
-                90px;
-
-            align-items:
-                start;
+            width:
+                100% !important;
 
             max-width:
-                1500px;
+                none !important;
 
             margin:
-                0 auto;
+                0 !important;
 
             padding:
-                105px 0 110px;
-
-            border-bottom:
-                1px solid #4A3427;
+                0 8% 120px !important;
         }
 
 
         /* =====================================================
-           LEFT SIDE — MOVEMENT TITLE
+           HORIZONTAL MOVEMENT
         ===================================================== */
 
-        .desk-entry-section-label {
+        .desk-entry .desk-entry-section {
 
-            display:
-                block;
+            width:
+                100% !important;
 
-            position:
-                static;
+            max-width:
+                1500px !important;
+
+            margin:
+                0 auto !important;
 
             padding:
-                0;
-        }
+                105px 0 110px !important;
 
-        .desk-entry-section-number {
+            border-bottom:
+                1px solid #4A3427 !important;
 
             display:
-                block;
+                flex !important;
 
-            margin-bottom:
-                20px;
+            flex-direction:
+                row !important;
+
+            align-items:
+                flex-start !important;
+
+            justify-content:
+                flex-start !important;
+
+            gap:
+                90px !important;
+        }
+
+
+        /* =====================================================
+           MOVEMENT TITLE
+        ===================================================== */
+
+        .desk-entry .desk-entry-section-label {
+
+            flex:
+                0 0 280px !important;
+
+            width:
+                280px !important;
+
+            max-width:
+                280px !important;
+
+            min-width:
+                280px !important;
+
+            margin:
+                0 !important;
+
+            padding:
+                0 !important;
+
+            position:
+                static !important;
+
+            display:
+                block !important;
+
+            float:
+                none !important;
+        }
+
+        .desk-entry .desk-entry-section-number {
+
+            display:
+                block !important;
+
+            margin:
+                0 0 20px !important;
 
             font-family:
                 Arial,
                 Helvetica,
-                sans-serif;
+                sans-serif !important;
 
             font-size:
-                0.62rem;
+                0.62rem !important;
 
             letter-spacing:
-                0.18em;
+                0.18em !important;
 
             color:
-                #806D5E;
+                #806D5E !important;
         }
 
-        .desk-entry-section h2 {
+        .desk-entry .desk-entry-section-label h2 {
 
-            margin:
-                0;
+            display:
+                block !important;
+
+            width:
+                100% !important;
 
             max-width:
-                260px;
+                260px !important;
+
+            margin:
+                0 !important;
+
+            padding:
+                0 !important;
 
             font-size:
                 clamp(
                     1.55rem,
                     2.2vw,
                     2.25rem
-                );
+                ) !important;
 
             line-height:
-                1.08;
+                1.08 !important;
 
             font-weight:
-                400;
+                400 !important;
 
             letter-spacing:
-                -0.025em;
+                -0.025em !important;
 
             color:
-                #B99568;
+                #B99568 !important;
         }
 
 
         /* =====================================================
-           RIGHT SIDE — PROSE
+           PROSE
         ===================================================== */
 
-        .desk-entry-content {
+        .desk-entry .desk-entry-content {
+
+            flex:
+                1 1 auto !important;
 
             width:
-                100%;
+                auto !important;
 
             max-width:
-                820px;
-        }
+                820px !important;
 
-        .desk-entry-content p {
+            min-width:
+                0 !important;
 
             margin:
-                0 0 1.55em;
+                0 !important;
+
+            padding:
+                0 !important;
+
+            display:
+                block !important;
+
+            float:
+                none !important;
+        }
+
+        .desk-entry .desk-entry-content p {
+
+            display:
+                block !important;
+
+            width:
+                100% !important;
+
+            max-width:
+                820px !important;
+
+            margin:
+                0 0 1.55em !important;
+
+            padding:
+                0 !important;
 
             font-size:
-                1.08rem;
+                1.08rem !important;
 
             line-height:
-                1.82;
+                1.82 !important;
 
             letter-spacing:
-                0.002em;
+                0.002em !important;
 
             color:
-                #E1D6C8;
+                #E1D6C8 !important;
         }
 
-        .desk-entry-content p:last-child {
+        .desk-entry .desk-entry-content p:last-child {
             margin-bottom:
-                0;
+                0 !important;
         }
 
-        .desk-entry-content em {
+        .desk-entry .desk-entry-content em {
 
             color:
-                #F0E5D2;
+                #F0E5D2 !important;
 
             font-style:
-                italic;
+                italic !important;
         }
 
 
@@ -312,62 +385,65 @@
 
         .desk-entry-navigation {
 
+            width:
+                100% !important;
+
             max-width:
-                1500px;
+                1500px !important;
 
             margin:
-                0 auto;
+                0 auto !important;
 
             padding:
-                38px 0;
+                38px 0 !important;
 
             display:
-                flex;
+                flex !important;
 
             justify-content:
-                space-between;
+                space-between !important;
 
             align-items:
-                center;
+                center !important;
 
             border-top:
-                1px solid #4A3427;
+                1px solid #4A3427 !important;
 
             font-family:
                 Arial,
                 Helvetica,
-                sans-serif;
+                sans-serif !important;
 
             font-size:
-                0.62rem;
+                0.62rem !important;
 
             letter-spacing:
-                0.1em;
+                0.1em !important;
 
             text-transform:
-                uppercase;
+                uppercase !important;
         }
 
         .desk-entry-navigation span {
             color:
-                #806D5E;
+                #806D5E !important;
         }
 
         .desk-entry-navigation a {
 
             color:
-                #B99568;
+                #B99568 !important;
 
             text-decoration:
-                none;
+                none !important;
 
             transition:
-                color 0.25s ease;
+                color 0.25s ease !important;
         }
 
         .desk-entry-navigation a:hover {
             color:
-                #E4CFA9;
+                #E4CFA9 !important;
         }
 
 
@@ -377,19 +453,31 @@
 
         @media (max-width: 1000px) {
 
-            .desk-entry-section {
+            .desk-entry .desk-entry-section {
 
-                grid-template-columns:
-                    220px
-                    minmax(0, 1fr);
-
-                column-gap:
-                    55px;
+                gap:
+                    55px !important;
             }
 
-            .desk-entry-section h2 {
+            .desk-entry .desk-entry-section-label {
+
+                flex:
+                    0 0 220px !important;
+
+                width:
+                    220px !important;
+
+                max-width:
+                    220px !important;
+
+                min-width:
+                    220px !important;
+            }
+
+            .desk-entry .desk-entry-section-label h2 {
+
                 font-size:
-                    1.6rem;
+                    1.6rem !important;
             }
 
         }
@@ -404,7 +492,7 @@
             .desk-entry-header {
 
                 padding:
-                    80px 7% 70px;
+                    80px 7% 70px !important;
             }
 
             .desk-entry-header h1 {
@@ -414,85 +502,112 @@
                         3.4rem,
                         14vw,
                         5rem
-                    );
+                    ) !important;
 
                 line-height:
-                    0.92;
+                    0.92 !important;
             }
 
             .desk-entry-intro {
 
                 font-size:
-                    1rem;
+                    1rem !important;
 
                 line-height:
-                    1.75;
+                    1.75 !important;
             }
 
             .desk-entry {
 
                 padding:
-                    0 7% 80px;
+                    0 7% 80px !important;
             }
 
-            .desk-entry-section {
+            .desk-entry .desk-entry-section {
 
                 display:
-                    block;
+                    block !important;
+
+                width:
+                    100% !important;
+
+                max-width:
+                    none !important;
 
                 padding:
-                    70px 0 75px;
+                    70px 0 75px !important;
+
+                margin:
+                    0 !important;
             }
 
-            .desk-entry-section-label {
+            .desk-entry .desk-entry-section-label {
 
-                margin-bottom:
-                    35px;
-            }
+                display:
+                    block !important;
 
-            .desk-entry-section-number {
-
-                margin-bottom:
-                    12px;
-            }
-
-            .desk-entry-section h2 {
+                width:
+                    100% !important;
 
                 max-width:
-                    none;
+                    none !important;
 
-                font-size:
-                    1.6rem;
+                min-width:
+                    0 !important;
+
+                margin:
+                    0 0 35px !important;
             }
 
-            .desk-entry-content {
+            .desk-entry .desk-entry-section-label h2 {
+
+                width:
+                    100% !important;
 
                 max-width:
-                    none;
-            }
-
-            .desk-entry-content p {
+                    none !important;
 
                 font-size:
-                    1rem;
+                    1.6rem !important;
+            }
+
+            .desk-entry .desk-entry-content {
+
+                display:
+                    block !important;
+
+                width:
+                    100% !important;
+
+                max-width:
+                    none !important;
+            }
+
+            .desk-entry .desk-entry-content p {
+
+                width:
+                    100% !important;
+
+                max-width:
+                    none !important;
+
+                font-size:
+                    1rem !important;
 
                 line-height:
-                    1.82;
+                    1.82 !important;
             }
 
             .desk-entry-navigation {
 
-                padding:
-                    30px 0;
-
                 flex-direction:
-                    column;
+                    column !important;
 
                 align-items:
-                    flex-start;
+                    flex-start !important;
 
                 gap:
-                    18px;
+                    18px !important;
             }
 
         }
@@ -545,7 +660,7 @@
 
 
         <!-- =====================================================
-             HEADER
+             ENTRY HEADER
         ===================================================== -->
 
         <header class="desk-entry-header">
@@ -587,7 +702,7 @@
 
 
             <!-- =================================================
-                 I
+                 MOVEMENT I
             ================================================= -->
 
             <section class="desk-entry-section">
@@ -661,7 +776,7 @@
 
 
             <!-- =================================================
-                 II
+                 MOVEMENT II
             ================================================= -->
 
             <section class="desk-entry-section">
@@ -733,7 +848,7 @@
 
 
             <!-- =================================================
-                 III
+                 MOVEMENT III
             ================================================= -->
 
             <section class="desk-entry-section">
@@ -813,7 +928,7 @@
 
 
             <!-- =================================================
-                 IV
+                 MOVEMENT IV
             ================================================= -->
 
             <section class="desk-entry-section">
@@ -881,7 +996,7 @@
 
 
             <!-- =================================================
-                 NAVIGATION
+                 ENTRY NAVIGATION
             ================================================= -->
 
             <div class="desk-entry-navigation">
