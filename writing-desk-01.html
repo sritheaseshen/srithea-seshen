@@ -24,6 +24,235 @@
         href="style.css"
     >
 
+    <style>
+
+        /* =========================
+           WRITING DESK ENTRY
+           This styling belongs only
+           to this page.
+        ========================= */
+
+        .desk-entry-header {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 110px 8% 70px;
+        }
+
+        .desk-entry-number {
+            margin-bottom: 28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.7rem;
+
+            letter-spacing: 0.2em;
+
+            text-transform: uppercase;
+
+            color: #8a6f5a;
+        }
+
+        .desk-entry-header h1 {
+            margin: 0;
+
+            font-size:
+                clamp(
+                    3.2rem,
+                    7vw,
+                    6.5rem
+                );
+
+            line-height: 0.95;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+        .desk-entry-rule {
+            width: 55px;
+            height: 2px;
+
+            margin: 38px 0 30px;
+
+            background: #8a6f5a;
+        }
+
+        .desk-entry-intro {
+            max-width: 650px;
+
+            margin: 0;
+
+            font-size: 1.15rem;
+
+            line-height: 1.8;
+
+            color: #bcae9d;
+        }
+
+        .desk-entry-date {
+            margin-top: 28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.68rem;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+            color: #8f8173;
+        }
+
+
+        /* =========================
+           ESSAY
+        ========================= */
+
+        .desk-entry {
+            max-width: 780px;
+
+            margin: 0 auto;
+
+            padding:
+                20px 8% 100px;
+        }
+
+        .desk-entry section {
+            margin-bottom: 90px;
+        }
+
+        .desk-entry section:last-of-type {
+            margin-bottom: 80px;
+        }
+
+        .desk-entry h2 {
+            margin:
+                0 0 35px;
+
+            font-size:
+                clamp(
+                    1.8rem,
+                    3vw,
+                    2.5rem
+                );
+
+            line-height: 1.15;
+
+            font-weight: 400;
+        }
+
+        .desk-entry p {
+            margin:
+                0 0 25px;
+
+            font-size: 1.08rem;
+
+            line-height: 1.95;
+
+            color: #d8cdbf;
+        }
+
+        .desk-entry p:last-child {
+            margin-bottom: 0;
+        }
+
+        .desk-entry em {
+            color: #eee5da;
+        }
+
+
+        /* =========================
+           ENTRY NAVIGATION
+        ========================= */
+
+        .desk-entry-navigation {
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            gap: 25px;
+
+            padding-top: 35px;
+
+            border-top:
+                1px solid rgba(
+                    216,
+                    205,
+                    191,
+                    0.25
+                );
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.68rem;
+
+            letter-spacing: 0.1em;
+
+            text-transform: uppercase;
+        }
+
+        .desk-entry-navigation a {
+            color: #bcae9d;
+
+            text-decoration: none;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        .desk-entry-navigation a:hover {
+            color: #eee5da;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .desk-entry-header {
+                padding:
+                    80px 7% 55px;
+            }
+
+            .desk-entry {
+                padding:
+                    15px 7% 75px;
+            }
+
+            .desk-entry section {
+                margin-bottom: 70px;
+            }
+
+            .desk-entry p {
+                font-size: 1rem;
+                line-height: 1.85;
+            }
+
+            .desk-entry-navigation {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -66,7 +295,7 @@
 
 
         <!-- =========================
-             ESSAY HEADER
+             ENTRY HEADER
         ========================= -->
 
         <header class="desk-entry-header">
@@ -113,13 +342,13 @@
                 </p>
 
                 <p>
-                    Someone leaves. Someone returns. A secret is
-                    overheard behind a closed door; a letter arrives
-                    three days too late; two strangers collide on a
-                    crowded corner and spend the rest of the night
-                    talking. Plot loves symmetry. It loves cause and
-                    effect. It operates on the clean, satisfying logic
-                    of momentum: <em>this happened, and so that must follow.</em>
+                    Someone leaves. Someone returns. A secret is overheard
+                    behind a closed door; a letter arrives three days too
+                    late; two strangers collide on a crowded corner and
+                    spend the rest of the night talking. Plot loves symmetry.
+                    It loves cause and effect. It operates on the clean,
+                    satisfying logic of momentum:
+                    <em>this happened, and so that must follow.</em>
                 </p>
 
                 <p>
@@ -137,8 +366,8 @@
                 </p>
 
                 <p>
-                    More than that, we remember unevenly. Put two people
-                    in a room during a life-altering moment, and five years
+                    More than that, we remember unevenly. Put two people in
+                    a room during a life-altering moment, and five years
                     later they will offer you two entirely different
                     histories. One remembers the exact words spoken; the
                     other remembers only the light through the window and
@@ -183,24 +412,24 @@
                 </p>
 
                 <p>
-                    This is the precise threshold where plot surrenders
-                    to character. Two people can stand in the wreckage of
-                    the exact same storm; one will rebuild the house stone
-                    by stone, while the other will pack a single bag and
-                    spend the rest of their life moving away from the coast.
-                    The storm is identical. The choices can take them in
-                    opposite directions.
+                    This is the precise threshold where plot surrenders to
+                    character. Two people can stand in the wreckage of the
+                    exact same storm; one will rebuild the house stone by
+                    stone, while the other will pack a single bag and spend
+                    the rest of their life moving away from the coast. The
+                    storm is identical. The choices can take them in opposite
+                    directions.
                 </p>
 
                 <p>
                     Character is not a list of traits, virtues, or carefully
                     chosen quirks written down in a notebook before the story
-                    begins. Character is the posture a human being adopts
-                    when forced into a corner. It lives in the small,
-                    agonizing beats between impulse and action: the phone
-                    call made or left unmade; the apology swallowed out of
-                    pride; the quiet, stubborn refusal to let a bitter moment
-                    turn us into bitter people.
+                    begins. Character is the posture a human being adopts when
+                    forced into a corner. It lives in the small, agonizing
+                    beats between impulse and action: the phone call made or
+                    left unmade; the apology swallowed out of pride; the
+                    quiet, stubborn refusal to let a bitter moment turn us
+                    into bitter people.
                 </p>
 
                 <p>
@@ -268,8 +497,8 @@
                     terrifying kind of surrender. It asks us to give up the
                     protection of our private narratives. It forces us to
                     decide whether we will retreat back into the safety of our
-                    solitude, or allow ourselves to be rearranged by love, by
-                    grief, or by the slow, difficult work of staying.
+                    solitude, or allow ourselves to be rearranged by love,
+                    by grief, or by the slow, difficult work of staying.
                 </p>
 
             </section>
@@ -309,38 +538,38 @@
                 </p>
 
                 <p>
-                    Plots will always offer us momentum—the thrilling, restless
-                    drive to find out what comes next. But it is character that
-                    gives that momentum a reason to exist. Plot tells us that
-                    a threshold was crossed. Character is why we hold our breath
-                    as their foot hovers over the line.
+                    Plots will always offer us momentum—the thrilling,
+                    restless drive to find out what comes next. But it is
+                    character that gives that momentum a reason to exist.
+                    Plot tells us that a threshold was crossed. Character is
+                    why we hold our breath as their foot hovers over the line.
                 </p>
 
                 <p>
-                    In the end, we do not remember stories because of how neatly
-                    they were constructed. We remember them because, for a few
-                    hundred pages, we were allowed to witness people making the
-                    fragile, courageous choice to begin again.
+                    In the end, we do not remember stories because of how
+                    neatly they were constructed. We remember them because,
+                    for a few hundred pages, we were allowed to witness people
+                    making the fragile, courageous choice to begin again.
                 </p>
 
             </section>
 
 
             <!-- =========================
-                 ENTRY FOOTER
+                 ENTRY NAVIGATION
             ========================= -->
 
-            <footer class="desk-entry-footer">
+            <div class="desk-entry-navigation">
 
-                <div>
+                <span>
                     Writing Desk · 01
-                </div>
+                </span>
 
                 <a href="writing-desk.html">
                     Back to the Writing Desk →
                 </a>
 
-            </footer>
+            </div>
 
 
         </article>
@@ -368,4 +597,3 @@
 </body>
 
 </html>
-
