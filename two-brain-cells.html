@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,691 +11,143 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Two Brain Cells — Srithea Seshen</title>
+    <title>Two Brain Cells · Srithea Seshen</title>
 
     <meta
         name="description"
-        content="Two Brain Cells — a standalone contemporary romance by Srithea Seshen."
+        content="Two Brain Cells — a contemporary romance by Srithea Seshen."
     >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =====================================================
+         TWO BRAIN CELLS — BOOK-SPECIFIC STYLES
+         ===================================================== -->
 
     <style>
 
-        * {
-            box-sizing: border-box;
+        :root {
+
+            --tbc-black:
+                #080D13;
+
+            --tbc-prussian:
+                #111F32;
+
+            --tbc-prussian-light:
+                #193050;
+
+            --tbc-cobalt:
+                #0047AB;
+
+            --tbc-cobalt-soft:
+                #31559D;
+
+            --tbc-steel:
+                #7F91A4;
+
+            --tbc-white:
+                #EEF2F5;
+
+            --tbc-white-soft:
+                #D8E0E7;
+
+            --tbc-border:
+                #253445;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
 
-        body {
-            margin: 0;
+        /* =================================================
+           PAGE
+           ================================================= */
 
-            background: #eef1f4;
-
-            color: #172333;
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-
-            padding: 27px 7%;
-
-            display: flex;
-
-            justify-content:
-                space-between;
-
-            align-items: center;
-
-            border-bottom:
-                1px solid #c6ced6;
+        .tbc-page {
 
             background:
-                #eef1f4;
-
-            position: relative;
-
-            z-index: 10;
-        }
-
-
-        .logo {
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 0.85rem;
-
-            letter-spacing: 0.18em;
-
-            text-transform:
-                uppercase;
-
-            text-decoration: none;
-
-            color: #172333;
-        }
-
-
-        nav a {
-
-            margin-left: 30px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 0.74rem;
-
-            letter-spacing: 0.08em;
-
-            text-transform:
-                uppercase;
-
-            text-decoration: none;
-
-            color: #52616f;
-
-            transition:
-                color 0.25s ease;
-        }
-
-
-        nav a:hover {
+                var(--tbc-black);
 
             color:
-                #174d78;
-        }
-
-
-        /* =========================
-           BACK LINK
-        ========================= */
-
-        .back {
-
-            display: block;
-
-            padding:
-                28px 7% 0;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 0.68rem;
-
-            letter-spacing: 0.12em;
-
-            text-transform:
-                uppercase;
-
-            text-decoration: none;
-
-            color: #5e6c79;
-
-            transition:
-                color 0.25s ease;
-        }
-
-
-        .back:hover {
-
-            color:
-                #174d78;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
+                var(--tbc-white);
 
             min-height:
-                88vh;
-
-            display: grid;
-
-            grid-template-columns:
-                0.9fr 1.1fr;
-
-            align-items:
-                center;
-
-            gap: 8%;
-
-            padding:
-                55px 7% 90px;
+                100vh;
         }
 
 
-        .hero-text {
+        /* =================================================
+           BOOK NAVIGATION
+           ================================================= */
 
-            max-width:
-                560px;
-        }
-
-
-        .eyebrow {
-
-            margin:
-                0 0 24px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #48677f;
-        }
-
-
-        h1 {
-
-            margin: 0;
-
-            font-size:
-                clamp(
-                    4rem,
-                    8vw,
-                    7.5rem
-                );
-
-            line-height:
-                0.87;
-
-            font-weight:
-                400;
-
-            letter-spacing:
-                -0.055em;
-
-            color:
-                #172333;
-        }
-
-
-        .subtitle {
-
-            margin-top:
-                34px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.76rem;
-
-            letter-spacing:
-                0.13em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #65737e;
-        }
-
-
-        .hero-rule {
-
-            width:
-                65px;
-
-            height:
-                2px;
-
-            margin:
-                36px 0;
+        .tbc-page nav {
 
             background:
-                #174d78;
+                var(--tbc-black);
+
+            border-color:
+                var(--tbc-border);
         }
 
-
-        .hero-text p:last-child {
-
-            max-width:
-                500px;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.9;
+        .tbc-page nav a {
 
             color:
-                #53606d;
+                var(--tbc-steel);
         }
 
-
-        /* =========================
-           IMAGE
-        ========================= */
-
-        .hero-image {
-
-            width: 100%;
-
-            height:
-                min(
-                    73vh,
-                    720px
-                );
-
-            overflow:
-                hidden;
-
-            background:
-                #d8dde2;
-        }
-
-
-        .hero-image img {
-
-            width: 100%;
-
-            height: 100%;
-
-            display: block;
-
-            object-fit: cover;
-
-            transition:
-                transform 1s ease;
-        }
-
-
-        .hero-image:hover img {
-
-            transform:
-                scale(1.015);
-        }
-
-
-        /* =========================
-           WORK INFORMATION
-        ========================= */
-
-        .work-section {
-
-            padding:
-                115px 8%;
-
-            border-top:
-                1px solid #c6ced6;
-
-            background:
-                #f6f7f8;
-        }
-
-
-        .section-label {
-
-            margin-bottom:
-                38px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
+        .tbc-page nav a:hover {
 
             color:
-                #48677f;
+                var(--tbc-white);
         }
 
-
-        .work-section h2 {
-
-            max-width:
-                850px;
-
-            margin: 0;
-
-            font-size:
-                clamp(
-                    2.1rem,
-                    4vw,
-                    3.7rem
-                );
-
-            line-height:
-                1.12;
-
-            font-weight:
-                400;
+        .tbc-page .logo {
 
             color:
-                #172333;
+                var(--tbc-white);
         }
 
 
-        .work-section p {
+        /* =================================================
+           HERO
+           ================================================= */
 
-            max-width:
-                700px;
+        .tbc-hero {
 
-            margin-top:
-                32px;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.9;
-
-            color:
-                #596571;
-        }
-
-
-        /* =========================
-           NERDY DETAILS
-        ========================= */
-
-        .details {
+            min-height:
+                calc(100vh - 85px);
 
             display:
                 grid;
 
             grid-template-columns:
-                repeat(
-                    3,
-                    1fr
-                );
-
-            margin-top:
-                85px;
-
-            border-top:
-                1px solid #c6ced6;
-
-            border-bottom:
-                1px solid #c6ced6;
-        }
-
-
-        .detail {
-
-            padding:
-                30px 24px;
-
-            border-right:
-                1px solid #c6ced6;
-        }
-
-
-        .detail:last-child {
-
-            border-right:
-                none;
-        }
-
-
-        .detail-number {
-
-            display:
-                block;
-
-            margin-bottom:
-                12px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.65rem;
-
-            letter-spacing:
-                0.14em;
-
-            color:
-                #7a8792;
-        }
-
-
-        .detail strong {
-
-            font-weight:
-                400;
-
-            font-size:
-                0.98rem;
-
-            color:
-                #26394b;
-        }
-
-
-        /* =========================
-           BLUE FEATURE
-        ========================= */
-
-        .feature {
-
-            padding:
-                120px 8%;
-
-            background:
-                #173f63;
-
-            color:
-                #edf2f5;
-        }
-
-
-        .feature-inner {
-
-            max-width:
-                850px;
-        }
-
-
-        .feature-label {
-
-            margin-bottom:
-                30px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #b9cbd9;
-        }
-
-
-        .feature h2 {
-
-            margin: 0;
-
-            max-width:
-                850px;
-
-            font-size:
-                clamp(
-                    2.5rem,
-                    5vw,
-                    5rem
-                );
-
-            line-height:
-                1;
-
-            font-weight:
-                400;
-        }
-
-
-        .feature p {
-
-            max-width:
-                640px;
-
-            margin-top:
-                32px;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.85;
-
-            color:
-                #d3dfe8;
-        }
-
-
-        /* =========================
-           STATUS
-        ========================= */
-
-        .status {
-
-            padding:
-                100px 8%;
-
-            background:
-                #dfe5ea;
-
-            border-top:
-                1px solid #c6ced6;
-        }
-
-
-        .status-label {
-
-            margin-bottom:
-                25px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #48677f;
-        }
-
-
-        .status h2 {
-
-            margin: 0;
-
-            font-size:
-                clamp(
-                    2.5rem,
-                    5vw,
-                    4.7rem
-                );
-
-            line-height:
-                1;
-
-            font-weight:
-                400;
-        }
-
-
-        .status p {
-
-            max-width:
-                620px;
-
-            margin-top:
-                30px;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.8;
-
-            color:
-                #5e6973;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-
-            padding:
-                45px 8%;
-
-            display:
-                flex;
-
-            justify-content:
-                space-between;
+                0.95fr 1.05fr;
 
             align-items:
                 center;
 
-            border-top:
-                1px solid #c6ced6;
+            gap:
+                8%;
+
+            padding:
+                80px 8% 100px;
 
             background:
-                #eef1f4;
+                var(--tbc-black);
+        }
+
+        .tbc-hero-text {
+
+            max-width:
+                650px;
+        }
+
+        .tbc-kicker {
+
+            margin:
+                0 0 28px;
 
             font-family:
                 Arial,
@@ -705,64 +158,470 @@
                 0.68rem;
 
             letter-spacing:
-                0.08em;
+                0.2em;
+
+            text-transform:
+                uppercase;
 
             color:
-                #6f7b85;
+                var(--tbc-cobalt-soft);
+        }
+
+        .tbc-hero h1 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    4rem,
+                    8vw,
+                    7.5rem
+                );
+
+            line-height:
+                0.86;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.055em;
+
+            color:
+                var(--tbc-white);
+        }
+
+        .tbc-rule {
+
+            width:
+                75px;
+
+            height:
+                2px;
+
+            margin:
+                40px 0;
+
+            background:
+                var(--tbc-cobalt);
+        }
+
+        .tbc-tagline {
+
+            max-width:
+                540px;
+
+            margin:
+                0;
+
+            font-size:
+                1.15rem;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--tbc-white-soft);
         }
 
 
-        footer a {
+        /* =================================================
+           HERO COVER
+           ================================================= */
+
+        .tbc-cover {
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            min-height:
+                650px;
+
+            background:
+                var(--tbc-prussian);
+        }
+
+        .tbc-cover img {
+
+            width:
+                100%;
+
+            height:
+                650px;
+
+            object-fit:
+                cover;
+
+            display:
+                block;
+        }
+
+        .tbc-cover-label {
+
+            position:
+                absolute;
+
+            left:
+                22px;
+
+            bottom:
+                20px;
+
+            padding:
+                8px 11px;
+
+            background:
+                rgba(
+                    8,
+                    13,
+                    19,
+                    0.92
+                );
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.61rem;
+
+            letter-spacing:
+                0.12em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--tbc-white-soft);
+        }
+
+
+        /* =================================================
+           BOOK INTRO
+           ================================================= */
+
+        .tbc-intro {
+
+            padding:
+                115px 8%;
+
+            border-top:
+                1px solid var(--tbc-border);
+
+            background:
+                var(--tbc-prussian);
+        }
+
+        .tbc-intro-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.65fr 1.35fr;
+
+            gap:
+                10%;
+        }
+
+        .tbc-intro h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.3rem,
+                    4vw,
+                    4rem
+                );
+
+            line-height:
+                1;
+
+            font-weight:
+                400;
+
+            color:
+                var(--tbc-white);
+        }
+
+        .tbc-intro-text {
+
+            max-width:
+                760px;
+        }
+
+        .tbc-intro-text p {
+
+            margin:
+                0 0 25px;
+
+            font-size:
+                1.08rem;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--tbc-white-soft);
+        }
+
+
+        /* =================================================
+           DETAILS
+           ================================================= */
+
+        .tbc-details {
+
+            padding:
+                90px 8%;
+
+            border-top:
+                1px solid var(--tbc-border);
+
+            background:
+                var(--tbc-black);
+        }
+
+        .tbc-details-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                1px;
+
+            background:
+                var(--tbc-border);
+        }
+
+        .tbc-detail {
+
+            padding:
+                35px;
+
+            background:
+                var(--tbc-black);
+        }
+
+        .tbc-detail-label {
+
+            display:
+                block;
+
+            margin-bottom:
+                15px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.62rem;
+
+            letter-spacing:
+                0.14em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--tbc-cobalt-soft);
+        }
+
+        .tbc-detail-value {
+
+            font-size:
+                1.2rem;
+
+            line-height:
+                1.5;
+
+            color:
+                var(--tbc-white);
+        }
+
+
+        /* =================================================
+           WRITING NOTE
+           ================================================= */
+
+        .tbc-note {
+
+            padding:
+                120px 8%;
+
+            border-top:
+                1px solid var(--tbc-border);
+
+            background:
+                var(--tbc-prussian);
+        }
+
+        .tbc-note-inner {
+
+            max-width:
+                900px;
+
+            margin:
+                0 auto;
+
+            text-align:
+                center;
+        }
+
+        .tbc-note-mark {
+
+            display:
+                block;
+
+            margin-bottom:
+                30px;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                3rem;
+
+            color:
+                var(--tbc-cobalt);
+        }
+
+        .tbc-note h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2rem,
+                    4vw,
+                    3.6rem
+                );
+
+            line-height:
+                1.1;
+
+            font-weight:
+                400;
+
+            color:
+                var(--tbc-white);
+        }
+
+        .tbc-note p {
+
+            max-width:
+                680px;
+
+            margin:
+                30px auto 0;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--tbc-white-soft);
+        }
+
+
+        /* =================================================
+           BACK TO WORKS
+           ================================================= */
+
+        .tbc-back {
+
+            padding:
+                75px 8%;
+
+            border-top:
+                1px solid var(--tbc-border);
+
+            background:
+                var(--tbc-black);
+        }
+
+        .tbc-back a {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                0.13em;
+
+            text-transform:
+                uppercase;
 
             text-decoration:
                 none;
 
             color:
-                #6f7b85;
+                var(--tbc-cobalt-soft);
 
             transition:
                 color 0.25s ease;
         }
 
-
-        footer a:hover {
+        .tbc-back a:hover {
 
             color:
-                #174d78;
+                var(--tbc-white);
         }
 
 
-        /* =========================
+        /* =================================================
+           FOOTER
+           ================================================= */
+
+        .tbc-page footer {
+
+            background:
+                var(--tbc-black);
+
+            border-color:
+                var(--tbc-border);
+
+            color:
+                var(--tbc-steel);
+        }
+
+
+        /* =================================================
            MOBILE
-        ========================= */
+           ================================================= */
 
         @media (max-width: 850px) {
 
-            nav {
-
-                padding:
-                    23px 6%;
-            }
-
-
-            nav a {
-
-                margin-left:
-                    15px;
-
-                font-size:
-                    0.68rem;
-            }
-
-
-            .back {
-
-                padding:
-                    24px 7% 0;
-            }
-
-
-            .hero {
+            .tbc-hero {
 
                 grid-template-columns:
                     1fr;
@@ -771,141 +630,93 @@
                     auto;
 
                 padding:
-                    55px 7% 80px;
+                    75px 7% 85px;
 
                 gap:
                     55px;
             }
 
-
-            .hero-image {
-
-                height:
-                    65vh;
+            .tbc-cover {
 
                 min-height:
-                    420px;
+                    auto;
             }
 
+            .tbc-cover img {
 
-            .work-section {
+                height:
+                    560px;
+            }
+
+            .tbc-intro {
 
                 padding:
-                    85px 7%;
+                    90px 7%;
             }
 
+            .tbc-intro-grid {
 
-            .details {
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    45px;
+            }
+
+            .tbc-details {
+
+                padding:
+                    75px 7%;
+            }
+
+            .tbc-details-grid {
 
                 grid-template-columns:
                     1fr;
             }
 
-
-            .detail {
-
-                border-right:
-                    none;
-
-                border-bottom:
-                    1px solid #c6ced6;
-            }
-
-
-            .detail:last-child {
-
-                border-bottom:
-                    none;
-            }
-
-
-            .feature {
+            .tbc-note {
 
                 padding:
-                    85px 7%;
+                    90px 7%;
             }
 
-
-            .status {
-
-                padding:
-                    80px 7%;
-            }
-
-
-            footer {
+            .tbc-back {
 
                 padding:
-                    35px 7%;
-
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
-
-                gap:
-                    12px;
+                    60px 7%;
             }
         }
 
 
         @media (max-width: 520px) {
 
-            nav {
+            .tbc-hero {
 
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
-
-                gap:
-                    18px;
+                padding:
+                    60px 7% 70px;
             }
 
-
-            nav div:last-child {
-
-                display:
-                    flex;
-
-                flex-wrap:
-                    wrap;
-
-                gap:
-                    12px;
-            }
-
-
-            nav a {
-
-                margin-left:
-                    0;
-
-                margin-right:
-                    12px;
-            }
-
-
-            h1 {
+            .tbc-hero h1 {
 
                 font-size:
                     clamp(
-                        4rem,
+                        3.5rem,
                         17vw,
-                        6.5rem
+                        5.5rem
                     );
             }
 
-
-            .hero-image {
+            .tbc-cover img {
 
                 height:
-                    55vh;
+                    460px;
+            }
 
-                min-height:
-                    360px;
+            .tbc-detail {
+
+                padding:
+                    28px;
             }
         }
 
@@ -917,7 +728,12 @@
 <body>
 
 
-    <!-- NAVIGATION -->
+<div class="tbc-page">
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
 
     <nav>
 
@@ -928,18 +744,21 @@
             Srithea Seshen
         </a>
 
-
         <div>
 
             <a href="index.html#works">
                 Works
             </a>
 
-            <a href="index.html#about">
+            <a href="about.html">
                 About
             </a>
 
-            <a href="index.html#contact">
+            <a href="writing-desk.html">
+                The Writing Desk
+            </a>
+
+            <a href="contact.html">
                 Contact
             </a>
 
@@ -949,30 +768,21 @@
 
 
 
-    <!-- BACK TO WORKS -->
-
-    <a
-        class="back"
-        href="index.html#works"
-    >
-        ← All Works
-    </a>
-
-
-
     <main>
 
 
-        <!-- HERO -->
+        <!-- =================================================
+             HERO
+             ================================================= -->
 
-        <section class="hero">
+        <section class="tbc-hero">
 
-            <div class="hero-text">
 
-                <p class="eyebrow">
-                    The Alchemy
+            <div class="tbc-hero-text">
+
+                <p class="tbc-kicker">
+                    The Alchemy · A standalone work
                 </p>
-
 
                 <h1>
                     Two<br>
@@ -980,99 +790,143 @@
                     Cells
                 </h1>
 
+                <div class="tbc-rule"></div>
 
-                <p class="subtitle">
-                    Standalone Contemporary Romance
-                </p>
-
-
-                <div class="hero-rule"></div>
-
-
-                <p>
-                    A story about two people,
-                    questionable decisions,
-                    and the inconvenient business
-                    of falling in love.
+                <p class="tbc-tagline">
+                    Two intelligent people.
+                    One complicated equation.
+                    And absolutely no idea what
+                    to do with each other.
                 </p>
 
             </div>
 
 
-            <div class="hero-image">
+
+            <div class="tbc-cover">
 
                 <img
                     src="images/two-brain-cells.jpeg"
                     alt="Two Brain Cells"
                 >
 
+                <div class="tbc-cover-label">
+                    Contemporary Romance
+                </div>
+
             </div>
 
         </section>
 
 
 
-        <!-- WORK -->
+        <!-- =================================================
+             ABOUT THE BOOK
+             ================================================= -->
 
-        <section class="work-section">
+        <section class="tbc-intro">
+
+            <div class="tbc-intro-grid">
+
+                <div>
+
+                    <h2>
+                        The book
+                    </h2>
+
+                </div>
+
+
+                <div class="tbc-intro-text">
+
+                    <p>
+                        Two Brain Cells is a contemporary
+                        romance about intelligent people,
+                        complicated feelings, and the
+                        spectacularly irrational things
+                        humans do when love enters the room.
+                    </p>
+
+                    <p>
+                        It is a story about the spaces
+                        between certainty and doubt,
+                        competence and vulnerability,
+                        friendship and something that
+                        refuses to remain friendship.
+                    </p>
+
+                    <p>
+                        Beneath the jokes, the arguments,
+                        the work, and the wonderfully
+                        inconvenient attraction is a
+                        simpler question:
+                    </p>
+
+                    <p>
+                        What happens when two people who
+                        understand almost everything
+                        finally encounter something
+                        they cannot reason their way out of?
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOOK DETAILS
+             ================================================= -->
+
+        <section class="tbc-details">
 
             <div class="section-label">
-                The Work
+                At a glance
             </div>
 
 
-            <h2>
-                A standalone story,
-                still finding its final shape.
-            </h2>
+            <div class="tbc-details-grid">
 
 
-            <p>
-                Two Brain Cells is currently being developed
-                as a standalone contemporary romance.
-                More about the story will appear here
-                when the work is ready.
-            </p>
+                <div class="tbc-detail">
 
-
-            <div class="details">
-
-
-                <div class="detail">
-
-                    <span class="detail-number">
-                        01
+                    <span class="tbc-detail-label">
+                        Genre
                     </span>
 
-                    <strong>
-                        The Alchemy
-                    </strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <span class="detail-number">
-                        02
-                    </span>
-
-                    <strong>
+                    <div class="tbc-detail-value">
                         Contemporary Romance
-                    </strong>
+                    </div>
 
                 </div>
 
 
-                <div class="detail">
+                <div class="tbc-detail">
 
-                    <span class="detail-number">
-                        03
+                    <span class="tbc-detail-label">
+                        Atmosphere
                     </span>
 
-                    <strong>
-                        Standalone
-                    </strong>
+                    <div class="tbc-detail-value">
+                        Academia · Science · Cities
+                    </div>
+
+                </div>
+
+
+                <div class="tbc-detail">
+
+                    <span class="tbc-detail-label">
+                        At its heart
+                    </span>
+
+                    <div class="tbc-detail-value">
+                        Two people learning
+                        how to be known.
+                    </div>
 
                 </div>
 
@@ -1083,27 +937,29 @@
 
 
 
-        <!-- FEATURE -->
+        <!-- =================================================
+             WRITING NOTE
+             ================================================= -->
 
-        <section class="feature">
+        <section class="tbc-note">
 
-            <div class="feature-inner">
+            <div class="tbc-note-inner">
 
-                <div class="feature-label">
-                    The Work in Progress
-                </div>
-
+                <span class="tbc-note-mark">
+                    ∴
+                </span>
 
                 <h2>
-                    Some stories need
-                    time to become themselves.
+                    The science is real.
+                    The feelings are worse.
                 </h2>
 
-
                 <p>
-                    Two Brain Cells is still being written,
-                    revised, argued with, and loved.
-                    The finished story will come when it is ready.
+                    Somewhere between laboratories,
+                    late nights, impossible schedules,
+                    terrible decisions, and two people
+                    who should probably know better,
+                    a love story happened.
                 </p>
 
             </div>
@@ -1112,25 +968,15 @@
 
 
 
-        <!-- STATUS -->
+        <!-- =================================================
+             BACK
+             ================================================= -->
 
-        <section class="status">
+        <section class="tbc-back">
 
-            <div class="status-label">
-                Current Status
-            </div>
-
-
-            <h2>
-                In progress.
-            </h2>
-
-
-            <p>
-                The manuscript is still being developed.
-                More will come when there is something
-                worth saying about it.
-            </p>
+            <a href="index.html#works">
+                ← Back to all works
+            </a>
 
         </section>
 
@@ -1138,7 +984,9 @@
 
 
 
-    <!-- FOOTER -->
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
 
     <footer>
 
@@ -1146,14 +994,17 @@
             © 2026 Srithea Seshen
         </span>
 
-
-        <a href="index.html#works">
-            ← All Works
-        </a>
+        <span>
+            Two Brain Cells
+        </span>
 
     </footer>
+
+
+</div>
 
 
 </body>
 
 </html>
+```
