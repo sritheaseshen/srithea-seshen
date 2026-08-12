@@ -10,11 +10,11 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>The Writing Desk · Srithea Seshen</title>
+    <title>Writing Desk · Srithea Seshen</title>
 
     <meta
         name="description"
-        content="The Writing Desk — essays, reading notes, observations, and fragments by Srithea Seshen."
+        content="The Writing Desk of Srithea Seshen — notes on people, stories, memory, emotion, science, and the things worth thinking about."
     >
 
     <link
@@ -22,15 +22,719 @@
         href="style.css"
     >
 
+
+    <style>
+
+        /* =================================================
+           WRITING DESK
+           ================================================= */
+
+        .desk-page {
+
+            min-height: 100vh;
+
+            background:
+                #120D0A;
+
+            color:
+                #F0E6D5;
+        }
+
+
+        /* =================================================
+           NAVIGATION
+           ================================================= */
+
+        .desk-page nav {
+
+            background:
+                #120D0A;
+
+            border-color:
+                #38271D;
+        }
+
+        .desk-page nav a {
+
+            color:
+                #A9937E;
+        }
+
+        .desk-page nav a:hover {
+
+            color:
+                #D7B88A;
+        }
+
+        .desk-page .logo {
+
+            color:
+                #F0E6D5;
+        }
+
+
+        /* =================================================
+           HERO
+           ================================================= */
+
+        .desk-hero {
+
+            padding:
+                120px 8% 135px;
+
+            border-bottom:
+                1px solid #38271D;
+
+            background:
+                #120D0A;
+        }
+
+        .desk-hero-inner {
+
+            max-width:
+                1000px;
+        }
+
+        .desk-kicker {
+
+            margin:
+                0 0 28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.67rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #B99568;
+        }
+
+        .desk-hero h1 {
+
+            margin:
+                0;
+
+            max-width:
+                850px;
+
+            font-size:
+                clamp(
+                    4rem,
+                    9vw,
+                    8rem
+                );
+
+            line-height:
+                0.88;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.055em;
+
+            color:
+                #F0E6D5;
+        }
+
+        .desk-rule {
+
+            width:
+                65px;
+
+            height:
+                2px;
+
+            margin:
+                42px 0;
+
+            background:
+                #B99568;
+        }
+
+        .desk-introduction {
+
+            max-width:
+                650px;
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    1.05rem,
+                    1.4vw,
+                    1.2rem
+                );
+
+            line-height:
+                1.95;
+
+            color:
+                #CDBEAA;
+        }
+
+
+        /* =================================================
+           DESK INTRODUCTION
+           ================================================= */
+
+        .desk-statement {
+
+            padding:
+                110px 8%;
+
+            background:
+                #1B130F;
+
+            border-bottom:
+                1px solid #38271D;
+        }
+
+        .desk-statement-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.65fr 1.35fr;
+
+            gap:
+                10%;
+        }
+
+        .desk-statement h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.2rem,
+                    4vw,
+                    3.7rem
+                );
+
+            line-height:
+                1;
+
+            font-weight:
+                400;
+
+            color:
+                #F0E6D5;
+        }
+
+        .desk-statement-text {
+
+            max-width:
+                730px;
+        }
+
+        .desk-statement-text p {
+
+            margin:
+                0 0 26px;
+
+            font-size:
+                1.06rem;
+
+            line-height:
+                1.95;
+
+            color:
+                #CDBEAA;
+        }
+
+        .desk-statement-text p:last-child {
+
+            margin-bottom:
+                0;
+        }
+
+
+        /* =================================================
+           NOTES
+           ================================================= */
+
+        .desk-notes {
+
+            padding:
+                120px 8%;
+
+            background:
+                #120D0A;
+        }
+
+        .desk-notes-heading {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                baseline;
+
+            gap:
+                30px;
+
+            padding-bottom:
+                22px;
+
+            margin-bottom:
+                50px;
+
+            border-bottom:
+                1px solid #38271D;
+        }
+
+        .desk-notes-heading h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.2rem,
+                    4vw,
+                    3.5rem
+                );
+
+            font-weight:
+                400;
+
+            color:
+                #F0E6D5;
+        }
+
+        .desk-notes-heading span {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.63rem;
+
+            letter-spacing:
+                0.13em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #8E7C6A;
+        }
+
+
+        /* =================================================
+           NOTE GRID
+           ================================================= */
+
+        .desk-note-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                1px;
+
+            background:
+                #38271D;
+        }
+
+        .desk-note {
+
+            min-height:
+                360px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                space-between;
+
+            padding:
+                35px;
+
+            background:
+                #120D0A;
+
+            text-decoration:
+                none;
+
+            color:
+                inherit;
+
+            transition:
+                background-color 0.4s ease,
+                transform 0.4s ease;
+        }
+
+        .desk-note:hover {
+
+            background:
+                #201712;
+        }
+
+        .desk-note-number {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.61rem;
+
+            letter-spacing:
+                0.14em;
+
+            color:
+                #8E7C6A;
+        }
+
+        .desk-note h3 {
+
+            margin:
+                55px 0 18px;
+
+            font-size:
+                1.8rem;
+
+            line-height:
+                1.1;
+
+            font-weight:
+                400;
+
+            color:
+                #F0E6D5;
+        }
+
+        .desk-note p {
+
+            margin:
+                0;
+
+            font-size:
+                0.95rem;
+
+            line-height:
+                1.8;
+
+            color:
+                #BBAE9C;
+        }
+
+        .desk-note-footer {
+
+            margin-top:
+                35px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.61rem;
+
+            letter-spacing:
+                0.12em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #B99568;
+        }
+
+
+        /* =================================================
+           CLOSING
+           ================================================= */
+
+        .desk-closing {
+
+            padding:
+                135px 8%;
+
+            background:
+                #241914;
+
+            border-top:
+                1px solid #38271D;
+        }
+
+        .desk-closing-inner {
+
+            max-width:
+                850px;
+
+            margin:
+                0 auto;
+
+            text-align:
+                center;
+        }
+
+        .desk-closing-mark {
+
+            display:
+                block;
+
+            margin-bottom:
+                30px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                3rem;
+
+            color:
+                #B99568;
+        }
+
+        .desk-closing h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.2rem,
+                    4vw,
+                    3.8rem
+                );
+
+            line-height:
+                1.1;
+
+            font-weight:
+                400;
+
+            color:
+                #F0E6D5;
+        }
+
+        .desk-closing p {
+
+            max-width:
+                650px;
+
+            margin:
+                30px auto 0;
+
+            font-size:
+                1.03rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #CDBEAA;
+        }
+
+
+        /* =================================================
+           FOOTER
+           ================================================= */
+
+        .desk-page footer {
+
+            background:
+                #120D0A;
+
+            border-color:
+                #38271D;
+
+            color:
+                #817263;
+        }
+
+
+        /* =================================================
+           MOBILE
+           ================================================= */
+
+        @media (max-width: 850px) {
+
+            .desk-hero {
+
+                padding:
+                    90px 7% 100px;
+            }
+
+            .desk-statement {
+
+                padding:
+                    90px 7%;
+            }
+
+            .desk-statement-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    40px;
+            }
+
+            .desk-notes {
+
+                padding:
+                    90px 7%;
+            }
+
+            .desk-note-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .desk-note {
+
+                min-height:
+                    300px;
+            }
+
+            .desk-closing {
+
+                padding:
+                    100px 7%;
+            }
+
+        }
+
+
+        @media (max-width: 520px) {
+
+            .desk-hero {
+
+                padding:
+                    70px 7% 80px;
+            }
+
+            .desk-hero h1 {
+
+                font-size:
+                    clamp(
+                        3.7rem,
+                        17vw,
+                        5.5rem
+                    );
+            }
+
+            .desk-rule {
+
+                margin:
+                    30px 0;
+            }
+
+            .desk-introduction {
+
+                font-size:
+                    0.98rem;
+
+                line-height:
+                    1.85;
+            }
+
+            .desk-statement {
+
+                padding:
+                    80px 7%;
+            }
+
+            .desk-statement-text p {
+
+                font-size:
+                    0.98rem;
+
+                line-height:
+                    1.85;
+            }
+
+            .desk-notes {
+
+                padding:
+                    80px 7%;
+            }
+
+            .desk-notes-heading {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    12px;
+            }
+
+            .desk-note {
+
+                min-height:
+                    280px;
+
+                padding:
+                    28px;
+            }
+
+            .desk-note h3 {
+
+                font-size:
+                    1.65rem;
+            }
+
+            .desk-closing {
+
+                padding:
+                    85px 7%;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- =========================
+<div class="desk-page">
+
+
+    <!-- =====================================================
          NAVIGATION
-         ========================= -->
+         ===================================================== -->
 
     <nav>
 
@@ -41,21 +745,22 @@
             Srithea Seshen
         </a>
 
+
         <div>
 
             <a href="index.html#works">
                 Works
             </a>
 
-            <a href="index.html#about">
+            <a href="about.html">
                 About
             </a>
 
             <a href="writing-desk.html">
-                The Writing Desk
+                Writing Desk
             </a>
 
-            <a href="index.html#contact">
+            <a href="contact.html">
                 Contact
             </a>
 
@@ -68,328 +773,271 @@
     <main>
 
 
-        <!-- =========================
-             PAGE INTRO
-             ========================= -->
+        <!-- =================================================
+             HERO
+             ================================================= -->
 
-        <section class="page-intro">
+        <section class="desk-hero">
 
-            <div class="section-label">
-                The Writing Desk
+
+            <div class="desk-hero-inner">
+
+                <p class="desk-kicker">
+                    The Writing Desk
+                </p>
+
+
+                <h1>
+                    Things worth
+                    thinking about.
+                </h1>
+
+
+                <div class="desk-rule"></div>
+
+
+                <p class="desk-introduction">
+                    Notes on people, stories, memory,
+                    emotion, science, and the strange
+                    things that happen when one human
+                    being meets another.
+                </p>
+
             </div>
-
-            <h1>
-                Thoughts<br>
-                worth keeping.
-            </h1>
-
-            <p>
-                Notes on people, stories, books,
-                science, mythology, and the strange
-                questions that refuse to leave quietly.
-            </p>
 
         </section>
 
 
 
-        <!-- =========================
-             WRITING DESK
-             ========================= -->
+        <!-- =================================================
+             STATEMENT
+             ================================================= -->
 
-        <section class="writing-desk">
+        <section class="desk-statement">
 
 
-            <!-- =========================
-                 ESSAYS
-                 ========================= -->
+            <div class="desk-statement-grid">
 
-            <div class="desk-section">
 
-                <div class="desk-section-heading">
+                <div>
 
                     <h2>
-                        Essays
+                        Before the plot.
                     </h2>
 
-                    <span>
-                        People before plots
-                    </span>
-
                 </div>
 
 
-                <div class="desk-entry">
 
-                    <div class="entry-type">
-                        Essay
-                    </div>
+                <div class="desk-statement-text">
 
-                    <div class="entry-content">
-
-                        <h3>
-                            The Cost of Regret
-                        </h3>
-
-                        <p class="entry-description">
-                            On mistakes, consequence,
-                            growth, and why regret may
-                            be less useful than the courage
-                            to begin again.
-                        </p>
-
-                        <span class="entry-status">
-                            Coming later
-                        </span>
-
-                    </div>
-
-                </div>
+                    <p>
+                        Fiction begins with people.
+                    </p>
 
 
-                <div class="desk-entry">
+                    <p>
+                        The plot may decide what happens
+                        to them. Character decides what
+                        those events mean.
+                    </p>
 
-                    <div class="entry-type">
-                        Essay
-                    </div>
 
-                    <div class="entry-content">
+                    <p>
+                        The Writing Desk is where the
+                        questions behind the stories get
+                        to remain questions for a while:
+                        why people stay, why they leave,
+                        what they forgive, what they cannot,
+                        and how a person becomes someone
+                        they did not expect to be.
+                    </p>
 
-                        <h3>
-                            People Before Plots
-                        </h3>
 
-                        <p class="entry-description">
-                            Why the most interesting stories
-                            often begin with a person rather
-                            than a plot.
-                        </p>
-
-                        <span class="entry-status">
-                            Coming later
-                        </span>
-
-                    </div>
+                    <p>
+                        Some notes will become stories.
+                        Some will become nothing at all.
+                        That is part of the point.
+                    </p>
 
                 </div>
 
             </div>
 
+        </section>
 
 
-            <!-- =========================
-                 READING NOTES
-                 ========================= -->
 
-            <div class="desk-section">
+        <!-- =================================================
+             NOTES
+             ================================================= -->
 
-                <div class="desk-section-heading">
-
-                    <h2>
-                        Reading Notes
-                    </h2>
-
-                    <span>
-                        Books · Texts · Ideas
-                    </span>
-
-                </div>
+        <section class="desk-notes">
 
 
-                <div class="desk-entry">
+            <div class="desk-notes-heading">
 
-                    <div class="entry-type">
-                        Reading Note
-                    </div>
+                <h2>
+                    From the desk
+                </h2>
 
-                    <div class="entry-content">
-
-                        <h3>
-                            Reading the Linga Purana
-                        </h3>
-
-                        <p class="entry-description">
-                            Notes from reading an ancient text
-                            through the overlapping lenses of
-                            mythology, philosophy, storytelling,
-                            and a scientist's curiosity.
-                        </p>
-
-                        <span class="entry-status">
-                            In progress
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="desk-entry">
-
-                    <div class="entry-type">
-                        Reading Note
-                    </div>
-
-                    <div class="entry-content">
-
-                        <h3>
-                            What Ancient Stories Remember
-                        </h3>
-
-                        <p class="entry-description">
-                            On memory, myth, repetition,
-                            and why stories survive long
-                            after the people who first told
-                            them are gone.
-                        </p>
-
-                        <span class="entry-status">
-                            Coming later
-                        </span>
-
-                    </div>
-
-                </div>
+                <span>
+                    Notes · Fragments · Questions
+                </span>
 
             </div>
 
 
 
-            <!-- =========================
-                 SCIENCE & STORYTELLING
-                 ========================= -->
+            <div class="desk-note-grid">
 
-            <div class="desk-section">
 
-                <div class="desk-section-heading">
+                <!-- NOTE ONE -->
 
-                    <h2>
-                        Science &amp; Storytelling
-                    </h2>
+                <a
+                    class="desk-note"
+                    href="#"
+                >
 
-                    <span>
-                        Observation · Interpretation
+                    <span class="desk-note-number">
+                        01
                     </span>
 
-                </div>
 
-
-                <div class="desk-entry">
-
-                    <div class="entry-type">
-                        Note
-                    </div>
-
-                    <div class="entry-content">
+                    <div>
 
                         <h3>
-                            Observation Before Interpretation
+                            Why people hurt
+                            the people they love.
                         </h3>
 
-                        <p class="entry-description">
-                            What science teaches about looking
-                            carefully before deciding what
-                            something means.
+
+                        <p>
+                            A note on intimacy, fear,
+                            self-protection, and the
+                            strange distance between
+                            intention and consequence.
                         </p>
 
-                        <span class="entry-status">
-                            Coming later
-                        </span>
-
                     </div>
 
-                </div>
+
+                    <span class="desk-note-footer">
+                        Read the note →
+                    </span>
+
+                </a>
 
 
-                <div class="desk-entry">
 
-                    <div class="entry-type">
-                        Note
-                    </div>
+                <!-- NOTE TWO -->
 
-                    <div class="entry-content">
+                <a
+                    class="desk-note"
+                    href="#"
+                >
+
+                    <span class="desk-note-number">
+                        02
+                    </span>
+
+
+                    <div>
 
                         <h3>
-                            The Scientist Who Writes About People
+                            Falling is part
+                            of becoming.
                         </h3>
 
-                        <p class="entry-description">
-                            Somewhere between molecules,
-                            memory, behaviour, and the stories
-                            people tell about themselves.
-                        </p>
 
-                        <span class="entry-status">
-                            Coming later
-                        </span>
+                        <p>
+                            On failure, regret, growth,
+                            and the uncomfortable work
+                            of getting back up.
+                        </p>
 
                     </div>
 
-                </div>
+
+                    <span class="desk-note-footer">
+                        Read the note →
+                    </span>
+
+                </a>
+
+
+
+                <!-- NOTE THREE -->
+
+                <a
+                    class="desk-note"
+                    href="#"
+                >
+
+                    <span class="desk-note-number">
+                        03
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            The scientist
+                            who writes people.
+                        </h3>
+
+
+                        <p>
+                            Observation, behaviour,
+                            patterns, contradiction —
+                            and what science teaches
+                            about looking closely.
+                        </p>
+
+                    </div>
+
+
+                    <span class="desk-note-footer">
+                        Read the note →
+                    </span>
+
+                </a>
 
             </div>
 
+        </section>
 
 
-            <!-- =========================
-                 NOTEBOOK
-                 ========================= -->
 
-            <div class="desk-section">
+        <!-- =================================================
+             CLOSING
+             ================================================= -->
 
-                <div class="desk-section-heading">
-
-                    <h2>
-                        Notebook
-                    </h2>
-
-                    <span>
-                        Fragments
-                    </span>
-
-                </div>
+        <section class="desk-closing">
 
 
-                <p class="notebook-intro">
-                    Not everything needs to become an essay.
-                    Some thoughts are better left small.
+            <div class="desk-closing-inner">
+
+                <span class="desk-closing-mark">
+                    ❧
+                </span>
+
+
+                <h2>
+                    The stories are fictional.
+                    The people are not.
+                </h2>
+
+
+                <p>
+                    Every story begins somewhere in the
+                    real world — in a conversation,
+                    a mistake, a memory, a stranger's
+                    expression, a relationship that
+                    changed something.
                 </p>
 
-
-                <div class="notebook-note">
-
-                    <p>
-                        To grow, one must fall.
-                        The difficult part is deciding
-                        to get up before the fall becomes
-                        an identity.
-                    </p>
-
-                    <span>
-                        Notebook · Srithea Seshen
-                    </span>
-
-                </div>
-
-
-                <div class="notebook-note">
-
-                    <p>
-                        Perhaps the most honest version
-                        of a person is not who they are
-                        when everything is going well,
-                        but what they choose after
-                        something has broken.
-                    </p>
-
-                    <span>
-                        Notebook · Srithea Seshen
-                    </span>
-
-                </div>
-
             </div>
-
 
         </section>
 
@@ -397,39 +1045,9 @@
 
 
 
-    <!-- =========================
-         CONTACT
-         ========================= -->
-
-    <section
-        class="contact"
-        id="contact"
-    >
-
-        <h2>
-            Contact
-        </h2>
-
-        <p>
-            For literary enquiries, collaborations,
-            publishing opportunities, or professional
-            correspondence:
-        </p>
-
-        <a
-            class="contact-email"
-            href="mailto:sritheaseshen@proton.me"
-        >
-            sritheaseshen@proton.me
-        </a>
-
-    </section>
-
-
-
-    <!-- =========================
+    <!-- =====================================================
          FOOTER
-         ========================= -->
+         ===================================================== -->
 
     <footer>
 
@@ -437,11 +1055,15 @@
             © 2026 Srithea Seshen
         </span>
 
+
         <span>
             Love · Memory · What Remains
         </span>
 
     </footer>
+
+
+</div>
 
 
 </body>
