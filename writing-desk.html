@@ -10,200 +10,155 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Writing Desk · Srithea Seshen</title>
+    <title>Writing Desk — Srithea Seshen</title>
 
     <meta
         name="description"
-        content="The Writing Desk of Srithea Seshen — notes on people, stories, memory, emotion, science, and the things worth thinking about."
+        content="The Writing Desk of Srithea Seshen — notes on people, emotion, memory, science, mythology, and the questions behind fiction."
     >
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
 
     <style>
 
-        ```css
-/* =========================================================
-   5.6B — WRITING DESK → WORKS
-   ========================================================= */
+        * {
+            box-sizing:
+                border-box;
+        }
 
-.desk-work-link {
+        html {
+            scroll-behavior:
+                smooth;
+        }
 
-    padding:
-        105px 8%;
-
-    border-top:
-        1px solid #38271D;
-
-    background:
-        #120D0A;
-}
-
-.desk-work-link-inner {
-
-    max-width:
-        850px;
-
-    margin:
-        0 auto;
-
-    text-align:
-        center;
-}
-
-.desk-work-link-inner > span {
-
-    display:
-        block;
-
-    margin-bottom:
-        25px;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size:
-        0.63rem;
-
-    letter-spacing:
-        0.18em;
-
-    text-transform:
-        uppercase;
-
-    color:
-        #8E7C6A;
-}
-
-.desk-work-link h2 {
-
-    margin:
-        0;
-
-    font-size:
-        clamp(
-            2.3rem,
-            4vw,
-            3.8rem
-        );
-
-    line-height:
-        1.05;
-
-    font-weight:
-        400;
-
-    color:
-        #F0E6D5;
-}
-
-.desk-work-link a {
-
-    display:
-        inline-block;
-
-    margin-top:
-        30px;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size:
-        0.66rem;
-
-    letter-spacing:
-        0.13em;
-
-    text-transform:
-        uppercase;
-
-    text-decoration:
-        none;
-
-    color:
-        #B99568;
-}
-
-@media (max-width: 520px) {
-
-    .desk-work-link {
-
-        padding:
-            80px 7%;
-    }
-
-    .desk-work-link h2 {
-
-        font-size:
-            2.4rem;
-    }
-
-}
-
-
-        /* =================================================
-           NAVIGATION
-           ================================================= */
-
-        .desk-page nav {
+        body {
+            margin:
+                0;
 
             background:
-                #120D0A;
-
-            border-color:
-                #38271D;
-        }
-
-        .desk-page nav a {
+                #211610;
 
             color:
-                #A9937E;
+                #F0E5D2;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            line-height:
+                1.7;
+
+            -webkit-font-smoothing:
+                antialiased;
+
+            -moz-osx-font-smoothing:
+                grayscale;
         }
 
-        .desk-page nav a:hover {
+        a {
+            color:
+                inherit;
+        }
 
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            padding:
+                28px 7%;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-bottom:
+                1px solid #4A3427;
+
+            background:
+                #211610;
+
+            position:
+                relative;
+
+            z-index:
+                10;
+        }
+
+        .logo {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.85rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #F0E5D2;
+        }
+
+        nav a {
+            margin-left:
+                30px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.72rem;
+
+            letter-spacing:
+                0.08em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #CDBEAA;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        nav a:hover {
             color:
                 #D7B88A;
         }
 
-        .desk-page .logo {
 
-            color:
-                #F0E6D5;
-        }
-
-
-        /* =================================================
+        /* =========================
            HERO
-           ================================================= */
+        ========================= */
 
         .desk-hero {
-
             padding:
-                120px 8% 135px;
+                125px 8% 110px;
 
             border-bottom:
-                1px solid #38271D;
-
-            background:
-                #120D0A;
+                1px solid #4A3427;
         }
 
-        .desk-hero-inner {
-
-            max-width:
-                1000px;
-        }
-
-        .desk-kicker {
-
+        .desk-label {
             margin:
                 0 0 28px;
 
@@ -213,7 +168,7 @@
                 sans-serif;
 
             font-size:
-                0.67rem;
+                0.65rem;
 
             letter-spacing:
                 0.2em;
@@ -226,12 +181,11 @@
         }
 
         .desk-hero h1 {
+            max-width:
+                1000px;
 
             margin:
                 0;
-
-            max-width:
-                850px;
 
             font-size:
                 clamp(
@@ -248,142 +202,36 @@
 
             letter-spacing:
                 -0.055em;
-
-            color:
-                #F0E6D5;
         }
 
-        .desk-rule {
-
-            width:
-                65px;
-
-            height:
-                2px;
-
-            margin:
-                42px 0;
-
-            background:
-                #B99568;
-        }
-
-        .desk-introduction {
-
+        .desk-hero-intro {
             max-width:
                 650px;
 
             margin:
-                0;
+                45px 0 0;
 
             font-size:
-                clamp(
-                    1.05rem,
-                    1.4vw,
-                    1.2rem
-                );
+                1.08rem;
 
             line-height:
-                1.95;
+                1.9;
 
             color:
                 #CDBEAA;
         }
 
 
-        /* =================================================
-           DESK INTRODUCTION
-           ================================================= */
-
-        .desk-statement {
-
-            padding:
-                110px 8%;
-
-            background:
-                #1B130F;
-
-            border-bottom:
-                1px solid #38271D;
-        }
-
-        .desk-statement-grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                0.65fr 1.35fr;
-
-            gap:
-                10%;
-        }
-
-        .desk-statement h2 {
-
-            margin:
-                0;
-
-            font-size:
-                clamp(
-                    2.2rem,
-                    4vw,
-                    3.7rem
-                );
-
-            line-height:
-                1;
-
-            font-weight:
-                400;
-
-            color:
-                #F0E6D5;
-        }
-
-        .desk-statement-text {
-
-            max-width:
-                730px;
-        }
-
-        .desk-statement-text p {
-
-            margin:
-                0 0 26px;
-
-            font-size:
-                1.06rem;
-
-            line-height:
-                1.95;
-
-            color:
-                #CDBEAA;
-        }
-
-        .desk-statement-text p:last-child {
-
-            margin-bottom:
-                0;
-        }
-
-
-        /* =================================================
+        /* =========================
            NOTES
-           ================================================= */
+        ========================= */
 
         .desk-notes {
-
             padding:
-                120px 8%;
-
-            background:
-                #120D0A;
+                110px 8%;
         }
 
-        .desk-notes-heading {
-
+        .notes-header {
             display:
                 flex;
 
@@ -396,37 +244,32 @@
             gap:
                 30px;
 
-            padding-bottom:
-                22px;
-
             margin-bottom:
-                50px;
+                55px;
+
+            padding-bottom:
+                20px;
 
             border-bottom:
-                1px solid #38271D;
+                1px solid #4A3427;
         }
 
-        .desk-notes-heading h2 {
-
+        .notes-header h2 {
             margin:
                 0;
 
             font-size:
                 clamp(
-                    2.2rem,
+                    2rem,
                     4vw,
-                    3.5rem
+                    3.4rem
                 );
 
             font-weight:
                 400;
-
-            color:
-                #F0E6D5;
         }
 
-        .desk-notes-heading span {
-
+        .notes-header span {
             font-family:
                 Arial,
                 Helvetica,
@@ -436,22 +279,21 @@
                 0.63rem;
 
             letter-spacing:
-                0.13em;
+                0.15em;
 
             text-transform:
                 uppercase;
 
             color:
-                #8E7C6A;
+                #806D5E;
         }
 
 
-        /* =================================================
+        /* =========================
            NOTE GRID
-           ================================================= */
+        ========================= */
 
-        .desk-note-grid {
-
+        .note-grid {
             display:
                 grid;
 
@@ -462,16 +304,15 @@
                 );
 
             gap:
-                1px;
-
-            background:
-                #38271D;
+                35px;
         }
 
-        .desk-note {
-
+        .note {
             min-height:
-                360px;
+                390px;
+
+            padding:
+                32px;
 
             display:
                 flex;
@@ -482,83 +323,80 @@
             justify-content:
                 space-between;
 
-            padding:
-                35px;
+            border:
+                1px solid #4A3427;
 
             background:
-                #120D0A;
-
-            text-decoration:
-                none;
-
-            color:
-                inherit;
+                #281A13;
 
             transition:
-                background-color 0.4s ease,
-                transform 0.4s ease;
+                transform 0.35s ease,
+                border-color 0.35s ease,
+                background-color 0.35s ease;
         }
 
-        .desk-note:hover {
+        .note:hover {
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #765039;
 
             background:
-                #201712;
+                #2D1E16;
         }
 
-        .desk-note-number {
-
+        .note-number {
             font-family:
                 Arial,
                 Helvetica,
                 sans-serif;
 
             font-size:
-                0.61rem;
+                0.62rem;
 
             letter-spacing:
-                0.14em;
+                0.16em;
 
             color:
-                #8E7C6A;
+                #806D5E;
         }
 
-        .desk-note h3 {
-
+        .note h3 {
             margin:
-                55px 0 18px;
+                35px 0 18px;
 
             font-size:
-                1.8rem;
+                clamp(
+                    1.7rem,
+                    2.5vw,
+                    2.35rem
+                );
 
             line-height:
-                1.1;
+                1.08;
 
             font-weight:
                 400;
-
-            color:
-                #F0E6D5;
         }
 
-        .desk-note p {
-
+        .note p {
             margin:
                 0;
 
             font-size:
-                0.95rem;
+                0.97rem;
 
             line-height:
-                1.8;
+                1.85;
 
             color:
-                #BBAE9C;
+                #CDBEAA;
         }
 
-        .desk-note-footer {
-
+        .note-topic {
             margin-top:
-                35px;
+                30px;
 
             font-family:
                 Arial,
@@ -566,10 +404,10 @@
                 sans-serif;
 
             font-size:
-                0.61rem;
+                0.6rem;
 
             letter-spacing:
-                0.12em;
+                0.13em;
 
             text-transform:
                 uppercase;
@@ -579,24 +417,109 @@
         }
 
 
-        /* =================================================
-           CLOSING
-           ================================================= */
+        /* =========================
+           PHILOSOPHY
+        ========================= */
 
-        .desk-closing {
-
+        .desk-statement {
             padding:
-                135px 8%;
+                125px 8%;
 
             background:
-                #241914;
+                #F0E5D2;
 
-            border-top:
-                1px solid #38271D;
+            color:
+                #261B15;
         }
 
-        .desk-closing-inner {
+        .desk-statement-inner {
+            max-width:
+                900px;
 
+            margin:
+                0 auto;
+
+            text-align:
+                center;
+        }
+
+        .desk-statement-label {
+            margin-bottom:
+                28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.63rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #876746;
+        }
+
+        .desk-statement h2 {
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.5rem,
+                    5vw,
+                    4.8rem
+                );
+
+            line-height:
+                1.04;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.035em;
+        }
+
+        .desk-statement p {
+            max-width:
+                680px;
+
+            margin:
+                35px auto 0;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #66574B;
+        }
+
+
+        /* =========================
+           WORKS LINK
+        ========================= */
+
+        .desk-work-link {
+            padding:
+                110px 8%;
+
+            border-top:
+                1px solid #4A3427;
+
+            background:
+                #160E0A;
+        }
+
+        .desk-work-link-inner {
             max-width:
                 850px;
 
@@ -607,193 +530,185 @@
                 center;
         }
 
-        .desk-closing-mark {
-
+        .desk-work-link-inner > span {
             display:
                 block;
 
             margin-bottom:
-                30px;
+                25px;
 
             font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-size:
-                3rem;
+                0.63rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
 
             color:
-                #B99568;
+                #806D5E;
         }
 
-        .desk-closing h2 {
-
+        .desk-work-link h2 {
             margin:
                 0;
 
             font-size:
                 clamp(
-                    2.2rem,
+                    2.3rem,
                     4vw,
                     3.8rem
                 );
 
             line-height:
-                1.1;
+                1.05;
 
             font-weight:
                 400;
 
             color:
-                #F0E6D5;
+                #F0E5D2;
         }
 
-        .desk-closing p {
+        .desk-work-link a {
+            display:
+                inline-block;
 
-            max-width:
-                650px;
+            margin-top:
+                30px;
 
-            margin:
-                30px auto 0;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-size:
-                1.03rem;
+                0.66rem;
 
-            line-height:
-                1.9;
+            letter-spacing:
+                0.13em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
 
             color:
-                #CDBEAA;
+                #D7B88A;
+        }
+
+        .desk-work-link a:hover {
+            color:
+                #E4CFA9;
         }
 
 
-        /* =================================================
+        /* =========================
            FOOTER
-           ================================================= */
+        ========================= */
 
-        .desk-page footer {
+        footer {
+            padding:
+                42px 8%;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-top:
+                1px solid #4A3427;
 
             background:
-                #120D0A;
+                #211610;
 
-            border-color:
-                #38271D;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.67rem;
+
+            letter-spacing:
+                0.08em;
 
             color:
-                #817263;
+                #806D5E;
         }
 
 
-        /* =================================================
+        /* =========================
            MOBILE
-           ================================================= */
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .note-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .note {
+                min-height:
+                    auto;
+
+                padding:
+                    30px;
+            }
+
+        }
+
 
         @media (max-width: 850px) {
 
-            .desk-hero {
-
+            nav {
                 padding:
-                    90px 7% 100px;
+                    23px 6%;
             }
 
-            .desk-statement {
+            nav a {
+                margin-left:
+                    15px;
 
+                font-size:
+                    0.68rem;
+            }
+
+            .desk-hero {
                 padding:
                     90px 7%;
             }
 
-            .desk-statement-grid {
-
-                grid-template-columns:
-                    1fr;
-
-                gap:
-                    40px;
-            }
-
             .desk-notes {
-
                 padding:
                     90px 7%;
             }
 
-            .desk-note-grid {
-
-                grid-template-columns:
-                    1fr;
-            }
-
-            .desk-note {
-
-                min-height:
-                    300px;
-            }
-
-            .desk-closing {
-
-                padding:
-                    100px 7%;
-            }
-
-        }
-
-
-        @media (max-width: 520px) {
-
-            .desk-hero {
-
-                padding:
-                    70px 7% 80px;
-            }
-
-            .desk-hero h1 {
-
-                font-size:
-                    clamp(
-                        3.7rem,
-                        17vw,
-                        5.5rem
-                    );
-            }
-
-            .desk-rule {
-
-                margin:
-                    30px 0;
-            }
-
-            .desk-introduction {
-
-                font-size:
-                    0.98rem;
-
-                line-height:
-                    1.85;
-            }
-
             .desk-statement {
-
                 padding:
-                    80px 7%;
+                    90px 7%;
             }
 
-            .desk-statement-text p {
-
-                font-size:
-                    0.98rem;
-
-                line-height:
-                    1.85;
-            }
-
-            .desk-notes {
-
+            .desk-work-link {
                 padding:
-                    80px 7%;
+                    85px 7%;
             }
 
-            .desk-notes-heading {
+            footer {
+                padding:
+                    35px 7%;
 
                 flex-direction:
                     column;
@@ -805,25 +720,75 @@
                     12px;
             }
 
-            .desk-note {
+        }
 
-                min-height:
-                    280px;
 
-                padding:
-                    28px;
+        @media (max-width: 520px) {
+
+            nav {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    18px;
             }
 
-            .desk-note h3 {
+            nav div:last-child {
+                display:
+                    flex;
 
+                flex-wrap:
+                    wrap;
+
+                gap:
+                    12px;
+            }
+
+            nav a {
+                margin-left:
+                    0;
+
+                margin-right:
+                    12px;
+            }
+
+            .desk-hero h1 {
                 font-size:
-                    1.65rem;
+                    4rem;
             }
 
-            .desk-closing {
+            .desk-hero-intro {
+                font-size:
+                    1rem;
+            }
 
+            .notes-header {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    10px;
+            }
+
+            .note {
                 padding:
-                    85px 7%;
+                    27px;
+            }
+
+            .desk-statement h2 {
+                font-size:
+                    2.6rem;
+            }
+
+            .desk-work-link h2 {
+                font-size:
+                    2.5rem;
             }
 
         }
@@ -836,12 +801,7 @@
 <body>
 
 
-<div class="desk-page">
-
-
-    <!-- =====================================================
-         NAVIGATION
-         ===================================================== -->
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -851,7 +811,6 @@
         >
             Srithea Seshen
         </a>
-
 
         <div>
 
@@ -876,273 +835,190 @@
     </nav>
 
 
-
     <main>
 
 
-        <!-- =================================================
-             HERO
-             ================================================= -->
+        <!-- HERO -->
 
         <section class="desk-hero">
 
-
-            <div class="desk-hero-inner">
-
-                <p class="desk-kicker">
-                    The Writing Desk
-                </p>
-
-
-                <h1>
-                    Things worth
-                    thinking about.
-                </h1>
-
-
-                <div class="desk-rule"></div>
-
-
-                <p class="desk-introduction">
-                    Notes on people, stories, memory,
-                    emotion, science, and the strange
-                    things that happen when one human
-                    being meets another.
-                </p>
-
+            <div class="desk-label">
+                The Writing Desk
             </div>
+
+            <h1>
+                Before the stories,
+                there are people.
+            </h1>
+
+            <p class="desk-hero-intro">
+                Notes on emotion, behaviour, memory,
+                science, mythology, and the strange
+                ways humans find one another.
+            </p>
 
         </section>
 
 
-
-        <!-- =================================================
-             STATEMENT
-             ================================================= -->
-
-        <section class="desk-statement">
-
-
-            <div class="desk-statement-grid">
-
-
-                <div>
-
-                    <h2>
-                        Before the plot.
-                    </h2>
-
-                </div>
-
-
-
-                <div class="desk-statement-text">
-
-                    <p>
-                        Fiction begins with people.
-                    </p>
-
-
-                    <p>
-                        The plot may decide what happens
-                        to them. Character decides what
-                        those events mean.
-                    </p>
-
-
-                    <p>
-                        The Writing Desk is where the
-                        questions behind the stories get
-                        to remain questions for a while:
-                        why people stay, why they leave,
-                        what they forgive, what they cannot,
-                        and how a person becomes someone
-                        they did not expect to be.
-                    </p>
-
-
-                    <p>
-                        Some notes will become stories.
-                        Some will become nothing at all.
-                        That is part of the point.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             NOTES
-             ================================================= -->
+        <!-- NOTES -->
 
         <section class="desk-notes">
 
-
-            <div class="desk-notes-heading">
+            <div class="notes-header">
 
                 <h2>
-                    From the desk
+                    Notes
                 </h2>
 
                 <span>
-                    Notes · Fragments · Questions
+                    Observations in progress
                 </span>
 
             </div>
 
 
+            <div class="note-grid">
 
-            <div class="desk-note-grid">
 
-
-                <!-- NOTE ONE -->
-
-                <a
-                    class="desk-note"
-                    href="#"
-                >
-
-                    <span class="desk-note-number">
-                        01
-                    </span>
-
+                <article class="note">
 
                     <div>
 
+                        <div class="note-number">
+                            01
+                        </div>
+
                         <h3>
-                            Why people hurt
-                            the people they love.
+                            On why people
+                            stay.
                         </h3>
 
-
                         <p>
-                            A note on intimacy, fear,
-                            self-protection, and the
-                            strange distance between
-                            intention and consequence.
+                            Sometimes leaving is easier than
+                            admitting what staying would require.
+                            Fiction begins in the uncomfortable
+                            space between those two truths.
                         </p>
 
                     </div>
 
+                    <div class="note-topic">
+                        People · Choice
+                    </div>
 
-                    <span class="desk-note-footer">
-                        Read the note →
-                    </span>
-
-                </a>
-
+                </article>
 
 
-                <!-- NOTE TWO -->
-
-                <a
-                    class="desk-note"
-                    href="#"
-                >
-
-                    <span class="desk-note-number">
-                        02
-                    </span>
-
+                <article class="note">
 
                     <div>
 
+                        <div class="note-number">
+                            02
+                        </div>
+
                         <h3>
-                            Falling is part
-                            of becoming.
+                            The things we
+                            carry.
                         </h3>
 
-
                         <p>
-                            On failure, regret, growth,
-                            and the uncomfortable work
-                            of getting back up.
+                            Memory is rarely a perfect archive.
+                            We remember selectively, emotionally,
+                            and often in ways that reveal more
+                            about who we are now than who we were.
                         </p>
 
                     </div>
 
+                    <div class="note-topic">
+                        Memory · Identity
+                    </div>
 
-                    <span class="desk-note-footer">
-                        Read the note →
-                    </span>
-
-                </a>
-
+                </article>
 
 
-                <!-- NOTE THREE -->
-
-                <a
-                    class="desk-note"
-                    href="#"
-                >
-
-                    <span class="desk-note-number">
-                        03
-                    </span>
-
+                <article class="note">
 
                     <div>
 
+                        <div class="note-number">
+                            03
+                        </div>
+
                         <h3>
-                            The scientist
-                            who writes people.
+                            Looking beneath
+                            the visible.
                         </h3>
 
-
                         <p>
-                            Observation, behaviour,
-                            patterns, contradiction —
-                            and what science teaches
-                            about looking closely.
+                            Science teaches a particular kind
+                            of attention: observe what is there,
+                            question what appears obvious, and
+                            remain curious about what cannot yet
+                            be seen.
                         </p>
 
                     </div>
 
+                    <div class="note-topic">
+                        Science · Curiosity
+                    </div>
 
-                    <span class="desk-note-footer">
-                        Read the note →
-                    </span>
+                </article>
 
-                </a>
 
             </div>
 
         </section>
 
 
+        <!-- STATEMENT -->
 
-        <!-- =================================================
-             CLOSING
-             ================================================= -->
+        <section class="desk-statement">
 
-        <section class="desk-closing">
+            <div class="desk-statement-inner">
 
-
-            <div class="desk-closing-inner">
-
-                <span class="desk-closing-mark">
-                    ❧
-                </span>
-
+                <div class="desk-statement-label">
+                    A working philosophy
+                </div>
 
                 <h2>
-                    The stories are fictional.
-                    The people are not.
+                    Fiction about people
+                    before plots.
                 </h2>
 
-
                 <p>
-                    Every story begins somewhere in the
-                    real world — in a conversation,
-                    a mistake, a memory, a stranger's
-                    expression, a relationship that
-                    changed something.
+                    The stories begin with human beings:
+                    their contradictions, their private
+                    histories, their desires, their mistakes,
+                    and the choices that change what comes
+                    after. Plot is what happens. People are
+                    why it matters.
                 </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- WORKS -->
+
+        <section class="desk-work-link">
+
+            <div class="desk-work-link-inner">
+
+                <span>
+                    When the thinking becomes fiction
+                </span>
+
+                <h2>
+                    Explore the stories.
+                </h2>
+
+                <a href="index.html#works">
+                    View the works →
+                </a>
 
             </div>
 
@@ -1151,10 +1027,7 @@
     </main>
 
 
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -1162,15 +1035,11 @@
             © 2026 Srithea Seshen
         </span>
 
-
         <span>
             Love · Memory · What Remains
         </span>
 
     </footer>
-
-
-</div>
 
 
 </body>
