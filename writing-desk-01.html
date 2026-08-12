@@ -28,7 +28,6 @@
 
         /* =====================================================
            WRITING DESK — ENTRY 01
-           Horizontal editorial reading layout
         ===================================================== */
 
         .desk-entry-header {
@@ -151,7 +150,7 @@
 
 
         /* =====================================================
-           ESSAY
+           ESSAY CONTAINER
         ===================================================== */
 
         .desk-entry {
@@ -159,16 +158,25 @@
                 0 8% 120px;
         }
 
+
+        /* =====================================================
+           EACH MOVEMENT
+        ===================================================== */
+
         .desk-entry-section {
+
             display:
                 grid;
 
             grid-template-columns:
-                minmax(220px, 25%)
-                minmax(0, 1fr);
+                280px
+                minmax(0, 820px);
 
             column-gap:
-                9%;
+                90px;
+
+            align-items:
+                start;
 
             max-width:
                 1500px;
@@ -177,45 +185,36 @@
                 0 auto;
 
             padding:
-                105px 0 115px;
+                105px 0 110px;
 
             border-bottom:
                 1px solid #4A3427;
         }
 
-        .desk-entry-section:last-of-type {
-            border-bottom:
-                none;
-
-            padding-bottom:
-                95px;
-        }
-
 
         /* =====================================================
-           MOVEMENT LABEL
+           LEFT SIDE — MOVEMENT TITLE
         ===================================================== */
 
         .desk-entry-section-label {
-            align-self:
-                start;
+
+            display:
+                block;
 
             position:
-                sticky;
+                static;
 
-            top:
-                40px;
-
-            padding-top:
-                5px;
+            padding:
+                0;
         }
 
         .desk-entry-section-number {
+
             display:
                 block;
 
             margin-bottom:
-                18px;
+                20px;
 
             font-family:
                 Arial,
@@ -233,17 +232,18 @@
         }
 
         .desk-entry-section h2 {
-            max-width:
-                280px;
 
             margin:
                 0;
 
+            max-width:
+                260px;
+
             font-size:
                 clamp(
-                    1.45rem,
-                    2.3vw,
-                    2.2rem
+                    1.55rem,
+                    2.2vw,
+                    2.25rem
                 );
 
             line-height:
@@ -253,7 +253,7 @@
                 400;
 
             letter-spacing:
-                -0.02em;
+                -0.025em;
 
             color:
                 #B99568;
@@ -261,23 +261,28 @@
 
 
         /* =====================================================
-           PROSE
+           RIGHT SIDE — PROSE
         ===================================================== */
 
         .desk-entry-content {
+
+            width:
+                100%;
+
             max-width:
-                780px;
+                820px;
         }
 
         .desk-entry-content p {
+
             margin:
-                0 0 1.45em;
+                0 0 1.55em;
 
             font-size:
                 1.08rem;
 
             line-height:
-                1.78;
+                1.82;
 
             letter-spacing:
                 0.002em;
@@ -292,6 +297,7 @@
         }
 
         .desk-entry-content em {
+
             color:
                 #F0E5D2;
 
@@ -301,29 +307,11 @@
 
 
         /* =====================================================
-           QUIET SENTENCE EMPHASIS
-        ===================================================== */
-
-        .desk-entry-content .emphasis {
-            margin:
-                42px 0;
-
-            font-size:
-                1.32rem;
-
-            line-height:
-                1.55;
-
-            color:
-                #F0E5D2;
-        }
-
-
-        /* =====================================================
-           ENTRY FOOTER
+           ENTRY NAVIGATION
         ===================================================== */
 
         .desk-entry-navigation {
+
             max-width:
                 1500px;
 
@@ -366,6 +354,7 @@
         }
 
         .desk-entry-navigation a {
+
             color:
                 #B99568;
 
@@ -386,11 +375,12 @@
            TABLET
         ===================================================== */
 
-        @media (max-width: 950px) {
+        @media (max-width: 1000px) {
 
             .desk-entry-section {
+
                 grid-template-columns:
-                    180px
+                    220px
                     minmax(0, 1fr);
 
                 column-gap:
@@ -399,7 +389,7 @@
 
             .desk-entry-section h2 {
                 font-size:
-                    1.55rem;
+                    1.6rem;
             }
 
         }
@@ -412,11 +402,13 @@
         @media (max-width: 700px) {
 
             .desk-entry-header {
+
                 padding:
                     80px 7% 70px;
             }
 
             .desk-entry-header h1 {
+
                 font-size:
                     clamp(
                         3.4rem,
@@ -429,6 +421,7 @@
             }
 
             .desk-entry-intro {
+
                 font-size:
                     1rem;
 
@@ -437,11 +430,13 @@
             }
 
             .desk-entry {
+
                 padding:
                     0 7% 80px;
             }
 
             .desk-entry-section {
+
                 display:
                     block;
 
@@ -450,35 +445,34 @@
             }
 
             .desk-entry-section-label {
-                position:
-                    static;
-
-                padding:
-                    0;
 
                 margin-bottom:
-                    38px;
+                    35px;
             }
 
             .desk-entry-section-number {
+
                 margin-bottom:
                     12px;
             }
 
             .desk-entry-section h2 {
+
                 max-width:
                     none;
 
                 font-size:
-                    1.55rem;
+                    1.6rem;
             }
 
             .desk-entry-content {
+
                 max-width:
                     none;
             }
 
             .desk-entry-content p {
+
                 font-size:
                     1rem;
 
@@ -486,18 +480,8 @@
                     1.82;
             }
 
-            .desk-entry-content .emphasis {
-                margin:
-                    38px 0;
-
-                font-size:
-                    1.15rem;
-
-                line-height:
-                    1.6;
-            }
-
             .desk-entry-navigation {
+
                 padding:
                     30px 0;
 
@@ -561,7 +545,7 @@
 
 
         <!-- =====================================================
-             ENTRY HEADER
+             HEADER
         ===================================================== -->
 
         <header class="desk-entry-header">
@@ -603,7 +587,7 @@
 
 
             <!-- =================================================
-                 MOVEMENT I
+                 I
             ================================================= -->
 
             <section class="desk-entry-section">
@@ -677,7 +661,7 @@
 
 
             <!-- =================================================
-                 MOVEMENT II
+                 II
             ================================================= -->
 
             <section class="desk-entry-section">
@@ -705,7 +689,7 @@
                         work of defining them.
                     </p>
 
-                    <p class="emphasis">
+                    <p>
                         But event is merely weather.
                     </p>
 
@@ -749,7 +733,7 @@
 
 
             <!-- =================================================
-                 MOVEMENT III
+                 III
             ================================================= -->
 
             <section class="desk-entry-section">
@@ -783,7 +767,7 @@
                         person we get to be when nobody is asking us to adapt.
                     </p>
 
-                    <p class="emphasis">
+                    <p>
                         Then another person arrives.
                     </p>
 
@@ -810,7 +794,7 @@
                         or secure a happy ending.
                     </p>
 
-                    <p class="emphasis">
+                    <p>
                         It is about the cost of being known.
                     </p>
 
@@ -829,7 +813,7 @@
 
 
             <!-- =================================================
-                 MOVEMENT IV
+                 IV
             ================================================= -->
 
             <section class="desk-entry-section">
@@ -897,7 +881,7 @@
 
 
             <!-- =================================================
-                 ENTRY NAVIGATION
+                 NAVIGATION
             ================================================= -->
 
             <div class="desk-entry-navigation">
