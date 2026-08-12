@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        On the Things We Become — Srithea Seshen
+    </title>
+
+    <meta
+        name="description"
+        content="On backstory, memory, identity, revision, and the people we are still becoming."
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        /* =========================
+           WRITING DESK ENTRY
+        ========================= */
+
+        .desk-entry-header {
+            max-width: 1000px;
+            margin: 0 auto;
+
+            padding:
+                110px 8% 75px;
+        }
+
+        .desk-entry-number {
+            margin-bottom: 28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.7rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #8a6f5a;
+        }
+
+        .desk-entry-header h1 {
+            margin: 0;
+
+            font-size:
+                clamp(
+                    3.2rem,
+                    7vw,
+                    6.5rem
+                );
+
+            line-height:
+                0.95;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.045em;
+        }
+
+        .desk-entry-rule {
+            width: 55px;
+            height: 2px;
+
+            margin:
+                38px 0 30px;
+
+            background:
+                #8a6f5a;
+        }
+
+        .desk-entry-intro {
+            max-width:
+                650px;
+
+            margin:
+                0;
+
+            font-size:
+                1.15rem;
+
+            line-height:
+                1.8;
+
+            color:
+                #bcae9d;
+        }
+
+        .desk-entry-date {
+            margin-top:
+                28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                0.12em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #8f8173;
+        }
+
+
+        /* =========================
+           ESSAY
+        ========================= */
+
+        .desk-entry {
+            max-width:
+                860px;
+
+            margin:
+                0 auto;
+
+            padding:
+                20px 8% 110px;
+        }
+
+        /*
+           IMPORTANT:
+           Each section remains a normal
+           vertical reading block.
+           No columns.
+           No grid.
+           No multi-column layout.
+        */
+
+        .desk-entry section {
+            display:
+                block;
+
+            width:
+                100%;
+
+            margin-bottom:
+                95px;
+        }
+
+        .desk-entry section:last-of-type {
+            margin-bottom:
+                85px;
+        }
+
+
+        /* =========================
+           SECTION HEADINGS
+        ========================= */
+
+        .desk-entry h2 {
+            margin:
+                0 0 38px;
+
+            font-size:
+                clamp(
+                    1.9rem,
+                    3vw,
+                    2.6rem
+                );
+
+            line-height:
+                1.15;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.02em;
+        }
+
+
+        /* =========================
+           BODY TEXT
+        ========================= */
+
+        .desk-entry p {
+            display:
+                block;
+
+            width:
+                100%;
+
+            margin:
+                0 0 27px;
+
+            font-size:
+                1.08rem;
+
+            line-height:
+                1.95;
+
+            color:
+                #d8cdbf;
+        }
+
+        .desk-entry p:last-child {
+            margin-bottom:
+                0;
+        }
+
+        .desk-entry em {
+            color:
+                #eee5da;
+
+            font-style:
+                italic;
+        }
+
+
+        /* =========================
+           ENTRY NAVIGATION
+        ========================= */
+
+        .desk-entry-navigation {
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                25px;
+
+            padding-top:
+                35px;
+
+            border-top:
+                1px solid
+                rgba(
+                    216,
+                    205,
+                    191,
+                    0.25
+                );
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                0.1em;
+
+            text-transform:
+                uppercase;
+        }
+
+        .desk-entry-navigation a {
+            color:
+                #bcae9d;
+
+            text-decoration:
+                none;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        .desk-entry-navigation a:hover {
+            color:
+                #eee5da;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding:
+                42px 8%;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-top:
+                1px solid
+                #4A3427;
+
+            background:
+                #211610;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.67rem;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                #806D5E;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .desk-entry-header {
+                padding:
+                    80px 7% 55px;
+            }
+
+            .desk-entry {
+                max-width:
+                    none;
+
+                padding:
+                    15px 7% 80px;
+            }
+
+            .desk-entry section {
+                margin-bottom:
+                    72px;
+            }
+
+            .desk-entry h2 {
+                margin-bottom:
+                    30px;
+            }
+
+            .desk-entry p {
+                font-size:
+                    1rem;
+
+                line-height:
+                    1.85;
+            }
+
+            .desk-entry-navigation {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    18px;
+            }
+
+            footer {
+                padding:
+                    35px 7%;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <a
+            class="logo"
+            href="index.html"
+        >
+            Srithea Seshen
+        </a>
+
+        <div>
+
+            <a href="index.html#works">
+                Works
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="writing-desk.html">
+                Writing Desk
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- =========================
+             ENTRY HEADER
+        ========================= -->
+
+        <header class="desk-entry-header">
+
+            <div class="desk-entry-number">
+                Writing Desk · 03
+            </div>
+
+            <h1>
+                On the Things We Become
+            </h1>
+
+            <div class="desk-entry-rule"></div>
+
+            <p class="desk-entry-intro">
+                On backstory, memory, identity,
+                revision, and the people we are
+                still becoming.
+            </p>
+
+            <div class="desk-entry-date">
+                August 2026
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             ESSAY
+        ========================= -->
+
+        <article class="desk-entry">
+
+
+            <!-- =========================
+                 I. THE MYTH OF BACKSTORY
+            ========================= -->
+
+            <section>
+
+                <h2>
+                    I. The Myth of Backstory
+                </h2>
+
+                <p>
+                    In narrative craft, we often talk about
+                    "backstory" as if it were a solid object.
+                </p>
+
+                <p>
+                    We fill out character sheets with dates,
+                    childhood homes, old heartbreaks, and formative
+                    injuries, treating these details like geological
+                    strata—hardened, unchangeable facts buried beneath
+                    the present tense. We like the comfort of a fixed
+                    origin story. It gives us a neat equation:
+                    <em>because this happened in the past, the character
+                    behaves like this today.</em>
+                </p>
+
+                <p>
+                    But human beings do not carry their histories
+                    like dusty museum exhibits.
+                </p>
+
+                <p>
+                    The past is not a passive archive; it is a fluid,
+                    active participant in the present. We do not look
+                    back at our earlier lives through clear glass.
+                    We look back through the lens of who we have become
+                    today. The memory you summoned at twenty-one—raw,
+                    urgent, demanding restitution—feels entirely
+                    different when recalled at thirty-five, softened
+                    by time or sharpened by a new, unrelated grief.
+                </p>
+
+                <p>
+                    We do not merely retain our history.
+                    We negotiate with it.
+                </p>
+
+                <p>
+                    When a story treats a character's past as a solved
+                    equation, it flattens them into a case study. But
+                    when it treats the past as a living, unsettled
+                    territory—something a person is still trying to
+                    make sense of, still trying to forgive, or still
+                    trying to outrun—the character suddenly begins
+                    to breathe.
+                </p>
+
+            </section>
+
+
+            <!-- =========================
+                 II. LOYALTY TO DEAD VERSIONS
+            ========================= -->
+
+            <section>
+
+                <h2>
+                    II. Loyalty to Dead Versions
+                </h2>
+
+                <p>
+                    One of the quietest tragedies of human life is
+                    our fierce, unexamined loyalty to people we
+                    no longer are.
+                </p>
+
+                <p>
+                    We make decisions at eighteen, twenty-two, or
+                    thirty, and then spend decades treating those
+                    decisions as binding contracts. We inherit a
+                    version of ourselves—the protective one, the
+                    wounded one, the relentless one, the one who
+                    swore never to trust again or never to ask for
+                    help—and we defend that identity as if changing
+                    it would be a betrayal.
+                </p>
+
+                <p>
+                    We forget that the person who made those vows
+                    was reacting to a world that no longer exists,
+                    using tools that were incomplete.
+                </p>
+
+                <p>
+                    In fiction, this is where the deepest internal
+                    friction lives. The real struggle of a character
+                    is rarely just overcoming an external obstacle;
+                    it is the agonizing process of outgrowing their
+                    own self-conception. It is the moment they realize
+                    that the armor that kept them safe five years ago
+                    has become the very cage keeping them isolated
+                    today.
+                </p>
+
+                <p>
+                    We stay loyal to old grudges because letting them
+                    go feels like admitting we suffered for nothing.
+                    We stay loyal to old ambitions because abandoning
+                    them feels like failing the younger self who wanted
+                    them so desperately.
+                </p>
+
+                <p>
+                    Yet real growth requires a strange kind of
+                    mourning. It asks us to allow older versions of
+                    ourselves to die gracefully, without holding them
+                    against the person we are trying to become.
+                </p>
+
+            </section>
+
+
+            <!-- =========================
+                 III. MEMORY AS A CHANGING WITNESS
+            ========================= -->
+
+            <section>
+
+                <h2>
+                    III. Memory as a Changing Witness
+                </h2>
+
+                <p>
+                    Memory is rarely a neutral bystander. It is a
+                    witness whose testimony alters with age.
+                </p>
+
+                <p>
+                    When we look back on our lives, we do not recall
+                    events with cold, archival precision. We curate
+                    them. We emphasize the small detail that proves
+                    we were right all along; we dim the memory of the
+                    conversation where we were careless or cruel; we
+                    turn an ambiguous departure into a heroic escape
+                    or a tragic abandonment.
+                </p>
+
+                <p>
+                    We reshape our personal histories so that the
+                    story of our lives remains coherent to the person
+                    we are today.
+                </p>
+
+                <p>
+                    This isn't necessarily dishonesty; it is survival.
+                    To endure ourselves, we need our past to lead
+                    logically to our present. We convert chaos into
+                    cause and effect. We take a series of reckless,
+                    accidental choices and reframe them as a deliberate
+                    journey toward wisdom.
+                </p>
+
+                <p>
+                    In storytelling, the most compelling characters
+                    are not those with pristine, perfectly accurate
+                    memories, but those whose memories are subtly
+                    compromised by their needs. The way a character
+                    remembers an old betrayal reveals far more about
+                    who they are today than the betrayal itself ever
+                    could.
+                </p>
+
+                <p>
+                    We do not merely remember who we were. We reshape
+                    who we were so we can live with who we are.
+                </p>
+
+            </section>
+
+
+            <!-- =========================
+                 IV. THE ART OF REVISION
+            ========================= -->
+
+            <section>
+
+                <h2>
+                    IV. The Art of Revision
+                </h2>
+
+                <p>
+                    We often speak of finding ourselves as if identity
+                    were a hidden object waiting to be unearthed in the
+                    dark—a pristine core buried beneath layers of
+                    expectation, fear, and time.
+                </p>
+
+                <p>
+                    We draft a version of who we are, live in it until
+                    it no longer fits, and then face the quiet,
+                    terrifying work of crossing out the lines that no
+                    longer hold true.
+                </p>
+
+                <p>
+                    In the hands of a careful writer, a character's
+                    turning point is rarely a sudden illumination.
+                    It is a sentence crossed out and rewritten. It is
+                    the moment they look at the story they have told
+                    themselves about their life—
+                    <em>I am the one who was left; I am the one who
+                    must fix this; I am incapable of staying</em>—
+                    and decide that the draft is no longer accurate.
+                </p>
+
+                <p>
+                    That is why the most resonant stories do not end
+                    with a character arriving at absolute certainty.
+                    They end with a character granting themselves
+                    permission to be unfinished.
+                </p>
+
+                <p>
+                    We are not bound to the rough drafts of our past.
+                    In the end, perhaps the truest grace we can offer
+                    ourselves—and each other—is the willingness to
+                    put down our drafts and our projections, to admit
+                    that we were wrong, and to remain curious about
+                    the person who is still becoming in front of us.
+                </p>
+
+            </section>
+
+
+            <!-- =========================
+                 ENTRY NAVIGATION
+            ========================= -->
+
+            <div class="desk-entry-navigation">
+
+                <span>
+                    Writing Desk · 03
+                </span>
+
+                <a href="writing-desk.html">
+                    Back to the Writing Desk →
+                </a>
+
+            </div>
+
+
+        </article>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <span>
+            © 2026 Srithea Seshen
+        </span>
+
+        <span>
+            Love · Memory · What Remains
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>
