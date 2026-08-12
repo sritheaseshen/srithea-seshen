@@ -1,772 +1,1039 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
-```
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>
-    The Soundtrack — Srithea Seshen
-</title>
-
-<meta
-    name="description"
-    content="Music from the rooms behind the stories of Srithea Seshen."
->
-
-<link
-    rel="stylesheet"
-    href="style.css"
->
-
-<style>
-
-    /* =========================================================
-       SOUNDTRACK PAGE
-    ========================================================= */
-
-    .soundtrack-hero {
-
-        padding:
-            125px 8% 110px;
-
-        border-bottom:
-            1px solid #4A3427;
-    }
-
-
-    .soundtrack-label {
-
-        margin:
-            0 0 28px;
-
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-
-        font-size:
-            0.65rem;
-
-        letter-spacing:
-            0.2em;
-
-        text-transform:
-            uppercase;
-
-        color:
-            #B99568;
-    }
-
-
-    .soundtrack-hero h1 {
-
-        max-width:
-            1000px;
-
-        margin:
-            0;
-
-        font-size:
-            clamp(
-                4rem,
-                9vw,
-                8rem
-            );
-
-        line-height:
-            0.88;
-
-        font-weight:
-            400;
-
-        letter-spacing:
-            -0.055em;
-    }
-
-
-    .soundtrack-intro {
-
-        max-width:
-            650px;
-
-        margin:
-            45px 0 0;
-
-        font-size:
-            1.08rem;
-
-        line-height:
-            1.9;
-
-        color:
-            #CDBEAA;
-    }
-
-
-    /* =========================================================
-       PLAYLIST SECTION
-    ========================================================= */
-
-    .soundtrack-list {
-
-        padding:
-            110px 8%;
-    }
-
-
-    .soundtrack-header {
-
-        display:
-            flex;
-
-        justify-content:
-            space-between;
-
-        align-items:
-            baseline;
-
-        gap:
-            30px;
-
-        margin-bottom:
-            65px;
-
-        padding-bottom:
-            20px;
-
-        border-bottom:
-            1px solid #4A3427;
-    }
-
-
-    .soundtrack-header h2 {
-
-        margin:
-            0;
-
-        font-size:
-            clamp(
-                2rem,
-                4vw,
-                3.4rem
-            );
-
-        font-weight:
-            400;
-    }
-
-
-    .soundtrack-header span {
-
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-
-        font-size:
-            0.63rem;
-
-        letter-spacing:
-            0.15em;
-
-        text-transform:
-            uppercase;
-
-        color:
-            #806D5E;
-    }
-
-
-    /* =========================================================
-       PLAYLIST CARD
-    ========================================================= */
-
-    .playlist {
-
-        max-width:
-            1050px;
-
-        margin:
-            0 auto 80px;
-
-        padding:
-            55px;
-
-        border:
-            1px solid #4A3427;
-
-        background:
-            #281A13;
-    }
-
-
-    .playlist:last-child {
-
-        margin-bottom:
-            0;
-    }
-
-
-    .playlist-number {
-
-        margin-bottom:
-            25px;
-
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-
-        font-size:
-            0.62rem;
-
-        letter-spacing:
-            0.17em;
-
-        text-transform:
-            uppercase;
-
-        color:
-            #806D5E;
-    }
-
-
-    .playlist h3 {
-
-        margin:
-            0;
-
-        font-size:
-            clamp(
-                2.3rem,
-                5vw,
-                4.5rem
-            );
-
-        line-height:
-            0.98;
-
-        font-weight:
-            400;
-
-        letter-spacing:
-            -0.04em;
-    }
-
-
-    .playlist-description {
-
-        max-width:
-            650px;
-
-        margin:
-            28px 0 45px;
-
-        font-size:
-            1rem;
-
-        line-height:
-            1.85;
-
-        color:
-            #CDBEAA;
-    }
-
-
-    /* =========================================================
-       SPOTIFY EMBED
-    ========================================================= */
-
-    .spotify-frame {
-
-        width:
-            100%;
-
-        min-height:
-            352px;
-
-        border:
-            0;
-
-        border-radius:
-            12px;
-
-        background:
-            #160E0A;
-    }
-
-
-    .playlist-note {
-
-        margin:
-            22px 0 0;
-
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-
-        font-size:
-            0.62rem;
-
-        line-height:
-            1.6;
-
-        letter-spacing:
-            0.05em;
-
-        color:
-            #806D5E;
-    }
-
-
-    /* =========================================================
-       FUTURE PLAYLISTS
-    ========================================================= */
-
-    .coming-soon {
-
-        padding:
-            100px 8%;
-
-        border-top:
-            1px solid #4A3427;
-
-        background:
-            #160E0A;
-    }
-
-
-    .coming-soon-inner {
-
-        max-width:
-            850px;
-
-        margin:
-            0 auto;
-
-        text-align:
-            center;
-    }
-
-
-    .coming-soon-label {
-
-        margin-bottom:
-            25px;
-
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-
-        font-size:
-            0.63rem;
-
-        letter-spacing:
-            0.18em;
-
-        text-transform:
-            uppercase;
-
-        color:
-            #806D5E;
-    }
-
-
-    .coming-soon h2 {
-
-        margin:
-            0;
-
-        font-size:
-            clamp(
-                2.3rem,
-                4vw,
-                3.8rem
-            );
-
-        line-height:
-            1.05;
-
-        font-weight:
-            400;
-
-        color:
-            #F0E5D2;
-    }
-
-
-    .coming-soon p {
-
-        max-width:
-            600px;
-
-        margin:
-            28px auto 0;
-
-        font-size:
-            1rem;
-
-        line-height:
-            1.85;
-
-        color:
-            #CDBEAA;
-    }
-
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-    footer {
-
-        padding:
-            42px 8%;
-
-        display:
-            flex;
-
-        justify-content:
-            space-between;
-
-        align-items:
-            center;
-
-        border-top:
-            1px solid #4A3427;
-
-        background:
-            #211610;
-
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-
-        font-size:
-            0.67rem;
-
-        letter-spacing:
-            0.08em;
-
-        color:
-            #806D5E;
-    }
-
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
-
-    @media (max-width: 850px) {
-
-        .soundtrack-hero {
-
-            padding:
-                90px 7%;
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        The Listening Room — Srithea Seshen
+    </title>
+
+    <meta
+        name="description"
+        content="The Listening Room of Srithea Seshen — music for writing, remembering, imagining, and becoming."
+    >
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            box-sizing:
+                border-box;
         }
 
-        .soundtrack-list {
-
-            padding:
-                85px 7%;
+        html {
+            scroll-behavior:
+                smooth;
         }
 
-        .playlist {
+        body {
+            margin:
+                0;
+
+            background:
+                #211610;
+
+            color:
+                #F0E5D2;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            line-height:
+                1.7;
+
+            -webkit-font-smoothing:
+                antialiased;
+
+            -moz-osx-font-smoothing:
+                grayscale;
+        }
+
+        a {
+            color:
+                inherit;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            padding:
+                28px 7%;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-bottom:
+                1px solid #4A3427;
+
+            background:
+                #211610;
+
+            position:
+                relative;
+
+            z-index:
+                10;
+        }
+
+        .logo {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.85rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #F0E5D2;
+        }
+
+        nav a {
+            margin-left:
+                30px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.72rem;
+
+            letter-spacing:
+                0.08em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #CDBEAA;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        nav a:hover {
+            color:
+                #D7B88A;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .listening-hero {
+            padding:
+                125px 8% 105px;
+
+            border-bottom:
+                1px solid #4A3427;
+        }
+
+        .listening-label {
+            margin:
+                0 0 28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.65rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #B99568;
+        }
+
+        .listening-hero h1 {
+            max-width:
+                1000px;
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    4rem,
+                    9vw,
+                    8rem
+                );
+
+            line-height:
+                0.88;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.055em;
+        }
+
+        .listening-intro {
+            max-width:
+                650px;
+
+            margin:
+                45px 0 0;
+
+            font-size:
+                1.08rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #CDBEAA;
+        }
+
+
+        /* =========================
+           PLAYLIST SECTION
+        ========================= */
+
+        .listening-room {
+            padding:
+                110px 8% 125px;
+        }
+
+        .playlist-header {
+            max-width:
+                820px;
+
+            margin:
+                0 auto 55px;
+        }
+
+        .playlist-number {
+            margin-bottom:
+                24px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.63rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #806D5E;
+        }
+
+        .playlist-header h2 {
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.7rem,
+                    5vw,
+                    4.8rem
+                );
+
+            line-height:
+                1;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.035em;
+        }
+
+        .playlist-rule {
+            width:
+                55px;
+
+            height:
+                2px;
+
+            margin:
+                32px 0;
+
+            background:
+                #B99568;
+        }
+
+        .playlist-description {
+            max-width:
+                620px;
+
+            margin:
+                0;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #CDBEAA;
+        }
+
+
+        /* =========================
+           PLAYER
+        ========================= */
+
+        .playlist-frame {
+            max-width:
+                1100px;
+
+            margin:
+                0 auto;
+
+            border:
+                1px solid #4A3427;
+
+            background:
+                #160E0A;
 
             padding:
-                35px;
+                14px;
+        }
+
+        .playlist-frame-inner {
+            position:
+                relative;
+
+            width:
+                100%;
+
+            aspect-ratio:
+                16 / 9;
+
+            overflow:
+                hidden;
+
+            background:
+                #000;
+        }
+
+        .playlist-frame iframe {
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            border:
+                0;
+        }
+
+
+        /* =========================
+           PLAYLIST NOTE
+        ========================= */
+
+        .playlist-note {
+            max-width:
+                1100px;
+
+            margin:
+                30px auto 0;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                30px;
+
+            padding-top:
+                22px;
+
+            border-top:
+                1px solid #4A3427;
+        }
+
+        .playlist-note p {
+            margin:
+                0;
+
+            font-size:
+                0.92rem;
+
+            line-height:
+                1.7;
+
+            color:
+                #8F8173;
+        }
+
+        .playlist-link {
+            flex-shrink:
+                0;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.64rem;
+
+            letter-spacing:
+                0.13em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #D7B88A;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        .playlist-link:hover {
+            color:
+                #E4CFA9;
+        }
+
+
+        /* =========================
+           LISTENING STATEMENT
+        ========================= */
+
+        .listening-statement {
+            padding:
+                125px 8%;
+
+            background:
+                #F0E5D2;
+
+            color:
+                #261B15;
+        }
+
+        .listening-statement-inner {
+            max-width:
+                900px;
+
+            margin:
+                0 auto;
+
+            text-align:
+                center;
+        }
+
+        .listening-statement-label {
+            margin-bottom:
+                28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.63rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #876746;
+        }
+
+        .listening-statement h2 {
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.5rem,
+                    5vw,
+                    4.8rem
+                );
+
+            line-height:
+                1.04;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.035em;
+        }
+
+        .listening-statement p {
+            max-width:
+                680px;
+
+            margin:
+                35px auto 0;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #66574B;
+        }
+
+
+        /* =========================
+           WRITING DESK LINK
+        ========================= */
+
+        .desk-link {
+            padding:
+                110px 8%;
+
+            border-top:
+                1px solid #4A3427;
+
+            background:
+                #160E0A;
+        }
+
+        .desk-link-inner {
+            max-width:
+                850px;
+
+            margin:
+                0 auto;
+
+            text-align:
+                center;
+        }
+
+        .desk-link-inner > span {
+            display:
+                block;
 
             margin-bottom:
-                55px;
+                25px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.63rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #806D5E;
         }
 
-        .coming-soon {
+        .desk-link h2 {
+            margin:
+                0;
 
-            padding:
-                80px 7%;
+            font-size:
+                clamp(
+                    2.3rem,
+                    4vw,
+                    3.8rem
+                );
+
+            line-height:
+                1.05;
+
+            font-weight:
+                400;
+
+            color:
+                #F0E5D2;
         }
+
+        .desk-link a {
+            display:
+                inline-block;
+
+            margin-top:
+                30px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.66rem;
+
+            letter-spacing:
+                0.13em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #D7B88A;
+        }
+
+        .desk-link a:hover {
+            color:
+                #E4CFA9;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-
             padding:
-                35px 7%;
+                42px 8%;
 
-            flex-direction:
-                column;
+            display:
+                flex;
+
+            justify-content:
+                space-between;
 
             align-items:
-                flex-start;
+                center;
 
-            gap:
-                12px;
-        }
+            border-top:
+                1px solid #4A3427;
 
-    }
+            background:
+                #211610;
 
-
-    @media (max-width: 520px) {
-
-        .soundtrack-hero h1 {
-
-            font-size:
-                4rem;
-        }
-
-        .soundtrack-intro {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             font-size:
-                1rem;
+                0.67rem;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                #806D5E;
         }
 
-        .soundtrack-header {
 
-            flex-direction:
-                column;
+        /* =========================
+           MOBILE
+        ========================= */
 
-            align-items:
-                flex-start;
+        @media (max-width: 850px) {
 
-            gap:
-                10px;
+            nav {
+                padding:
+                    23px 6%;
+            }
+
+            nav a {
+                margin-left:
+                    15px;
+
+                font-size:
+                    0.68rem;
+            }
+
+            .listening-hero {
+                padding:
+                    90px 7%;
+            }
+
+            .listening-room {
+                padding:
+                    85px 7% 95px;
+            }
+
+            .listening-statement {
+                padding:
+                    90px 7%;
+            }
+
+            .desk-link {
+                padding:
+                    85px 7%;
+            }
+
+            footer {
+                padding:
+                    35px 7%;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    12px;
+            }
+
         }
 
-        .playlist {
 
-            padding:
-                27px;
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    18px;
+            }
+
+            nav div:last-child {
+                display:
+                    flex;
+
+                flex-wrap:
+                    wrap;
+
+                gap:
+                    12px;
+            }
+
+            nav a {
+                margin-left:
+                    0;
+
+                margin-right:
+                    12px;
+            }
+
+            .listening-hero h1 {
+                font-size:
+                    4rem;
+            }
+
+            .listening-intro {
+                font-size:
+                    1rem;
+            }
+
+            .playlist-header h2 {
+                font-size:
+                    3rem;
+            }
+
+            .playlist-frame {
+                padding:
+                    8px;
+            }
+
+            .playlist-note {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    18px;
+            }
+
+            .listening-statement h2 {
+                font-size:
+                    2.6rem;
+            }
+
+            .desk-link h2 {
+                font-size:
+                    2.5rem;
+            }
+
         }
 
-        .playlist h3 {
-
-            font-size:
-                2.7rem;
-        }
-
-        .spotify-frame {
-
-            min-height:
-                352px;
-        }
-
-    }
-
-</style>
-```
+    </style>
 
 </head>
 
+
 <body>
 
-```
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
 
-<nav>
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
-    <a
-        class="logo"
-        href="index.html"
-    >
-        Srithea Seshen
-    </a>
+    <nav>
 
-    <div>
-
-        <a href="index.html#works">
-            Works
+        <a
+            class="logo"
+            href="index.html"
+        >
+            Srithea Seshen
         </a>
 
-        <a href="about.html">
-            About
-        </a>
+        <div>
 
-        <a href="writing-desk.html">
-            Writing Desk
-        </a>
+            <a href="index.html#works">
+                Works
+            </a>
 
-        <a href="soundtrack.html">
-            Soundtrack
-        </a>
+            <a href="about.html">
+                About
+            </a>
 
-        <a href="contact.html">
-            Contact
-        </a>
+            <a href="writing-desk.html">
+                Writing Desk
+            </a>
 
-    </div>
-
-</nav>
-
-
-<main>
-
-
-    <!-- =====================================================
-         HERO
-    ===================================================== -->
-
-    <section class="soundtrack-hero">
-
-        <div class="soundtrack-label">
-            The Soundtrack
-        </div>
-
-        <h1>
-            Some stories arrive
-            as music.
-        </h1>
-
-        <p class="soundtrack-intro">
-            Music from the rooms behind the stories.
-            Songs for writing, thinking, remembering,
-            falling in love, making mistakes, and
-            occasionally staring at the same sentence
-            for twenty minutes.
-        </p>
-
-    </section>
-
-
-    <!-- =====================================================
-         PLAYLISTS
-    ===================================================== -->
-
-    <section class="soundtrack-list">
-
-        <div class="soundtrack-header">
-
-            <h2>
-                Playlists
-            </h2>
-
-            <span>
-                Music behind the work
-            </span>
+            <a href="contact.html">
+                Contact
+            </a>
 
         </div>
 
+    </nav>
 
-        <!-- =================================================
-             PLAYLIST 01
-        ================================================= -->
 
-        <article class="playlist">
+    <main>
 
-            <div class="playlist-number">
-                01 · The Writer's Room
+
+        <!-- =========================
+             HERO
+        ========================= -->
+
+        <section class="listening-hero">
+
+            <div class="listening-label">
+                The Listening Room
             </div>
 
-            <h3>
-                The Writer's Room
-            </h3>
+            <h1>
+                Some stories
+                arrive as music.
+            </h1>
 
-            <p class="playlist-description">
-                Music for writing, thinking, remembering,
-                disappearing into fictional lives, and
-                finding the sentence that was hiding
-                somewhere underneath the first one.
+            <p class="listening-intro">
+                A collection of songs for writing,
+                remembering, imagining, and disappearing
+                briefly into other lives.
             </p>
 
-
-            <!-- =================================================
-                 SPOTIFY EMBED
-
-                 Replace the iframe below with the embed code
-                 Spotify gives you for your playlist.
-
-                 Spotify:
-                 Share → Embed playlist → Copy code
-            ================================================= -->
-
-            <iframe
-                class="spotify-frame"
-                src="https://open.spotify.com/embed/playlist/YOUR_PLAYLIST_ID"
-                width="100%"
-                height="352"
-                frameborder="0"
-                allowfullscreen=""
-                allow="
-                    autoplay;
-                    clipboard-write;
-                    encrypted-media;
-                    fullscreen;
-                    picture-in-picture
-                "
-                loading="lazy"
-            >
-            </iframe>
+        </section>
 
 
-            <p class="playlist-note">
-                Listen on Spotify · Playlist curated by Srithea Seshen
-            </p>
+        <!-- =========================
+             PLAYLIST
+        ========================= -->
 
-        </article>
+        <section class="listening-room">
 
+            <div class="playlist-header">
 
-    </section>
+                <div class="playlist-number">
+                    Listening Room · 01
+                </div>
 
+                <h2>
+                    The Writer's Room
+                </h2>
 
-    <!-- =====================================================
-         FUTURE PLAYLISTS
-    ===================================================== -->
+                <div class="playlist-rule"></div>
 
-    <section class="coming-soon">
+                <p class="playlist-description">
+                    Music for the hours between sentences —
+                    when a scene refuses to arrive, when a
+                    character becomes more real than expected,
+                    or when writing stops feeling like work.
+                </p>
 
-        <div class="coming-soon-inner">
-
-            <div class="coming-soon-label">
-                More rooms, eventually
             </div>
 
-            <h2>
-                The stories will have
-                their own soundtracks.
-            </h2>
 
-            <p>
-                Some playlists will belong to books.
-                Some will belong to characters. Some
-                will exist simply because a particular
-                collection of songs refused to leave me
-                alone.
-            </p>
+            <div class="playlist-frame">
 
-        </div>
+                <div class="playlist-frame-inner">
 
-    </section>
+                    <iframe
+                        src="https://www.youtube.com/embed?listType=playlist&list=PLTwqB8uuZYv0"
+                        title="The Writer's Room — Srithea Seshen"
+                        allow="
+                            accelerometer;
+                            autoplay;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share
+                        "
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
 
 
-</main>
+            <div class="playlist-note">
+
+                <p>
+                    Curated for the rooms where stories
+                    are still becoming.
+                </p>
+
+                <a
+                    class="playlist-link"
+                    href="https://www.youtube.com/playlist?list=PLTwqB8uuZYv0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open playlist on YouTube →
+                </a>
+
+            </div>
+
+        </section>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+        <!-- =========================
+             STATEMENT
+        ========================= -->
 
-<footer>
+        <section class="listening-statement">
 
-    <span>
-        © 2026 Srithea Seshen
-    </span>
+            <div class="listening-statement-inner">
 
-    <span>
-        Love · Memory · What Remains
-    </span>
+                <div class="listening-statement-label">
+                    A small confession
+                </div>
 
-</footer>
-```
+                <h2>
+                    Some scenes are
+                    written in sound first.
+                </h2>
+
+                <p>
+                    Before a sentence knows what it wants to
+                    become, sometimes a song already knows.
+                    Music can hold a mood without explaining it,
+                    remember a feeling without naming it, and
+                    give a fictional world its first pulse.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WRITING DESK LINK
+        ========================= -->
+
+        <section class="desk-link">
+
+            <div class="desk-link-inner">
+
+                <span>
+                    From sound back into words
+                </span>
+
+                <h2>
+                    Visit the Writing Desk.
+                </h2>
+
+                <a href="writing-desk.html">
+                    Enter the Writing Desk →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <span>
+            © 2026 Srithea Seshen
+        </span>
+
+        <span>
+            Love · Memory · What Remains
+        </span>
+
+    </footer>
+
 
 </body>
 
