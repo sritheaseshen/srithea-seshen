@@ -2171,3 +2171,581 @@ footer {
     }
 
 }
+```css
+/* =========================================================
+   5.5C — MOBILE POLISH
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    /* -------------------------
+       NAVIGATION
+       ------------------------- */
+
+    nav {
+        padding:
+            22px 7%;
+
+        gap:
+            20px;
+    }
+
+    nav .logo {
+        font-size:
+            0.78rem;
+
+        letter-spacing:
+            0.15em;
+    }
+
+    nav div {
+        display:
+            flex;
+
+        flex-wrap:
+            wrap;
+
+        align-items:
+            center;
+
+        gap:
+            14px 20px;
+    }
+
+    nav a {
+        margin-left:
+            0;
+
+        font-size:
+            0.66rem;
+    }
+
+
+    /* -------------------------
+       HERO
+       ------------------------- */
+
+    .hero {
+        padding:
+            70px 7% 85px;
+
+        gap:
+            50px;
+    }
+
+    .hero-text {
+        max-width:
+            620px;
+    }
+
+    h1 {
+        font-size:
+            clamp(
+                4rem,
+                16vw,
+                6.5rem
+            );
+
+        line-height:
+            0.88;
+    }
+
+    .hero-rule {
+        margin:
+            30px 0;
+    }
+
+    .hero-image {
+        height:
+            62vh;
+
+        min-height:
+            430px;
+
+        max-height:
+            650px;
+    }
+
+
+    /* -------------------------
+       WORKS
+       ------------------------- */
+
+    .collection-heading h2 {
+        font-size:
+            clamp(
+                2rem,
+                7vw,
+                3.1rem
+            );
+    }
+
+    .collection-type {
+        font-size:
+            0.62rem;
+    }
+
+    .book-grid {
+        gap:
+            35px;
+    }
+
+    .book-image {
+        height:
+            430px;
+    }
+
+    .alchemy-book .book-image {
+        height:
+            520px;
+    }
+
+
+    /* -------------------------
+       ABOUT
+       ------------------------- */
+
+    .about-grid {
+        gap:
+            40px;
+    }
+
+    .about h2 {
+        font-size:
+            clamp(
+                2.3rem,
+                8vw,
+                3.5rem
+            );
+    }
+
+
+    /* -------------------------
+       CONTACT
+       ------------------------- */
+
+    .contact h2 {
+        font-size:
+            clamp(
+                2.7rem,
+                10vw,
+                4.5rem
+            );
+    }
+
+
+    /* -------------------------
+       FOOTER
+       ------------------------- */
+
+    footer {
+        gap:
+            15px;
+
+        line-height:
+            1.7;
+    }
+
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    /* -------------------------
+       NAVIGATION
+       ------------------------- */
+
+    nav {
+        padding:
+            22px 7% 24px;
+
+        align-items:
+            flex-start;
+    }
+
+    nav .logo {
+        font-size:
+            0.76rem;
+    }
+
+    nav div {
+        width:
+            100%;
+
+        display:
+            flex;
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            10px 17px;
+    }
+
+    nav a {
+        font-size:
+            0.63rem;
+
+        letter-spacing:
+            0.07em;
+    }
+
+    nav div a::after {
+        bottom:
+            -5px;
+    }
+
+
+    /* -------------------------
+       HERO
+       ------------------------- */
+
+    .hero {
+        padding:
+            55px 7% 70px;
+
+        gap:
+            42px;
+    }
+
+    .eyebrow {
+        margin-bottom:
+            20px;
+
+        font-size:
+            0.63rem;
+
+        letter-spacing:
+            0.16em;
+    }
+
+    h1 {
+        font-size:
+            clamp(
+                3.8rem,
+                18vw,
+                5.5rem
+            );
+
+        letter-spacing:
+            -0.06em;
+    }
+
+    .hero-rule {
+        width:
+            48px;
+
+        height:
+            1px;
+
+        margin:
+            27px 0;
+    }
+
+    .hero-text > p:last-child {
+        max-width:
+            100%;
+
+        font-size:
+            0.98rem;
+
+        line-height:
+            1.85;
+    }
+
+    .hero-image {
+        height:
+            55vh;
+
+        min-height:
+            360px;
+
+        max-height:
+            500px;
+    }
+
+    .image-caption {
+        left:
+            14px;
+
+        bottom:
+            14px;
+
+        padding:
+            6px 8px;
+
+        font-size:
+            0.55rem;
+    }
+
+
+    /* -------------------------
+       WORKS
+       ------------------------- */
+
+    .works {
+        padding:
+            80px 7% 90px;
+    }
+
+    .section-label {
+        margin-bottom:
+            38px;
+
+        font-size:
+            0.63rem;
+    }
+
+    .collection {
+        margin-bottom:
+            80px;
+    }
+
+    .collection-heading {
+        padding-bottom:
+            18px;
+
+        gap:
+            10px;
+    }
+
+    .collection-heading h2 {
+        font-size:
+            clamp(
+                1.95rem,
+                8vw,
+                2.8rem
+            );
+
+        line-height:
+            1.05;
+    }
+
+    .collection-type {
+        font-size:
+            0.58rem;
+
+        white-space:
+            normal;
+    }
+
+    .book-grid {
+        gap:
+            35px;
+
+        margin-top:
+            32px;
+    }
+
+    .alchemy-grid {
+        margin-top:
+            32px;
+    }
+
+    .book-image {
+        height:
+            350px;
+    }
+
+    .alchemy-book .book-image {
+        height:
+            390px;
+    }
+
+    .book-info {
+        padding-top:
+            20px;
+
+        padding-bottom:
+            25px;
+    }
+
+    .book-number {
+        margin-bottom:
+            8px;
+
+        font-size:
+            0.59rem;
+    }
+
+    .book h3 {
+        font-size:
+            1.65rem;
+    }
+
+    .book-meta {
+        font-size:
+            0.61rem;
+
+        letter-spacing:
+            0.08em;
+    }
+
+    .book-arrow {
+        margin-top:
+            18px;
+
+        font-size:
+            0.61rem;
+    }
+
+
+    /* -------------------------
+       ABOUT
+       ------------------------- */
+
+    .about {
+        padding:
+            85px 7%;
+    }
+
+    .about-grid {
+        gap:
+            38px;
+    }
+
+    .about h2 {
+        font-size:
+            2.5rem;
+    }
+
+    .about-text p {
+        font-size:
+            0.98rem;
+
+        line-height:
+            1.85;
+
+        margin-bottom:
+            24px;
+    }
+
+
+    /* -------------------------
+       CONTACT
+       ------------------------- */
+
+    .contact {
+        padding:
+            80px 7%;
+    }
+
+    .contact h2 {
+        font-size:
+            clamp(
+                2.8rem,
+                12vw,
+                4rem
+            );
+    }
+
+    .contact p {
+        font-size:
+            0.98rem;
+
+        line-height:
+            1.8;
+    }
+
+    .contact-email {
+        font-size:
+            0.7rem;
+
+        overflow-wrap:
+            anywhere;
+    }
+
+
+    /* -------------------------
+       FOOTER
+       ------------------------- */
+
+    footer {
+        padding:
+            30px 7%;
+
+        font-size:
+            0.6rem;
+
+        gap:
+            10px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    nav div {
+        gap:
+            9px 13px;
+    }
+
+    nav a {
+        font-size:
+            0.59rem;
+    }
+
+    h1 {
+        font-size:
+            3.6rem;
+    }
+
+    .hero-image {
+        min-height:
+            330px;
+    }
+
+    .book-image {
+        height:
+            320px;
+    }
+
+    .alchemy-book .book-image {
+        height:
+            360px;
+    }
+
+    .book h3 {
+        font-size:
+            1.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   Remove hover-dependent visual behaviour where
+   there is no real hover state.
+   ========================================================= */
+
+@media (hover: none) {
+
+    .book:hover .book-image img,
+    .alchemy-book:hover .book-image img,
+    .hero-image:hover img {
+        transform:
+            none;
+    }
+
+    .book:hover h3,
+    .alchemy-book:hover h3 {
+        transform:
+            none;
+    }
+
+}
