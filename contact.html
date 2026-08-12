@@ -1,5 +1,657 @@
-<p class="email">
-    <a href="mailto:sritheaseshen@proton.me">
-        sritheaseshen@proton.me
-    </a>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contact — Srithea Seshen</title>
+
+    <meta
+        name="description"
+        content="Literary and professional enquiries for Srithea Seshen."
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+
+            background: #f4f1e9;
+
+            color: #252a26;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+        }
+
+
+        a {
+            color: inherit;
+        }
+
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+
+            padding:
+                27px 7%;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-bottom:
+                1px solid #d0cec4;
+
+            background:
+                #f4f1e9;
+
+            position:
+                relative;
+
+            z-index:
+                10;
+        }
+
+
+        .logo {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.85rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #252a26;
+        }
+
+
+        nav a {
+
+            margin-left:
+                30px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.74rem;
+
+            letter-spacing:
+                0.08em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                #646b64;
+
+            transition:
+                color 0.25s ease;
+        }
+
+
+        nav a:hover {
+
+            color:
+                #315c50;
+        }
+
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+
+            min-height:
+                82vh;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            padding:
+                100px 8%;
+        }
+
+
+        .contact-inner {
+
+            max-width:
+                900px;
+        }
+
+
+        .eyebrow {
+
+            margin:
+                0 0 32px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.7rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #496c60;
+        }
+
+
+        h1 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    4rem,
+                    9vw,
+                    8rem
+                );
+
+            line-height:
+                0.88;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.06em;
+
+            color:
+                #252a26;
+        }
+
+
+        .rule {
+
+            width:
+                65px;
+
+            height:
+                2px;
+
+            margin:
+                48px 0 38px;
+
+            background:
+                #496c60;
+        }
+
+
+        .intro {
+
+            max-width:
+                650px;
+
+            margin:
+                0;
+
+            font-size:
+                1.12rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #5c625d;
+        }
+
+
+
+        /* =========================
+           EMAIL
+        ========================= */
+
+        .contact-block {
+
+            margin-top:
+                55px;
+
+            padding-top:
+                35px;
+
+            border-top:
+                1px solid #d0cec4;
+        }
+
+
+        .contact-label {
+
+            margin:
+                0 0 15px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                0.16em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #68716a;
+        }
+
+
+        .email {
+
+            margin:
+                0;
+        }
+
+
+        .email a {
+
+            font-size:
+                clamp(
+                    1.25rem,
+                    3vw,
+                    2rem
+                );
+
+            text-decoration:
+                none;
+
+            color:
+                #315c50;
+
+            border-bottom:
+                1px solid #8ba39a;
+
+            padding-bottom:
+                4px;
+
+            transition:
+                color 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+
+        .email a:hover {
+
+            color:
+                #1e3d34;
+
+            border-color:
+                #315c50;
+        }
+
+
+
+        /* =========================
+           SMALL NOTE
+        ========================= */
+
+        .note {
+
+            max-width:
+                570px;
+
+            margin-top:
+                42px;
+
+            font-size:
+                0.9rem;
+
+            line-height:
+                1.8;
+
+            color:
+                #777d77;
+        }
+
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                45px 8%;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-top:
+                1px solid #d0cec4;
+
+            background:
+                #ebe8de;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                #747a73;
+        }
+
+
+        footer a {
+
+            text-decoration:
+                none;
+
+            color:
+                #747a73;
+
+            transition:
+                color 0.25s ease;
+        }
+
+
+        footer a:hover {
+
+            color:
+                #315c50;
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+
+                padding:
+                    23px 6%;
+            }
+
+
+            nav a {
+
+                margin-left:
+                    15px;
+
+                font-size:
+                    0.68rem;
+            }
+
+
+            main {
+
+                min-height:
+                    75vh;
+
+                padding:
+                    80px 7%;
+            }
+
+
+            footer {
+
+                padding:
+                    35px 7%;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    12px;
+            }
+        }
+
+
+        @media (max-width: 520px) {
+
+            nav {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    18px;
+            }
+
+
+            nav div:last-child {
+
+                display:
+                    flex;
+
+                flex-wrap:
+                    wrap;
+
+                gap:
+                    12px;
+            }
+
+
+            nav a {
+
+                margin-left:
+                    0;
+
+                margin-right:
+                    12px;
+            }
+
+
+            h1 {
+
+                font-size:
+                    clamp(
+                        3.8rem,
+                        16vw,
+                        6rem
+                    );
+            }
+
+
+            .email a {
+
+                font-size:
+                    1.05rem;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a
+            class="logo"
+            href="index.html"
+        >
+            Srithea Seshen
+        </a>
+
+
+        <div>
+
+            <a href="index.html#works">
+                Works
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <div class="contact-inner">
+
+            <p class="eyebrow">
+                Contact
+            </p>
+
+
+            <h1>
+                Let’s<br>
+                talk.
+            </h1>
+
+
+            <div class="rule"></div>
+
+
+            <p class="intro">
+
+                For literary enquiries, editorial correspondence,
+                publishing opportunities, collaborations, or other
+                professional matters:
+
+            </p>
+
+
+            <div class="contact-block">
+
+                <p class="contact-label">
+                    Literary &amp; Professional Enquiries
+                </p>
+
+
+                <p class="email">
+
+                    <a
+                        href="mailto:sritheaseshen@proton.me"
+                    >
+                        sritheaseshen@proton.me
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            <p class="note">
+
+                Messages concerning manuscripts, publishing,
+                editorial work, or literary collaboration are
+                welcome.
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <span>
+            © 2026 Srithea Seshen
+        </span>
+
+
+        <a href="index.html">
+            ← Home
+        </a>
+
+    </footer>
+
+
+</body>
+
+</html>
