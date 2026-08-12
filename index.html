@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -201,8 +202,6 @@
         }
 
 
-        /* Very subtle botanical atmosphere */
-
         .hero::before {
 
             content: "";
@@ -270,11 +269,6 @@
 
             position: relative;
         }
-
-        /*
-            THE IMAGE ITSELF IS NOT CHANGED.
-            images/lotus.jpeg stays exactly as uploaded.
-        */
 
         .hero-image {
 
@@ -392,7 +386,7 @@
 
 
         /* =========================================================
-           SMALL BOTANICAL DIVIDER
+           FIRST THRESHOLD
         ========================================================= */
 
         .threshold {
@@ -458,11 +452,6 @@
             overflow: hidden;
         }
 
-
-        /*
-            Water-ripple atmosphere.
-            Pure CSS — no extra image required.
-        */
 
         .works::before {
 
@@ -637,7 +626,7 @@
 
 
         /* =========================================================
-           OAKHAVEN
+           OAKHAVEN SERIES
         ========================================================= */
 
         .series {
@@ -651,9 +640,20 @@
                 var(--dark-line);
         }
 
+        .series-heading {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            margin-bottom: 45px;
+        }
+
         .series-title {
 
-            margin: 0 0 45px;
+            margin: 0;
 
             font-size: 0.71rem;
 
@@ -664,23 +664,130 @@
             color: #D5E0DE;
         }
 
-        .series-books {
+        .series-note {
+
+            margin: 8px 0 0;
+
+            font-size: 0.62rem;
+
+            letter-spacing: 0.18em;
+
+            text-transform: uppercase;
+
+            color: var(--mist);
+        }
+
+        .botanical-mark {
+
+            font-family: Georgia, serif;
+
+            font-size: 1.1rem;
+
+            color: var(--pink-red);
+
+            opacity: 0.75;
+        }
+
+
+        /* =========================================================
+           OAKHAVEN IMAGE + BOOKS
+        ========================================================= */
+
+        .series-layout {
 
             display: grid;
 
             grid-template-columns:
-                repeat(2, 1fr);
+                0.8fr 1.2fr;
 
-            gap: 32px;
+            gap: 65px;
+
+            align-items: stretch;
+        }
+
+
+        .series-image {
+
+            min-height: 430px;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .series-image::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    transparent 55%,
+                    rgba(6, 38, 43, 0.32)
+                );
+
+            pointer-events: none;
+        }
+
+        .series-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            filter:
+                saturate(0.78)
+                contrast(0.96);
+
+            transition:
+                transform 0.8s ease,
+                filter 0.8s ease;
+        }
+
+        .series-image:hover img {
+
+            transform: scale(1.035);
+
+            filter:
+                saturate(0.95)
+                contrast(1);
+        }
+
+
+        /* =========================================================
+           OAKHAVEN BOOK CARDS
+        ========================================================= */
+
+        .series-books {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 18px;
         }
 
         .series-book {
 
-            padding: 35px;
+            flex: 1;
+
+            padding: 38px 40px;
 
             border:
                 1px solid
                 rgba(243, 245, 241, 0.13);
+
+            display: flex;
+
+            align-items: flex-end;
 
             position: relative;
 
@@ -692,28 +799,28 @@
                 transform 0.35s ease;
         }
 
-        .series-book::before {
+        .series-book::after {
 
             content: "";
 
             position: absolute;
 
-            width: 70px;
-
-            height: 70px;
-
             right: -35px;
 
-            bottom: -35px;
+            top: -35px;
+
+            width: 100px;
+
+            height: 100px;
 
             border-radius: 50%;
 
             border:
                 1px solid
-                rgba(198, 90, 104, 0.35);
+                rgba(198, 90, 104, 0.24);
 
             transition:
-                transform 0.4s ease;
+                transform 0.5s ease;
         }
 
         .series-book:hover {
@@ -722,16 +829,32 @@
                 rgba(243, 245, 241, 0.045);
 
             border-color:
-                rgba(243, 245, 241, 0.35);
+                rgba(243, 245, 241, 0.28);
 
             transform:
-                translateY(-3px);
+                translateX(4px);
         }
 
-        .series-book:hover::before {
+        .series-book:hover::after {
 
             transform:
-                scale(2.2);
+                scale(1.8);
+        }
+
+        .book-number {
+
+            margin: 0 0 15px;
+
+            font-family:
+                "Libre Baskerville",
+                Georgia,
+                serif;
+
+            font-size: 0.8rem;
+
+            color: var(--pink-red);
+
+            letter-spacing: 0.12em;
         }
 
         .series-book h3 {
@@ -743,35 +866,34 @@
                 Georgia,
                 serif;
 
-            font-size: 1.5rem;
+            font-size:
+                clamp(
+                    1.4rem,
+                    2.5vw,
+                    2rem
+                );
 
             font-weight: 400;
 
-            position: relative;
-
-            z-index: 2;
+            line-height: 1.2;
         }
 
-        .series-book p {
+        .series-book p:last-child {
 
-            margin: 15px 0 0;
+            margin: 14px 0 0;
 
-            font-size: 0.64rem;
+            font-size: 0.62rem;
 
-            letter-spacing: 0.17em;
+            letter-spacing: 0.18em;
 
             text-transform: uppercase;
 
             color: var(--mist);
-
-            position: relative;
-
-            z-index: 2;
         }
 
 
         /* =========================================================
-           BOTANICAL THRESHOLD
+           GREEN THRESHOLD
         ========================================================= */
 
         .green-threshold {
@@ -791,7 +913,8 @@
 
         .green-threshold span {
 
-            color: rgba(243,245,241,0.6);
+            color:
+                rgba(243,245,241,0.6);
 
             font-family:
                 Georgia,
@@ -1068,15 +1191,44 @@
                 gap: 22px;
             }
 
-            .series-books {
+            .series {
+
+                margin-top: 75px;
+            }
+
+            .series-heading {
+
+                align-items:
+                    flex-start;
+            }
+
+            .series-layout {
 
                 grid-template-columns:
                     1fr;
+
+                gap: 25px;
+            }
+
+            .series-image {
+
+                min-height:
+                    360px;
+            }
+
+            .series-book {
+
+                min-height:
+                    210px;
+
+                padding:
+                    30px;
             }
 
             .green-threshold {
 
-                height: 95px;
+                height:
+                    95px;
             }
 
             .about {
@@ -1171,7 +1323,7 @@
             <div class="hero-inner">
 
 
-                <!-- LOTUS — UNTOUCHED -->
+                <!-- LOTUS -->
 
                 <div class="hero-image-wrap">
 
@@ -1215,14 +1367,16 @@
 
 
 
-        <!-- THRESHOLD -->
+        <!-- =====================================================
+             THRESHOLD
+        ====================================================== -->
 
         <div class="threshold"></div>
 
 
 
         <!-- =====================================================
-             THE WORK
+             THE WORK / THE ALCHEMY
         ====================================================== -->
 
         <section
@@ -1241,12 +1395,13 @@
                 </h2>
 
 
+                <!-- TWO BRAIN CELLS -->
+
                 <div class="alchemy">
 
                     <p class="alchemy-label">
                         A novel
                     </p>
-
 
                     <article class="book">
 
@@ -1262,58 +1417,116 @@
 
                         </div>
 
-
                         <p class="book-description">
                             A novel in progress.
                         </p>
 
                     </article>
 
-
                 </div>
 
 
-                <!-- OAKHAVEN -->
+
+                <!-- =================================================
+                     OAKHAVEN
+                ================================================== -->
 
                 <div class="series">
 
-                    <p class="series-title">
-                        The Oakhaven Series
-                    </p>
 
+                    <div class="series-heading">
 
-                    <div class="series-books">
+                        <div>
 
-
-                        <article class="series-book">
-
-                            <h3>
-                                Hearth &amp; Heritage
-                            </h3>
-
-                            <p>
-                                Novel
+                            <p class="series-title">
+                                The Oakhaven Series
                             </p>
 
-                        </article>
-
-
-                        <article class="series-book">
-
-                            <h3>
-                                In Deep Water
-                            </h3>
-
-                            <p>
-                                Novel
+                            <p class="series-note">
+                                Two novels
                             </p>
 
-                        </article>
+                        </div>
+
+                        <div class="botanical-mark">
+                            ❋
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="series-layout">
+
+
+                        <!-- WATER LILY -->
+
+                        <div class="series-image">
+
+                            <img
+                                src="./images/waterlily.jpeg"
+                                alt="Water lily floating on dark water"
+                            >
+
+                        </div>
+
+
+
+                        <!-- OAKHAVEN BOOKS -->
+
+                        <div class="series-books">
+
+
+                            <article class="series-book">
+
+                                <div>
+
+                                    <p class="book-number">
+                                        I
+                                    </p>
+
+                                    <h3>
+                                        Hearth &amp; Heritage
+                                    </h3>
+
+                                    <p>
+                                        Novel
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <article class="series-book">
+
+                                <div>
+
+                                    <p class="book-number">
+                                        II
+                                    </p>
+
+                                    <h3>
+                                        In Deep Water
+                                    </h3>
+
+                                    <p>
+                                        Novel
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                        </div>
 
 
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -1321,7 +1534,9 @@
 
 
 
-        <!-- GREEN THRESHOLD -->
+        <!-- =====================================================
+             GREEN THRESHOLD
+        ====================================================== -->
 
         <div class="green-threshold">
 
