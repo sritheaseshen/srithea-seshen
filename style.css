@@ -1902,3 +1902,272 @@ footer:hover span:last-child {
     }
 
 }
+```css
+/* =========================================================
+   5.5B — TYPOGRAPHY & SPACING
+   Literary hierarchy and deliberate whitespace
+   ========================================================= */
+
+
+/* =========================================================
+   BODY RHYTHM
+   ========================================================= */
+
+body {
+    line-height:
+        1.7;
+
+    text-rendering:
+        optimizeLegibility;
+
+    -webkit-font-smoothing:
+        antialiased;
+
+    -moz-osx-font-smoothing:
+        grayscale;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-text > p:last-child {
+    max-width:
+        520px;
+
+    font-size:
+        clamp(
+            1.02rem,
+            1.25vw,
+            1.16rem
+        );
+
+    line-height:
+        1.95;
+
+    letter-spacing:
+        0.005em;
+}
+
+.eyebrow {
+    line-height:
+        1.5;
+}
+
+
+/* =========================================================
+   LARGE HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+    text-wrap:
+        balance;
+}
+
+h1 {
+    font-kerning:
+        normal;
+}
+
+.collection-heading h2 {
+    letter-spacing:
+        -0.025em;
+}
+
+.book h3 {
+    letter-spacing:
+        -0.02em;
+}
+
+
+/* =========================================================
+   WORKS
+   ========================================================= */
+
+.works {
+    padding-top:
+        125px;
+
+    padding-bottom:
+        125px;
+}
+
+.collection {
+    margin-bottom:
+        120px;
+}
+
+.collection-heading {
+    padding-bottom:
+        24px;
+}
+
+.collection-type {
+    white-space:
+        nowrap;
+}
+
+
+/* =========================================================
+   BOOK INFORMATION
+   ========================================================= */
+
+.book-info {
+    padding-top:
+        26px;
+
+    padding-bottom:
+        30px;
+}
+
+.book-number {
+    letter-spacing:
+        0.18em;
+}
+
+.book-meta {
+    margin-top:
+        12px;
+
+    letter-spacing:
+        0.12em;
+}
+
+.book-arrow {
+    margin-top:
+        23px;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+    padding-top:
+        135px;
+
+    padding-bottom:
+        135px;
+}
+
+.about h2 {
+    letter-spacing:
+        -0.025em;
+}
+
+.about-text {
+    max-width:
+        700px;
+}
+
+.about-text p {
+    margin-bottom:
+        30px;
+
+    font-size:
+        1.06rem;
+
+    line-height:
+        1.95;
+}
+
+.about-text p:last-child {
+    margin-bottom:
+        0;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+    padding-top:
+        120px;
+
+    padding-bottom:
+        120px;
+}
+
+.contact h2 {
+    letter-spacing:
+        -0.035em;
+}
+
+.contact p {
+    line-height:
+        1.9;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    line-height:
+        1.5;
+}
+
+
+/* =========================================================
+   MOBILE TYPOGRAPHY
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .works {
+        padding-top:
+            95px;
+
+        padding-bottom:
+            95px;
+    }
+
+    .collection {
+        margin-bottom:
+            90px;
+    }
+
+    .about {
+        padding-top:
+            100px;
+
+        padding-bottom:
+            100px;
+    }
+
+    .contact {
+        padding-top:
+            90px;
+
+        padding-bottom:
+            90px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .hero-text > p:last-child {
+        font-size:
+            1rem;
+
+        line-height:
+            1.85;
+    }
+
+    .about-text p {
+        font-size:
+            1rem;
+
+        line-height:
+            1.85;
+    }
+
+}
