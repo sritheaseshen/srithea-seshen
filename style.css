@@ -1,5 +1,11 @@
 /* =========================================================
-   SRITHEA SESHEN — SHARED SITE STYLES
+   SRITHEA SESHEN
+   MASTER SITE STYLESHEET
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
    ========================================================= */
 
 * {
@@ -12,13 +18,19 @@ html {
 
 body {
     margin: 0;
+
     background: #f5f1ea;
+
     color: #24211e;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
@@ -34,14 +46,19 @@ nav {
     padding: 28px 7%;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
-    border-bottom: 1px solid #d8d0c5;
+    border-bottom:
+        1px solid #d8d0c5;
 
-    background: #f5f1ea;
+    background:
+        #f5f1ea;
 
     position: relative;
+
     z-index: 10;
 }
 
@@ -90,7 +107,7 @@ nav a:hover {
 
 
 /* =========================================================
-   GENERAL
+   GENERAL SECTION LABEL
    ========================================================= */
 
 .section-label {
@@ -109,6 +126,433 @@ nav a:hover {
 
     color: #536875;
 }
+
+
+/* =========================================================
+   HOMEPAGE HERO
+   ========================================================= */
+
+.hero {
+    min-height: 88vh;
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 7%;
+
+    padding:
+        70px 7% 90px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.eyebrow {
+    margin:
+        0 0 24px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    color: #536875;
+}
+
+h1 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            4rem,
+            9vw,
+            8rem
+        );
+
+    line-height: 0.88;
+
+    font-weight: 400;
+
+    letter-spacing: -0.055em;
+}
+
+.hero-rule {
+    width: 60px;
+
+    height: 2px;
+
+    margin:
+        36px 0;
+
+    background:
+        #365c76;
+}
+
+.hero-text > p:last-child {
+    max-width: 500px;
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+
+    color: #59534c;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.hero-image {
+    position: relative;
+
+    width: 100%;
+
+    height:
+        min(
+            72vh,
+            700px
+        );
+
+    overflow: hidden;
+
+    background:
+        #d9d6cf;
+}
+
+.hero-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 1s ease;
+}
+
+.hero-image:hover img {
+    transform:
+        scale(1.015);
+}
+
+.image-caption {
+    position: absolute;
+
+    left: 18px;
+
+    bottom: 16px;
+
+    padding:
+        7px 10px;
+
+    background:
+        rgba(
+            245,
+            241,
+            234,
+            0.9
+        );
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    color: #3d4548;
+}
+
+
+/* =========================================================
+   WORKS
+   ========================================================= */
+
+.works {
+    padding:
+        115px 8%;
+
+    border-top:
+        1px solid #d8d0c5;
+}
+
+.collection {
+    margin-bottom:
+        105px;
+}
+
+.collection:last-child {
+    margin-bottom: 0;
+}
+
+.collection-heading {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        baseline;
+
+    gap: 30px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid #cfc8bd;
+}
+
+.collection-heading h2 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.5rem
+        );
+
+    font-weight: 400;
+}
+
+.collection-type {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    color: #777067;
+}
+
+
+/* =========================================================
+   BOOK GRIDS
+   ========================================================= */
+
+.book-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap: 45px;
+
+    margin-top: 45px;
+}
+
+.alchemy-grid {
+    margin-top: 45px;
+}
+
+.book,
+.alchemy-book {
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+.book-image {
+    width: 100%;
+
+    height: 440px;
+
+    overflow: hidden;
+
+    background:
+        #dedbd4;
+}
+
+.alchemy-book .book-image {
+    height: 560px;
+}
+
+.book-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+.book:hover .book-image img,
+.alchemy-book:hover .book-image img {
+    transform:
+        scale(1.025);
+}
+
+.book-info {
+    padding-top: 23px;
+
+    padding-bottom: 25px;
+
+    border-bottom:
+        1px solid #cfc8bd;
+}
+
+.book-number {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.13em;
+
+    color: #777067;
+}
+
+.book h3 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            1.6rem,
+            3vw,
+            2.5rem
+        );
+
+    font-weight: 400;
+}
+
+.book-meta {
+    margin-top: 10px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    color: #536875;
+}
+
+.book-arrow {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    color: #365c76;
+
+    transition:
+        letter-spacing 0.25s ease;
+}
+
+.book:hover .book-arrow,
+.alchemy-book:hover .book-arrow {
+    letter-spacing: 0.17em;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+    padding:
+        120px 8%;
+
+    border-top:
+        1px solid #d8d0c5;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        0.65fr 1.35fr;
+
+    gap: 10%;
+}
+
+.about h2 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            2.2rem,
+            4vw,
+            3.7rem
+        );
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+.about-text {
+    max-width: 720px;
+}
+
+.about-text p {
+    margin:
+        0 0 25px;
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+
+    color: #56504a;
+}
+
+
+/* =========================================================
+   WRITING DESK
+   ========================================================= */
 
 .page-intro {
     padding:
@@ -149,18 +593,14 @@ nav a:hover {
     color: #59534c;
 }
 
-
-/* =========================================================
-   WRITING DESK
-   ========================================================= */
-
 .writing-desk {
     padding:
         90px 8% 130px;
 }
 
 .desk-section {
-    margin-bottom: 105px;
+    margin-bottom:
+        105px;
 }
 
 .desk-section:last-child {
@@ -170,9 +610,11 @@ nav a:hover {
 .desk-section-heading {
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
-    align-items: baseline;
+    align-items:
+        baseline;
 
     gap: 30px;
 
@@ -210,11 +652,6 @@ nav a:hover {
     color: #777067;
 }
 
-
-/* =========================================================
-   DESK ENTRIES
-   ========================================================= */
-
 .desk-entry {
     display: grid;
 
@@ -230,23 +667,6 @@ nav a:hover {
         1px solid #ddd6cc;
 
     text-decoration: none;
-
-    transition:
-        background 0.25s ease;
-}
-
-.desk-entry:last-child {
-    border-bottom: none;
-}
-
-.desk-entry:hover {
-    background:
-        rgba(
-            216,
-            208,
-            197,
-            0.16
-        );
 }
 
 .entry-type {
@@ -388,7 +808,8 @@ nav a:hover {
     border-top:
         1px solid #d8d0c5;
 
-    background: #eae5dc;
+    background:
+        #eae5dc;
 }
 
 .contact h2 {
@@ -445,7 +866,8 @@ nav a:hover {
 }
 
 .contact-email:hover {
-    color: #203d50;
+    color:
+        #203d50;
 
     border-color:
         #365c76;
@@ -503,6 +925,72 @@ footer {
         font-size: 0.68rem;
     }
 
+    .hero {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding:
+            70px 7% 80px;
+
+        gap: 55px;
+    }
+
+    h1 {
+        font-size:
+            clamp(
+                4rem,
+                17vw,
+                6.5rem
+            );
+    }
+
+    .hero-image {
+        height: 65vh;
+
+        min-height: 420px;
+    }
+
+    .works {
+        padding:
+            85px 7%;
+    }
+
+    .collection-heading {
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap: 12px;
+    }
+
+    .book-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .book-image {
+        height: 420px;
+    }
+
+    .alchemy-book .book-image {
+        height: 460px;
+    }
+
+    .about {
+        padding:
+            90px 7%;
+    }
+
+    .about-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 45px;
+    }
+
     .page-intro {
         padding:
             85px 7% 65px;
@@ -514,19 +1002,23 @@ footer {
     }
 
     .desk-section {
-        margin-bottom: 80px;
+        margin-bottom:
+            80px;
     }
 
     .desk-section-heading {
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: flex-start;
+        align-items:
+            flex-start;
 
         gap: 12px;
     }
 
     .desk-entry {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 12px;
 
@@ -547,7 +1039,8 @@ footer {
         padding:
             35px 7%;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
         align-items:
             flex-start;
@@ -560,9 +1053,11 @@ footer {
 @media (max-width: 520px) {
 
     nav {
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: flex-start;
+        align-items:
+            flex-start;
 
         gap: 18px;
     }
@@ -581,8 +1076,27 @@ footer {
         margin-right: 12px;
     }
 
-    .page-intro {
-        padding-top: 65px;
+    .hero {
+        padding-top:
+            60px;
+    }
+
+    .hero-image {
+        height:
+            55vh;
+
+        min-height:
+            360px;
+    }
+
+    .book-image {
+        height:
+            350px;
+    }
+
+    .alchemy-book .book-image {
+        height:
+            390px;
     }
 
     .page-intro h1 {
@@ -600,11 +1114,13 @@ footer {
     }
 
     .desk-section {
-        margin-bottom: 70px;
+        margin-bottom:
+            70px;
     }
 
     .desk-entry:hover {
-        background: transparent;
+        background:
+            transparent;
     }
 
     .contact {
@@ -613,6 +1129,7 @@ footer {
     }
 
     .contact-email {
-        font-size: 0.82rem;
+        font-size:
+            0.82rem;
     }
 }
