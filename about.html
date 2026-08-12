@@ -10,1021 +10,17 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>About — Srithea Seshen</title>
+    <title>About · Srithea Seshen</title>
 
     <meta
         name="description"
-        content="About Srithea Seshen — writing about humans, emotion, psychology, behaviour, and the stories beneath the surface."
+        content="About Srithea Seshen — writer and scientist interested in people, emotions, relationships, memory, and the stories we make from them."
     >
 
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-            margin: 0;
-
-            background: #f4f1e9;
-
-            color: #252a26;
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-        }
-
-
-        a {
-            color: inherit;
-        }
-
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-
-            padding:
-                27px 7%;
-
-            display:
-                flex;
-
-            justify-content:
-                space-between;
-
-            align-items:
-                center;
-
-            border-bottom:
-                1px solid #d0cec4;
-
-            background:
-                #f4f1e9;
-
-            position:
-                relative;
-
-            z-index:
-                10;
-        }
-
-
-        .logo {
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.85rem;
-
-            letter-spacing:
-                0.18em;
-
-            text-transform:
-                uppercase;
-
-            text-decoration:
-                none;
-
-            color:
-                #252a26;
-        }
-
-
-        nav a {
-
-            margin-left:
-                30px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.74rem;
-
-            letter-spacing:
-                0.08em;
-
-            text-transform:
-                uppercase;
-
-            text-decoration:
-                none;
-
-            color:
-                #646b64;
-
-            transition:
-                color 0.25s ease;
-        }
-
-
-        nav a:hover {
-
-            color:
-                #315c50;
-        }
-
-
-
-        /* =========================
-           INTRODUCTION
-        ========================= */
-
-        .intro {
-
-            min-height:
-                72vh;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            padding:
-                100px 8%;
-
-            border-bottom:
-                1px solid #d0cec4;
-        }
-
-
-        .intro-inner {
-
-            max-width:
-                1050px;
-        }
-
-
-        .eyebrow {
-
-            margin:
-                0 0 32px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #496c60;
-        }
-
-
-        h1 {
-
-            margin:
-                0;
-
-            max-width:
-                950px;
-
-            font-size:
-                clamp(
-                    4rem,
-                    8vw,
-                    8rem
-                );
-
-            line-height:
-                0.9;
-
-            font-weight:
-                400;
-
-            letter-spacing:
-                -0.06em;
-
-            color:
-                #252a26;
-        }
-
-
-        .intro-rule {
-
-            width:
-                70px;
-
-            height:
-                2px;
-
-            margin:
-                48px 0 38px;
-
-            background:
-                #496c60;
-        }
-
-
-        .intro-text {
-
-            max-width:
-                720px;
-
-            margin:
-                0;
-
-            font-size:
-                1.15rem;
-
-            line-height:
-                1.9;
-
-            color:
-                #5c625d;
-        }
-
-
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
-
-        section {
-
-            padding:
-                115px 8%;
-        }
-
-
-        .section-label {
-
-            margin-bottom:
-                38px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                0.2em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #496c60;
-        }
-
-
-        section h2 {
-
-            margin:
-                0;
-
-            max-width:
-                800px;
-
-            font-size:
-                clamp(
-                    2.4rem,
-                    5vw,
-                    4.8rem
-                );
-
-            line-height:
-                1.02;
-
-            font-weight:
-                400;
-
-            letter-spacing:
-                -0.035em;
-        }
-
-
-
-        /* =========================
-           THE STORIES
-        ========================= */
-
-        .stories {
-
-            background:
-                #ebe8de;
-
-            border-bottom:
-                1px solid #d0cec4;
-        }
-
-
-        .stories-grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                0.75fr 1.25fr;
-
-            gap:
-                11%;
-
-            margin-top:
-                65px;
-        }
-
-
-        .stories-lead {
-
-            font-size:
-                1.3rem;
-
-            line-height:
-                1.7;
-
-            color:
-                #343a35;
-        }
-
-
-        .stories-body p {
-
-            max-width:
-                700px;
-
-            margin:
-                0 0 28px;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.9;
-
-            color:
-                #5b615c;
-        }
-
-
-        .stories-body p:last-child {
-
-            margin-bottom:
-                0;
-        }
-
-
-        .statement {
-
-            margin-top:
-                65px;
-
-            padding:
-                45px 0;
-
-            border-top:
-                1px solid #c9c8bd;
-
-            border-bottom:
-                1px solid #c9c8bd;
-
-            font-size:
-                clamp(
-                    1.8rem,
-                    3vw,
-                    3rem
-                );
-
-            line-height:
-                1.25;
-
-            font-style:
-                italic;
-
-            color:
-                #304d43;
-        }
-
-
-
-        /* =========================
-           BENEATH THE SURFACE
-        ========================= */
-
-        .surface {
-
-            background:
-                #102f31;
-
-            color:
-                #e9efea;
-        }
-
-
-        .surface .section-label {
-
-            color:
-                #8fb3a9;
-        }
-
-
-        .surface h2 {
-
-            color:
-                #edf2ed;
-        }
-
-
-        .surface-grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(
-                    3,
-                    1fr
-                );
-
-            gap:
-                1px;
-
-            margin-top:
-                75px;
-
-            background:
-                #315352;
-        }
-
-
-        .surface-card {
-
-            padding:
-                42px 32px;
-
-            background:
-                #102f31;
-        }
-
-
-        .surface-number {
-
-            display:
-                block;
-
-            margin-bottom:
-                22px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.65rem;
-
-            letter-spacing:
-                0.15em;
-
-            color:
-                #789d95;
-        }
-
-
-        .surface-card h3 {
-
-            margin:
-                0 0 20px;
-
-            font-size:
-                1.55rem;
-
-            font-weight:
-                400;
-
-            color:
-                #edf2ed;
-        }
-
-
-        .surface-card p {
-
-            margin:
-                0;
-
-            font-size:
-                0.98rem;
-
-            line-height:
-                1.85;
-
-            color:
-                #b8c8c4;
-        }
-
-
-        .surface-conclusion {
-
-            max-width:
-                800px;
-
-            margin-top:
-                70px;
-
-            font-size:
-                1.08rem;
-
-            line-height:
-                1.9;
-
-            color:
-                #c8d4d1;
-        }
-
-
-
-        /* =========================
-           THE WORK
-        ========================= */
-
-        .work {
-
-            background:
-                #f4f1e9;
-        }
-
-
-        .work-intro {
-
-            max-width:
-                720px;
-
-            margin-top:
-                42px;
-
-            font-size:
-                1.08rem;
-
-            line-height:
-                1.9;
-
-            color:
-                #5c625d;
-        }
-
-
-        .work-grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(
-                    2,
-                    1fr
-                );
-
-            gap:
-                35px;
-
-            margin-top:
-                75px;
-        }
-
-
-        .work-card {
-
-            padding:
-                40px 35px;
-
-            border:
-                1px solid #cbc9be;
-
-            background:
-                #eeece4;
-
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease;
-        }
-
-
-        .work-card:hover {
-
-            transform:
-                translateY(-3px);
-
-            border-color:
-                #82978d;
-        }
-
-
-        .work-card .label {
-
-            margin-bottom:
-                25px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.65rem;
-
-            letter-spacing:
-                0.15em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                #60776e;
-        }
-
-
-        .work-card h3 {
-
-            margin:
-                0 0 18px;
-
-            font-size:
-                2rem;
-
-            font-weight:
-                400;
-        }
-
-
-        .work-card p {
-
-            margin:
-                0;
-
-            font-size:
-                0.98rem;
-
-            line-height:
-                1.8;
-
-            color:
-                #656a64;
-        }
-
-
-        .work-card a {
-
-            display:
-                inline-block;
-
-            margin-top:
-                28px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.68rem;
-
-            letter-spacing:
-                0.12em;
-
-            text-transform:
-                uppercase;
-
-            text-decoration:
-                none;
-
-            color:
-                #496c60;
-
-            transition:
-                color 0.25s ease;
-        }
-
-
-        .work-card a:hover {
-
-            color:
-                #253e36;
-        }
-
-
-
-        /* =========================
-           CLOSING
-        ========================= */
-
-        .closing {
-
-            padding:
-                130px 8% 145px;
-
-            background:
-                #dfe5df;
-
-            border-top:
-                1px solid #c8cec7;
-        }
-
-
-        .closing-inner {
-
-            max-width:
-                900px;
-        }
-
-
-        .closing h2 {
-
-            font-size:
-                clamp(
-                    2.7rem,
-                    6vw,
-                    5.7rem
-                );
-
-            color:
-                #293b33;
-        }
-
-
-        .closing-rule {
-
-            width:
-                55px;
-
-            height:
-                2px;
-
-            margin:
-                42px 0;
-            
-            background:
-                #496c60;
-        }
-
-
-        .closing p {
-
-            max-width:
-                650px;
-
-            margin:
-                0;
-
-            font-size:
-                1.05rem;
-
-            line-height:
-                1.85;
-
-            color:
-                #59655e;
-        }
-
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-
-            padding:
-                45px 8%;
-
-            display:
-                flex;
-
-            justify-content:
-                space-between;
-
-            align-items:
-                center;
-
-            border-top:
-                1px solid #c8cec7;
-
-            background:
-                #ebe8de;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.68rem;
-
-            letter-spacing:
-                0.08em;
-
-            color:
-                #747a73;
-        }
-
-
-        footer a {
-
-            text-decoration:
-                none;
-
-            color:
-                #747a73;
-
-            transition:
-                color 0.25s ease;
-        }
-
-
-        footer a:hover {
-
-            color:
-                #315c50;
-        }
-
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 850px) {
-
-            nav {
-
-                padding:
-                    23px 6%;
-            }
-
-
-            nav a {
-
-                margin-left:
-                    15px;
-
-                font-size:
-                    0.68rem;
-            }
-
-
-            .intro {
-
-                min-height:
-                    65vh;
-
-                padding:
-                    80px 7%;
-            }
-
-
-            section {
-
-                padding:
-                    85px 7%;
-            }
-
-
-            .stories-grid {
-
-                grid-template-columns:
-                    1fr;
-
-                gap:
-                    45px;
-
-                margin-top:
-                    50px;
-            }
-
-
-            .surface-grid {
-
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .surface-card {
-
-                padding:
-                    35px 28px;
-            }
-
-
-            .work-grid {
-
-                grid-template-columns:
-                    1fr;
-
-                margin-top:
-                    55px;
-            }
-
-
-            .closing {
-
-                padding:
-                    90px 7% 100px;
-            }
-
-
-            footer {
-
-                padding:
-                    35px 7%;
-
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
-
-                gap:
-                    12px;
-            }
-        }
-
-
-        @media (max-width: 520px) {
-
-            nav {
-
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
-
-                gap:
-                    18px;
-            }
-
-
-            nav div:last-child {
-
-                display:
-                    flex;
-
-                flex-wrap:
-                    wrap;
-
-                gap:
-                    12px;
-            }
-
-
-            nav a {
-
-                margin-left:
-                    0;
-
-                margin-right:
-                    12px;
-            }
-
-
-            h1 {
-
-                font-size:
-                    clamp(
-                        3.8rem,
-                        16vw,
-                        6rem
-                    );
-            }
-
-
-            .statement {
-
-                font-size:
-                    1.65rem;
-            }
-        }
-
-    </style>
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
@@ -1032,7 +28,9 @@
 <body>
 
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
 
     <nav>
 
@@ -1042,7 +40,6 @@
         >
             Srithea Seshen
         </a>
-
 
         <div>
 
@@ -1054,7 +51,11 @@
                 About
             </a>
 
-            <a href="index.html#contact">
+            <a href="writing-desk.html">
+                The Writing Desk
+            </a>
+
+            <a href="contact.html">
                 Contact
             </a>
 
@@ -1067,324 +68,93 @@
     <main>
 
 
-        <!-- INTRODUCTION -->
+        <!-- =========================
+             ABOUT INTRO
+             ========================= -->
 
-        <section class="intro">
-
-            <div class="intro-inner">
-
-                <p class="eyebrow">
-                    About
-                </p>
-
-
-                <h1>
-                    Humans,<br>
-                    above all.
-                </h1>
-
-
-                <div class="intro-rule"></div>
-
-
-                <p class="intro-text">
-                    Srithea Seshen writes about humans—their
-                    emotions, psychology, behaviour, contradictions,
-                    and the strange ways in which people find,
-                    lose, hurt, understand, and love one another.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- THE STORIES -->
-
-        <section class="stories">
+        <section class="page-intro">
 
             <div class="section-label">
-                The Stories
+                About
             </div>
 
-
-            <h2>
-                Fiction gives the story
-                its shape. Humanity gives
-                it its truth.
-            </h2>
-
-
-            <div class="stories-grid">
-
-
-                <div class="stories-lead">
-
-                    <p>
-                        Raw emotion is at the heart
-                        of the work.
-                    </p>
-
-                </div>
-
-
-                <div class="stories-body">
-
-                    <p>
-                        Not emotion polished into something
-                        convenient or beautiful, but emotion
-                        as it exists: irrational, inconvenient,
-                        tender, ugly, overwhelming, and
-                        occasionally transformative.
-                    </p>
-
-
-                    <p>
-                        Feeling deeply is not weakness.
-                        It is often where strength begins.
-                    </p>
-
-
-                    <p>
-                        Growth, however, is rarely graceful.
-                        There are wrong choices, consequences,
-                        losses, and regrets. There are moments
-                        when falling is unavoidable.
-                    </p>
-
-
-                    <p>
-                        What matters is the getting up—the
-                        decision to continue, to learn, to change,
-                        and to try again.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="statement">
-
-                To grow, one must sometimes fall.
-                To live, one must get back up.
-
-            </div>
-
-        </section>
-
-
-
-        <!-- BENEATH THE SURFACE -->
-
-        <section class="surface">
-
-            <div class="section-label">
-                Beneath the Surface
-            </div>
-
-
-            <h2>
-                The visible thing is rarely
-                the whole story.
-            </h2>
-
-
-            <div class="surface-grid">
-
-
-                <div class="surface-card">
-
-                    <span class="surface-number">
-                        01
-                    </span>
-
-
-                    <h3>
-                        Behaviour
-                    </h3>
-
-
-                    <p>
-                        A behaviour has a history.
-                        People carry more into a moment
-                        than the moment itself reveals.
-                    </p>
-
-                </div>
-
-
-
-                <div class="surface-card">
-
-                    <span class="surface-number">
-                        02
-                    </span>
-
-
-                    <h3>
-                        Reaction
-                    </h3>
-
-
-                    <p>
-                        A reaction has a reason.
-                        Sometimes understanding arrives
-                        only after the reaction has passed.
-                    </p>
-
-                </div>
-
-
-
-                <div class="surface-card">
-
-                    <span class="surface-number">
-                        03
-                    </span>
-
-
-                    <h3>
-                        Emotion
-                    </h3>
-
-
-                    <p>
-                        An emotion comes from somewhere.
-                        The difficult part is often discovering
-                        where.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <p class="surface-conclusion">
-
-                Biochemistry is an education in looking beneath
-                appearances—at systems, interactions, reactions,
-                patterns, and causes that are not immediately visible.
-                Perhaps that is part of why people remain so fascinating.
-
-                Science and writing meet in curiosity about what lies
-                beneath the surface.
-
+            <h1>
+                Fiction about
+                people before plots.
+            </h1>
+
+            <p>
+                About the choices that shape us,
+                the relationships that undo us,
+                and the hope that asks us to
+                begin again.
             </p>
 
         </section>
 
 
 
-        <!-- THE WORK -->
+        <!-- =========================
+             ABOUT CONTENT
+             ========================= -->
 
-        <section class="work">
+        <section class="about">
 
-            <div class="section-label">
-                The Work
-            </div>
+            <div class="about-grid">
 
+                <div>
 
-            <h2>
-                Different stories.
-                Different worlds.
-                The same fascination.
-            </h2>
+                    <h2>
+                        Srithea<br>
+                        Seshen
+                    </h2>
 
-
-            <p class="work-intro">
-
-                The writing moves between contemporary romance,
-                literary fiction, and human stories.
-
-            </p>
+                </div>
 
 
-            <div class="work-grid">
-
-
-                <article class="work-card">
-
-                    <div class="label">
-                        The Alchemy
-                    </div>
-
-
-                    <h3>
-                        Two Brain Cells
-                    </h3>
-
+                <div class="about-text">
 
                     <p>
-                        A standalone contemporary romance.
-                        The story of two people, questionable
-                        decisions, and the inconvenient business
-                        of falling in love.
+                        Srithea Seshen writes about people:
+                        their emotions, their contradictions,
+                        their private histories, and the choices
+                        that quietly change the course of a life.
                     </p>
-
-
-                    <a href="two-brain-cells.html">
-                        View the work →
-                    </a>
-
-                </article>
-
-
-
-                <article class="work-card">
-
-                    <div class="label">
-                        The Oakhaven Series
-                    </div>
-
-
-                    <h3>
-                        Hearth &amp; Heritage
-                    </h3>
-
 
                     <p>
-                        Book One of The Oakhaven Series,
-                        shaped by family, memory, place,
-                        inheritance, and the lives built
-                        around one another.
+                        The stories move through contemporary
+                        romance, literary fiction, family,
+                        memory, inheritance, desire, mythology,
+                        and the complicated spaces between them.
                     </p>
-
-
-                    <a href="hearth-and-heritage.html">
-                        View the work →
-                    </a>
-
-                </article>
-
-
-
-                <article class="work-card">
-
-                    <div class="label">
-                        The Oakhaven Series
-                    </div>
-
-
-                    <h3>
-                        In Deep Water
-                    </h3>
-
 
                     <p>
-                        Book Two of The Oakhaven Series,
-                        moving into deeper and darker
-                        territory.
+                        The work begins with a simple belief:
+                        people are more interesting than plots.
+                        A plot may tell us what happened.
+                        A person tells us why it mattered.
                     </p>
 
+                    <p>
+                        There is room here for tenderness and
+                        foolishness, regret and reinvention,
+                        obsession and ordinary happiness.
+                        Human beings are rarely one thing at a time.
+                    </p>
 
-                    <a href="in-deep-water.html">
-                        View the work →
-                    </a>
+                    <p>
+                        Alongside writing is a life in science.
+                        The laboratory offers its own education
+                        in patience, observation, uncertainty,
+                        failure, and the necessity of beginning
+                        again.
+                    </p>
 
-                </article>
+                    <p>
+                        Writer · Scientist
+                    </p>
 
+                </div>
 
             </div>
 
@@ -1392,27 +162,28 @@
 
 
 
-        <!-- CLOSING -->
+        <!-- =========================
+             CONTACT PREVIEW
+             ========================= -->
 
-        <section class="closing">
+        <section class="contact">
 
-            <div class="closing-inner">
+            <h2>
+                Stay a while.
+            </h2>
 
-                <h2>
-                    What makes us human?
-                </h2>
+            <p>
+                For literary enquiries, collaborations,
+                publishing opportunities, or professional
+                correspondence:
+            </p>
 
-
-                <div class="closing-rule"></div>
-
-
-                <p>
-                    Perhaps there is no single answer.
-                    Perhaps that is precisely what makes
-                    the question worth returning to.
-                </p>
-
-            </div>
+            <a
+                class="contact-email"
+                href="mailto:sritheaseshen@proton.me"
+            >
+                sritheaseshen@proton.me
+            </a>
 
         </section>
 
@@ -1420,7 +191,9 @@
 
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+         ========================= -->
 
     <footer>
 
@@ -1428,10 +201,9 @@
             © 2026 Srithea Seshen
         </span>
 
-
-        <a href="index.html">
-            ← Home
-        </a>
+        <span>
+            Love · Memory · What Remains
+        </span>
 
     </footer>
 
