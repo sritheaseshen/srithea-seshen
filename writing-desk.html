@@ -25,20 +25,127 @@
 
     <style>
 
-        /* =================================================
-           WRITING DESK
-           ================================================= */
+        ```css
+/* =========================================================
+   5.6B — WRITING DESK → WORKS
+   ========================================================= */
 
-        .desk-page {
+.desk-work-link {
 
-            min-height: 100vh;
+    padding:
+        105px 8%;
 
-            background:
-                #120D0A;
+    border-top:
+        1px solid #38271D;
 
-            color:
-                #F0E6D5;
-        }
+    background:
+        #120D0A;
+}
+
+.desk-work-link-inner {
+
+    max-width:
+        850px;
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+}
+
+.desk-work-link-inner > span {
+
+    display:
+        block;
+
+    margin-bottom:
+        25px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        0.63rem;
+
+    letter-spacing:
+        0.18em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        #8E7C6A;
+}
+
+.desk-work-link h2 {
+
+    margin:
+        0;
+
+    font-size:
+        clamp(
+            2.3rem,
+            4vw,
+            3.8rem
+        );
+
+    line-height:
+        1.05;
+
+    font-weight:
+        400;
+
+    color:
+        #F0E6D5;
+}
+
+.desk-work-link a {
+
+    display:
+        inline-block;
+
+    margin-top:
+        30px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        0.66rem;
+
+    letter-spacing:
+        0.13em;
+
+    text-transform:
+        uppercase;
+
+    text-decoration:
+        none;
+
+    color:
+        #B99568;
+}
+
+@media (max-width: 520px) {
+
+    .desk-work-link {
+
+        padding:
+            80px 7%;
+    }
+
+    .desk-work-link h2 {
+
+        font-size:
+            2.4rem;
+    }
+
+}
 
 
         /* =================================================
