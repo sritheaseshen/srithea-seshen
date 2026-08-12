@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,7 +12,6 @@
         content="Srithea Seshen — contemporary romance, literary fiction, and human stories."
     >
 
-    <!-- Literary serif + clean sans-serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -20,24 +20,44 @@
         rel="stylesheet"
     >
 
+
     <style>
 
         /* =========================================================
-           FOUNDATION
+           COLOUR SYSTEM
         ========================================================= */
 
         :root {
+
             --ocean: #082F35;
-            --deep-green: #174A3C;
+
+            --deep-water: #06262B;
+
+            --green: #174A3C;
+
             --botanical: #F3F5F1;
+
             --soft-green: #E6EFEB;
+
             --mist: #8FB0AE;
+
             --ink: #102D30;
+
             --muted: #587274;
+
             --red: #A8324A;
-            --line: rgba(16, 45, 48, 0.16);
-            --dark-line: rgba(243, 245, 241, 0.18);
+
+            --pink-red: #C65A68;
+
+            --line: rgba(16, 45, 48, 0.14);
+
+            --dark-line: rgba(243, 245, 241, 0.17);
         }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
 
         * {
             box-sizing: border-box;
@@ -48,9 +68,11 @@
         }
 
         body {
+
             margin: 0;
 
             background: var(--botanical);
+
             color: var(--ink);
 
             font-family:
@@ -58,7 +80,7 @@
                 Arial,
                 sans-serif;
 
-            font-weight: 400;
+            overflow-x: hidden;
         }
 
         a {
@@ -72,6 +94,7 @@
         ========================================================= */
 
         nav {
+
             position: absolute;
 
             top: 0;
@@ -82,35 +105,38 @@
             padding: 34px 7%;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
-            z-index: 20;
+            z-index: 30;
         }
 
         .logo {
+
             font-family:
                 "Libre Baskerville",
                 Georgia,
                 serif;
 
-            font-size: 0.95rem;
+            font-size: 0.93rem;
 
             letter-spacing: 0.08em;
-
-            color: var(--ink);
         }
 
         .nav-links {
+
             display: flex;
 
             gap: 34px;
         }
 
         .nav-links a {
+
             position: relative;
 
-            font-size: 0.68rem;
+            font-size: 0.67rem;
 
             letter-spacing: 0.18em;
 
@@ -123,14 +149,17 @@
         }
 
         .nav-links a::after {
+
             content: "";
 
             position: absolute;
 
             left: 0;
+
             bottom: -7px;
 
             width: 0;
+
             height: 1px;
 
             background: var(--red);
@@ -140,10 +169,12 @@
         }
 
         .nav-links a:hover {
+
             color: var(--red);
         }
 
         .nav-links a:hover::after {
+
             width: 100%;
         }
 
@@ -153,20 +184,57 @@
         ========================================================= */
 
         .hero {
+
             min-height: 100vh;
 
+            position: relative;
+
             display: flex;
+
             align-items: center;
 
             padding:
                 150px 8%
-                110px;
+                115px;
 
-            position: relative;
+            overflow: hidden;
         }
 
+
+        /* Very subtle botanical atmosphere */
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+
+            height: 420px;
+
+            right: -190px;
+
+            top: 50px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(23, 74, 60, 0.08);
+
+            box-shadow:
+                0 0 0 35px rgba(23, 74, 60, 0.025),
+                0 0 0 70px rgba(23, 74, 60, 0.018);
+
+            pointer-events: none;
+        }
+
+
         .hero-inner {
+
             width: 100%;
+
             max-width: 1120px;
 
             margin: 0 auto;
@@ -179,24 +247,37 @@
             align-items: center;
 
             gap: 85px;
+
+            position: relative;
+
+            z-index: 2;
         }
 
-        /*
-            IMPORTANT:
-            The lotus image itself is NOT modified.
-            Your existing images/lotus.jpeg remains untouched.
-        */
+
+        /* =========================================================
+           LOTUS IMAGE
+        ========================================================= */
 
         .hero-image-wrap {
+
             order: 2;
 
             display: flex;
 
             justify-content: center;
+
             align-items: center;
+
+            position: relative;
         }
 
+        /*
+            THE IMAGE ITSELF IS NOT CHANGED.
+            images/lotus.jpeg stays exactly as uploaded.
+        */
+
         .hero-image {
+
             display: block;
 
             width: min(430px, 38vw);
@@ -214,25 +295,25 @@
             box-shadow:
                 0 30px 70px
                 rgba(8, 47, 53, 0.15);
-
-            /*
-                No filter.
-                No colour alteration.
-                No overlay.
-                The photograph stays yours.
-            */
         }
 
+
+        /* =========================================================
+           HERO COPY
+        ========================================================= */
+
         .hero-copy {
+
             order: 1;
         }
 
         .eyebrow {
+
             margin: 0 0 24px;
 
-            font-size: 0.68rem;
+            font-size: 0.66rem;
 
-            letter-spacing: 0.28em;
+            letter-spacing: 0.3em;
 
             text-transform: uppercase;
 
@@ -240,6 +321,7 @@
         }
 
         h1 {
+
             margin: 0;
 
             font-family:
@@ -259,11 +341,10 @@
             font-weight: 400;
 
             letter-spacing: -0.065em;
-
-            color: var(--ink);
         }
 
         .hero-line {
+
             width: 48px;
 
             height: 1px;
@@ -274,6 +355,7 @@
         }
 
         .hero-statement {
+
             max-width: 470px;
 
             margin: 0;
@@ -294,44 +376,139 @@
 
             font-style: italic;
 
-            color: var(--deep-green);
+            color: var(--green);
         }
 
         .hero-symbol {
+
             margin-top: 45px;
 
-            font-size: 1rem;
+            font-size: 0.95rem;
 
             color: var(--red);
 
-            opacity: 0.85;
+            letter-spacing: 0.4em;
         }
 
 
         /* =========================================================
-           WORKS
+           SMALL BOTANICAL DIVIDER
+        ========================================================= */
+
+        .threshold {
+
+            height: 100px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+
+            background: var(--botanical);
+        }
+
+        .threshold::before {
+
+            content: "";
+
+            width: 1px;
+
+            height: 55px;
+
+            background: var(--red);
+
+            opacity: 0.65;
+        }
+
+        .threshold::after {
+
+            content: "✦";
+
+            position: absolute;
+
+            font-size: 0.6rem;
+
+            color: var(--red);
+
+            background: var(--botanical);
+
+            padding: 10px;
+        }
+
+
+        /* =========================================================
+           THE ALCHEMY
         ========================================================= */
 
         .works {
+
             background: var(--ocean);
 
             color: var(--botanical);
 
             padding:
                 135px 8%
-                145px;
+                150px;
+
+            position: relative;
+
+            overflow: hidden;
         }
 
+
+        /*
+            Water-ripple atmosphere.
+            Pure CSS — no extra image required.
+        */
+
+        .works::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 650px;
+
+            height: 650px;
+
+            right: -320px;
+
+            top: -250px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(143, 176, 174, 0.08);
+
+            box-shadow:
+                0 0 0 45px rgba(143, 176, 174, 0.025),
+                0 0 0 90px rgba(143, 176, 174, 0.018),
+                0 0 0 135px rgba(143, 176, 174, 0.012);
+
+            pointer-events: none;
+        }
+
+
         .section-inner {
+
             max-width: 1120px;
 
             margin: 0 auto;
+
+            position: relative;
+
+            z-index: 2;
         }
 
         .section-label {
+
             margin: 0 0 24px;
 
-            font-size: 0.66rem;
+            font-size: 0.65rem;
 
             letter-spacing: 0.28em;
 
@@ -341,6 +518,7 @@
         }
 
         .works-title {
+
             margin: 0 0 90px;
 
             font-family:
@@ -362,17 +540,25 @@
             letter-spacing: -0.055em;
         }
 
+
+        /* =========================================================
+           ALCHEMY NOVEL
+        ========================================================= */
+
         .alchemy {
+
             padding-top: 44px;
 
             border-top:
-                1px solid var(--dark-line);
+                1px solid
+                var(--dark-line);
         }
 
         .alchemy-label {
+
             margin: 0 0 44px;
 
-            font-size: 0.66rem;
+            font-size: 0.65rem;
 
             letter-spacing: 0.25em;
 
@@ -381,12 +567,8 @@
             color: var(--mist);
         }
 
-
-        /* =========================================================
-           BOOK
-        ========================================================= */
-
         .book {
+
             display: grid;
 
             grid-template-columns:
@@ -402,10 +584,12 @@
         }
 
         .book:first-of-type {
+
             border-top: none;
         }
 
         .book-title {
+
             margin: 0;
 
             font-family:
@@ -426,9 +610,10 @@
         }
 
         .book-meta {
+
             margin: 14px 0 0;
 
-            font-size: 0.65rem;
+            font-size: 0.64rem;
 
             letter-spacing: 0.18em;
 
@@ -438,6 +623,7 @@
         }
 
         .book-description {
+
             max-width: 560px;
 
             margin: 0;
@@ -451,22 +637,25 @@
 
 
         /* =========================================================
-           OAKHAVEN SERIES
+           OAKHAVEN
         ========================================================= */
 
         .series {
+
             margin-top: 95px;
 
             padding-top: 48px;
 
             border-top:
-                1px solid var(--dark-line);
+                1px solid
+                var(--dark-line);
         }
 
         .series-title {
+
             margin: 0 0 45px;
 
-            font-size: 0.72rem;
+            font-size: 0.71rem;
 
             letter-spacing: 0.22em;
 
@@ -476,6 +665,7 @@
         }
 
         .series-books {
+
             display: grid;
 
             grid-template-columns:
@@ -485,11 +675,16 @@
         }
 
         .series-book {
-            padding: 34px;
+
+            padding: 35px;
 
             border:
                 1px solid
                 rgba(243, 245, 241, 0.13);
+
+            position: relative;
+
+            overflow: hidden;
 
             transition:
                 background 0.35s ease,
@@ -497,7 +692,32 @@
                 transform 0.35s ease;
         }
 
+        .series-book::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 70px;
+
+            height: 70px;
+
+            right: -35px;
+
+            bottom: -35px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(198, 90, 104, 0.35);
+
+            transition:
+                transform 0.4s ease;
+        }
+
         .series-book:hover {
+
             background:
                 rgba(243, 245, 241, 0.045);
 
@@ -508,7 +728,14 @@
                 translateY(-3px);
         }
 
+        .series-book:hover::before {
+
+            transform:
+                scale(2.2);
+        }
+
         .series-book h3 {
+
             margin: 0;
 
             font-family:
@@ -519,9 +746,14 @@
             font-size: 1.5rem;
 
             font-weight: 400;
+
+            position: relative;
+
+            z-index: 2;
         }
 
         .series-book p {
+
             margin: 15px 0 0;
 
             font-size: 0.64rem;
@@ -531,6 +763,45 @@
             text-transform: uppercase;
 
             color: var(--mist);
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =========================================================
+           BOTANICAL THRESHOLD
+        ========================================================= */
+
+        .green-threshold {
+
+            height: 130px;
+
+            background: var(--green);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+        }
+
+        .green-threshold span {
+
+            color: rgba(243,245,241,0.6);
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 0.8rem;
+
+            letter-spacing: 0.5em;
+
+            margin-left: 0.5em;
         }
 
 
@@ -539,13 +810,16 @@
         ========================================================= */
 
         .about {
+
             padding:
                 140px 8%;
 
-            background: var(--botanical);
+            background:
+                var(--botanical);
         }
 
         .about-grid {
+
             max-width: 1120px;
 
             margin: 0 auto;
@@ -561,6 +835,7 @@
         }
 
         .about-title {
+
             margin: 0;
 
             font-family:
@@ -583,6 +858,7 @@
         }
 
         .about-text {
+
             max-width: 650px;
 
             font-family:
@@ -598,19 +874,20 @@
         }
 
         .about-text p {
-            margin: 0 0 30px;
+
+            margin:
+                0 0 30px;
         }
 
         .about-mark {
-            margin-top: 48px;
 
-            font-family:
-                Georgia,
-                serif;
+            margin-top: 48px;
 
             color: var(--red);
 
-            font-size: 1rem;
+            font-size: 0.95rem;
+
+            letter-spacing: 0.4em;
         }
 
 
@@ -619,13 +896,16 @@
         ========================================================= */
 
         .contact {
+
             padding:
                 105px 8%;
 
-            background: var(--soft-green);
+            background:
+                var(--soft-green);
         }
 
         .contact-inner {
+
             max-width: 1120px;
 
             margin: 0 auto;
@@ -640,6 +920,7 @@
         }
 
         .contact h2 {
+
             margin: 0;
 
             font-family:
@@ -660,6 +941,7 @@
         }
 
         .contact p {
+
             max-width: 390px;
 
             margin: 0;
@@ -677,14 +959,17 @@
         ========================================================= */
 
         footer {
+
             padding:
                 32px 8%;
 
-            background: var(--ocean);
+            background:
+                var(--deep-water);
 
-            color: var(--mist);
+            color:
+                var(--mist);
 
-            font-size: 0.62rem;
+            font-size: 0.61rem;
 
             letter-spacing: 0.16em;
 
@@ -705,44 +990,56 @@
         @media (max-width: 800px) {
 
             nav {
-                padding: 25px 6%;
+
+                padding:
+                    25px 6%;
             }
 
             .nav-links {
+
                 gap: 17px;
             }
 
             .nav-links a {
-                font-size: 0.61rem;
+
+                font-size: 0.6rem;
             }
 
             .hero {
+
                 padding:
                     125px 7%
                     90px;
             }
 
             .hero-inner {
+
                 grid-template-columns: 1fr;
 
                 gap: 58px;
             }
 
             .hero-image-wrap {
+
                 order: 1;
             }
 
             .hero-copy {
+
                 order: 2;
             }
 
             .hero-image {
-                width: min(330px, 78vw);
 
-                height: min(430px, 70vh);
+                width:
+                    min(330px, 78vw);
+
+                height:
+                    min(430px, 70vh);
             }
 
             h1 {
+
                 font-size:
                     clamp(
                         3.4rem,
@@ -751,55 +1048,81 @@
                     );
             }
 
+            .threshold {
+
+                height: 80px;
+            }
+
             .works {
+
                 padding:
                     95px 7%
                     105px;
             }
 
             .book {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
 
                 gap: 22px;
             }
 
             .series-books {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .green-threshold {
+
+                height: 95px;
             }
 
             .about {
+
                 padding:
                     95px 7%;
             }
 
             .about-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
 
                 gap: 48px;
             }
 
             .contact {
+
                 padding:
                     80px 7%;
             }
 
             .contact-inner {
-                flex-direction: column;
 
-                align-items: flex-start;
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
             }
 
             footer {
-                flex-direction: column;
+
+                flex-direction:
+                    column;
 
                 gap: 13px;
 
                 padding:
                     30px 7%;
             }
+
         }
 
     </style>
+
 </head>
 
 
@@ -818,11 +1141,17 @@
 
         <div class="nav-links">
 
-            <a href="#works">Works</a>
+            <a href="#works">
+                Works
+            </a>
 
-            <a href="#about">About</a>
+            <a href="#about">
+                About
+            </a>
 
-            <a href="#contact">Contact</a>
+            <a href="#contact">
+                Contact
+            </a>
 
         </div>
 
@@ -836,12 +1165,14 @@
 
     <main>
 
+
         <section class="hero">
 
             <div class="hero-inner">
 
 
-                <!-- YOUR ORIGINAL LOTUS IMAGE -->
+                <!-- LOTUS — UNTOUCHED -->
+
                 <div class="hero-image-wrap">
 
                     <img
@@ -884,11 +1215,20 @@
 
 
 
+        <!-- THRESHOLD -->
+
+        <div class="threshold"></div>
+
+
+
         <!-- =====================================================
-             WORKS
+             THE WORK
         ====================================================== -->
 
-        <section class="works" id="works">
+        <section
+            class="works"
+            id="works"
+        >
 
             <div class="section-inner">
 
@@ -932,6 +1272,8 @@
 
                 </div>
 
+
+                <!-- OAKHAVEN -->
 
                 <div class="series">
 
@@ -979,13 +1321,29 @@
 
 
 
+        <!-- GREEN THRESHOLD -->
+
+        <div class="green-threshold">
+
+            <span>
+                · · ·
+            </span>
+
+        </div>
+
+
+
         <!-- =====================================================
              ABOUT
         ====================================================== -->
 
-        <section class="about" id="about">
+        <section
+            class="about"
+            id="about"
+        >
 
             <div class="about-grid">
+
 
                 <div>
 
@@ -1008,9 +1366,10 @@
                     </p>
 
                     <p>
-                        Her work is interested in intimacy, inheritance,
-                        memory, mythology, and the strange things people
-                        carry with them long after they believe they've
+                        Her work is interested in intimacy,
+                        inheritance, memory, mythology, and
+                        the strange things people carry with
+                        them long after they believe they've
                         left them behind.
                     </p>
 
@@ -1019,6 +1378,7 @@
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -1030,9 +1390,13 @@
              CONTACT
         ====================================================== -->
 
-        <section class="contact" id="contact">
+        <section
+            class="contact"
+            id="contact"
+        >
 
             <div class="contact-inner">
+
 
                 <div>
 
@@ -1048,15 +1412,23 @@
 
 
                 <p>
+
                     Literary enquiries, rights,
                     collaborations, or simply to say hello.
+
                     <br><br>
-                    <em>Email coming soon.</em>
+
+                    <em>
+                        Email coming soon.
+                    </em>
+
                 </p>
+
 
             </div>
 
         </section>
+
 
     </main>
 
@@ -1080,4 +1452,5 @@
 
 
 </body>
+
 </html>
