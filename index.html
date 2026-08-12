@@ -532,6 +532,34 @@
             color: #56504a;
         }
 
+        .about-link {
+            display: inline-block;
+
+            margin-top: 5px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.68rem;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            color: #365c76;
+
+            transition:
+                letter-spacing 0.25s ease;
+        }
+
+        .about-link:hover {
+            letter-spacing: 0.17em;
+        }
+
 
         /* =========================
            CONTACT
@@ -572,8 +600,67 @@
             color: #5b554e;
         }
 
-        .contact-note {
-            font-style: italic;
+        .contact-email {
+            display: inline-block;
+
+            margin-top: 5px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.95rem;
+
+            letter-spacing: 0.03em;
+
+            text-decoration: none;
+
+            color: #365c76;
+
+            border-bottom:
+                1px solid #9ba9b1;
+
+            padding-bottom: 4px;
+
+            transition:
+                color 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .contact-email:hover {
+            color: #203d50;
+
+            border-color:
+                #365c76;
+        }
+
+        .contact-page-link {
+            display: inline-block;
+
+            margin-top: 28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.68rem;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            color: #365c76;
+
+            transition:
+                letter-spacing 0.25s ease;
+        }
+
+        .contact-page-link:hover {
+            letter-spacing: 0.17em;
         }
 
 
@@ -744,6 +831,10 @@
             .alchemy-book .book-image {
                 height: 390px;
             }
+
+            .contact-email {
+                font-size: 0.82rem;
+            }
         }
 
     </style>
@@ -771,11 +862,11 @@
                 Works
             </a>
 
-            <a href="#about">
+            <a href="about.html">
                 About
             </a>
 
-            <a href="#contact">
+            <a href="contact.html">
                 Contact
             </a>
 
@@ -1042,6 +1133,13 @@
                         inheritance, desire, and choice.
                     </p>
 
+                    <a
+                        class="about-link"
+                        href="about.html"
+                    >
+                        Read more about Srithea →
+                    </a>
+
                 </div>
 
             </div>
@@ -1063,12 +1161,25 @@
 
             <p>
                 For literary enquiries, collaborations,
-                or simply to say hello.
+                publishing opportunities, or professional
+                correspondence:
             </p>
 
-            <p class="contact-note">
-                Email coming soon.
-            </p>
+            <a
+                class="contact-email"
+                href="mailto:sritheaseshen@proton.me"
+            >
+                sritheaseshen@proton.me
+            </a>
+
+            <br>
+
+            <a
+                class="contact-page-link"
+                href="contact.html"
+            >
+                Full contact page →
+            </a>
 
         </section>
 
