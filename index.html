@@ -23,7 +23,12 @@
         rel="stylesheet"
     >
 
+
     <style>
+
+        /* =====================================================
+           COLOUR PALETTE
+        ===================================================== */
 
         :root {
 
@@ -376,17 +381,38 @@
             color: var(--green);
         }
 
-        .hero-symbol {
 
-            margin-top: 43px;
+        /* =====================================================
+           THREE MARKS
+        ===================================================== */
 
-            font-size: 0.8rem;
+        .three-marks {
+
+            display: inline-flex;
+
+            gap: 8px;
+
+            align-items: center;
+
+            margin-top: 42px;
 
             color: var(--red);
 
-            letter-spacing: 0.45em;
+            opacity: 0.65;
+        }
 
-            opacity: 0.8;
+        .three-marks span {
+
+            display: block;
+
+            width: 3px;
+
+            height: 3px;
+
+            border-radius: 50%;
+
+            background:
+                currentColor;
         }
 
 
@@ -422,22 +448,6 @@
                 var(--red);
 
             opacity: 0.6;
-        }
-
-        .threshold::after {
-
-            content: "✦";
-
-            position: absolute;
-
-            font-size: 0.52rem;
-
-            color: var(--red);
-
-            background:
-                var(--botanical);
-
-            padding: 10px;
         }
 
 
@@ -541,7 +551,7 @@
 
 
         /* =====================================================
-           THE ALCHEMY — TWO BRAIN CELLS
+           TWO BRAIN CELLS
         ===================================================== */
 
         .alchemy {
@@ -947,22 +957,34 @@
             align-items: center;
         }
 
-        .green-threshold span {
+        .threshold-symbol {
 
-            color:
-                rgba(243,245,241,0.55);
+            display: inline-block;
 
             font-family:
                 Georgia,
                 serif;
 
-            font-size: 0.72rem;
+            font-size: 0.62rem;
 
-            letter-spacing:
-                0.55em;
+            letter-spacing: 0.28em;
 
-            margin-left:
-                0.55em;
+            color:
+                var(--pink-red);
+
+            opacity: 0.72;
+
+            transition:
+                transform 0.5s ease,
+                opacity 0.5s ease;
+        }
+
+        .threshold-symbol:hover {
+
+            opacity: 1;
+
+            transform:
+                translateY(-2px);
         }
 
 
@@ -1045,16 +1067,47 @@
         .about-mark {
 
             margin-top: 50px;
+        }
 
-            color:
-                var(--red);
 
-            font-size: 0.82rem;
+        /* =====================================================
+           THREE MARKS — ABOUT
+        ===================================================== */
 
-            letter-spacing:
-                0.5em;
+        .about .three-marks {
 
-            opacity: 0.8;
+            margin-top: 45px;
+        }
+
+
+        /* =====================================================
+           RETURN TO SURFACE
+        ===================================================== */
+
+        .return-surface {
+
+            display: block;
+
+            width: fit-content;
+
+            margin:
+                70px auto 0;
+
+            font-size: 0.57rem;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+
+            color: var(--muted);
+
+            transition:
+                color 0.35s ease;
+        }
+
+        .return-surface:hover {
+
+            color: var(--red);
         }
 
 
@@ -1152,102 +1205,7 @@
             gap: 30px;
         }
 
-        /* =====================================================
-           STAGE 2.7 — HIDDEN VISUAL LANGUAGE
-        ===================================================== */
 
-        /* The threshold mark */
-
-        .threshold-symbol {
-
-            display: inline-block;
-
-            font-family:
-                Georgia,
-                serif;
-
-            font-size: 0.62rem;
-
-            letter-spacing: 0.28em;
-
-            color: var(--red);
-
-            opacity: 0.72;
-
-            transition:
-                transform 0.5s ease,
-                opacity 0.5s ease;
-        }
-
-        .threshold-symbol:hover {
-
-            opacity: 1;
-
-            transform:
-                translateY(-2px);
-        }
-
-
-        /* The three marks */
-
-        .three-marks {
-
-            display: inline-flex;
-
-            gap: 8px;
-
-            align-items: center;
-
-            margin-top: 42px;
-
-            color: var(--red);
-
-            opacity: 0.65;
-        }
-
-        .three-marks span {
-
-            display: block;
-
-            width: 3px;
-
-            height: 3px;
-
-            border-radius: 50%;
-
-            background:
-                currentColor;
-        }
-
-
-        /* Quiet return */
-
-        .return-surface {
-
-            display: block;
-
-            width: fit-content;
-
-            margin:
-                70px auto 0;
-
-            font-size: 0.57rem;
-
-            letter-spacing: 0.25em;
-
-            text-transform: uppercase;
-
-            color: var(--muted);
-
-            transition:
-                color 0.35s ease;
-        }
-
-        .return-surface:hover {
-
-            color: var(--red);
-        }
-        
         /* =====================================================
            MOBILE
         ===================================================== */
@@ -1427,7 +1385,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 
     <!-- =====================================================
@@ -1487,8 +1445,16 @@
                         Here we talk about love, memory, and what remains.
                     </p>
 
-                    <div class="hero-symbol">
-                        · · ·
+
+                    <div
+                        class="three-marks"
+                        aria-hidden="true"
+                    >
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
                     </div>
 
                 </div>
@@ -1517,7 +1483,7 @@
 
 
         <!-- =================================================
-             THE WORK
+             THE ALCHEMY
         ================================================== -->
 
         <section
@@ -1572,7 +1538,9 @@
                 </div>
 
 
-                <!-- OAKHAVEN -->
+                <!-- =================================================
+                     OAKHAVEN SERIES
+                ================================================== -->
 
                 <div class="series">
 
@@ -1592,7 +1560,10 @@
                         </div>
 
 
-                        <div class="botanical-mark">
+                        <div
+                            class="botanical-mark"
+                            aria-hidden="true"
+                        >
                             ✦
                         </div>
 
@@ -1674,7 +1645,10 @@
 
         <div class="green-threshold">
 
-            <span>
+            <span
+                class="threshold-symbol"
+                aria-hidden="true"
+            >
                 ✦
             </span>
 
@@ -1717,9 +1691,25 @@
                         Most are interested in what survives both.
                     </p>
 
-                    <div class="about-mark">
-                        · · ·
+
+                    <div
+                        class="three-marks"
+                        aria-hidden="true"
+                    >
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
                     </div>
+
+
+                    <a
+                        href="#top"
+                        class="return-surface"
+                    >
+                        ↑ Return to surface
+                    </a>
 
                 </div>
 
