@@ -1,372 +1,765 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>In Deep Water — Srithea Seshen</title>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0;1,400&display=swap"
-        rel="stylesheet"
+    <meta
+        name="description"
+        content="In Deep Water — part of The Oakhaven Series by Srithea Seshen."
     >
 
-
     <style>
-
-        :root {
-
-            --ocean: #082F35;
-
-            --deep: #06262B;
-
-            --botanical: #F3F5F1;
-
-            --mist: #8FB0AE;
-
-            --red: #C65A68;
-        }
-
-
         * {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
-
             margin: 0;
-
-            background:
-                var(--ocean);
-
-            color:
-                var(--botanical);
-
-            font-family:
-                "DM Sans",
-                Arial,
-                sans-serif;
+            background: #edf2ef;
+            color: #102b2b;
+            font-family: Georgia, "Times New Roman", serif;
         }
 
-
-        a {
-
-            color: inherit;
-
-            text-decoration: none;
-        }
-
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
+            padding: 27px 7%;
 
-            padding:
-                34px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            display:
-                flex;
+            border-bottom: 1px solid #b9cbc8;
 
-            justify-content:
-                space-between;
-
-            align-items:
-                center;
-
-            border-bottom:
-                1px solid
-                rgba(243,245,241,0.13);
+            background: #edf2ef;
         }
-
 
         .logo {
+            font-family: Arial, Helvetica, sans-serif;
 
-            font-family:
-                "Libre Baskerville",
-                Georgia,
-                serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
 
-            font-size:
-                0.86rem;
-
-            letter-spacing:
-                0.105em;
+            color: #123b3b;
         }
 
+        nav a {
+            margin-left: 30px;
 
-        .back {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
 
-            font-size:
-                0.61rem;
+            color: #466363;
 
-            letter-spacing:
-                0.2em;
+            text-decoration: none;
 
-            text-transform:
-                uppercase;
-
-            color:
-                var(--mist);
+            transition: color 0.25s ease;
         }
 
-
-        main {
-
-            min-height:
-                calc(100vh - 100px);
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            padding:
-                100px 8%;
+        nav a:hover {
+            color: #a4423d;
         }
 
+        /* =========================
+           HERO
+        ========================= */
 
-        .inner {
+        .hero {
+            min-height: 94vh;
 
-            max-width:
-                950px;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
 
-            width: 100%;
+            align-items: center;
 
-            margin:
-                auto;
+            gap: 7%;
+
+            padding: 70px 7% 90px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #edf2ef 0%,
+                    #e3ece9 100%
+                );
         }
 
-
-        .label {
-
-            margin:
-                0 0 27px;
-
-            font-size:
-                0.61rem;
-
-            letter-spacing:
-                0.31em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                var(--mist);
+        .hero-text {
+            max-width: 560px;
         }
 
+        .series {
+            margin: 0 0 24px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+
+            color: #3f716e;
+        }
 
         h1 {
+            margin: 0;
+
+            font-size: clamp(4rem, 8vw, 8rem);
+            line-height: 0.86;
+
+            font-weight: 400;
+            letter-spacing: -0.055em;
+
+            color: #102b2b;
+        }
+
+        .genre {
+            margin-top: 34px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.76rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+
+            color: #607676;
+        }
+
+        .hero-rule {
+            width: 68px;
+            height: 2px;
+
+            margin: 36px 0;
+
+            background: #3f716e;
+        }
+
+        .intro {
+            max-width: 500px;
+
+            font-size: 1.07rem;
+            line-height: 1.9;
+
+            color: #526565;
+        }
+
+        /* =========================
+           HERO IMAGE
+        ========================= */
+
+        .hero-image {
+            position: relative;
+
+            width: 100%;
+            height: min(74vh, 730px);
+
+            overflow: hidden;
+
+            background: #174b4a;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform 1.2s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.025);
+        }
+
+        .image-caption {
+            position: absolute;
+
+            left: 18px;
+            bottom: 16px;
+
+            padding: 7px 10px;
+
+            background: rgba(237, 242, 239, 0.9);
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.62rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+
+            color: #244d4c;
+        }
+
+        /* =========================
+           BOOK SECTION
+        ========================= */
+
+        .book-section {
+            padding: 115px 8%;
+
+            border-top: 1px solid #b9cbc8;
+
+            background: #f5f7f5;
+        }
+
+        .section-label {
+            margin-bottom: 34px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+
+            color: #3f716e;
+        }
+
+        .book-section h2 {
+            max-width: 900px;
 
             margin: 0;
 
-            font-family:
-                "Libre Baskerville",
-                Georgia,
-                serif;
+            font-size: clamp(2.1rem, 4vw, 3.7rem);
+            line-height: 1.15;
 
-            font-size:
-                clamp(
-                    3.5rem,
-                    8vw,
-                    6.5rem
+            font-weight: 400;
+
+            color: #102b2b;
+        }
+
+        .book-section p {
+            max-width: 710px;
+
+            margin-top: 32px;
+
+            font-size: 1.05rem;
+            line-height: 1.9;
+
+            color: #586b6a;
+        }
+
+        /* =========================
+           WATER DETAILS
+        ========================= */
+
+        .water-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            margin-top: 90px;
+
+            border-top: 1px solid #b9cbc8;
+            border-bottom: 1px solid #b9cbc8;
+        }
+
+        .water-detail {
+            padding: 30px 24px;
+
+            border-right: 1px solid #b9cbc8;
+        }
+
+        .water-detail:last-child {
+            border-right: none;
+        }
+
+        .detail-number {
+            display: block;
+
+            margin-bottom: 13px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.67rem;
+            letter-spacing: 0.14em;
+
+            color: #78908e;
+        }
+
+        .water-detail strong {
+            font-size: 1rem;
+            font-weight: 400;
+
+            color: #234443;
+        }
+
+        /* =========================
+           DEEP WATER FEATURE
+        ========================= */
+
+        .deep-section {
+            position: relative;
+
+            min-height: 620px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 8%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #103b3b 0%,
+                    #155c59 48%,
+                    #0c3435 100%
                 );
 
-            line-height:
-                0.95;
+            overflow: hidden;
 
-            font-weight:
-                400;
-
-            letter-spacing:
-                -0.06em;
+            color: #edf2ef;
         }
 
+        .deep-section::after {
+            content: "";
 
-        .line {
+            position: absolute;
 
-            width:
-                45px;
+            width: 420px;
+            height: 420px;
 
-            height:
-                1px;
+            right: -120px;
+            bottom: -180px;
 
-            margin:
-                45px 0;
+            border: 1px solid rgba(180, 211, 204, 0.18);
 
-            background:
-                var(--red);
+            border-radius: 50%;
         }
 
+        .deep-inner {
+            position: relative;
+            z-index: 2;
 
-        .more {
-
-            font-family:
-                "Libre Baskerville",
-                Georgia,
-                serif;
-
-            font-style:
-                italic;
-
-            color:
-                #C9D8D6;
-
-            font-size:
-                1.1rem;
+            max-width: 850px;
         }
 
+        .deep-label {
+            margin-bottom: 30px;
 
-        .marks {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
 
-            display:
-                flex;
-
-            gap:
-                8px;
-
-            margin-top:
-                70px;
+            color: #a8c8c2;
         }
 
+        .deep-section h2 {
+            margin: 0;
 
-        .marks span {
+            max-width: 850px;
 
-            width:
-                3px;
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            line-height: 1;
 
-            height:
-                3px;
-
-            border-radius:
-                50%;
-
-            background:
-                var(--red);
+            font-weight: 400;
         }
 
+        .deep-section p {
+            max-width: 650px;
+
+            margin-top: 32px;
+
+            font-size: 1.05rem;
+            line-height: 1.85;
+
+            color: #d1e1dd;
+        }
+
+        /* =========================
+           STATUS
+        ========================= */
+
+        .status {
+            padding: 100px 8%;
+
+            background: #dce8e4;
+
+            border-top: 1px solid #b9cbc8;
+        }
+
+        .status-inner {
+            max-width: 800px;
+        }
+
+        .status-label {
+            margin-bottom: 25px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+
+            color: #3f716e;
+        }
+
+        .status h2 {
+            margin: 0;
+
+            font-size: clamp(2.5rem, 5vw, 4.7rem);
+            line-height: 1;
+
+            font-weight: 400;
+
+            color: #102b2b;
+        }
+
+        .status p {
+            max-width: 620px;
+
+            margin-top: 30px;
+
+            font-size: 1.05rem;
+            line-height: 1.8;
+
+            color: #5d6e6d;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
+            padding: 45px 8%;
 
-            padding:
-                30px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            background:
-                var(--deep);
+            border-top: 1px solid #b9cbc8;
 
-            color:
-                var(--mist);
+            background: #edf2ef;
 
-            font-size:
-                0.57rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
 
-            letter-spacing:
-                0.17em;
-
-            text-transform:
-                uppercase;
-
-            display:
-                flex;
-
-            justify-content:
-                space-between;
+            color: #71817f;
         }
 
+        footer a {
+            color: #71817f;
 
-        @media (max-width:700px) {
+            text-decoration: none;
 
-            main {
+            transition: color 0.25s ease;
+        }
 
-                padding:
-                    80px 7%;
+        footer a:hover {
+            color: #a4423d;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                padding: 23px 6%;
             }
 
+            nav a {
+                margin-left: 15px;
+                font-size: 0.68rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                min-height: auto;
+
+                padding: 75px 7% 80px;
+
+                gap: 55px;
+            }
+
+            h1 {
+                font-size: clamp(4rem, 17vw, 6.5rem);
+            }
+
+            .hero-image {
+                height: 65vh;
+                min-height: 420px;
+            }
+
+            .book-section {
+                padding: 80px 7%;
+            }
+
+            .water-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .water-detail {
+                border-right: none;
+                border-bottom: 1px solid #b9cbc8;
+            }
+
+            .water-detail:last-child {
+                border-bottom: none;
+            }
+
+            .deep-section {
+                min-height: 520px;
+
+                padding: 85px 7%;
+            }
+
+            .status {
+                padding: 80px 7%;
+            }
 
             footer {
+                padding: 35px 7%;
 
-                flex-direction:
-                    column;
+                flex-direction: column;
+                align-items: flex-start;
 
-                gap:
-                    12px;
+                gap: 12px;
             }
-
         }
 
+        @media (max-width: 520px) {
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 18px;
+            }
+
+            nav div:last-child {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 12px;
+            }
+
+            .hero {
+                padding-top: 60px;
+            }
+
+            .hero-image {
+                height: 55vh;
+                min-height: 360px;
+            }
+
+            .intro {
+                font-size: 1rem;
+            }
+        }
     </style>
-
 </head>
-
 
 <body>
 
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
 
-        <a
-            href="index.html"
-            class="logo"
-        >
+        <div class="logo">
             Srithea Seshen
-        </a>
+        </div>
 
-
-        <a
-            href="oakhaven.html"
-            class="back"
-        >
-            ← Oakhaven
-        </a>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="index.html#books">Works</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
 
     </nav>
 
 
     <main>
 
-        <div class="inner">
+        <!-- =========================
+             HERO
+        ========================= -->
 
+        <section class="hero">
 
-            <p class="label">
-                The Oakhaven Series · II
-            </p>
+            <div class="hero-text">
 
+                <p class="series">
+                    The Oakhaven Series
+                </p>
 
-            <h1>
-                In Deep<br>
-                Water
-            </h1>
+                <h1>
+                    In<br>
+                    Deep<br>
+                    Water
+                </h1>
 
+                <p class="genre">
+                    The Oakhaven Series
+                </p>
 
-            <div class="line"></div>
+                <div class="hero-rule"></div>
 
-
-            <p class="more">
-                More soon.
-            </p>
-
-
-            <div
-                class="marks"
-                aria-hidden="true"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
+                <p class="intro">
+                    Some things are visible from the surface.
+                    Others become clear only after you go deep enough.
+                </p>
 
             </div>
 
-        </div>
+
+            <div class="hero-image">
+
+                <img
+                    src="images/in-deep-water.jpeg"
+                    alt="Teal blue-green water with coral and small black fish"
+                >
+
+                <div class="image-caption">
+                    The Oakhaven Series
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             THE WORK
+        ========================= -->
+
+        <section class="book-section">
+
+            <div class="section-label">
+                The Work
+            </div>
+
+            <h2>
+                The surface is rarely the whole story.
+            </h2>
+
+            <p>
+                In Deep Water belongs to The Oakhaven Series.
+                The details of the story are still being allowed
+                to settle into their final form.
+            </p>
+
+
+            <div class="water-grid">
+
+                <div class="water-detail">
+
+                    <span class="detail-number">
+                        01
+                    </span>
+
+                    <strong>
+                        The Oakhaven Series
+                    </strong>
+
+                </div>
+
+
+                <div class="water-detail">
+
+                    <span class="detail-number">
+                        02
+                    </span>
+
+                    <strong>
+                        More Beneath the Surface
+                    </strong>
+
+                </div>
+
+
+                <div class="water-detail">
+
+                    <span class="detail-number">
+                        03
+                    </span>
+
+                    <strong>
+                        More Soon
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DEEP WATER FEATURE
+        ========================= -->
+
+        <section class="deep-section">
+
+            <div class="deep-inner">
+
+                <div class="deep-label">
+                    Beneath the Surface
+                </div>
+
+                <h2>
+                    There is always
+                    something moving below.
+                </h2>
+
+                <p>
+                    Water carries what we cannot see:
+                    memory, distance, desire, danger,
+                    and the things we thought had disappeared.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             STATUS
+        ========================= -->
+
+        <section class="status">
+
+            <div class="status-inner">
+
+                <div class="status-label">
+                    Current Status
+                </div>
+
+                <h2>
+                    More soon.
+                </h2>
+
+                <p>
+                    The story is still being written, revised,
+                    and allowed to find its own depth.
+                </p>
+
+            </div>
+
+        </section>
 
     </main>
 
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -374,13 +767,11 @@
             © 2026 Srithea Seshen
         </span>
 
-        <span>
-            In Deep Water
-        </span>
+        <a href="index.html">
+            Back to Srithea Seshen
+        </a>
 
     </footer>
 
-
 </body>
-
 </html>
