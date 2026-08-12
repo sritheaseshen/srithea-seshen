@@ -10,17 +10,441 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Contact · Srithea Seshen</title>
+    <title>Contact — Srithea Seshen</title>
 
     <meta
         name="description"
-        content="Contact Srithea Seshen for literary enquiries, collaborations, publishing opportunities, and professional correspondence."
+        content="Contact Srithea Seshen for literary enquiries, collaborations, and professional correspondence."
     >
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            background:
+                #211610;
+
+            color:
+                #F0E5D2;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            -webkit-font-smoothing:
+                antialiased;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            padding: 28px 7%;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-bottom:
+                1px solid #4A3427;
+
+            background:
+                #211610;
+        }
+
+        .logo {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.85rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 30px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            color:
+                #CDBEAA;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        nav a:hover {
+            color:
+                #D7B88A;
+        }
+
+
+        /* =========================
+           CONTACT HERO
+        ========================= */
+
+        .contact-hero {
+            min-height:
+                78vh;
+
+            padding:
+                110px 8%;
+
+            display: flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+        }
+
+        .contact-label {
+            margin-bottom:
+                28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+
+            color:
+                #B99568;
+        }
+
+        .contact-hero h1 {
+            max-width:
+                1000px;
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    4rem,
+                    10vw,
+                    9rem
+                );
+
+            line-height:
+                0.88;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.055em;
+        }
+
+        .contact-hero p {
+            max-width:
+                600px;
+
+            margin:
+                45px 0 0;
+
+            font-size:
+                1.1rem;
+
+            line-height:
+                1.9;
+
+            color:
+                #CDBEAA;
+        }
+
+
+        /* =========================
+           EMAIL
+        ========================= */
+
+        .email-section {
+            padding:
+                90px 8% 125px;
+
+            border-top:
+                1px solid #4A3427;
+        }
+
+        .email-label {
+            margin-bottom:
+                22px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.64rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+
+            color:
+                #8E7C6A;
+        }
+
+        .email-link {
+            display:
+                inline-block;
+
+            position:
+                relative;
+
+            font-size:
+                clamp(
+                    1.6rem,
+                    4vw,
+                    3.5rem
+                );
+
+            line-height:
+                1.15;
+
+            text-decoration:
+                none;
+
+            color:
+                #D7B88A;
+
+            overflow-wrap:
+                anywhere;
+        }
+
+        .email-link::after {
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left: 0;
+            bottom: -10px;
+
+            width: 100%;
+            height: 1px;
+
+            background:
+                #D7B88A;
+
+            transform:
+                scaleX(0);
+
+            transform-origin:
+                right;
+
+            transition:
+                transform 0.35s ease;
+        }
+
+        .email-link:hover::after {
+            transform:
+                scaleX(1);
+
+            transform-origin:
+                left;
+        }
+
+
+        /* =========================
+           NOTE
+        ========================= */
+
+        .contact-note {
+            max-width:
+                680px;
+
+            margin-top:
+                50px;
+
+            padding-top:
+                28px;
+
+            border-top:
+                1px solid #4A3427;
+
+            font-size:
+                0.95rem;
+
+            line-height:
+                1.8;
+
+            color:
+                #9E8D7B;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding:
+                42px 8%;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-top:
+                1px solid #4A3427;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.67rem;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                #806D5E;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                padding:
+                    23px 6%;
+            }
+
+            nav a {
+                margin-left:
+                    15px;
+
+                font-size:
+                    0.68rem;
+            }
+
+            .contact-hero {
+                min-height:
+                    70vh;
+
+                padding:
+                    85px 7%;
+            }
+
+            .email-section {
+                padding:
+                    75px 7% 95px;
+            }
+
+            footer {
+                padding:
+                    35px 7%;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    12px;
+            }
+        }
+
+
+        @media (max-width: 520px) {
+
+            nav {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    18px;
+            }
+
+            nav div:last-child {
+                display:
+                    flex;
+
+                flex-wrap:
+                    wrap;
+
+                gap:
+                    12px;
+            }
+
+            nav a {
+                margin-left:
+                    0;
+
+                margin-right:
+                    12px;
+            }
+
+            .contact-hero {
+                padding-top:
+                    65px;
+            }
+
+            .contact-hero h1 {
+                font-size:
+                    4rem;
+            }
+
+            .contact-hero p {
+                font-size:
+                    1rem;
+            }
+
+            .email-link {
+                font-size:
+                    1.45rem;
+            }
+        }
+
+    </style>
 
 </head>
 
@@ -28,9 +452,7 @@
 <body>
 
 
-    <!-- =========================
-         NAVIGATION
-         ========================= -->
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -52,7 +474,7 @@
             </a>
 
             <a href="writing-desk.html">
-                The Writing Desk
+                Writing Desk
             </a>
 
             <a href="contact.html">
@@ -64,106 +486,58 @@
     </nav>
 
 
-
     <main>
 
 
-        <!-- =========================
-             CONTACT INTRO
-             ========================= -->
+        <!-- HERO -->
 
-        <section class="page-intro">
+        <section class="contact-hero">
 
-            <div class="section-label">
+            <div class="contact-label">
                 Contact
             </div>
 
             <h1>
-                Words begin
-                somewhere.
+                Let's talk.
             </h1>
 
             <p>
-                For literary enquiries, publishing,
-                collaborations, or simply to open
-                a conversation.
+                For literary enquiries, collaborations,
+                professional correspondence, or simply
+                to say hello.
             </p>
 
         </section>
 
 
+        <!-- EMAIL -->
 
-        <!-- =========================
-             CONTACT
-             ========================= -->
+        <section class="email-section">
 
-        <section class="contact">
-
-            <h2>
-                Get in touch.
-            </h2>
-
-            <p>
-                For literary enquiries, collaborations,
-                publishing opportunities, rights,
-                or professional correspondence,
-                email directly.
-            </p>
+            <div class="email-label">
+                Email
+            </div>
 
             <a
-                class="contact-email"
+                class="email-link"
                 href="mailto:sritheaseshen@proton.me"
             >
                 sritheaseshen@proton.me
             </a>
 
-        </section>
-
-
-
-        <!-- =========================
-             NOTE
-             ========================= -->
-
-        <section class="about">
-
-            <div class="about-grid">
-
-                <div>
-
-                    <h2>
-                        A small note
-                    </h2>
-
-                </div>
-
-
-                <div class="about-text">
-
-                    <p>
-                        There is no newsletter here yet,
-                        and no elaborate mailing list.
-                    </p>
-
-                    <p>
-                        For now, correspondence can remain
-                        correspondence: one person writing
-                        to another.
-                    </p>
-
-                </div>
-
-            </div>
+            <p class="contact-note">
+                I read every message. For literary or
+                professional enquiries, a little context
+                about what you are reaching out about is
+                always appreciated.
+            </p>
 
         </section>
 
     </main>
 
 
-
-    <!-- =========================
-         FOOTER
-         ========================= -->
+    <!-- FOOTER -->
 
     <footer>
 
