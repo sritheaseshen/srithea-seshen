@@ -16,21 +16,106 @@
 
     <meta
         name="description"
-        content="Writing Desk 02 — On the Things We Misread. Notes on projection, silence, intimacy, misunderstanding, and what remains unknowable in another person."
-    >
-
-    <link
-        rel="stylesheet"
-        href="style.css"
+        content="On projection, silence, misunderstanding, intimacy, and the limits of knowing another person."
     >
 
     <style>
 
-        /* =====================================================
-           WRITING DESK — ENTRY 02
-           Standalone page styling only.
-           Site-wide configuration remains in style.css.
-        ===================================================== */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            background: #211610;
+
+            color: #F0E5D2;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            line-height: 1.7;
+
+            -webkit-font-smoothing: antialiased;
+
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            padding: 28px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            border-bottom: 1px solid #4A3427;
+
+            background: #211610;
+
+            position: relative;
+
+            z-index: 10;
+        }
+
+        .logo {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.85rem;
+
+            letter-spacing: 0.18em;
+
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            color: #F0E5D2;
+        }
+
+        nav a {
+            margin-left: 30px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.08em;
+
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            color: #CDBEAA;
+
+            transition: color 0.25s ease;
+        }
+
+        nav a:hover {
+            color: #D7B88A;
+        }
 
 
         /* =========================
@@ -39,312 +124,214 @@
 
         .desk-entry-header {
 
-            max-width:
-                900px;
+            width: min(
+                90%,
+                1050px
+            );
 
-            margin:
-                0 auto;
+            margin: 0 auto;
 
             padding:
-                110px 8% 75px;
-
+                110px 0 75px;
         }
-
 
         .desk-entry-number {
 
-            margin:
-                0 0 28px;
+            margin-bottom: 28px;
 
             font-family:
                 Arial,
                 Helvetica,
                 sans-serif;
 
-            font-size:
-                0.68rem;
+            font-size: 0.68rem;
 
-            line-height:
-                1.4;
+            letter-spacing: 0.2em;
 
-            letter-spacing:
-                0.2em;
+            text-transform: uppercase;
 
-            text-transform:
-                uppercase;
-
-            color:
-                #8a6f5a;
-
+            color: #B99568;
         }
-
 
         .desk-entry-header h1 {
 
-            margin:
-                0;
+            max-width: 950px;
 
-            max-width:
-                900px;
+            margin: 0;
 
             font-size:
                 clamp(
-                    3.4rem,
-                    7vw,
-                    6.8rem
+                    3.5rem,
+                    8vw,
+                    7rem
                 );
 
-            line-height:
-                0.94;
+            line-height: 0.92;
 
-            font-weight:
-                400;
+            font-weight: 400;
 
-            letter-spacing:
-                -0.05em;
-
-            text-wrap:
-                balance;
-
+            letter-spacing: -0.055em;
         }
-
 
         .desk-entry-rule {
 
-            width:
-                55px;
+            width: 55px;
 
-            height:
-                2px;
+            height: 2px;
 
             margin:
                 38px 0 30px;
 
-            background:
-                #8a6f5a;
-
+            background: #B99568;
         }
-
 
         .desk-entry-intro {
 
-            max-width:
-                650px;
+            max-width: 680px;
 
-            margin:
-                0;
+            margin: 0;
 
-            font-size:
-                1.12rem;
+            font-size: 1.12rem;
 
-            line-height:
-                1.85;
+            line-height: 1.85;
 
-            color:
-                #bcae9d;
-
+            color: #CDBEAA;
         }
-
 
         .desk-entry-date {
 
-            margin-top:
-                28px;
+            margin-top: 28px;
 
             font-family:
                 Arial,
                 Helvetica,
                 sans-serif;
 
-            font-size:
-                0.65rem;
+            font-size: 0.65rem;
 
-            line-height:
-                1.5;
+            letter-spacing: 0.12em;
 
-            letter-spacing:
-                0.13em;
+            text-transform: uppercase;
 
-            text-transform:
-                uppercase;
-
-            color:
-                #8f8173;
-
+            color: #806D5E;
         }
 
 
         /* =========================
-           ESSAY CONTAINER
+           READING AREA
         ========================= */
 
         .desk-entry {
 
-            width:
-                100%;
+            width: min(
+                90%,
+                780px
+            );
 
-            max-width:
-                820px;
-
-            margin:
-                0 auto;
+            margin: 0 auto;
 
             padding:
-                20px 8% 110px;
+                20px 0 110px;
 
+            display: block;
         }
 
 
         /* =========================
-           EACH MOVEMENT
+           IMPORTANT:
+           SINGLE COLUMN ONLY
         ========================= */
 
         .desk-entry section {
 
-            width:
-                100%;
+            display: block;
 
-            margin:
-                0 0 105px;
+            width: 100%;
 
-            padding:
-                0;
+            margin: 0 0 85px;
 
+            padding: 0;
         }
-
 
         .desk-entry section:last-of-type {
 
-            margin-bottom:
-                85px;
-
+            margin-bottom: 75px;
         }
 
 
         /* =========================
-           MOVEMENT HEADING
+           SECTION HEADINGS
         ========================= */
 
         .desk-entry h2 {
 
-            margin:
-                0 0 38px;
+            display: block;
 
-            font-size:
-                clamp(
-                    1.85rem,
-                    3vw,
-                    2.65rem
-                );
-
-            line-height:
-                1.12;
-
-            font-weight:
-                400;
-
-            letter-spacing:
-                -0.025em;
-
-            color:
-                #f0e5d2;
-
-        }
-
-
-        /* =========================
-           BODY PROSE
-        ========================= */
-
-        .desk-entry p {
+            width: 100%;
 
             margin:
-                0 0 27px;
+                0 0 34px;
 
-            padding:
-                0;
+            padding-bottom: 16px;
 
-            font-size:
-                1.08rem;
-
-            line-height:
-                1.95;
-
-            font-weight:
-                400;
-
-            color:
-                #d8cdbf;
-
-            text-align:
-                left;
-
-        }
-
-
-        .desk-entry p:last-child {
-
-            margin-bottom:
-                0;
-
-        }
-
-
-        .desk-entry em {
-
-            color:
-                #eee5da;
-
-        }
-
-
-        /* =========================
-           EMPHASIS PARAGRAPHS
-           Used for short philosophical
-           statements such as:
-           "The human mind is..."
-        ========================= */
-
-        .desk-entry .short-line {
-
-            margin-top:
-                4px;
-
-            margin-bottom:
-                30px;
-
-        }
-
-
-        /* =========================
-           DIVIDER BETWEEN MOVEMENTS
-        ========================= */
-
-        .desk-entry section:not(:last-of-type)::after {
-
-            content:
-                "";
-
-            display:
-                block;
-
-            width:
-                100%;
-
-            height:
-                1px;
-
-            margin-top:
-                78px;
-
-            background:
+            border-bottom:
+                1px solid
                 rgba(
                     216,
                     205,
                     191,
-                    0.16
+                    0.18
                 );
 
+            font-size:
+                clamp(
+                    1.8rem,
+                    3vw,
+                    2.55rem
+                );
+
+            line-height: 1.15;
+
+            font-weight: 400;
+
+            color: #F0E5D2;
+        }
+
+
+        /* =========================
+           PARAGRAPHS
+        ========================= */
+
+        .desk-entry p {
+
+            display: block;
+
+            width: 100%;
+
+            max-width: 72ch;
+
+            margin:
+                0 0 26px;
+
+            padding: 0;
+
+            font-size: 1.08rem;
+
+            line-height: 1.95;
+
+            color: #D8CDBF;
+        }
+
+        .desk-entry p:last-child {
+
+            margin-bottom: 0;
+        }
+
+        .desk-entry em {
+
+            color: #EEE5DA;
+
+            font-style: italic;
         }
 
 
@@ -354,20 +341,16 @@
 
         .desk-entry-navigation {
 
-            display:
-                flex;
+            display: flex;
 
             justify-content:
                 space-between;
 
-            align-items:
-                center;
+            align-items: center;
 
-            gap:
-                25px;
+            gap: 25px;
 
-            padding-top:
-                35px;
+            padding-top: 32px;
 
             border-top:
                 1px solid
@@ -375,7 +358,7 @@
                     216,
                     205,
                     191,
-                    0.25
+                    0.22
                 );
 
             font-family:
@@ -383,49 +366,126 @@
                 Helvetica,
                 sans-serif;
 
-            font-size:
-                0.66rem;
+            font-size: 0.66rem;
 
-            line-height:
-                1.5;
+            letter-spacing: 0.1em;
 
-            letter-spacing:
-                0.1em;
-
-            text-transform:
-                uppercase;
-
+            text-transform: uppercase;
         }
-
 
         .desk-entry-navigation span {
 
-            color:
-                #806d5e;
-
+            color: #806D5E;
         }
-
 
         .desk-entry-navigation a {
 
-            color:
-                #bcae9d;
+            color: #BCAe9D;
 
-            text-decoration:
-                none;
+            text-decoration: none;
 
             transition:
-                color
-                0.25s
-                ease;
-
+                color 0.25s ease;
         }
-
 
         .desk-entry-navigation a:hover {
 
-            color:
-                #eee5da;
+            color: #EEE5DA;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                42px 8%;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            border-top:
+                1px solid #4A3427;
+
+            background:
+                #211610;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.67rem;
+
+            letter-spacing: 0.08em;
+
+            color: #806D5E;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+
+                padding:
+                    23px 6%;
+            }
+
+            nav a {
+
+                margin-left: 15px;
+
+                font-size: 0.68rem;
+            }
+
+            .desk-entry-header {
+
+                width: 86%;
+
+                padding:
+                    90px 0 60px;
+            }
+
+            .desk-entry {
+
+                width: 86%;
+
+                padding-bottom: 85px;
+            }
+
+            .desk-entry section {
+
+                margin-bottom: 70px;
+            }
+
+            .desk-entry p {
+
+                font-size: 1.03rem;
+
+                line-height: 1.9;
+            }
+
+            footer {
+
+                padding:
+                    35px 7%;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 12px;
+            }
 
         }
 
@@ -434,185 +494,87 @@
            MOBILE
         ========================= */
 
-        @media (max-width: 700px) {
+        @media (max-width: 520px) {
 
+            nav {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 18px;
+            }
+
+            nav div:last-child {
+
+                display: flex;
+
+                flex-wrap: wrap;
+
+                gap: 12px;
+            }
+
+            nav a {
+
+                margin-left: 0;
+
+                margin-right: 12px;
+            }
 
             .desk-entry-header {
 
+                width: 86%;
+
                 padding:
-                    80px 7% 55px;
-
+                    75px 0 50px;
             }
-
 
             .desk-entry-header h1 {
 
-                font-size:
-                    clamp(
-                        3rem,
-                        13vw,
-                        4.8rem
-                    );
+                font-size: 3.8rem;
 
-                line-height:
-                    0.96;
-
+                line-height: 0.94;
             }
-
 
             .desk-entry-intro {
 
-                font-size:
-                    1rem;
+                font-size: 1rem;
 
-                line-height:
-                    1.8;
-
+                line-height: 1.8;
             }
-
 
             .desk-entry {
 
-                max-width:
-                    none;
+                width: 86%;
 
-                padding:
-                    15px 7% 80px;
-
+                padding-bottom: 70px;
             }
-
-
-            .desk-entry section {
-
-                margin-bottom:
-                    80px;
-
-            }
-
-
-            .desk-entry section:not(:last-of-type)::after {
-
-                margin-top:
-                    60px;
-
-            }
-
 
             .desk-entry h2 {
 
-                margin-bottom:
-                    30px;
+                font-size: 1.8rem;
 
-                font-size:
-                    1.85rem;
+                margin-bottom: 28px;
 
-                line-height:
-                    1.15;
-
+                padding-bottom: 13px;
             }
-
 
             .desk-entry p {
 
-                font-size:
-                    1rem;
+                font-size: 1rem;
 
-                line-height:
-                    1.88;
+                line-height: 1.85;
 
-                margin-bottom:
-                    24px;
-
+                margin-bottom: 24px;
             }
-
 
             .desk-entry-navigation {
 
-                flex-direction:
-                    column;
+                flex-direction: column;
 
-                align-items:
-                    flex-start;
+                align-items: flex-start;
 
-                gap:
-                    18px;
-
-            }
-
-        }
-
-
-        /* =========================
-           SMALL MOBILE
-        ========================= */
-
-        @media (max-width: 480px) {
-
-
-            .desk-entry-header {
-
-                padding:
-                    70px 7% 48px;
-
-            }
-
-
-            .desk-entry-header h1 {
-
-                font-size:
-                    3.25rem;
-
-            }
-
-
-            .desk-entry-rule {
-
-                margin:
-                    30px 0 25px;
-
-            }
-
-
-            .desk-entry {
-
-                padding:
-                    10px 7% 70px;
-
-            }
-
-
-            .desk-entry section {
-
-                margin-bottom:
-                    70px;
-
-            }
-
-
-            .desk-entry section:not(:last-of-type)::after {
-
-                margin-top:
-                    52px;
-
-            }
-
-
-            .desk-entry h2 {
-
-                font-size:
-                    1.7rem;
-
-            }
-
-
-            .desk-entry p {
-
-                font-size:
-                    0.98rem;
-
-                line-height:
-                    1.84;
-
+                gap: 15px;
             }
 
         }
@@ -625,9 +587,9 @@
 <body>
 
 
-    <!-- =====================================================
+    <!-- =========================
          NAVIGATION
-    ===================================================== -->
+    ========================= -->
 
     <nav>
 
@@ -648,6 +610,10 @@
                 About
             </a>
 
+            <a href="writing-desk.html">
+                Writing Desk
+            </a>
+
             <a href="contact.html">
                 Contact
             </a>
@@ -657,16 +623,12 @@
     </nav>
 
 
-    <!-- =====================================================
-         MAIN
-    ===================================================== -->
-
     <main>
 
 
-        <!-- =================================================
+        <!-- =========================
              ENTRY HEADER
-        ================================================= -->
+        ========================= -->
 
         <header class="desk-entry-header">
 
@@ -674,23 +636,19 @@
                 Writing Desk · 02
             </div>
 
-
             <h1>
                 On the Things<br>
                 We Misread
             </h1>
 
-
             <div class="desk-entry-rule"></div>
 
-
             <p class="desk-entry-intro">
-                On projection, silence, intimacy,
-                misunderstanding, and the parts
-                of another person we can never
-                completely know.
+                On projection, silence,
+                misunderstanding, intimacy,
+                and the limits of knowing
+                another person.
             </p>
-
 
             <div class="desk-entry-date">
                 August 13, 2026
@@ -699,33 +657,24 @@
         </header>
 
 
-        <!-- =================================================
+        <!-- =========================
              ESSAY
-        ================================================= -->
+        ========================= -->
 
-        <article
-            class="desk-entry"
-            aria-label="On the Things We Misread"
-        >
+        <article class="desk-entry">
 
 
-            <!-- =============================================
-                 MOVEMENT I
-            ============================================== -->
+            <!-- SECTION I -->
 
-            <section
-                aria-labelledby="movement-one"
-            >
+            <section>
 
-                <h2 id="movement-one">
+                <h2>
                     I. The Stories We Tell Ourselves
                 </h2>
 
-
-                <p class="short-line">
+                <p>
                     The human mind is an aggressive interpreter.
                 </p>
-
 
                 <p>
                     When presented with another person, we rarely permit
@@ -735,7 +684,6 @@
                     a message left unanswered through an afternoon—we do not
                     wait for clarity. We invent it.
                 </p>
-
 
                 <p>
                     We construct entire interior architectures for people
@@ -748,7 +696,6 @@
                     toward us.
                 </p>
 
-
                 <p>
                     What is striking is not just that we do this, but the
                     speed with which we do it. The story is built in a breath.
@@ -757,7 +704,6 @@
                     take is dragged through the filter of the narrative we
                     have already constructed.
                 </p>
-
 
                 <p>
                     We like to believe we are observing other people. More
@@ -768,24 +714,18 @@
             </section>
 
 
-            <!-- =============================================
-                 MOVEMENT II
-            ============================================== -->
+            <!-- SECTION II -->
 
-            <section
-                aria-labelledby="movement-two"
-            >
+            <section>
 
-                <h2 id="movement-two">
+                <h2>
                     II. The Problem with Silence
                 </h2>
 
-
-                <p class="short-line">
-                    Silence is almost never received as empty space. It is a
-                    canvas we paint our deepest anxieties upon.
+                <p>
+                    Silence is almost never received as empty space. It is
+                    a canvas we paint our deepest anxieties upon.
                 </p>
-
 
                 <p>
                     When a room goes quiet, or when a conversation hits a
@@ -798,11 +738,9 @@
                     that we are ultimately uninteresting.
                 </p>
 
-
                 <p>
                     In this way, silence becomes a dangerous kind of mirror.
                 </p>
-
 
                 <p>
                     A quiet partner isn't just quiet; they are harboring a
@@ -812,7 +750,6 @@
                     evidence against them—or against ourselves—long before a
                     single word is actually spoken.
                 </p>
-
 
                 <p>
                     In fiction, as in life, the most devastating
@@ -826,80 +763,67 @@
             </section>
 
 
-            <!-- =============================================
-                 MOVEMENT III
-            ============================================== -->
+            <!-- SECTION III -->
 
-            <section
-                aria-labelledby="movement-three"
-            >
+            <section>
 
-                <h2 id="movement-three">
+                <h2>
                     III. When We Get Someone Wrong
                 </h2>
-
 
                 <p>
                     There is a distinct, quiet shock in realizing you have
                     completely misread someone you care about.
                 </p>
 
-
                 <p>
                     It usually arrives not in a grand confrontation, but in
                     a small, unscripted moment that refuses to fit into the
                     narrative you’ve built. A sudden admission of fear from
                     someone you thought was invincible. A quiet boundary
-                    drawn by someone you assumed would always yield. A tender
-                    memory they hold from a shared night that you remembered
-                    only as uncomfortable.
+                    drawn by someone you assumed would always yield. A
+                    tender memory they hold from a shared night that you
+                    remembered only as uncomfortable.
                 </p>
 
-
                 <p>
-                    In that beat, the illusion shatters. You realize that for
-                    months—or years—you were not relating to the human being
-                    in front of you. You were relating to a ghost of your own
-                    making.
+                    In that beat, the illusion shatters. You realize that
+                    for months—or years—you were not relating to the human
+                    being in front of you. You were relating to a ghost of
+                    your own making.
                 </p>
 
-
                 <p>
-                    This is where intimacy faces its steepest trial. When the
-                    version of someone you invented collides with who they
-                    actually are, the ego's first instinct is defence. We
-                    want to argue with reality. We want to insist that
+                    This is where intimacy faces its steepest trial. When
+                    the version of someone you invented collides with who
+                    they actually are, the ego's first instinct is defence.
+                    We want to argue with reality. We want to insist that
                     <em>our</em> version of them was the correct one, that
                     they are being inconsistent, unfair, or untrue to
                     themselves.
                 </p>
 
-
                 <p>
-                    To love someone past this point requires a painful act of
-                    demolition. It demands that we dismantle our preferred
-                    draft of them and do the slow, humbling work of learning
-                    who they actually are. Real connection doesn't begin when
-                    two people understand each other perfectly; it begins in
-                    the aftermath of a misreading, when both people choose
-                    recalibration over the safety of their projections.
+                    To love someone past this point requires a painful act
+                    of demolition. It demands that we dismantle our
+                    preferred draft of them and do the slow, humbling work
+                    of learning who they actually are. Real connection
+                    doesn't begin when two people understand each other
+                    perfectly; it begins in the aftermath of a misreading,
+                    when both people choose recalibration over the safety
+                    of their projections.
                 </p>
 
             </section>
 
 
-            <!-- =============================================
-                 MOVEMENT IV
-            ============================================== -->
+            <!-- SECTION IV -->
 
-            <section
-                aria-labelledby="movement-four"
-            >
+            <section>
 
-                <h2 id="movement-four">
+                <h2>
                     IV. What We Cannot Know
                 </h2>
-
 
                 <p>
                     As writers, we are taught to pursue total clarity—to map
@@ -908,12 +832,10 @@
                     solve our people.
                 </p>
 
-
-                <p class="short-line">
+                <p>
                     But a human being who is completely explainable ceases
                     to feel human.
                 </p>
-
 
                 <p>
                     The most enduring fiction leaves room for the unmapped
@@ -926,21 +848,18 @@
                     minds where no one else will ever step.
                 </p>
 
-
                 <p>
                     Allowing a character—or a person—to keep that privacy is
                     not a failure of understanding. It is a form of respect.
                 </p>
 
-
                 <p>
-                    When we stop demanding that others be entirely legible to
-                    us, our relationships change. Misreading ceases to be an
-                    insult or a betrayal; it becomes a reminder that the
-                    person across from us is vast, evolving, and independent
-                    of our imagination.
+                    When we stop demanding that others be entirely legible
+                    to us, our relationships change. Misreading ceases to
+                    be an insult or a betrayal; it becomes a reminder that
+                    the person across from us is vast, evolving, and
+                    independent of our imagination.
                 </p>
-
 
                 <p>
                     In the end, perhaps the truest love we can offer another
@@ -954,16 +873,15 @@
             </section>
 
 
-            <!-- =================================================
+            <!-- =========================
                  ENTRY NAVIGATION
-            ================================================= -->
+            ========================= -->
 
             <div class="desk-entry-navigation">
 
                 <span>
                     Writing Desk · 02
                 </span>
-
 
                 <a href="writing-desk.html">
                     Back to the Writing Desk →
@@ -977,16 +895,15 @@
     </main>
 
 
-    <!-- =====================================================
+    <!-- =========================
          FOOTER
-    ===================================================== -->
+    ========================= -->
 
     <footer>
 
         <span>
             © 2026 Srithea Seshen
         </span>
-
 
         <span>
             Love · Memory · What Remains
