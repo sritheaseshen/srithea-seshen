@@ -1152,7 +1152,102 @@
             gap: 30px;
         }
 
+        /* =====================================================
+           STAGE 2.7 — HIDDEN VISUAL LANGUAGE
+        ===================================================== */
 
+        /* The threshold mark */
+
+        .threshold-symbol {
+
+            display: inline-block;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 0.62rem;
+
+            letter-spacing: 0.28em;
+
+            color: var(--red);
+
+            opacity: 0.72;
+
+            transition:
+                transform 0.5s ease,
+                opacity 0.5s ease;
+        }
+
+        .threshold-symbol:hover {
+
+            opacity: 1;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* The three marks */
+
+        .three-marks {
+
+            display: inline-flex;
+
+            gap: 8px;
+
+            align-items: center;
+
+            margin-top: 42px;
+
+            color: var(--red);
+
+            opacity: 0.65;
+        }
+
+        .three-marks span {
+
+            display: block;
+
+            width: 3px;
+
+            height: 3px;
+
+            border-radius: 50%;
+
+            background:
+                currentColor;
+        }
+
+
+        /* Quiet return */
+
+        .return-surface {
+
+            display: block;
+
+            width: fit-content;
+
+            margin:
+                70px auto 0;
+
+            font-size: 0.57rem;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+
+            color: var(--muted);
+
+            transition:
+                color 0.35s ease;
+        }
+
+        .return-surface:hover {
+
+            color: var(--red);
+        }
+        
         /* =====================================================
            MOBILE
         ===================================================== */
