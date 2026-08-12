@@ -10,17 +10,549 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>About · Srithea Seshen</title>
+    <title>About — Srithea Seshen</title>
 
     <meta
         name="description"
-        content="About Srithea Seshen — writer and scientist interested in people, emotions, relationships, memory, and the stories we make from them."
+        content="About Srithea Seshen — writer and scientist."
     >
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            background: #F3EBDD;
+            color: #261B15;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            line-height: 1.7;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            padding: 28px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom:
+                1px solid #CDBEAD;
+
+            background:
+                #F3EBDD;
+
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.85rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 30px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            color: #5B4A3F;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        nav a:hover {
+            color: #765039;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .about-hero {
+            padding:
+                120px 8% 105px;
+
+            border-bottom:
+                1px solid #CDBEAD;
+        }
+
+        .about-eyebrow {
+            margin: 0 0 25px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.67rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+
+            color: #876746;
+        }
+
+        .about-hero h1 {
+            max-width: 1050px;
+
+            margin: 0;
+
+            font-size:
+                clamp(
+                    3.5rem,
+                    8vw,
+                    7rem
+                );
+
+            line-height: 0.95;
+            font-weight: 400;
+            letter-spacing: -0.045em;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .about-intro {
+            padding:
+                110px 8%;
+
+            display: grid;
+
+            grid-template-columns:
+                0.65fr 1.35fr;
+
+            gap: 10%;
+        }
+
+        .about-intro-label {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.67rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+
+            color: #876746;
+        }
+
+        .about-intro-text {
+            max-width: 760px;
+        }
+
+        .about-intro-text p {
+            margin:
+                0 0 30px;
+
+            font-size:
+                clamp(
+                    1.15rem,
+                    1.6vw,
+                    1.35rem
+                );
+
+            line-height: 1.85;
+        }
+
+        .about-intro-text p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           TWO WORLDS
+        ========================= */
+
+        .two-worlds {
+            padding:
+                110px 8%;
+
+            background:
+                #211610;
+
+            color:
+                #F0E5D2;
+        }
+
+        .two-worlds-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 8%;
+        }
+
+        .world {
+            padding-top: 25px;
+
+            border-top:
+                1px solid #614837;
+        }
+
+        .world-label {
+            margin-bottom: 22px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+
+            color: #B99568;
+        }
+
+        .world h2 {
+            margin: 0 0 22px;
+
+            font-size:
+                clamp(
+                    2rem,
+                    4vw,
+                    3.5rem
+                );
+
+            line-height: 1.05;
+            font-weight: 400;
+        }
+
+        .world p {
+            margin: 0;
+
+            font-size: 1rem;
+            line-height: 1.9;
+
+            color: #CDBEAA;
+        }
+
+
+        /* =========================
+           WRITING DESK LINK
+        ========================= */
+
+        .about-desk-link {
+            padding:
+                115px 8%;
+
+            border-top:
+                1px solid #CDBEAD;
+
+            background:
+                #E8DCCB;
+
+            color:
+                #261B15;
+        }
+
+        .about-desk-link-inner {
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .about-desk-link-inner > span {
+            display: block;
+
+            margin-bottom: 25px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.63rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+
+            color: #876746;
+        }
+
+        .about-desk-link h2 {
+            margin: 0;
+
+            font-size:
+                clamp(
+                    2.3rem,
+                    5vw,
+                    4.2rem
+                );
+
+            line-height: 1.05;
+            font-weight: 400;
+        }
+
+        .about-desk-link a {
+            display: inline-block;
+
+            margin-top: 32px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.66rem;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            color: #68452F;
+        }
+
+        .about-desk-link a:hover {
+            color: #3F2A1F;
+        }
+
+
+        /* =========================
+           CONTACT STRIP
+        ========================= */
+
+        .contact-strip {
+            padding:
+                65px 8%;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap: 30px;
+
+            border-top:
+                1px solid #CDBEAD;
+
+            background:
+                #F3EBDD;
+        }
+
+        .contact-strip span {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+
+            color: #806D5E;
+        }
+
+        .contact-strip a {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.68rem;
+            letter-spacing: 0.08em;
+
+            color: #68452F;
+
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding:
+                42px 8%;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-top:
+                1px solid #CDBEAD;
+
+            background:
+                #F3EBDD;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 0.67rem;
+            letter-spacing: 0.08em;
+
+            color: #806D5E;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                padding:
+                    23px 6%;
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 0.68rem;
+            }
+
+            .about-hero {
+                padding:
+                    85px 7%;
+            }
+
+            .about-intro {
+                grid-template-columns: 1fr;
+                gap: 35px;
+
+                padding:
+                    85px 7%;
+            }
+
+            .two-worlds {
+                padding:
+                    85px 7%;
+            }
+
+            .two-worlds-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .about-desk-link {
+                padding:
+                    85px 7%;
+            }
+
+            .contact-strip {
+                padding:
+                    55px 7%;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+
+            footer {
+                padding:
+                    35px 7%;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap: 12px;
+            }
+        }
+
+
+        @media (max-width: 520px) {
+
+            nav {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap: 18px;
+            }
+
+            nav div:last-child {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 12px;
+            }
+
+            .about-hero h1 {
+                font-size:
+                    4rem;
+            }
+
+            .about-intro-text p {
+                font-size:
+                    1.05rem;
+
+                line-height:
+                    1.85;
+            }
+
+            .about-desk-link h2 {
+                font-size:
+                    2.5rem;
+            }
+        }
+
+    </style>
 
 </head>
 
@@ -28,9 +560,7 @@
 <body>
 
 
-    <!-- =========================
-         NAVIGATION
-         ========================= -->
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -52,7 +582,7 @@
             </a>
 
             <a href="writing-desk.html">
-                The Writing Desk
+                Writing Desk
             </a>
 
             <a href="contact.html">
@@ -64,94 +594,109 @@
     </nav>
 
 
-
     <main>
 
 
-        <!-- =========================
-             ABOUT INTRO
-             ========================= -->
+        <!-- HERO -->
 
-        <section class="page-intro">
+        <section class="about-hero">
 
-            <div class="section-label">
+            <p class="about-eyebrow">
                 About
-            </div>
+            </p>
 
             <h1>
-                Fiction about
-                people before plots.
+                A writer between
+                worlds.
             </h1>
-
-            <p>
-                About the choices that shape us,
-                the relationships that undo us,
-                and the hope that asks us to
-                begin again.
-            </p>
 
         </section>
 
 
+        <!-- INTRO -->
 
-        <!-- =========================
-             ABOUT CONTENT
-             ========================= -->
+        <section class="about-intro">
 
-        <section class="about">
+            <div class="about-intro-label">
+                Srithea Seshen
+            </div>
 
-            <div class="about-grid">
+            <div class="about-intro-text">
 
-                <div>
+                <p>
+                    Srithea Seshen is a writer and scientist
+                    interested in intimacy, memory, mythology,
+                    ordinary life, and the complicated spaces
+                    between them.
+                </p>
+
+                <p>
+                    Fiction comes first for her as a study
+                    of people: the choices they make, the
+                    stories they tell themselves, the ways
+                    they love, and the things they carry
+                    long after they believe they have left
+                    them behind.
+                </p>
+
+                <p>
+                    Her work moves between contemporary
+                    romance, literary fiction, and the
+                    quieter territories of family, inheritance,
+                    desire, identity, and choice.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TWO WORLDS -->
+
+        <section class="two-worlds">
+
+            <div class="two-worlds-grid">
+
+                <div class="world">
+
+                    <div class="world-label">
+                        The writer
+                    </div>
 
                     <h2>
-                        Srithea<br>
-                        Seshen
+                        Fiction about
+                        people before plots.
                     </h2>
+
+                    <p>
+                        The stories are interested in what
+                        happens underneath the obvious story:
+                        why people stay, why they leave, what
+                        makes forgiveness possible, and what
+                        it means to begin again.
+                    </p>
 
                 </div>
 
 
-                <div class="about-text">
+                <div class="world">
+
+                    <div class="world-label">
+                        The scientist
+                    </div>
+
+                    <h2>
+                        Curiosity is not
+                        confined to one discipline.
+                    </h2>
 
                     <p>
-                        Srithea Seshen writes about people:
-                        their emotions, their contradictions,
-                        their private histories, and the choices
-                        that quietly change the course of a life.
-                    </p>
-
-                    <p>
-                        The stories move through contemporary
-                        romance, literary fiction, family,
-                        memory, inheritance, desire, mythology,
-                        and the complicated spaces between them.
-                    </p>
-
-                    <p>
-                        The work begins with a simple belief:
-                        people are more interesting than plots.
-                        A plot may tell us what happened.
-                        A person tells us why it mattered.
-                    </p>
-
-                    <p>
-                        There is room here for tenderness and
-                        foolishness, regret and reinvention,
-                        obsession and ordinary happiness.
-                        Human beings are rarely one thing at a time.
-                    </p>
-
-                    <p>
-                        Alongside writing is a life in science.
-                        The laboratory offers its own education
-                        in patience, observation, uncertainty,
-                        failure, and the necessity of beginning
-                        again.
-                    </p>
-
-                    <p>
-                        Writer · Scientist
+                        Alongside writing, Srithea works in
+                        science. That life shapes the way she
+                        observes the world: with curiosity,
+                        patience, skepticism, and a fascination
+                        with the hidden structures beneath
+                        visible things.
                     </p>
 
                 </div>
@@ -161,27 +706,39 @@
         </section>
 
 
+        <!-- WRITING DESK -->
 
-        <!-- =========================
-             CONTACT PREVIEW
-             ========================= -->
+        <section class="about-desk-link">
 
-        <section class="contact">
+            <div class="about-desk-link-inner">
 
-            <h2>
-                Stay a while.
-            </h2>
+                <span>
+                    The Writing Desk
+                </span>
 
-            <p>
-                For literary enquiries, collaborations,
-                publishing opportunities, or professional
-                correspondence:
-            </p>
+                <h2>
+                    The questions behind
+                    the stories live here.
+                </h2>
 
-            <a
-                class="contact-email"
-                href="mailto:sritheaseshen@proton.me"
-            >
+                <a href="writing-desk.html">
+                    Visit the Writing Desk →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section class="contact-strip">
+
+            <span>
+                For literary enquiries &amp; collaborations
+            </span>
+
+            <a href="mailto:sritheaseshen@proton.me">
                 sritheaseshen@proton.me
             </a>
 
@@ -190,10 +747,7 @@
     </main>
 
 
-
-    <!-- =========================
-         FOOTER
-         ========================= -->
+    <!-- FOOTER -->
 
     <footer>
 
