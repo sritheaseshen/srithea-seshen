@@ -26,19 +26,25 @@
 
     <style>
 
-        /* =========================
-           WRITING DESK ENTRY
-        ========================= */
+        /* =====================================================
+           WRITING DESK — ENTRY 01
+           Horizontal editorial reading layout
+        ===================================================== */
 
         .desk-entry-header {
+            padding:
+                120px 8% 105px;
+
+            border-bottom:
+                1px solid #4A3427;
+        }
+
+        .desk-entry-header-inner {
             max-width:
-                900px;
+                1500px;
 
             margin:
                 0 auto;
-
-            padding:
-                115px 7% 85px;
         }
 
         .desk-entry-number {
@@ -65,37 +71,40 @@
 
         .desk-entry-header h1 {
             max-width:
-                850px;
+                1150px;
 
             margin:
                 0;
 
             font-size:
                 clamp(
-                    3.2rem,
-                    7vw,
-                    6.4rem
+                    4rem,
+                    8vw,
+                    8.5rem
                 );
 
             line-height:
-                0.94;
+                0.9;
 
             font-weight:
                 400;
 
             letter-spacing:
-                -0.05em;
+                -0.055em;
+
+            color:
+                #F0E5D2;
         }
 
         .desk-entry-rule {
             width:
-                52px;
+                55px;
 
             height:
                 1px;
 
             margin:
-                42px 0 30px;
+                45px 0 30px;
 
             background:
                 #B99568;
@@ -103,7 +112,7 @@
 
         .desk-entry-intro {
             max-width:
-                620px;
+                680px;
 
             margin:
                 0;
@@ -112,7 +121,7 @@
                 1.08rem;
 
             line-height:
-                1.75;
+                1.8;
 
             color:
                 #CDBEAA;
@@ -131,7 +140,7 @@
                 0.62rem;
 
             letter-spacing:
-                0.12em;
+                0.13em;
 
             text-transform:
                 uppercase;
@@ -141,68 +150,128 @@
         }
 
 
-        /* =========================
+        /* =====================================================
            ESSAY
-        ========================= */
+        ===================================================== */
 
         .desk-entry {
+            padding:
+                0 8% 120px;
+        }
+
+        .desk-entry-section {
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(220px, 25%)
+                minmax(0, 1fr);
+
+            column-gap:
+                9%;
+
             max-width:
-                68ch;
+                1500px;
 
             margin:
                 0 auto;
 
             padding:
-                15px 7% 115px;
+                105px 0 115px;
+
+            border-bottom:
+                1px solid #4A3427;
         }
 
-        .desk-entry section {
-            margin-bottom:
-                105px;
-        }
+        .desk-entry-section:last-of-type {
+            border-bottom:
+                none;
 
-        .desk-entry section:last-of-type {
-            margin-bottom:
+            padding-bottom:
                 95px;
         }
 
 
-        /* =========================
-           SECTION HEADINGS
-        ========================= */
+        /* =====================================================
+           MOVEMENT LABEL
+        ===================================================== */
 
-        .desk-entry h2 {
+        .desk-entry-section-label {
+            align-self:
+                start;
+
+            position:
+                sticky;
+
+            top:
+                40px;
+
+            padding-top:
+                5px;
+        }
+
+        .desk-entry-section-number {
+            display:
+                block;
+
+            margin-bottom:
+                18px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.62rem;
+
+            letter-spacing:
+                0.18em;
+
+            color:
+                #806D5E;
+        }
+
+        .desk-entry-section h2 {
+            max-width:
+                280px;
+
             margin:
-                0 0 42px;
+                0;
 
             font-size:
                 clamp(
-                    1.35rem,
-                    2.2vw,
-                    1.7rem
+                    1.45rem,
+                    2.3vw,
+                    2.2rem
                 );
 
             line-height:
-                1.25;
+                1.08;
 
             font-weight:
                 400;
 
             letter-spacing:
-                0.01em;
+                -0.02em;
 
             color:
                 #B99568;
         }
 
 
-        /* =========================
-           BODY TEXT
-        ========================= */
+        /* =====================================================
+           PROSE
+        ===================================================== */
 
-        .desk-entry p {
+        .desk-entry-content {
+            max-width:
+                780px;
+        }
+
+        .desk-entry-content p {
             margin:
-                0 0 1.35em;
+                0 0 1.45em;
 
             font-size:
                 1.08rem;
@@ -217,12 +286,12 @@
                 #E1D6C8;
         }
 
-        .desk-entry p:last-child {
+        .desk-entry-content p:last-child {
             margin-bottom:
                 0;
         }
 
-        .desk-entry em {
+        .desk-entry-content em {
             color:
                 #F0E5D2;
 
@@ -231,30 +300,39 @@
         }
 
 
-        /* =========================
-           QUIET EMPHASIS
-        ========================= */
+        /* =====================================================
+           QUIET SENTENCE EMPHASIS
+        ===================================================== */
 
-        .desk-entry .emphasis {
+        .desk-entry-content .emphasis {
             margin:
-                45px 0;
+                42px 0;
 
             font-size:
-                1.25rem;
+                1.32rem;
 
             line-height:
-                1.6;
+                1.55;
 
             color:
                 #F0E5D2;
         }
 
 
-        /* =========================
-           ENTRY NAVIGATION
-        ========================= */
+        /* =====================================================
+           ENTRY FOOTER
+        ===================================================== */
 
         .desk-entry-navigation {
+            max-width:
+                1500px;
+
+            margin:
+                0 auto;
+
+            padding:
+                38px 0;
+
             display:
                 flex;
 
@@ -263,12 +341,6 @@
 
             align-items:
                 center;
-
-            gap:
-                25px;
-
-            padding-top:
-                35px;
 
             border-top:
                 1px solid #4A3427;
@@ -310,24 +382,50 @@
         }
 
 
-        /* =========================
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .desk-entry-section {
+                grid-template-columns:
+                    180px
+                    minmax(0, 1fr);
+
+                column-gap:
+                    55px;
+            }
+
+            .desk-entry-section h2 {
+                font-size:
+                    1.55rem;
+            }
+
+        }
+
+
+        /* =====================================================
            MOBILE
-        ========================= */
+        ===================================================== */
 
         @media (max-width: 700px) {
 
             .desk-entry-header {
                 padding:
-                    80px 7% 60px;
+                    80px 7% 70px;
             }
 
             .desk-entry-header h1 {
                 font-size:
                     clamp(
-                        3rem,
-                        13vw,
-                        4.5rem
+                        3.4rem,
+                        14vw,
+                        5rem
                     );
+
+                line-height:
+                    0.92;
             }
 
             .desk-entry-intro {
@@ -335,50 +433,74 @@
                     1rem;
 
                 line-height:
-                    1.7;
+                    1.75;
             }
 
             .desk-entry {
+                padding:
+                    0 7% 80px;
+            }
+
+            .desk-entry-section {
+                display:
+                    block;
+
+                padding:
+                    70px 0 75px;
+            }
+
+            .desk-entry-section-label {
+                position:
+                    static;
+
+                padding:
+                    0;
+
+                margin-bottom:
+                    38px;
+            }
+
+            .desk-entry-section-number {
+                margin-bottom:
+                    12px;
+            }
+
+            .desk-entry-section h2 {
                 max-width:
                     none;
 
-                padding:
-                    10px 8% 80px;
-            }
-
-            .desk-entry section {
-                margin-bottom:
-                    80px;
-            }
-
-            .desk-entry h2 {
-                margin-bottom:
-                    32px;
-
                 font-size:
-                    1.3rem;
+                    1.55rem;
             }
 
-            .desk-entry p {
+            .desk-entry-content {
+                max-width:
+                    none;
+            }
+
+            .desk-entry-content p {
                 font-size:
                     1rem;
 
                 line-height:
-                    1.8;
+                    1.82;
             }
 
-            .desk-entry .emphasis {
+            .desk-entry-content .emphasis {
                 margin:
                     38px 0;
 
                 font-size:
-                    1.13rem;
+                    1.15rem;
 
                 line-height:
                     1.6;
             }
 
             .desk-entry-navigation {
+                padding:
+                    30px 0;
+
                 flex-direction:
                     column;
 
@@ -399,9 +521,9 @@
 <body>
 
 
-    <!-- =========================
+    <!-- =====================================================
          NAVIGATION
-    ========================= -->
+    ===================================================== -->
 
     <nav>
 
@@ -438,278 +560,345 @@
     <main>
 
 
-        <!-- =========================
+        <!-- =====================================================
              ENTRY HEADER
-        ========================= -->
+        ===================================================== -->
 
         <header class="desk-entry-header">
 
-            <div class="desk-entry-number">
-                Writing Desk · 01
-            </div>
+            <div class="desk-entry-header-inner">
 
-            <h1>
-                On Writing People<br>
-                Before Plots
-            </h1>
+                <div class="desk-entry-number">
+                    Writing Desk · 01
+                </div>
 
-            <div class="desk-entry-rule"></div>
+                <h1>
+                    On Writing People
+                    <br>
+                    Before Plots
+                </h1>
 
-            <p class="desk-entry-intro">
-                On character, choice, intimacy,
-                and the strange inefficiency
-                of being human.
-            </p>
+                <div class="desk-entry-rule"></div>
 
-            <div class="desk-entry-date">
-                August 12, 2026
+                <p class="desk-entry-intro">
+                    On character, choice, intimacy,
+                    and the strange inefficiency
+                    of being human.
+                </p>
+
+                <div class="desk-entry-date">
+                    August 12, 2026
+                </div>
+
             </div>
 
         </header>
 
 
-        <!-- =========================
+        <!-- =====================================================
              ESSAY
-        ========================= -->
+        ===================================================== -->
 
         <article class="desk-entry">
 
 
-            <!-- MOVEMENT I -->
+            <!-- =================================================
+                 MOVEMENT I
+            ================================================= -->
 
-            <section>
+            <section class="desk-entry-section">
 
-                <h2>
-                    I. The Problem with Plots
-                </h2>
+                <div class="desk-entry-section-label">
 
-                <p>
-                    Plots are wonderfully efficient engines.
-                </p>
+                    <span class="desk-entry-section-number">
+                        01
+                    </span>
 
-                <p>
-                    Someone leaves. Someone returns. A secret is overheard
-                    behind a closed door; a letter arrives three days too
-                    late; two strangers collide on a crowded corner and
-                    spend the rest of the night talking. Plot loves symmetry.
-                    It loves cause and effect. It operates on the clean,
-                    satisfying logic of momentum:
-                    <em>this happened, and so that must follow.</em>
-                </p>
+                    <h2>
+                        The Problem
+                        with Plots
+                    </h2>
 
-                <p>
-                    But real people are terribly inefficient.
-                </p>
-
-                <p>
-                    We do not move in straight lines toward our desires.
-                    We hesitate at open doors. We misread the quietest
-                    gestures and assign grand meaning to total accidents.
-                    We contradict ourselves within the space of a single
-                    breath—demanding honesty from the people we love while
-                    hiding the very parts of ourselves that feel too sharp
-                    to show.
-                </p>
-
-                <p>
-                    More than that, we remember unevenly. Put two people in
-                    a room during a life-altering moment, and five years
-                    later they will offer you two entirely different
-                    histories. One remembers the exact words spoken; the
-                    other remembers only the light through the window and
-                    the sudden, overwhelming desire to leave.
-                </p>
-
-                <p>
-                    If a story relies too heavily on the machinery of plot,
-                    it risks treating people like cargo—moving them neatly
-                    from point A to point B to satisfy the itinerary. But a
-                    life isn't an itinerary. When we look back on our own
-                    histories, we rarely remember the clean sequence of
-                    events. We remember how it felt to stand in the middle
-                    of them, completely unsure of what to do next.
-                </p>
-
-            </section>
+                </div>
 
 
-            <!-- MOVEMENT II -->
+                <div class="desk-entry-content">
 
-            <section>
+                    <p>
+                        Plots are wonderfully efficient engines.
+                    </p>
 
-                <h2>
-                    II. The Choice
-                </h2>
+                    <p>
+                        Someone leaves. Someone returns. A secret is overheard
+                        behind a closed door; a letter arrives three days too
+                        late; two strangers collide on a crowded corner and
+                        spend the rest of the night talking. Plot loves symmetry.
+                        It loves cause and effect. It operates on the clean,
+                        satisfying logic of momentum:
+                        <em>this happened, and so that must follow.</em>
+                    </p>
 
-                <p>
-                    There is a quiet temptation in storytelling to believe
-                    that trauma or triumph is the whole story. We watch a
-                    character survive a loss, fall into a fortune, or endure
-                    a betrayal, and we assume the event itself has done the
-                    work of defining them.
-                </p>
+                    <p>
+                        But real people are terribly inefficient.
+                    </p>
 
-                <p class="emphasis">
-                    But event is merely weather.
-                </p>
+                    <p>
+                        We do not move in straight lines toward our desires.
+                        We hesitate at open doors. We misread the quietest
+                        gestures and assign grand meaning to total accidents.
+                        We contradict ourselves within the space of a single
+                        breath—demanding honesty from the people we love while
+                        hiding the very parts of ourselves that feel too sharp
+                        to show.
+                    </p>
 
-                <p>
-                    The far more interesting question is never simply,
-                    <em>what happened to this person?</em> It is:
-                    <em>what did they decide to do with what happened?</em>
-                </p>
+                    <p>
+                        More than that, we remember unevenly. Put two people in
+                        a room during a life-altering moment, and five years
+                        later they will offer you two entirely different
+                        histories. One remembers the exact words spoken; the
+                        other remembers only the light through the window and
+                        the sudden, overwhelming desire to leave.
+                    </p>
 
-                <p>
-                    This is the precise threshold where plot surrenders to
-                    character. Two people can stand in the wreckage of the
-                    exact same storm; one will rebuild the house stone by
-                    stone, while the other will pack a single bag and spend
-                    the rest of their life moving away from the coast. The
-                    storm is identical. The choices can take them in opposite
-                    directions.
-                </p>
+                    <p>
+                        If a story relies too heavily on the machinery of plot,
+                        it risks treating people like cargo—moving them neatly
+                        from point A to point B to satisfy the itinerary. But a
+                        life isn't an itinerary. When we look back on our own
+                        histories, we rarely remember the clean sequence of
+                        events. We remember how it felt to stand in the middle
+                        of them, completely unsure of what to do next.
+                    </p>
 
-                <p>
-                    Character is not a list of traits, virtues, or carefully
-                    chosen quirks written down in a notebook before the story
-                    begins. Character is the posture a human being adopts when
-                    forced into a corner. It lives in the small, agonizing
-                    beats between impulse and action: the phone call made or
-                    left unmade; the apology swallowed out of pride; the
-                    quiet, stubborn refusal to let a bitter moment turn us
-                    into bitter people.
-                </p>
-
-                <p>
-                    We are not merely the sum of our circumstances. We are
-                    the sum of what we forfeit, what we protect, and what we
-                    forgive—especially when nobody is standing there to
-                    applaud the decision.
-                </p>
+                </div>
 
             </section>
 
 
-            <!-- MOVEMENT III -->
+            <!-- =================================================
+                 MOVEMENT II
+            ================================================= -->
 
-            <section>
+            <section class="desk-entry-section">
 
-                <h2>
-                    III. Relationships as Disruption
-                </h2>
+                <div class="desk-entry-section-label">
 
-                <p>
-                    Left to ourselves, we are remarkably good at maintaining
-                    the illusion of stability.
-                </p>
+                    <span class="desk-entry-section-number">
+                        02
+                    </span>
 
-                <p>
-                    We curate our habits, smooth down our rough edges, and
-                    rehearse the stories we tell ourselves about who we are.
-                    In solitude, we can convince ourselves that we are patient,
-                    reasonable, and composed. We become accustomed to the quiet
-                    person we get to be when nobody is asking us to adapt.
-                </p>
+                    <h2>
+                        The Choice
+                    </h2>
 
-                <p class="emphasis">
-                    Then another person arrives.
-                </p>
-
-                <p>
-                    A lover, a parent, a child, a friend—sometimes even an
-                    adversary. They walk into the neat architecture of our
-                    lives, and suddenly the version of ourselves we worked
-                    so hard to preserve begins to fracture.
-                </p>
-
-                <p>
-                    This is the true disruption of intimacy. It isn't just
-                    that another person enters our space; it's that they bring
-                    a mirror with them. They notice the slight pause before we
-                    answer a simple question. They hear the sentence we cut
-                    short. They see the fear behind our competence, or the
-                    fragility behind our distance.
-                </p>
-
-                <p>
-                    When that happens, the real conflict of a story is rarely
-                    the external conflict alone. It isn't about whether two
-                    people will manage to stay in the same room, or win the day,
-                    or secure a happy ending.
-                </p>
-
-                <p class="emphasis">
-                    It is about the cost of being known.
-                </p>
-
-                <p>
-                    To be truly seen by another human being requires a
-                    terrifying kind of surrender. It asks us to give up the
-                    protection of our private narratives. It forces us to
-                    decide whether we will retreat back into the safety of our
-                    solitude, or allow ourselves to be rearranged by love,
-                    by grief, or by the slow, difficult work of staying.
-                </p>
-
-            </section>
+                </div>
 
 
-            <!-- MOVEMENT IV -->
+                <div class="desk-entry-content">
 
-            <section>
+                    <p>
+                        There is a quiet temptation in storytelling to believe
+                        that trauma or triumph is the whole story. We watch a
+                        character survive a loss, fall into a fortune, or endure
+                        a betrayal, and we assume the event itself has done the
+                        work of defining them.
+                    </p>
 
-                <h2>
-                    IV. What Remains
-                </h2>
+                    <p class="emphasis">
+                        But event is merely weather.
+                    </p>
 
-                <p>
-                    When I sit down to write, I do not begin with the question
-                    of what should happen to these people.
-                </p>
+                    <p>
+                        The far more interesting question is never simply,
+                        <em>what happened to this person?</em> It is:
+                        <em>what did they decide to do with what happened?</em>
+                    </p>
 
-                <p>
-                    I don't look for the dramatic reveal, the sudden twist,
-                    or the clean resolution designed to tie a narrative into
-                    a tidy bow. Those things have their place, but they are
-                    scaffolding.
-                </p>
+                    <p>
+                        This is the precise threshold where plot surrenders to
+                        character. Two people can stand in the wreckage of the
+                        exact same storm; one will rebuild the house stone by
+                        stone, while the other will pack a single bag and spend
+                        the rest of their life moving away from the coast. The
+                        storm is identical. The choices can take them in opposite
+                        directions.
+                    </p>
 
-                <p>
-                    Instead, I begin with a quieter, far more demanding set
-                    of questions: Who are these people when no one is watching?
-                    What do they hold onto when the room goes dark? And what
-                    happens when someone finally steps into that room, turns
-                    on the light, and refuses to leave?
-                </p>
+                    <p>
+                        Character is not a list of traits, virtues, or carefully
+                        chosen quirks written down in a notebook before the story
+                        begins. Character is the posture a human being adopts when
+                        forced into a corner. It lives in the small, agonizing
+                        beats between impulse and action: the phone call made or
+                        left unmade; the apology swallowed out of pride; the
+                        quiet, stubborn refusal to let a bitter moment turn us
+                        into bitter people.
+                    </p>
 
-                <p>
-                    Storytelling, at its most honest, is not an escape from
-                    reality; it is an act of attention. It is a refusal to let
-                    the noise of events obscure the subtle, monumental shifts
-                    happening inside the human heart.
-                </p>
+                    <p>
+                        We are not merely the sum of our circumstances. We are
+                        the sum of what we forfeit, what we protect, and what we
+                        forgive—especially when nobody is standing there to
+                        applaud the decision.
+                    </p>
 
-                <p>
-                    Plots will always offer us momentum—the thrilling,
-                    restless drive to find out what comes next. But it is
-                    character that gives that momentum a reason to exist.
-                    Plot tells us that a threshold was crossed. Character is
-                    why we hold our breath as their foot hovers over the line.
-                </p>
-
-                <p>
-                    In the end, we do not remember stories because of how
-                    neatly they were constructed. We remember them because,
-                    for a few hundred pages, we were allowed to witness people
-                    making the fragile, courageous choice to begin again.
-                </p>
+                </div>
 
             </section>
 
 
-            <!-- =========================
+            <!-- =================================================
+                 MOVEMENT III
+            ================================================= -->
+
+            <section class="desk-entry-section">
+
+                <div class="desk-entry-section-label">
+
+                    <span class="desk-entry-section-number">
+                        03
+                    </span>
+
+                    <h2>
+                        Relationships
+                        as Disruption
+                    </h2>
+
+                </div>
+
+
+                <div class="desk-entry-content">
+
+                    <p>
+                        Left to ourselves, we are remarkably good at maintaining
+                        the illusion of stability.
+                    </p>
+
+                    <p>
+                        We curate our habits, smooth down our rough edges, and
+                        rehearse the stories we tell ourselves about who we are.
+                        In solitude, we can convince ourselves that we are patient,
+                        reasonable, and composed. We become accustomed to the quiet
+                        person we get to be when nobody is asking us to adapt.
+                    </p>
+
+                    <p class="emphasis">
+                        Then another person arrives.
+                    </p>
+
+                    <p>
+                        A lover, a parent, a child, a friend—sometimes even an
+                        adversary. They walk into the neat architecture of our
+                        lives, and suddenly the version of ourselves we worked
+                        so hard to preserve begins to fracture.
+                    </p>
+
+                    <p>
+                        This is the true disruption of intimacy. It isn't just
+                        that another person enters our space; it's that they bring
+                        a mirror with them. They notice the slight pause before we
+                        answer a simple question. They hear the sentence we cut
+                        short. They see the fear behind our competence, or the
+                        fragility behind our distance.
+                    </p>
+
+                    <p>
+                        When that happens, the real conflict of a story is rarely
+                        the external conflict alone. It isn't about whether two
+                        people will manage to stay in the same room, or win the day,
+                        or secure a happy ending.
+                    </p>
+
+                    <p class="emphasis">
+                        It is about the cost of being known.
+                    </p>
+
+                    <p>
+                        To be truly seen by another human being requires a
+                        terrifying kind of surrender. It asks us to give up the
+                        protection of our private narratives. It forces us to
+                        decide whether we will retreat back into the safety of our
+                        solitude, or allow ourselves to be rearranged by love,
+                        by grief, or by the slow, difficult work of staying.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MOVEMENT IV
+            ================================================= -->
+
+            <section class="desk-entry-section">
+
+                <div class="desk-entry-section-label">
+
+                    <span class="desk-entry-section-number">
+                        04
+                    </span>
+
+                    <h2>
+                        What Remains
+                    </h2>
+
+                </div>
+
+
+                <div class="desk-entry-content">
+
+                    <p>
+                        When I sit down to write, I do not begin with the question
+                        of what should happen to these people.
+                    </p>
+
+                    <p>
+                        I don't look for the dramatic reveal, the sudden twist,
+                        or the clean resolution designed to tie a narrative into
+                        a tidy bow. Those things have their place, but they are
+                        scaffolding.
+                    </p>
+
+                    <p>
+                        Instead, I begin with a quieter, far more demanding set
+                        of questions: Who are these people when no one is watching?
+                        What do they hold onto when the room goes dark? And what
+                        happens when someone finally steps into that room, turns
+                        on the light, and refuses to leave?
+                    </p>
+
+                    <p>
+                        Storytelling, at its most honest, is not an escape from
+                        reality; it is an act of attention. It is a refusal to let
+                        the noise of events obscure the subtle, monumental shifts
+                        happening inside the human heart.
+                    </p>
+
+                    <p>
+                        Plots will always offer us momentum—the thrilling,
+                        restless drive to find out what comes next. But it is
+                        character that gives that momentum a reason to exist.
+                        Plot tells us that a threshold was crossed. Character is
+                        why we hold our breath as their foot hovers over the line.
+                    </p>
+
+                    <p>
+                        In the end, we do not remember stories because of how
+                        neatly they were constructed. We remember them because,
+                        for a few hundred pages, we were allowed to witness people
+                        making the fragile, courageous choice to begin again.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
                  ENTRY NAVIGATION
-            ========================= -->
+            ================================================= -->
 
             <div class="desk-entry-navigation">
 
@@ -729,9 +918,9 @@
     </main>
 
 
-    <!-- =========================
-         SITE FOOTER
-    ========================= -->
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
 
     <footer>
 
