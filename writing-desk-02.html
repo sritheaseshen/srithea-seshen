@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        On the Things We Misread — Srithea Seshen
+    </title>
+
+    <meta
+        name="description"
+        content="Writing Desk 02 — On the Things We Misread. Notes on projection, silence, intimacy, misunderstanding, and what remains unknowable in another person."
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           WRITING DESK — ENTRY 02
+           Standalone page styling only.
+           Site-wide configuration remains in style.css.
+        ===================================================== */
+
+
+        /* =========================
+           ENTRY HEADER
+        ========================= */
+
+        .desk-entry-header {
+
+            max-width:
+                900px;
+
+            margin:
+                0 auto;
+
+            padding:
+                110px 8% 75px;
+
+        }
+
+
+        .desk-entry-number {
+
+            margin:
+                0 0 28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            line-height:
+                1.4;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #8a6f5a;
+
+        }
+
+
+        .desk-entry-header h1 {
+
+            margin:
+                0;
+
+            max-width:
+                900px;
+
+            font-size:
+                clamp(
+                    3.4rem,
+                    7vw,
+                    6.8rem
+                );
+
+            line-height:
+                0.94;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.05em;
+
+            text-wrap:
+                balance;
+
+        }
+
+
+        .desk-entry-rule {
+
+            width:
+                55px;
+
+            height:
+                2px;
+
+            margin:
+                38px 0 30px;
+
+            background:
+                #8a6f5a;
+
+        }
+
+
+        .desk-entry-intro {
+
+            max-width:
+                650px;
+
+            margin:
+                0;
+
+            font-size:
+                1.12rem;
+
+            line-height:
+                1.85;
+
+            color:
+                #bcae9d;
+
+        }
+
+
+        .desk-entry-date {
+
+            margin-top:
+                28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.65rem;
+
+            line-height:
+                1.5;
+
+            letter-spacing:
+                0.13em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #8f8173;
+
+        }
+
+
+        /* =========================
+           ESSAY CONTAINER
+        ========================= */
+
+        .desk-entry {
+
+            width:
+                100%;
+
+            max-width:
+                820px;
+
+            margin:
+                0 auto;
+
+            padding:
+                20px 8% 110px;
+
+        }
+
+
+        /* =========================
+           EACH MOVEMENT
+        ========================= */
+
+        .desk-entry section {
+
+            width:
+                100%;
+
+            margin:
+                0 0 105px;
+
+            padding:
+                0;
+
+        }
+
+
+        .desk-entry section:last-of-type {
+
+            margin-bottom:
+                85px;
+
+        }
+
+
+        /* =========================
+           MOVEMENT HEADING
+        ========================= */
+
+        .desk-entry h2 {
+
+            margin:
+                0 0 38px;
+
+            font-size:
+                clamp(
+                    1.85rem,
+                    3vw,
+                    2.65rem
+                );
+
+            line-height:
+                1.12;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.025em;
+
+            color:
+                #f0e5d2;
+
+        }
+
+
+        /* =========================
+           BODY PROSE
+        ========================= */
+
+        .desk-entry p {
+
+            margin:
+                0 0 27px;
+
+            padding:
+                0;
+
+            font-size:
+                1.08rem;
+
+            line-height:
+                1.95;
+
+            font-weight:
+                400;
+
+            color:
+                #d8cdbf;
+
+            text-align:
+                left;
+
+        }
+
+
+        .desk-entry p:last-child {
+
+            margin-bottom:
+                0;
+
+        }
+
+
+        .desk-entry em {
+
+            color:
+                #eee5da;
+
+        }
+
+
+        /* =========================
+           EMPHASIS PARAGRAPHS
+           Used for short philosophical
+           statements such as:
+           "The human mind is..."
+        ========================= */
+
+        .desk-entry .short-line {
+
+            margin-top:
+                4px;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        /* =========================
+           DIVIDER BETWEEN MOVEMENTS
+        ========================= */
+
+        .desk-entry section:not(:last-of-type)::after {
+
+            content:
+                "";
+
+            display:
+                block;
+
+            width:
+                100%;
+
+            height:
+                1px;
+
+            margin-top:
+                78px;
+
+            background:
+                rgba(
+                    216,
+                    205,
+                    191,
+                    0.16
+                );
+
+        }
+
+
+        /* =========================
+           ENTRY NAVIGATION
+        ========================= */
+
+        .desk-entry-navigation {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                25px;
+
+            padding-top:
+                35px;
+
+            border-top:
+                1px solid
+                rgba(
+                    216,
+                    205,
+                    191,
+                    0.25
+                );
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.66rem;
+
+            line-height:
+                1.5;
+
+            letter-spacing:
+                0.1em;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .desk-entry-navigation span {
+
+            color:
+                #806d5e;
+
+        }
+
+
+        .desk-entry-navigation a {
+
+            color:
+                #bcae9d;
+
+            text-decoration:
+                none;
+
+            transition:
+                color
+                0.25s
+                ease;
+
+        }
+
+
+        .desk-entry-navigation a:hover {
+
+            color:
+                #eee5da;
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+
+            .desk-entry-header {
+
+                padding:
+                    80px 7% 55px;
+
+            }
+
+
+            .desk-entry-header h1 {
+
+                font-size:
+                    clamp(
+                        3rem,
+                        13vw,
+                        4.8rem
+                    );
+
+                line-height:
+                    0.96;
+
+            }
+
+
+            .desk-entry-intro {
+
+                font-size:
+                    1rem;
+
+                line-height:
+                    1.8;
+
+            }
+
+
+            .desk-entry {
+
+                max-width:
+                    none;
+
+                padding:
+                    15px 7% 80px;
+
+            }
+
+
+            .desk-entry section {
+
+                margin-bottom:
+                    80px;
+
+            }
+
+
+            .desk-entry section:not(:last-of-type)::after {
+
+                margin-top:
+                    60px;
+
+            }
+
+
+            .desk-entry h2 {
+
+                margin-bottom:
+                    30px;
+
+                font-size:
+                    1.85rem;
+
+                line-height:
+                    1.15;
+
+            }
+
+
+            .desk-entry p {
+
+                font-size:
+                    1rem;
+
+                line-height:
+                    1.88;
+
+                margin-bottom:
+                    24px;
+
+            }
+
+
+            .desk-entry-navigation {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    18px;
+
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+
+            .desk-entry-header {
+
+                padding:
+                    70px 7% 48px;
+
+            }
+
+
+            .desk-entry-header h1 {
+
+                font-size:
+                    3.25rem;
+
+            }
+
+
+            .desk-entry-rule {
+
+                margin:
+                    30px 0 25px;
+
+            }
+
+
+            .desk-entry {
+
+                padding:
+                    10px 7% 70px;
+
+            }
+
+
+            .desk-entry section {
+
+                margin-bottom:
+                    70px;
+
+            }
+
+
+            .desk-entry section:not(:last-of-type)::after {
+
+                margin-top:
+                    52px;
+
+            }
+
+
+            .desk-entry h2 {
+
+                font-size:
+                    1.7rem;
+
+            }
+
+
+            .desk-entry p {
+
+                font-size:
+                    0.98rem;
+
+                line-height:
+                    1.84;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
+    <nav>
+
+        <a
+            class="logo"
+            href="index.html"
+        >
+            Srithea Seshen
+        </a>
+
+        <div>
+
+            <a href="index.html#works">
+                Works
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             ENTRY HEADER
+        ================================================= -->
+
+        <header class="desk-entry-header">
+
+            <div class="desk-entry-number">
+                Writing Desk · 02
+            </div>
+
+
+            <h1>
+                On the Things<br>
+                We Misread
+            </h1>
+
+
+            <div class="desk-entry-rule"></div>
+
+
+            <p class="desk-entry-intro">
+                On projection, silence, intimacy,
+                misunderstanding, and the parts
+                of another person we can never
+                completely know.
+            </p>
+
+
+            <div class="desk-entry-date">
+                August 13, 2026
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             ESSAY
+        ================================================= -->
+
+        <article
+            class="desk-entry"
+            aria-label="On the Things We Misread"
+        >
+
+
+            <!-- =============================================
+                 MOVEMENT I
+            ============================================== -->
+
+            <section
+                aria-labelledby="movement-one"
+            >
+
+                <h2 id="movement-one">
+                    I. The Stories We Tell Ourselves
+                </h2>
+
+
+                <p class="short-line">
+                    The human mind is an aggressive interpreter.
+                </p>
+
+
+                <p>
+                    When presented with another person, we rarely permit
+                    them to exist as a blank canvas. We are far too restless
+                    for that. Faced with incomplete information—a voice that
+                    drops an octave, a glance that lingers a second too long,
+                    a message left unanswered through an afternoon—we do not
+                    wait for clarity. We invent it.
+                </p>
+
+
+                <p>
+                    We construct entire interior architectures for people
+                    based on a handful of scattered clues. A quiet demeanor
+                    becomes coldness; a nervous laugh becomes arrogance; a
+                    brief hesitation becomes deliberate withdrawal. We take
+                    the smallest, most ambiguous fragments of another
+                    person's behavior and weave them into a seamless,
+                    convincing story about who they are and what they feel
+                    toward us.
+                </p>
+
+
+                <p>
+                    What is striking is not just that we do this, but the
+                    speed with which we do it. The story is built in a breath.
+                    And once the story exists, we begin looking for evidence
+                    that will keep it intact. Every subsequent action they
+                    take is dragged through the filter of the narrative we
+                    have already constructed.
+                </p>
+
+
+                <p>
+                    We like to believe we are observing other people. More
+                    often than not, we are simply reading our own draft of
+                    them.
+                </p>
+
+            </section>
+
+
+            <!-- =============================================
+                 MOVEMENT II
+            ============================================== -->
+
+            <section
+                aria-labelledby="movement-two"
+            >
+
+                <h2 id="movement-two">
+                    II. The Problem with Silence
+                </h2>
+
+
+                <p class="short-line">
+                    Silence is almost never received as empty space. It is a
+                    canvas we paint our deepest anxieties upon.
+                </p>
+
+
+                <p>
+                    When a room goes quiet, or when a conversation hits a
+                    sudden, unexpected lull, our instinct is rarely to assume
+                    that the other person is merely thinking, tired, or
+                    absent-minded. Instead, we project into the void. We fill
+                    the quiet with whatever story we are most primed to
+                    believe about ourselves—our fear of being a burden, our
+                    terror of being exposed, or our quiet, lingering suspicion
+                    that we are ultimately uninteresting.
+                </p>
+
+
+                <p>
+                    In this way, silence becomes a dangerous kind of mirror.
+                </p>
+
+
+                <p>
+                    A quiet partner isn't just quiet; they are harboring a
+                    secret disappointment. A friend's unread text isn't just
+                    a busy day; it is a gradual, deliberate retreat from the
+                    friendship. We turn another person's stillness into
+                    evidence against them—or against ourselves—long before a
+                    single word is actually spoken.
+                </p>
+
+
+                <p>
+                    In fiction, as in life, the most devastating
+                    misunderstandings rarely come from loud arguments or
+                    dramatic lies. They come from the quiet moments where two
+                    people sit in the same room, each privately interpreting
+                    the other’s silence, building two entirely different,
+                    incompatible realities out of nothing at all.
+                </p>
+
+            </section>
+
+
+            <!-- =============================================
+                 MOVEMENT III
+            ============================================== -->
+
+            <section
+                aria-labelledby="movement-three"
+            >
+
+                <h2 id="movement-three">
+                    III. When We Get Someone Wrong
+                </h2>
+
+
+                <p>
+                    There is a distinct, quiet shock in realizing you have
+                    completely misread someone you care about.
+                </p>
+
+
+                <p>
+                    It usually arrives not in a grand confrontation, but in
+                    a small, unscripted moment that refuses to fit into the
+                    narrative you’ve built. A sudden admission of fear from
+                    someone you thought was invincible. A quiet boundary
+                    drawn by someone you assumed would always yield. A tender
+                    memory they hold from a shared night that you remembered
+                    only as uncomfortable.
+                </p>
+
+
+                <p>
+                    In that beat, the illusion shatters. You realize that for
+                    months—or years—you were not relating to the human being
+                    in front of you. You were relating to a ghost of your own
+                    making.
+                </p>
+
+
+                <p>
+                    This is where intimacy faces its steepest trial. When the
+                    version of someone you invented collides with who they
+                    actually are, the ego's first instinct is defence. We
+                    want to argue with reality. We want to insist that
+                    <em>our</em> version of them was the correct one, that
+                    they are being inconsistent, unfair, or untrue to
+                    themselves.
+                </p>
+
+
+                <p>
+                    To love someone past this point requires a painful act of
+                    demolition. It demands that we dismantle our preferred
+                    draft of them and do the slow, humbling work of learning
+                    who they actually are. Real connection doesn't begin when
+                    two people understand each other perfectly; it begins in
+                    the aftermath of a misreading, when both people choose
+                    recalibration over the safety of their projections.
+                </p>
+
+            </section>
+
+
+            <!-- =============================================
+                 MOVEMENT IV
+            ============================================== -->
+
+            <section
+                aria-labelledby="movement-four"
+            >
+
+                <h2 id="movement-four">
+                    IV. What We Cannot Know
+                </h2>
+
+
+                <p>
+                    As writers, we are taught to pursue total clarity—to map
+                    every motivation, expose every secret, and lay a
+                    character’s inner life bare for the reader. We want to
+                    solve our people.
+                </p>
+
+
+                <p class="short-line">
+                    But a human being who is completely explainable ceases
+                    to feel human.
+                </p>
+
+
+                <p>
+                    The most enduring fiction leaves room for the unmapped
+                    territory. It recognizes that even at our most intimate,
+                    even after years of shared living and quiet reckonings,
+                    there remains an irreducible core in every person that
+                    cannot be fully cataloged or known. There are memories
+                    they will never share, motives they will never fully
+                    understand themselves, and private rooms within their
+                    minds where no one else will ever step.
+                </p>
+
+
+                <p>
+                    Allowing a character—or a person—to keep that privacy is
+                    not a failure of understanding. It is a form of respect.
+                </p>
+
+
+                <p>
+                    When we stop demanding that others be entirely legible to
+                    us, our relationships change. Misreading ceases to be an
+                    insult or a betrayal; it becomes a reminder that the
+                    person across from us is vast, evolving, and independent
+                    of our imagination.
+                </p>
+
+
+                <p>
+                    In the end, perhaps the truest love we can offer another
+                    person is not the claim that we know them completely. It
+                    is the willingness to put down our drafts and our
+                    projections, to admit that we were wrong, and to remain
+                    curious about the person who is still becoming in front
+                    of us.
+                </p>
+
+            </section>
+
+
+            <!-- =================================================
+                 ENTRY NAVIGATION
+            ================================================= -->
+
+            <div class="desk-entry-navigation">
+
+                <span>
+                    Writing Desk · 02
+                </span>
+
+
+                <a href="writing-desk.html">
+                    Back to the Writing Desk →
+                </a>
+
+            </div>
+
+
+        </article>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <span>
+            © 2026 Srithea Seshen
+        </span>
+
+
+        <span>
+            Love · Memory · What Remains
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>
