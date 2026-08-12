@@ -5,7 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Srithea Seshen</title>
 
@@ -14,9 +17,13 @@
         content="Srithea Seshen — stories of love, memory, and what remains."
     >
 
-    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
@@ -25,10 +32,6 @@
 
 
     <style>
-
-        /* =====================================================
-           COLOUR PALETTE
-        ===================================================== */
 
         :root {
 
@@ -47,22 +50,20 @@
             --red: #A8324A;
             --pink-red: #C65A68;
 
-            --line: rgba(16, 45, 48, 0.13);
-            --dark-line: rgba(243, 245, 241, 0.16);
+            --line: rgba(16,45,48,0.13);
+            --dark-line: rgba(243,245,241,0.16);
         }
 
-
-        /* =====================================================
-           RESET
-        ===================================================== */
 
         * {
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
 
@@ -78,19 +79,18 @@
                 sans-serif;
 
             -webkit-font-smoothing: antialiased;
-
-            overflow-x: hidden;
         }
 
+
         a {
+
             color: inherit;
+
             text-decoration: none;
         }
 
 
-        /* =====================================================
-           NAVIGATION
-        ===================================================== */
+        /* NAVIGATION */
 
         nav {
 
@@ -109,8 +109,9 @@
 
             align-items: center;
 
-            z-index: 30;
+            z-index: 20;
         }
+
 
         .logo {
 
@@ -122,9 +123,8 @@
             font-size: 0.86rem;
 
             letter-spacing: 0.105em;
-
-            color: var(--ink);
         }
+
 
         .nav-links {
 
@@ -133,9 +133,8 @@
             gap: 34px;
         }
 
-        .nav-links a {
 
-            position: relative;
+        .nav-links a {
 
             font-size: 0.62rem;
 
@@ -146,49 +145,21 @@
             color: var(--muted);
 
             transition:
-                color 0.35s ease;
+                color 0.3s ease;
         }
 
-        .nav-links a::after {
-
-            content: "";
-
-            position: absolute;
-
-            left: 0;
-
-            bottom: -8px;
-
-            width: 0;
-
-            height: 1px;
-
-            background: var(--red);
-
-            transition:
-                width 0.35s ease;
-        }
 
         .nav-links a:hover {
 
-            color: var(--ink);
-        }
-
-        .nav-links a:hover::after {
-
-            width: 100%;
+            color: var(--red);
         }
 
 
-        /* =====================================================
-           HERO
-        ===================================================== */
+        /* HERO */
 
         .hero {
 
             min-height: 100vh;
-
-            position: relative;
 
             display: flex;
 
@@ -198,35 +169,9 @@
                 150px 8%
                 110px;
 
-            overflow: hidden;
+            position: relative;
         }
 
-        .hero::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 420px;
-
-            height: 420px;
-
-            right: -190px;
-
-            top: 50px;
-
-            border-radius: 50%;
-
-            border:
-                1px solid
-                rgba(23, 74, 60, 0.07);
-
-            box-shadow:
-                0 0 0 35px rgba(23, 74, 60, 0.022),
-                0 0 0 70px rgba(23, 74, 60, 0.015);
-
-            pointer-events: none;
-        }
 
         .hero-inner {
 
@@ -234,7 +179,7 @@
 
             max-width: 1120px;
 
-            margin: 0 auto;
+            margin: auto;
 
             display: grid;
 
@@ -244,37 +189,28 @@
             align-items: center;
 
             gap: 85px;
-
-            position: relative;
-
-            z-index: 2;
         }
 
 
-        /* =====================================================
-           HERO IMAGE
-        ===================================================== */
+        .hero-copy {
+            order: 1;
+        }
+
 
         .hero-image-wrap {
-
             order: 2;
 
             display: flex;
 
             justify-content: center;
-
-            align-items: center;
-
-            position: relative;
         }
+
 
         .hero-image {
 
-            display: block;
+            width: min(430px,38vw);
 
-            width: min(430px, 38vw);
-
-            height: min(560px, 62vh);
+            height: min(560px,62vh);
 
             object-fit: cover;
 
@@ -286,26 +222,9 @@
 
             box-shadow:
                 0 30px 70px
-                rgba(8, 47, 53, 0.15);
-
-            transition:
-                transform 1s cubic-bezier(.2,.7,.2,1);
+                rgba(8,47,53,0.15);
         }
 
-        .hero-image:hover {
-
-            transform:
-                translateY(-5px);
-        }
-
-
-        /* =====================================================
-           HERO COPY
-        ===================================================== */
-
-        .hero-copy {
-            order: 1;
-        }
 
         .eyebrow {
 
@@ -321,6 +240,7 @@
             color: var(--muted);
         }
 
+
         h1 {
 
             margin: 0;
@@ -331,11 +251,7 @@
                 serif;
 
             font-size:
-                clamp(
-                    4rem,
-                    8vw,
-                    7.2rem
-                );
+                clamp(4rem,8vw,7.2rem);
 
             line-height: 0.91;
 
@@ -344,17 +260,18 @@
             letter-spacing: -0.067em;
         }
 
+
         .hero-line {
 
             width: 45px;
 
             height: 1px;
 
-            margin:
-                39px 0;
+            margin: 39px 0;
 
             background: var(--red);
         }
+
 
         .hero-statement {
 
@@ -367,12 +284,7 @@
                 Georgia,
                 serif;
 
-            font-size:
-                clamp(
-                    1.05rem,
-                    1.8vw,
-                    1.35rem
-                );
+            font-size: 1.2rem;
 
             line-height: 1.72;
 
@@ -381,10 +293,6 @@
             color: var(--green);
         }
 
-
-        /* =====================================================
-           THREE MARKS
-        ===================================================== */
 
         .three-marks {
 
@@ -401,6 +309,7 @@
             opacity: 0.65;
         }
 
+
         .three-marks span {
 
             display: block;
@@ -411,14 +320,11 @@
 
             border-radius: 50%;
 
-            background:
-                currentColor;
+            background: currentColor;
         }
 
 
-        /* =====================================================
-           THRESHOLD
-        ===================================================== */
+        /* THRESHOLD */
 
         .threshold {
 
@@ -429,12 +335,8 @@
             justify-content: center;
 
             align-items: center;
-
-            position: relative;
-
-            background:
-                var(--botanical);
         }
+
 
         .threshold::before {
 
@@ -444,72 +346,33 @@
 
             height: 54px;
 
-            background:
-                var(--red);
+            background: var(--red);
 
             opacity: 0.6;
         }
 
 
-        /* =====================================================
-           THE ALCHEMY
-        ===================================================== */
+        /* WORKS */
 
         .works {
 
-            background:
-                var(--ocean);
+            background: var(--ocean);
 
-            color:
-                var(--botanical);
+            color: var(--botanical);
 
             padding:
                 140px 8%
                 155px;
-
-            position: relative;
-
-            overflow: hidden;
         }
 
-        .works::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 650px;
-
-            height: 650px;
-
-            right: -320px;
-
-            top: -250px;
-
-            border-radius: 50%;
-
-            border:
-                1px solid
-                rgba(143, 176, 174, 0.075);
-
-            box-shadow:
-                0 0 0 45px rgba(143, 176, 174, 0.022),
-                0 0 0 90px rgba(143, 176, 174, 0.015),
-                0 0 0 135px rgba(143, 176, 174, 0.01);
-
-            pointer-events: none;
-        }
 
         .section-inner {
 
             max-width: 1120px;
 
-            margin: 0 auto;
-
-            position: relative;
-
-            z-index: 2;
+            margin: auto;
         }
+
 
         .section-label {
 
@@ -525,6 +388,7 @@
             color: var(--mist);
         }
 
+
         .works-title {
 
             margin:
@@ -536,11 +400,7 @@
                 serif;
 
             font-size:
-                clamp(
-                    3.1rem,
-                    6vw,
-                    5.5rem
-                );
+                clamp(3.1rem,6vw,5.5rem);
 
             line-height: 0.95;
 
@@ -550,9 +410,7 @@
         }
 
 
-        /* =====================================================
-           TWO BRAIN CELLS
-        ===================================================== */
+        /* ALCHEMY */
 
         .alchemy {
 
@@ -562,6 +420,7 @@
                 1px solid
                 var(--dark-line);
         }
+
 
         .alchemy-label {
 
@@ -577,6 +436,7 @@
             color: var(--mist);
         }
 
+
         .book {
 
             display: grid;
@@ -588,15 +448,8 @@
 
             padding:
                 42px 0;
-
-            border-top:
-                1px solid
-                rgba(243, 245, 241, 0.11);
         }
 
-        .book:first-of-type {
-            border-top: none;
-        }
 
         .book-title {
 
@@ -608,27 +461,22 @@
                 serif;
 
             font-size:
-                clamp(
-                    1.75rem,
-                    3vw,
-                    2.45rem
-                );
+                clamp(1.75rem,3vw,2.45rem);
 
             font-weight: 400;
 
             line-height: 1.15;
 
-            letter-spacing: -0.025em;
-
             transition:
-                color 0.35s ease;
+                color 0.3s ease;
         }
+
 
         .book-title:hover {
 
-            color:
-                #F0B1B9;
+            color: #F0B1B9;
         }
+
 
         .book-meta {
 
@@ -644,6 +492,7 @@
             color: var(--mist);
         }
 
+
         .book-description {
 
             max-width: 560px;
@@ -654,14 +503,11 @@
 
             line-height: 1.9;
 
-            color:
-                #D5E0DE;
+            color: #D5E0DE;
         }
 
 
-        /* =====================================================
-           OAKHAVEN SERIES
-        ===================================================== */
+        /* OAKHAVEN */
 
         .series {
 
@@ -674,6 +520,7 @@
                 var(--dark-line);
         }
 
+
         .series-heading {
 
             display: flex;
@@ -685,6 +532,7 @@
             margin-bottom: 47px;
         }
 
+
         .series-title {
 
             margin: 0;
@@ -695,9 +543,9 @@
 
             text-transform: uppercase;
 
-            color:
-                #D5E0DE;
+            color: #D5E0DE;
         }
+
 
         .series-note {
 
@@ -713,24 +561,14 @@
             color: var(--mist);
         }
 
+
         .botanical-mark {
 
-            font-family:
-                Georgia,
-                serif;
-
-            font-size: 1rem;
-
-            color:
-                var(--pink-red);
+            color: var(--pink-red);
 
             opacity: 0.7;
         }
 
-
-        /* =====================================================
-           OAKHAVEN IMAGE
-        ===================================================== */
 
         .series-layout {
 
@@ -740,36 +578,16 @@
                 0.8fr 1.2fr;
 
             gap: 65px;
-
-            align-items: stretch;
         }
+
 
         .series-image {
 
             min-height: 430px;
 
             overflow: hidden;
-
-            position: relative;
         }
 
-        .series-image::after {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    180deg,
-                    transparent 52%,
-                    rgba(6, 38, 43, 0.3)
-                );
-
-            pointer-events: none;
-        }
 
         .series-image img {
 
@@ -782,28 +600,9 @@
             display: block;
 
             filter:
-                saturate(0.75)
-                contrast(0.97);
-
-            transition:
-                transform 1s cubic-bezier(.2,.7,.2,1),
-                filter 0.8s ease;
+                saturate(0.75);
         }
 
-        .series-image:hover img {
-
-            transform:
-                scale(1.035);
-
-            filter:
-                saturate(0.9)
-                contrast(1);
-        }
-
-
-        /* =====================================================
-           OAKHAVEN BOOKS
-        ===================================================== */
 
         .series-books {
 
@@ -814,6 +613,7 @@
             gap: 18px;
         }
 
+
         .series-book {
 
             flex: 1;
@@ -823,82 +623,27 @@
 
             border:
                 1px solid
-                rgba(243, 245, 241, 0.13);
+                rgba(243,245,241,0.13);
 
             display: flex;
 
             align-items: flex-end;
 
-            position: relative;
-
-            overflow: hidden;
-
             transition:
-                background 0.4s ease,
-                border-color 0.4s ease,
-                transform 0.4s ease;
+                background 0.35s ease,
+                transform 0.35s ease;
         }
 
-        .series-book::after {
-
-            content: "";
-
-            position: absolute;
-
-            right: -35px;
-
-            top: -35px;
-
-            width: 100px;
-
-            height: 100px;
-
-            border-radius: 50%;
-
-            border:
-                1px solid
-                rgba(198, 90, 104, 0.22);
-
-            transition:
-                transform 0.6s ease;
-        }
 
         .series-book:hover {
 
             background:
-                rgba(243, 245, 241, 0.045);
-
-            border-color:
-                rgba(243, 245, 241, 0.26);
+                rgba(243,245,241,0.045);
 
             transform:
                 translateX(4px);
         }
 
-        .series-book:hover::after {
-
-            transform:
-                scale(1.8);
-        }
-
-        .book-number {
-
-            margin:
-                0 0 15px;
-
-            font-family:
-                "Libre Baskerville",
-                Georgia,
-                serif;
-
-            font-size: 0.78rem;
-
-            color:
-                var(--pink-red);
-
-            letter-spacing:
-                0.13em;
-        }
 
         .series-book h3 {
 
@@ -910,18 +655,22 @@
                 serif;
 
             font-size:
-                clamp(
-                    1.45rem,
-                    2.5vw,
-                    2rem
-                );
+                clamp(1.45rem,2.5vw,2rem);
 
             font-weight: 400;
-
-            line-height: 1.2;
-
-            letter-spacing: -0.025em;
         }
+
+
+        .book-number {
+
+            margin:
+                0 0 15px;
+
+            color: var(--pink-red);
+
+            font-size: 0.78rem;
+        }
+
 
         .series-book p:last-child {
 
@@ -934,21 +683,17 @@
 
             text-transform: uppercase;
 
-            color:
-                var(--mist);
+            color: var(--mist);
         }
 
 
-        /* =====================================================
-           GREEN THRESHOLD
-        ===================================================== */
+        /* THRESHOLD */
 
         .green-threshold {
 
             height: 130px;
 
-            background:
-                var(--green);
+            background: var(--green);
 
             display: flex;
 
@@ -957,40 +702,20 @@
             align-items: center;
         }
 
+
         .threshold-symbol {
 
-            display: inline-block;
-
-            font-family:
-                Georgia,
-                serif;
+            font-family: Georgia, serif;
 
             font-size: 0.62rem;
 
-            letter-spacing: 0.28em;
-
-            color:
-                var(--pink-red);
+            color: var(--pink-red);
 
             opacity: 0.72;
-
-            transition:
-                transform 0.5s ease,
-                opacity 0.5s ease;
-        }
-
-        .threshold-symbol:hover {
-
-            opacity: 1;
-
-            transform:
-                translateY(-2px);
         }
 
 
-        /* =====================================================
-           ABOUT
-        ===================================================== */
+        /* ABOUT */
 
         .about {
 
@@ -1001,11 +726,12 @@
                 var(--botanical);
         }
 
+
         .about-grid {
 
             max-width: 1120px;
 
-            margin: 0 auto;
+            margin: auto;
 
             display: grid;
 
@@ -1013,9 +739,8 @@
                 0.7fr 1.3fr;
 
             gap: 105px;
-
-            align-items: start;
         }
+
 
         .about-title {
 
@@ -1027,19 +752,13 @@
                 serif;
 
             font-size:
-                clamp(
-                    2.8rem,
-                    5vw,
-                    4.5rem
-                );
+                clamp(2.8rem,5vw,4.5rem);
 
             font-weight: 400;
 
-            letter-spacing:
-                -0.055em;
-
-            line-height: 1;
+            letter-spacing: -0.055em;
         }
+
 
         .about-text {
 
@@ -1054,9 +773,9 @@
 
             line-height: 2.02;
 
-            color:
-                #36585A;
+            color: #36585A;
         }
+
 
         .about-text p {
 
@@ -1064,25 +783,6 @@
                 0 0 31px;
         }
 
-        .about-mark {
-
-            margin-top: 50px;
-        }
-
-
-        /* =====================================================
-           THREE MARKS — ABOUT
-        ===================================================== */
-
-        .about .three-marks {
-
-            margin-top: 45px;
-        }
-
-
-        /* =====================================================
-           RETURN TO SURFACE
-        ===================================================== */
 
         .return-surface {
 
@@ -1102,8 +802,9 @@
             color: var(--muted);
 
             transition:
-                color 0.35s ease;
+                color 0.3s ease;
         }
+
 
         .return-surface:hover {
 
@@ -1111,9 +812,7 @@
         }
 
 
-        /* =====================================================
-           CONTACT
-        ===================================================== */
+        /* CONTACT */
 
         .contact {
 
@@ -1124,11 +823,12 @@
                 var(--soft-green);
         }
 
+
         .contact-inner {
 
             max-width: 1120px;
 
-            margin: 0 auto;
+            margin: auto;
 
             display: flex;
 
@@ -1138,6 +838,7 @@
 
             gap: 70px;
         }
+
 
         .contact h2 {
 
@@ -1149,17 +850,11 @@
                 serif;
 
             font-size:
-                clamp(
-                    2.7rem,
-                    5vw,
-                    4.1rem
-                );
+                clamp(2.7rem,5vw,4.1rem);
 
             font-weight: 400;
-
-            letter-spacing:
-                -0.05em;
         }
+
 
         .contact p {
 
@@ -1171,14 +866,11 @@
 
             line-height: 1.95;
 
-            color:
-                var(--muted);
+            color: var(--muted);
         }
 
 
-        /* =====================================================
-           FOOTER
-        ===================================================== */
+        /* FOOTER */
 
         footer {
 
@@ -1193,22 +885,17 @@
 
             font-size: 0.58rem;
 
-            letter-spacing:
-                0.17em;
+            letter-spacing: 0.17em;
 
             text-transform: uppercase;
 
             display: flex;
 
             justify-content: space-between;
-
-            gap: 30px;
         }
 
 
-        /* =====================================================
-           MOBILE
-        ===================================================== */
+        /* MOBILE */
 
         @media (max-width: 800px) {
 
@@ -1218,15 +905,12 @@
                     25px 6%;
             }
 
+
             .nav-links {
 
                 gap: 17px;
             }
 
-            .nav-links a {
-
-                font-size: 0.58rem;
-            }
 
             .hero {
 
@@ -1235,6 +919,7 @@
                     90px;
             }
 
+
             .hero-inner {
 
                 grid-template-columns: 1fr;
@@ -1242,99 +927,48 @@
                 gap: 58px;
             }
 
+
             .hero-image-wrap {
+
                 order: 1;
             }
 
+
             .hero-copy {
+
                 order: 2;
             }
+
 
             .hero-image {
 
                 width:
-                    min(330px, 78vw);
+                    min(330px,78vw);
 
                 height:
-                    min(430px, 70vh);
+                    min(430px,70vh);
             }
 
-            h1 {
-
-                font-size:
-                    clamp(
-                        3.4rem,
-                        17vw,
-                        5.5rem
-                    );
-            }
-
-            .threshold {
-
-                height: 80px;
-            }
-
-            .works {
-
-                padding:
-                    95px 7%
-                    105px;
-            }
-
-            .works-title {
-
-                margin-bottom:
-                    70px;
-            }
 
             .book {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
 
                 gap: 22px;
             }
 
-            .series {
-
-                margin-top:
-                    75px;
-            }
-
-            .series-heading {
-
-                align-items:
-                    flex-start;
-            }
 
             .series-layout {
 
-                grid-template-columns:
-                    1fr;
-
-                gap: 25px;
+                grid-template-columns: 1fr;
             }
+
 
             .series-image {
 
-                min-height:
-                    360px;
+                min-height: 360px;
             }
 
-            .series-book {
-
-                min-height:
-                    210px;
-
-                padding:
-                    30px;
-            }
-
-            .green-threshold {
-
-                height:
-                    95px;
-            }
 
             .about {
 
@@ -1342,14 +976,14 @@
                     95px 7%;
             }
 
+
             .about-grid {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
 
-                gap:
-                    48px;
+                gap: 48px;
             }
+
 
             .contact {
 
@@ -1357,22 +991,20 @@
                     80px 7%;
             }
 
+
             .contact-inner {
 
-                flex-direction:
-                    column;
+                flex-direction: column;
 
-                align-items:
-                    flex-start;
+                align-items: flex-start;
             }
+
 
             footer {
 
-                flex-direction:
-                    column;
+                flex-direction: column;
 
-                gap:
-                    13px;
+                gap: 13px;
 
                 padding:
                     30px 7%;
@@ -1385,18 +1017,20 @@
 </head>
 
 
-<body id="top">
+<body>
 
 
-    <!-- =====================================================
-         NAVIGATION
-    ===================================================== -->
+    <!-- NAVIGATION -->
 
     <nav>
 
-        <div class="logo">
+        <a
+            href="index.html"
+            class="logo"
+        >
             Srithea Seshen
-        </div>
+        </a>
+
 
         <div class="nav-links">
 
@@ -1417,9 +1051,7 @@
     </nav>
 
 
-    <!-- =====================================================
-         HERO
-    ===================================================== -->
+    <!-- HERO -->
 
     <main>
 
@@ -1434,12 +1066,15 @@
                         Writer
                     </p>
 
+
                     <h1>
                         Srithea<br>
                         Seshen
                     </h1>
 
+
                     <div class="hero-line"></div>
+
 
                     <p class="hero-statement">
                         Here we talk about love, memory, and what remains.
@@ -1475,16 +1110,10 @@
         </section>
 
 
-        <!-- =================================================
-             THRESHOLD
-        ================================================== -->
-
         <div class="threshold"></div>
 
 
-        <!-- =================================================
-             THE ALCHEMY
-        ================================================== -->
+        <!-- THE WORK -->
 
         <section
             class="works"
@@ -1497,6 +1126,7 @@
                 <p class="section-label">
                     The Work
                 </p>
+
 
                 <h2 class="works-title">
                     The Alchemy
@@ -1516,9 +1146,16 @@
 
                         <div>
 
-                            <h3 class="book-title">
-                                Two Brain Cells
-                            </h3>
+                            <a
+                                href="two-brain-cells.html"
+                            >
+
+                                <h3 class="book-title">
+                                    Two Brain Cells
+                                </h3>
+
+                            </a>
+
 
                             <p class="book-meta">
                                 Contemporary Romance
@@ -1528,9 +1165,7 @@
 
 
                         <p class="book-description">
-                            A story about two people, the lives they have
-                            built around themselves, and what happens when
-                            those lives become inconveniently entangled.
+                            More soon.
                         </p>
 
                     </article>
@@ -1538,9 +1173,7 @@
                 </div>
 
 
-                <!-- =================================================
-                     OAKHAVEN SERIES
-                ================================================== -->
+                <!-- OAKHAVEN -->
 
                 <div class="series">
 
@@ -1549,9 +1182,16 @@
 
                         <div>
 
-                            <h3 class="series-title">
-                                The Oakhaven Series
-                            </h3>
+                            <a
+                                href="oakhaven.html"
+                            >
+
+                                <h3 class="series-title">
+                                    The Oakhaven Series
+                                </h3>
+
+                            </a>
+
 
                             <p class="series-note">
                                 Hearth &amp; Heritage · In Deep Water
@@ -1560,10 +1200,7 @@
                         </div>
 
 
-                        <div
-                            class="botanical-mark"
-                            aria-hidden="true"
-                        >
+                        <div class="botanical-mark">
                             ✦
                         </div>
 
@@ -1573,20 +1210,26 @@
                     <div class="series-layout">
 
 
-                        <div class="series-image">
+                        <a
+                            href="oakhaven.html"
+                            class="series-image"
+                        >
 
                             <img
                                 src="images/waterlily.jpeg"
                                 alt="Water lily floating on deep water"
                             >
 
-                        </div>
+                        </a>
 
 
                         <div class="series-books">
 
 
-                            <article class="series-book">
+                            <a
+                                href="hearth-and-heritage.html"
+                                class="series-book"
+                            >
 
                                 <div>
 
@@ -1604,10 +1247,13 @@
 
                                 </div>
 
-                            </article>
+                            </a>
 
 
-                            <article class="series-book">
+                            <a
+                                href="in-deep-water.html"
+                                class="series-book"
+                            >
 
                                 <div>
 
@@ -1625,7 +1271,7 @@
 
                                 </div>
 
-                            </article>
+                            </a>
 
 
                         </div>
@@ -1639,10 +1285,6 @@
         </section>
 
 
-        <!-- =================================================
-             GREEN THRESHOLD
-        ================================================== -->
-
         <div class="green-threshold">
 
             <span
@@ -1655,9 +1297,7 @@
         </div>
 
 
-        <!-- =================================================
-             ABOUT
-        ================================================== -->
+        <!-- ABOUT -->
 
         <section
             class="about"
@@ -1679,16 +1319,11 @@
                         romance, literary fiction, and human stories.
                     </p>
 
+
                     <p>
                         The work is interested in the spaces between
                         intimacy and memory, mythology and ordinary life,
                         inheritance and choice.
-                    </p>
-
-                    <p>
-                        Some stories begin with love.
-                        Some begin with what was left behind.
-                        Most are interested in what survives both.
                     </p>
 
 
@@ -1718,9 +1353,7 @@
         </section>
 
 
-        <!-- =================================================
-             CONTACT
-        ================================================== -->
+        <!-- CONTACT -->
 
         <section
             class="contact"
@@ -1736,12 +1369,17 @@
 
 
                 <p>
-                    For literary enquiries, collaborations,
+
+                    For literary enquiries,
+                    collaborations,
                     or simply to say hello.
+
                     <br><br>
+
                     <em>
                         Email coming soon.
                     </em>
+
                 </p>
 
             </div>
@@ -1751,9 +1389,7 @@
     </main>
 
 
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
+    <!-- FOOTER -->
 
     <footer>
 
