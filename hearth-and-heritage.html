@@ -23,38 +23,49 @@
 
         :root {
 
+            /* =================================================
+               OAKHAVEN PALETTE
+               Deep phthalo green + cedar + warm earth
+               ================================================= */
+
             --bg:
-                #211610;
+                #102A20;
 
             --bg-deep:
-                #160E0A;
+                #091A14;
 
             --surface:
-                #281A13;
+                #16362A;
 
             --surface-light:
-                #332219;
+                #214638;
 
             --text:
-                #F0E5D2;
+                #EEE5D2;
 
             --text-muted:
-                #CDBEAA;
+                #C9C6B2;
 
             --text-dim:
-                #806D5E;
+                #7F9686;
 
             --accent:
-                #D7B88A;
+                #B8B991;
 
             --accent-dark:
-                #B99568;
+                #8F9D78;
+
+            --earth:
+                #72533D;
+
+            --earth-light:
+                #987258;
 
             --line:
-                #4A3427;
+                #294C3B;
 
             --line-soft:
-                #604837;
+                #3A5C49;
         }
 
 
@@ -288,6 +299,9 @@
 
             letter-spacing:
                 -0.055em;
+
+            color:
+                var(--text);
         }
 
         .hero-rule {
@@ -399,8 +413,8 @@
             background:
                 linear-gradient(
                     to bottom,
-                    rgba(22,14,10,0.02),
-                    rgba(22,14,10,0.34)
+                    rgba(9,26,20,0.02),
+                    rgba(9,26,20,0.42)
                 );
 
             pointer-events:
@@ -426,10 +440,10 @@
 
             background:
                 rgba(
-                    33,
-                    22,
-                    16,
-                    0.86
+                    9,
+                    26,
+                    20,
+                    0.88
                 );
 
             font-family:
@@ -587,10 +601,10 @@
 
             background:
                 rgba(
-                    22,
-                    14,
-                    10,
-                    0.28
+                    9,
+                    26,
+                    20,
+                    0.34
                 );
         }
 
@@ -680,7 +694,7 @@
         .character p {
 
             margin:
-                0 0 24px;
+                0;
 
             font-size:
                 1rem;
@@ -690,11 +704,6 @@
 
             color:
                 var(--text-muted);
-        }
-
-        .character p:last-child {
-            margin-bottom:
-                0;
         }
 
 
@@ -952,6 +961,29 @@
 
             color:
                 var(--text);
+        }
+
+        .excerpt-attribution {
+
+            margin-top:
+                35px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.62rem;
+
+            letter-spacing:
+                0.12em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--text-dim);
         }
 
 
@@ -1382,7 +1414,7 @@
         .next-link:hover {
 
             color:
-                #E4CFA9;
+                #D4D5B4;
         }
 
 
@@ -1789,7 +1821,7 @@
                 <article class="character">
 
                     <div class="character-role">
-                        The Man Who Stayed
+                        The Mountain
                     </div>
 
                     <h2>
@@ -1801,10 +1833,8 @@
                     </div>
 
                     <p class="character-essence">
-                        He has spent his life building things
-                        that endure, only to discover that
-                        permanence means very little if you
-                        have nowhere to belong.
+                        He understands permanence better
+                        than intimacy.
                     </p>
 
                     <p>
@@ -1818,19 +1848,13 @@
                         himself.
                     </p>
 
-                    <p>
-                        He wants nothing from anyone, yet
-                        quietly measures his entire life by
-                        what he can provide for them.
-                    </p>
-
                 </article>
 
 
                 <article class="character">
 
                     <div class="character-role">
-                        The Woman Who Left
+                        The Fire
                     </div>
 
                     <h2>
@@ -1842,10 +1866,8 @@
                     </div>
 
                     <p class="character-essence">
-                        She has made a life out of feeding
-                        other people, while becoming
-                        increasingly uncertain what it would
-                        mean to be nourished herself.
+                        She feeds everyone except the
+                        hungriest parts of herself.
                     </p>
 
                     <p>
@@ -1856,13 +1878,6 @@
                         translating love into work, achievement,
                         and nourishment—without realizing how
                         profoundly starved she has become herself.
-                    </p>
-
-                    <p>
-                        She is fiercely independent, yet has
-                        spent years allowing other people's
-                        expectations to decide what kind of
-                        life she deserves.
                     </p>
 
                 </article>
@@ -2071,16 +2086,6 @@
 
                     <div class="song">
                         <span>
-                            Unakkul Naane
-                        </span>
-
-                        <span>
-                            Pritt &amp; dilushselva
-                        </span>
-                    </div>
-
-                    <div class="song">
-                        <span>
                             Raag Khamaj
                         </span>
 
@@ -2096,6 +2101,16 @@
 
                         <span>
                             Pt. Ravi Shankar
+                        </span>
+                    </div>
+
+                    <div class="song">
+                        <span>
+                            Unakkul Naane
+                        </span>
+
+                        <span>
+                            Pritt
                         </span>
                     </div>
 
@@ -2275,7 +2290,7 @@
 
     <!-- =====================================================
          FOOTER
-        ===================================================== -->
+         ===================================================== -->
 
     <footer>
 
