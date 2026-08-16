@@ -1275,8 +1275,291 @@ var(--muted);
 
 
 /* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+nav {
+
+padding:
+23px 6%;
+}
+
+nav a {
+
+margin-left:
+15px;
+
+font-size:
+0.68rem;
+}
+
+.hero {
+
+grid-template-columns:
+1fr;
+
+min-height:
+auto;
+
+padding:
+70px 7% 80px;
+
+gap:
+55px;
+}
+
+h1 {
+
+font-size:
+clamp(
+4rem,
+17vw,
+6.5rem
+);
+}
+
+.hero-image {
+
+height:
+65vh;
+
+min-height:
+420px;
+}
+
+.works {
+
+padding:
+85px 7%;
+}
+
+.collection-heading {
+
+flex-direction:
+column;
+
+align-items:
+flex-start;
+
+gap:
+12px;
+}
+
+.book-grid {
+
+grid-template-columns:
+1fr;
+}
+
+.book-image {
+
+height:
+420px;
+}
+
+.alchemy-book .book-image {
+
+height:
+460px;
+}
+
+.about {
+
+padding:
+90px 7%;
+}
+
+.about-grid {
+
+grid-template-columns:
+1fr;
+
+gap:
+45px;
+}
+
+.page-intro {
+
+padding:
+85px 7% 65px;
+}
+
+.writing-desk {
+
+padding:
+70px 7% 95px;
+}
+
+.desk-section {
+
+margin-bottom:
+80px;
+}
+
+.desk-section-heading {
+
+flex-direction:
+column;
+
+align-items:
+flex-start;
+
+gap:
+12px;
+}
+
+.desk-entry {
+
+grid-template-columns:
+1fr;
+
+gap:
+12px;
+
+padding:
+30px 0;
+}
+
+.entry-type {
+
+padding-top:
+0;
+}
+
+.contact {
+
+padding:
+85px 7%;
+}
+
+footer {
+
+padding:
+35px 7%;
+
+flex-direction:
+column;
+
+align-items:
+flex-start;
+
+gap:
+12px;
+}
+}
+
+
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+nav {
+
+flex-direction:
+column;
+
+align-items:
+flex-start;
+
+gap:
+18px;
+}
+
+nav div:last-child {
+
+display:
+flex;
+
+flex-wrap:
+wrap;
+
+gap:
+12px;
+}
+
+nav a {
+
+margin-left:
+0;
+
+margin-right:
+12px;
+}
+
+.hero {
+
+padding-top:
+60px;
+}
+
+.hero-image {
+
+height:
+55vh;
+
+min-height:
+360px;
+}
+
+.book-image {
+
+height:
+350px;
+}
+
+.alchemy-book .book-image {
+
+height:
+390px;
+}
+
+.page-intro h1 {
+
+font-size:
+clamp(
+3.3rem,
+17vw,
+5rem
+);
+}
+
+.writing-desk {
+
+padding:
+60px 7% 80px;
+}
+
+.desk-section {
+
+margin-bottom:
+70px;
+}
+
+.contact {
+
+padding:
+75px 7%;
+}
+
+.contact-email {
+
+font-size:
+0.82rem;
+}
+}
+
+/* =========================================================
 5.5 — POLISH
 Quiet motion, depth, and interaction
+========================================================= */
+
+
+/* =========================================================
+GLOBAL TRANSITIONS
 ========================================================= */
 
 a {
@@ -1284,6 +1567,11 @@ transition:
 color 0.3s ease,
 opacity 0.3s ease;
 }
+
+
+/* =========================================================
+NAVIGATION
+========================================================= */
 
 nav {
 transition:
@@ -1326,6 +1614,11 @@ transform-origin:
 left;
 }
 
+
+/* =========================================================
+HERO IMAGE
+========================================================= */
+
 .hero-image {
 overflow: hidden;
 }
@@ -1348,6 +1641,11 @@ scale(1.025);
 filter:
 brightness(0.94);
 }
+
+
+/* =========================================================
+HERO TEXT
+========================================================= */
 
 .hero-text {
 animation:
@@ -1389,6 +1687,11 @@ translateY(0);
 }
 }
 
+
+/* =========================================================
+SECTION LABELS
+========================================================= */
+
 .section-label {
 transition:
 letter-spacing 0.35s ease;
@@ -1398,6 +1701,11 @@ letter-spacing 0.35s ease;
 letter-spacing:
 0.25em;
 }
+
+
+/* =========================================================
+BOOK CARDS
+========================================================= */
 
 .book,
 .alchemy-book {
@@ -1453,6 +1761,11 @@ transform:
 scale(1.035);
 }
 
+
+/* =========================================================
+BOOK TITLES
+========================================================= */
+
 .book h3 {
 transition:
 transform 0.35s ease,
@@ -1464,6 +1777,11 @@ color 0.35s ease;
 transform:
 translateX(4px);
 }
+
+
+/* =========================================================
+BOOK ARROW
+========================================================= */
 
 .book-arrow {
 transition:
@@ -1477,10 +1795,20 @@ transform:
 translateX(4px);
 }
 
+
+/* =========================================================
+ABOUT
+========================================================= */
+
 .about-text p {
 transition:
 opacity 0.3s ease;
 }
+
+
+/* =========================================================
+CONTACT
+========================================================= */
 
 .contact-email {
 position: relative;
@@ -1511,11 +1839,9 @@ content: "";
 position: absolute;
 
 left: 0;
-
 bottom: -6px;
 
 width: 100%;
-
 height: 1px;
 
 background:
@@ -1539,6 +1865,11 @@ transform-origin:
 left;
 }
 
+
+/* =========================================================
+FOOTER
+========================================================= */
+
 footer span:last-child {
 transition:
 opacity 0.3s ease;
@@ -1551,8 +1882,38 @@ opacity:
 
 
 /* =========================================================
+ACCESSIBILITY
+Respect the user's reduced-motion preference.
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+*,
+*::before,
+*::after {
+scroll-behavior:
+auto !important;
+
+animation-duration:
+0.01ms !important;
+
+animation-iteration-count:
+1 !important;
+
+transition-duration:
+0.01ms !important;
+}
+
+}
+
+/* =========================================================
 5.5B — TYPOGRAPHY & SPACING
 Literary hierarchy and deliberate whitespace
+========================================================= */
+
+
+/* =========================================================
+BODY RHYTHM
 ========================================================= */
 
 body {
@@ -1568,6 +1929,11 @@ antialiased;
 -moz-osx-font-smoothing:
 grayscale;
 }
+
+
+/* =========================================================
+HERO
+========================================================= */
 
 .hero-text > p:last-child {
 max-width:
@@ -1592,6 +1958,11 @@ line-height:
 1.5;
 }
 
+
+/* =========================================================
+LARGE HEADINGS
+========================================================= */
+
 h1,
 h2,
 h3 {
@@ -1613,6 +1984,11 @@ letter-spacing:
 letter-spacing:
 -0.02em;
 }
+
+
+/* =========================================================
+WORKS
+========================================================= */
 
 .works {
 padding-top:
@@ -1636,6 +2012,11 @@ padding-bottom:
 white-space:
 nowrap;
 }
+
+
+/* =========================================================
+BOOK INFORMATION
+========================================================= */
 
 .book-info {
 padding-top:
@@ -1662,6 +2043,11 @@ letter-spacing:
 margin-top:
 23px;
 }
+
+
+/* =========================================================
+ABOUT
+========================================================= */
 
 .about {
 padding-top:
@@ -1697,6 +2083,11 @@ margin-bottom:
 0;
 }
 
+
+/* =========================================================
+CONTACT
+========================================================= */
+
 .contact {
 padding-top:
 120px;
@@ -1715,6 +2106,11 @@ line-height:
 1.9;
 }
 
+
+/* =========================================================
+FOOTER
+========================================================= */
+
 footer {
 line-height:
 1.5;
@@ -1722,296 +2118,77 @@ line-height:
 
 
 /* =========================================================
-5.6B — WRITING DESK INVITATION
-========================================================= */
-
-.desk-invitation {
-
-padding:
-115px 8%;
-
-border-top:
-1px solid var(--border);
-
-background:
-var(--chocolate-soft);
-
-color:
-var(--ivory);
-}
-
-.desk-invitation-inner {
-
-max-width:
-850px;
-
-margin:
-0 auto;
-
-text-align:
-center;
-}
-
-.desk-invitation-label {
-
-margin-bottom:
-28px;
-
-font-family:
-Arial,
-Helvetica,
-sans-serif;
-
-font-size:
-0.64rem;
-
-letter-spacing:
-0.2em;
-
-text-transform:
-uppercase;
-
-color:
-var(--mocha);
-}
-
-.desk-invitation h2 {
-
-margin:
-0;
-
-font-size:
-clamp(
-2.4rem,
-5vw,
-4.5rem
-);
-
-line-height:
-1.03;
-
-font-weight:
-400;
-
-letter-spacing:
--0.03em;
-}
-
-.desk-invitation p {
-
-max-width:
-620px;
-
-margin:
-30px auto 0;
-
-font-size:
-1.04rem;
-
-line-height:
-1.9;
-
-color:
-var(--ivory-soft);
-}
-
-.desk-invitation-link {
-
-position:
-relative;
-
-display:
-inline-block;
-
-margin-top:
-30px;
-
-font-family:
-Arial,
-Helvetica,
-sans-serif;
-
-font-size:
-0.67rem;
-
-letter-spacing:
-0.13em;
-
-text-transform:
-uppercase;
-
-text-decoration:
-none;
-
-color:
-var(--mocha-bright);
-}
-
-.desk-invitation-link::after {
-
-content:
-"";
-
-position:
-absolute;
-
-left:
-0;
-
-bottom:
--7px;
-
-width:
-100%;
-
-height:
-1px;
-
-background:
-currentColor;
-
-transform:
-scaleX(0);
-
-transform-origin:
-right;
-
-transition:
-transform 0.3s ease;
-}
-
-.desk-invitation-link:hover::after {
-
-transform:
-scaleX(1);
-
-transform-origin:
-left;
-}
-
-
-/* =========================================================
-STANDALONE NOVEL CARD & PAGE (FOUR MONTHS IN MONTREAL)
-========================================================= */
-
-.standalone-card {
-  background: var(--chocolate-soft);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  max-width: 580px;
-  margin: 3rem auto;
-  overflow: hidden;
-  color: var(--ivory);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  transition: border-color 0.35s ease, transform 0.35s ease;
-}
-
-.standalone-card:hover {
-  border-color: var(--mocha);
-  transform: translateY(-3px);
-}
-
-.card-image-wrap {
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-  background: var(--chocolate-light);
-  position: relative;
-}
-
-.card-image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.standalone-card:hover .card-image-wrap img {
-  transform: scale(1.03);
-}
-
-.card-content {
-  padding: 2.25rem 2rem;
-}
-
-.standalone-card .badge {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.18em;
-  color: var(--mocha);
-  font-weight: 600;
-  text-transform: uppercase;
-  display: block;
-}
-
-.standalone-card .title {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 400;
-  margin: 0.35rem 0 0 0;
-  color: var(--ivory);
-  line-height: 1.1;
-}
-
-.standalone-card .author {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  color: var(--ivory-muted);
-  text-transform: uppercase;
-  margin: 0.3rem 0 1.5rem 0;
-}
-
-.standalone-card .epigraph {
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: var(--ivory-soft);
-  border-left: 2px solid var(--mocha);
-  padding-left: 1rem;
-  margin: 0 0 1.5rem 0;
-}
-
-.standalone-card .divider {
-  height: 1px;
-  background: var(--border);
-  margin-bottom: 1.5rem;
-}
-
-.standalone-card .section {
-  margin-bottom: 1.25rem;
-}
-
-.standalone-card .section:last-child {
-  margin-bottom: 0;
-}
-
-.standalone-card .label {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
-  color: var(--mocha-bright);
-  font-weight: 600;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 0.35rem;
-}
-
-.standalone-card .section p {
-  font-size: 0.94rem;
-  line-height: 1.7;
-  color: var(--ivory-muted);
-  margin: 0;
-}
-
-
-/* =========================================================
-MOBILE & RESPONSIVE BREAKPOINTS
+MOBILE TYPOGRAPHY
 ========================================================= */
 
 @media (max-width: 850px) {
+
+.works {
+padding-top:
+95px;
+
+padding-bottom:
+95px;
+}
+
+.collection {
+margin-bottom:
+90px;
+}
+
+.about {
+padding-top:
+100px;
+
+padding-bottom:
+100px;
+}
+
+.contact {
+padding-top:
+90px;
+
+padding-bottom:
+90px;
+}
+
+}
+
+
+@media (max-width: 520px) {
+
+.hero-text > p:last-child {
+font-size:
+1rem;
+
+line-height:
+1.85;
+}
+
+.about-text p {
+font-size:
+1rem;
+
+line-height:
+1.85;
+}
+
+}
+
+/* =========================================================
+5.5C — MOBILE POLISH
+========================================================= */
+
+
+/* =========================================================
+TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 850px) {
+
+/* -------------------------
+NAVIGATION
+------------------------- */
 
 nav {
 padding:
@@ -2051,15 +2228,17 @@ font-size:
 0.66rem;
 }
 
+
+/* -------------------------
+HERO
+------------------------- */
+
 .hero {
 padding:
 70px 7% 85px;
 
 gap:
 50px;
-
-grid-template-columns: 1fr;
-min-height: auto;
 }
 
 .hero-text {
@@ -2095,25 +2274,10 @@ max-height:
 650px;
 }
 
-.works {
-padding-top:
-95px;
 
-padding-bottom:
-95px;
-}
-
-.collection {
-margin-bottom:
-90px;
-}
-
-.collection-heading {
-flex-direction: column;
-align-items: flex-start;
-gap: 12px;
-padding-bottom: 24px;
-}
+/* -------------------------
+WORKS
+------------------------- */
 
 .collection-heading h2 {
 font-size:
@@ -2130,7 +2294,6 @@ font-size:
 }
 
 .book-grid {
-grid-template-columns: 1fr;
 gap:
 35px;
 }
@@ -2145,16 +2308,12 @@ height:
 520px;
 }
 
-.about {
-padding-top:
-100px;
 
-padding-bottom:
-100px;
-}
+/* -------------------------
+ABOUT
+------------------------- */
 
 .about-grid {
-grid-template-columns: 1fr;
 gap:
 40px;
 }
@@ -2168,37 +2327,10 @@ clamp(
 );
 }
 
-.writing-desk {
-padding: 70px 7% 95px;
-}
 
-.desk-section {
-margin-bottom: 80px;
-}
-
-.desk-section-heading {
-flex-direction: column;
-align-items: flex-start;
-gap: 12px;
-}
-
-.desk-entry {
-grid-template-columns: 1fr;
-gap: 12px;
-padding: 30px 0;
-}
-
-.entry-type {
-padding-top: 0;
-}
-
-.contact {
-padding-top:
-90px;
-
-padding-bottom:
-90px;
-}
+/* -------------------------
+CONTACT
+------------------------- */
 
 .contact h2 {
 font-size:
@@ -2209,10 +2341,12 @@ clamp(
 );
 }
 
+
+/* -------------------------
+FOOTER
+------------------------- */
+
 footer {
-padding: 35px 7%;
-flex-direction: column;
-align-items: flex-start;
 gap:
 15px;
 
@@ -2220,19 +2354,18 @@ line-height:
 1.7;
 }
 
-.standalone-card {
-max-width: 100%;
-margin: 2rem 0;
 }
 
-.card-image-wrap {
-height: 240px;
-}
 
-}
-
+/* =========================================================
+PHONE
+========================================================= */
 
 @media (max-width: 520px) {
+
+/* -------------------------
+NAVIGATION
+------------------------- */
 
 nav {
 padding:
@@ -2240,8 +2373,6 @@ padding:
 
 align-items:
 flex-start;
-flex-direction: column;
-gap: 18px;
 }
 
 nav .logo {
@@ -2269,8 +2400,6 @@ font-size:
 
 letter-spacing:
 0.07em;
-margin-left: 0;
-margin-right: 12px;
 }
 
 nav div a::after {
@@ -2278,13 +2407,17 @@ bottom:
 -5px;
 }
 
+
+/* -------------------------
+HERO
+------------------------- */
+
 .hero {
 padding:
 55px 7% 70px;
 
 gap:
 42px;
-padding-top: 60px;
 }
 
 .eyebrow {
@@ -2356,6 +2489,11 @@ padding:
 font-size:
 0.55rem;
 }
+
+
+/* -------------------------
+WORKS
+------------------------- */
 
 .works {
 padding:
@@ -2463,6 +2601,11 @@ font-size:
 0.61rem;
 }
 
+
+/* -------------------------
+ABOUT
+------------------------- */
+
 .about {
 padding:
 85px 7%;
@@ -2489,26 +2632,10 @@ margin-bottom:
 24px;
 }
 
-.writing-desk {
-padding: 60px 7% 80px;
-}
 
-.desk-section {
-margin-bottom: 70px;
-}
-
-.desk-invitation {
-padding: 85px 7%;
-}
-
-.desk-invitation h2 {
-font-size: 2.5rem;
-}
-
-.desk-invitation p {
-font-size: 0.98rem;
-line-height: 1.85;
-}
+/* -------------------------
+CONTACT
+------------------------- */
 
 .contact {
 padding:
@@ -2540,6 +2667,11 @@ overflow-wrap:
 anywhere;
 }
 
+
+/* -------------------------
+FOOTER
+------------------------- */
+
 footer {
 padding:
 30px 7%;
@@ -2551,16 +2683,12 @@ gap:
 10px;
 }
 
-.card-content {
-padding: 1.5rem;
 }
 
-.card-image-wrap {
-height: 200px;
-}
 
-}
-
+/* =========================================================
+VERY SMALL PHONES
+========================================================= */
 
 @media (max-width: 380px) {
 
@@ -2603,44 +2731,222 @@ font-size:
 
 
 /* =========================================================
-ACCESSIBILITY & TOUCH DEVICES
+TOUCH DEVICES
+Remove hover-dependent visual behaviour where
+there is no real hover state.
 ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-*,
-*::before,
-*::after {
-scroll-behavior:
-auto !important;
-
-animation-duration:
-0.01ms !important;
-
-animation-iteration-count:
-1 !important;
-
-transition-duration:
-0.01ms !important;
-}
-
-}
 
 @media (hover: none) {
 
 .book:hover .book-image img,
 .alchemy-book:hover .book-image img,
-.hero-image:hover img,
-.standalone-card:hover .card-image-wrap img {
+.hero-image:hover img {
 transform:
 none;
 }
 
 .book:hover h3,
-.alchemy-book:hover h3,
-.standalone-card:hover {
+.alchemy-book:hover h3 {
 transform:
 none;
+}
+
+}
+
+/* =========================================================
+5.6B — WRITING DESK INVITATION
+========================================================= */
+
+.desk-invitation {
+
+padding:
+115px 8%;
+
+border-top:
+1px solid #38271D;
+
+background:
+#1B130F;
+
+color:
+#F0E6D5;
+}
+
+.desk-invitation-inner {
+
+max-width:
+850px;
+
+margin:
+0 auto;
+
+text-align:
+center;
+}
+
+.desk-invitation-label {
+
+margin-bottom:
+28px;
+
+font-family:
+Arial,
+Helvetica,
+sans-serif;
+
+font-size:
+0.64rem;
+
+letter-spacing:
+0.2em;
+
+text-transform:
+uppercase;
+
+color:
+#B99568;
+}
+
+.desk-invitation h2 {
+
+margin:
+0;
+
+font-size:
+clamp(
+2.4rem,
+5vw,
+4.5rem
+);
+
+line-height:
+1.03;
+
+font-weight:
+400;
+
+letter-spacing:
+-0.03em;
+}
+
+.desk-invitation p {
+
+max-width:
+620px;
+
+margin:
+30px auto 0;
+
+font-size:
+1.04rem;
+
+line-height:
+1.9;
+
+color:
+#CDBEAA;
+}
+
+.desk-invitation-link {
+
+position:
+relative;
+
+display:
+inline-block;
+
+margin-top:
+30px;
+
+font-family:
+Arial,
+Helvetica,
+sans-serif;
+
+font-size:
+0.67rem;
+
+letter-spacing:
+0.13em;
+
+text-transform:
+uppercase;
+
+text-decoration:
+none;
+
+color:
+#D7B88A;
+}
+
+.desk-invitation-link::after {
+
+content:
+"";
+
+position:
+absolute;
+
+left:
+0;
+
+bottom:
+-7px;
+
+width:
+100%;
+
+height:
+1px;
+
+background:
+currentColor;
+
+transform:
+scaleX(0);
+
+transform-origin:
+right;
+
+transition:
+transform 0.3s ease;
+}
+
+.desk-invitation-link:hover::after {
+
+transform:
+scaleX(1);
+
+transform-origin:
+left;
+}
+
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+.desk-invitation {
+
+padding:
+85px 7%;
+}
+
+.desk-invitation h2 {
+
+font-size:
+2.5rem;
+}
+
+.desk-invitation p {
+
+font-size:
+0.98rem;
+
+line-height:
+1.85;
 }
 
 }
