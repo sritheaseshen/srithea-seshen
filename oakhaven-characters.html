@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        The Oakhaven Duology — Characters — Srithea Seshen
+    </title>
+
+    <meta
+        name="description"
+        content="The characters of The Oakhaven Duology by Srithea Seshen."
+    >
+
+    <style>
+
+        :root {
+
+            --bg:
+                #151A18;
+
+            --bg-deep:
+                #0D1210;
+
+            --surface:
+                #1C2420;
+
+            --surface-light:
+                #26312B;
+
+            --text:
+                #E8E2D7;
+
+            --text-muted:
+                #BDB8AD;
+
+            --text-dim:
+                #70766F;
+
+            --accent:
+                #B8A98A;
+
+            --accent-soft:
+                #8FA39A;
+
+            --line:
+                #344039;
+
+            --line-soft:
+                #435149;
+
+            --water:
+                #557C7A;
+
+            --fire:
+                #A66A4E;
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            box-sizing:
+                border-box;
+        }
+
+        html {
+            scroll-behavior:
+                smooth;
+        }
+
+        body {
+
+            margin:
+                0;
+
+            background:
+                var(--bg-deep);
+
+            color:
+                var(--text);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            line-height:
+                1.7;
+
+            -webkit-font-smoothing:
+                antialiased;
+
+            -moz-osx-font-smoothing:
+                grayscale;
+        }
+
+        a {
+
+            color:
+                inherit;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+
+            padding:
+                27px 7%;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-bottom:
+                1px solid var(--line);
+
+            background:
+                var(--bg);
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                20;
+        }
+
+        .logo {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.82rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                var(--text);
+        }
+
+        nav a {
+
+            margin-left:
+                28px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                0.09em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                var(--text-muted);
+
+            transition:
+                color 0.25s ease;
+        }
+
+        nav a:hover {
+
+            color:
+                var(--accent);
+        }
+
+        nav .active {
+
+            color:
+                var(--accent);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .archive-hero {
+
+            min-height:
+                88vh;
+
+            padding:
+                105px 8% 120px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+            background:
+                var(--bg-deep);
+
+            border-bottom:
+                1px solid var(--line);
+        }
+
+        .archive-kicker {
+
+            margin:
+                0 0 25px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.63rem;
+
+            letter-spacing:
+                0.22em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--accent);
+        }
+
+        .archive-hero h1 {
+
+            max-width:
+                1100px;
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    4rem,
+                    10vw,
+                    10rem
+                );
+
+            line-height:
+                0.84;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.06em;
+        }
+
+        .hero-line {
+
+            width:
+                90px;
+
+            height:
+                1px;
+
+            margin:
+                55px 0 40px;
+
+            background:
+                var(--accent);
+        }
+
+        .archive-intro {
+
+            max-width:
+                720px;
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    1.15rem,
+                    2vw,
+                    1.45rem
+                );
+
+            line-height:
+                1.8;
+
+            color:
+                var(--text-muted);
+        }
+
+        .archive-intro em {
+
+            color:
+                var(--text);
+        }
+
+
+        /* =====================================================
+           ARCHIVE INDEX
+        ===================================================== */
+
+        .archive-index {
+
+            padding:
+                80px 8%;
+
+            background:
+                var(--surface);
+
+            border-bottom:
+                1px solid var(--line);
+        }
+
+        .index-inner {
+
+            max-width:
+                1200px;
+
+            margin:
+                0 auto;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.6fr 1.4fr;
+
+            gap:
+                70px;
+        }
+
+        .index-label {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.62rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--accent);
+        }
+
+        .index-links {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                12px 30px;
+        }
+
+        .index-links a {
+
+            font-size:
+                1.05rem;
+
+            text-decoration:
+                none;
+
+            color:
+                var(--text-muted);
+
+            transition:
+                color 0.25s ease;
+        }
+
+        .index-links a:hover {
+
+            color:
+                var(--text);
+        }
+
+
+        /* =====================================================
+           BOOK DIVIDER
+        ===================================================== */
+
+        .book-divider {
+
+            padding:
+                120px 8% 70px;
+
+            background:
+                var(--bg);
+
+            border-bottom:
+                1px solid var(--line);
+        }
+
+        .book-divider-inner {
+
+            max-width:
+                1200px;
+
+            margin:
+                0 auto;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-end;
+
+            gap:
+                50px;
+        }
+
+        .book-number {
+
+            margin:
+                0 0 15px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.6rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--accent);
+        }
+
+        .book-divider h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    3rem,
+                    6vw,
+                    6rem
+                );
+
+            line-height:
+                0.9;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.045em;
+        }
+
+        .book-link {
+
+            padding-bottom:
+                8px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.63rem;
+
+            letter-spacing:
+                0.12em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            color:
+                var(--text-muted);
+
+            white-space:
+                nowrap;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        .book-link:hover {
+
+            color:
+                var(--accent);
+        }
+
+
+        /* =====================================================
+           CHARACTER SECTION
+        ===================================================== */
+
+        .character-section {
+
+            padding:
+                100px 8% 140px;
+
+            background:
+                var(--bg);
+        }
+
+        .character-container {
+
+            max-width:
+                1200px;
+
+            margin:
+                0 auto;
+        }
+
+        .character {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.72fr 1.28fr;
+
+            gap:
+                90px;
+
+            padding:
+                90px 0;
+
+            border-bottom:
+                1px solid var(--line);
+        }
+
+        .character:last-child {
+
+            border-bottom:
+                none;
+        }
+
+
+        /* =====================================================
+           CHARACTER IDENTITY
+        ===================================================== */
+
+        .character-identity {
+
+            position:
+                relative;
+        }
+
+        .character-index {
+
+            position:
+                absolute;
+
+            top:
+                -10px;
+
+            right:
+                0;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.62rem;
+
+            letter-spacing:
+                0.15em;
+
+            color:
+                var(--text-dim);
+        }
+
+        .character-type {
+
+            margin:
+                0 0 18px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.61rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--accent);
+        }
+
+        .character-name {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    3.5rem,
+                    6vw,
+                    6.8rem
+                );
+
+            line-height:
+                0.84;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.055em;
+        }
+
+        .character-full-name {
+
+            margin:
+                25px 0 8px;
+
+            font-size:
+                1rem;
+
+            color:
+                var(--text-muted);
+        }
+
+        .character-role {
+
+            margin:
+                0;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.62rem;
+
+            letter-spacing:
+                0.1em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--text-dim);
+        }
+
+        .character-essence {
+
+            margin:
+                55px 0 0;
+
+            padding-left:
+                22px;
+
+            border-left:
+                1px solid var(--accent);
+
+            font-size:
+                1.35rem;
+
+            line-height:
+                1.55;
+
+            font-style:
+                italic;
+
+            color:
+                var(--text-muted);
+        }
+
+
+        /* =====================================================
+           CHARACTER DETAILS
+        ===================================================== */
+
+        .character-details {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                48px;
+        }
+
+        .detail-block {
+
+            max-width:
+                720px;
+        }
+
+        .detail-label {
+
+            margin:
+                0 0 14px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.58rem;
+
+            letter-spacing:
+                0.18em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--text-dim);
+        }
+
+        .detail-block p {
+
+            margin:
+                0;
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.85;
+
+            color:
+                var(--text-muted);
+        }
+
+
+        /* =====================================================
+           CONTRADICTION
+        ===================================================== */
+
+        .contradiction {
+
+            padding:
+                28px 0;
+
+            border-top:
+                1px solid var(--line-soft);
+
+            border-bottom:
+                1px solid var(--line-soft);
+        }
+
+        .contradiction p {
+
+            font-size:
+                1.3rem;
+
+            color:
+                var(--text);
+        }
+
+
+        /* =====================================================
+           TRIVIA
+        ===================================================== */
+
+        .trivia {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                0 45px;
+
+            border-top:
+                1px solid var(--line-soft);
+        }
+
+        .trivia-item {
+
+            padding:
+                22px 0;
+
+            border-bottom:
+                1px solid var(--line-soft);
+        }
+
+        .trivia-item p {
+
+            margin:
+                0;
+
+            font-size:
+                0.95rem;
+
+            line-height:
+                1.65;
+        }
+
+        .trivia-item strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                7px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.56rem;
+
+            letter-spacing:
+                0.13em;
+
+            text-transform:
+                uppercase;
+
+            font-weight:
+                400;
+
+            color:
+                var(--accent);
+        }
+
+
+        /* =====================================================
+           WHAT THEY DON'T KNOW
+        ===================================================== */
+
+        .unknown {
+
+            margin-top:
+                10px;
+
+            padding:
+                38px;
+
+            background:
+                var(--surface);
+
+            border:
+                1px solid var(--line);
+        }
+
+        .unknown .detail-label {
+
+            color:
+                var(--accent);
+        }
+
+        .unknown p {
+
+            font-size:
+                1.18rem;
+
+            line-height:
+                1.8;
+
+            color:
+                var(--text);
+        }
+
+
+        /* =====================================================
+           BOOK TWO WATER ACCENT
+        ===================================================== */
+
+        .water-section {
+
+            background:
+                #10191A;
+        }
+
+        .water-section .book-divider {
+
+            background:
+                #10191A;
+        }
+
+        .water-section .character-section {
+
+            background:
+                #10191A;
+        }
+
+        .water-section .character-essence {
+
+            border-left-color:
+                var(--water);
+        }
+
+        .water-section .character-type {
+
+            color:
+                #7D9D9A;
+        }
+
+        .water-section .unknown {
+
+            background:
+                #172426;
+
+            border-color:
+                #304747;
+        }
+
+
+        /* =====================================================
+           AUTHOR'S MARGIN
+        ===================================================== */
+
+        .margin {
+
+            padding:
+                140px 8%;
+
+            background:
+                var(--surface-light);
+
+            border-top:
+                1px solid var(--line);
+        }
+
+        .margin-inner {
+
+            max-width:
+                1000px;
+
+            margin:
+                0 auto;
+
+            text-align:
+                center;
+        }
+
+        .margin-label {
+
+            margin:
+                0 0 40px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.6rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--accent);
+        }
+
+        .margin blockquote {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    1.7rem,
+                    3.5vw,
+                    3rem
+                );
+
+            line-height:
+                1.6;
+
+            font-weight:
+                400;
+
+            color:
+                var(--text);
+        }
+
+        .margin-note {
+
+            max-width:
+                650px;
+
+            margin:
+                40px auto 0;
+
+            font-size:
+                0.98rem;
+
+            line-height:
+                1.8;
+
+            color:
+                var(--text-muted);
+        }
+
+
+        /* =====================================================
+           DUO CLOSING
+        ===================================================== */
+
+        .closing {
+
+            min-height:
+                65vh;
+
+            padding:
+                120px 8%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            background:
+                var(--bg-deep);
+        }
+
+        .closing-inner {
+
+            max-width:
+                900px;
+        }
+
+        .closing-label {
+
+            margin:
+                0 0 35px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.6rem;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--text-dim);
+        }
+
+        .closing h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    2.8rem,
+                    6vw,
+                    5.7rem
+                );
+
+            line-height:
+                1;
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                -0.045em;
+        }
+
+        .closing p {
+
+            max-width:
+                650px;
+
+            margin:
+                40px auto 0;
+
+            font-size:
+                1.1rem;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--text-muted);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding:
+                45px 8%;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-top:
+                1px solid var(--line);
+
+            background:
+                var(--bg);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                0.65rem;
+
+            letter-spacing:
+                0.08em;
+
+            color:
+                var(--text-dim);
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            nav {
+
+                padding:
+                    23px 6%;
+            }
+
+            nav a {
+
+                margin-left:
+                    15px;
+
+                font-size:
+                    0.65rem;
+            }
+
+            .archive-hero {
+
+                min-height:
+                    78vh;
+
+                padding:
+                    85px 7%;
+            }
+
+            .archive-index {
+
+                padding:
+                    65px 7%;
+            }
+
+            .index-inner {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    25px;
+            }
+
+            .book-divider {
+
+                padding:
+                    85px 7% 55px;
+            }
+
+            .book-divider-inner {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    25px;
+            }
+
+            .character-section {
+
+                padding:
+                    70px 7% 100px;
+            }
+
+            .character {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    55px;
+
+                padding:
+                    75px 0;
+            }
+
+            .character-index {
+
+                position:
+                    static;
+
+                margin-bottom:
+                    25px;
+            }
+
+            .character-essence {
+
+                margin-top:
+                    40px;
+            }
+
+            .trivia {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .margin,
+            .closing {
+
+                padding:
+                    100px 7%;
+            }
+
+            footer {
+
+                padding:
+                    35px 7%;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    12px;
+            }
+        }
+
+
+        @media (max-width: 520px) {
+
+            nav {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    17px;
+            }
+
+            nav div:last-child {
+
+                display:
+                    flex;
+
+                flex-wrap:
+                    wrap;
+
+                gap:
+                    12px;
+            }
+
+            nav a {
+
+                margin:
+                    0 12px 0 0;
+            }
+
+            .archive-hero h1 {
+
+                font-size:
+                    4rem;
+            }
+
+            .character-name {
+
+                font-size:
+                    4.2rem;
+            }
+
+            .unknown {
+
+                padding:
+                    27px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav>
+
+        <a
+            class="logo"
+            href="index.html"
+        >
+            Srithea Seshen
+        </a>
+
+        <div>
+
+            <a href="index.html#works">
+                Works
+            </a>
+
+            <a
+                class="active"
+                href="oakhaven-characters.html"
+            >
+                Characters
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="writing-desk.html">
+                Writing Desk
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- =================================================
+             ARCHIVE HERO
+             ================================================= -->
+
+        <section class="archive-hero">
+
+            <p class="archive-kicker">
+                The Oakhaven Duology · Character Archive
+            </p>
+
+            <h1>
+                The People<br>
+                of Oakhaven
+            </h1>
+
+            <div class="hero-line"></div>
+
+            <p class="archive-intro">
+                Four people. Two stories.
+                <em>And the things they don't yet know
+                about themselves.</em>
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             ARCHIVE INDEX
+             ================================================= -->
+
+        <section class="archive-index">
+
+            <div class="index-inner">
+
+                <div class="index-label">
+                    Character Index
+                </div>
+
+                <div class="index-links">
+
+                    <a href="#tryambak">
+                        Tryambak Rudra-Vanshaj
+                    </a>
+
+                    <a href="#vamika">
+                        Vamika Cavendish
+                    </a>
+
+                    <a href="#hrishikesh">
+                        Hrishikesh Rudra-Vanshaj
+                    </a>
+
+                    <a href="#rhea">
+                        Rhea Galani
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BOOK ONE DIVIDER
+             ================================================= -->
+
+        <section class="book-divider">
+
+            <div class="book-divider-inner">
+
+                <div>
+
+                    <p class="book-number">
+                        Oakhaven Duology · Book One
+                    </p>
+
+                    <h2>
+                        Hearth &amp; Heritage
+                    </h2>
+
+                </div>
+
+                <a
+                    class="book-link"
+                    href="hearth-and-heritage.html"
+                >
+                    Enter the book →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BOOK ONE CHARACTERS
+             ================================================= -->
+
+        <section class="character-section">
+
+            <div class="character-container">
+
+
+                <!-- TRYAMBAK -->
+
+                <article
+                    class="character"
+                    id="tryambak"
+                >
+
+                    <div class="character-identity">
+
+                        <span class="character-index">
+                            01 / 04
+                        </span>
+
+                        <p class="character-type">
+                            The Mountain
+                        </p>
+
+                        <h2 class="character-name">
+                            Tryambak
+                        </h2>
+
+                        <p class="character-full-name">
+                            Tryambak Rudra-Vanshaj
+                        </p>
+
+                        <p class="character-role">
+                            33 · Freelance Architect
+                        </p>
+
+                        <p class="character-essence">
+                            He understands permanence
+                            better than intimacy.
+                        </p>
+
+                    </div>
+
+
+                    <div class="character-details">
+
+
+                        <div class="detail-block">
+
+                            <p class="detail-label">
+                                The Man
+                            </p>
+
+                            <p>
+                                Tryambak builds structures meant
+                                to endure. He is disciplined,
+                                private, and almost unnervingly
+                                self-contained. He came to
+                                Oakhaven believing that solitude
+                                was the same thing as peace.
+                            </p>
+
+                        </div>
+
+
+                        <div class="contradiction">
+
+                            <p class="detail-label">
+                                His contradiction
+                            </p>
+
+                            <p>
+                                He wants nothing from anyone,
+                                yet quietly measures his life
+                                by what he can protect for them.
+                            </p>
+
+                        </div>
+
+
+                        <div class="trivia">
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Comfort language
+                                </strong>
+
+                                <p>
+                                    The Active Pillar.
+                                    If something needs doing,
+                                    Tryambak does it.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Default response to conflict
+                                </strong>
+
+                                <p>
+                                    Confrontation—when he
+                                    believes the conflict matters
+                                    to his peace.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Cannot resist
+                                </strong>
+
+                                <p>
+                                    Vamika Cavendish.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Would never admit
+                                </strong>
+
+                                <p>
+                                    That being needed by the
+                                    people he loves is one of
+                                    the deepest forms of happiness
+                                    he knows.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Most likely to
+                                </strong>
+
+                                <p>
+                                    Be found beside the barbecue,
+                                    cooking the meat alone while
+                                    everyone else talks.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Secretly terrible at
+                                </strong>
+
+                                <p>
+                                    Painting.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    The thing that makes him soft
+                                </strong>
+
+                                <p>
+                                    Vamika—and now his son.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="unknown">
+
+                            <p class="detail-label">
+                                What he doesn't know about himself
+                            </p>
+
+                            <p>
+                                He thinks he came to Oakhaven
+                                to escape people. He actually
+                                came because he wanted somewhere
+                                nobody could ask him to be anything.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VAMIKA -->
+
+                <article
+                    class="character"
+                    id="vamika"
+                >
+
+                    <div class="character-identity">
+
+                        <span class="character-index">
+                            02 / 04
+                        </span>
+
+                        <p class="character-type">
+                            The Fire
+                        </p>
+
+                        <h2 class="character-name">
+                            Vamika
+                        </h2>
+
+                        <p class="character-full-name">
+                            Vamika Cavendish
+                        </p>
+
+                        <p class="character-role">
+                            28 · Chef-Restaurateur
+                        </p>
+
+                        <p class="character-essence">
+                            She has spent years feeding
+                            everyone except herself.
+                        </p>
+
+                    </div>
+
+
+                    <div class="character-details">
+
+
+                        <div class="detail-block">
+
+                            <p class="detail-label">
+                                The Woman
+                            </p>
+
+                            <p>
+                                Vamika is warmth with teeth.
+                                She solves problems before anyone
+                                can ask her to, turns chaos into
+                                something nourishing, and gives
+                                more than she has. Her greatest
+                                strength is also the habit that
+                                exhausts her: she has learned to
+                                make herself indispensable.
+                            </p>
+
+                        </div>
+
+
+                        <div class="contradiction">
+
+                            <p class="detail-label">
+                                Her contradiction
+                            </p>
+
+                            <p>
+                                She is fiercely independent,
+                                yet has spent much of her life
+                                believing she must be useful
+                                to deserve love.
+                            </p>
+
+                        </div>
+
+
+                        <div class="trivia">
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Comfort language
+                                </strong>
+
+                                <p>
+                                    Problem-solving.
+                                    If she loves you, she will
+                                    find a solution.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Default response to conflict
+                                </strong>
+
+                                <p>
+                                    Becoming the martyr.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Cannot resist
+                                </strong>
+
+                                <p>
+                                    Coffee.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Would never admit
+                                </strong>
+
+                                <p>
+                                    She can lose her calm
+                                    faster than a flash.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Most likely to
+                                </strong>
+
+                                <p>
+                                    Be found by the lake,
+                                    looking at constellations
+                                    alone.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Secretly terrible at
+                                </strong>
+
+                                <p>
+                                    Finding constellations
+                                    and directions.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    The thing that makes her soft
+                                </strong>
+
+                                <p>
+                                    She is, fundamentally,
+                                    the epitome of softness.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="unknown">
+
+                            <p class="detail-label">
+                                What she doesn't know about herself
+                            </p>
+
+                            <p>
+                                She thinks she has to earn
+                                belonging by taking care of
+                                everyone else. She doesn't yet
+                                understand that she is allowed
+                                to be loved while doing nothing
+                                at all.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BOOK TWO DIVIDER
+             ================================================= -->
+
+        <section class="book-divider water-section">
+
+            <div class="book-divider-inner">
+
+                <div>
+
+                    <p class="book-number">
+                        Oakhaven Duology · Book Two
+                    </p>
+
+                    <h2>
+                        In Deep Water
+                    </h2>
+
+                </div>
+
+                <a
+                    class="book-link"
+                    href="in-deep-water.html"
+                >
+                    Enter the book →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BOOK TWO CHARACTERS
+             ================================================= -->
+
+        <section class="character-section water-section">
+
+            <div class="character-container">
+
+
+                <!-- HRISHIKESH -->
+
+                <article
+                    class="character"
+                    id="hrishikesh"
+                >
+
+                    <div class="character-identity">
+
+                        <span class="character-index">
+                            03 / 04
+                        </span>
+
+                        <p class="character-type">
+                            The Deep Water
+                        </p>
+
+                        <h2 class="character-name">
+                            Hrishikesh
+                        </h2>
+
+                        <p class="character-full-name">
+                            Hrishikesh Rudra-Vanshaj
+                        </p>
+
+                        <p class="character-role">
+                            31+ · VP of Corporate Strategy
+                        </p>
+
+                        <p class="character-role">
+                            Rudra-Vanshaj Conglomerate
+                        </p>
+
+                        <p class="character-essence">
+                            He protects through preparation,
+                            and loves through staying.
+                        </p>
+
+                    </div>
+
+
+                    <div class="character-details">
+
+
+                        <div class="detail-block">
+
+                            <p class="detail-label">
+                                The Man
+                            </p>
+
+                            <p>
+                                Hrishikesh is calm in the way
+                                deep water is calm: not empty,
+                                but carrying enormous weight
+                                beneath the surface. He notices
+                                everything, plans for almost
+                                everything, and rarely asks for
+                                anything in return.
+                            </p>
+
+                        </div>
+
+
+                        <div class="contradiction">
+
+                            <p class="detail-label">
+                                His contradiction
+                            </p>
+
+                            <p>
+                                He believes giving someone
+                                freedom is the highest form
+                                of love—while quietly arranging
+                                the world so they never have
+                                a reason to leave.
+                            </p>
+
+                        </div>
+
+
+                        <div class="trivia">
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Comfort language
+                                </strong>
+
+                                <p>
+                                    Presence.
+                                    He doesn't always know
+                                    what to say, but he knows
+                                    how to stay.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Default response to conflict
+                                </strong>
+
+                                <p>
+                                    Negotiation.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Cannot resist
+                                </strong>
+
+                                <p>
+                                    Irritating Rhea Galani.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Would never admit
+                                </strong>
+
+                                <p>
+                                    That Rhea can derail an
+                                    entire day's carefully
+                                    structured thinking with
+                                    one sentence.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Most likely to
+                                </strong>
+
+                                <p>
+                                    Be found buying Skanda
+                                    another PlayStation game
+                                    for absolutely no reason.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Secretly terrible at
+                                </strong>
+
+                                <p>
+                                    Explanation.
+                                    He understands things
+                                    far more easily than he
+                                    explains them.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    The thing that makes him soft
+                                </strong>
+
+                                <p>
+                                    His newly found family.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="unknown">
+
+                            <p class="detail-label">
+                                What he doesn't know about himself
+                            </p>
+
+                            <p>
+                                He thinks his greatest strength
+                                is knowing when to hold steady.
+                                He has not yet learned that
+                                sometimes love asks you to stop
+                                holding everything together and
+                                let another person carry part
+                                of the weight.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RHEA -->
+
+                <article
+                    class="character"
+                    id="rhea"
+                >
+
+                    <div class="character-identity">
+
+                        <span class="character-index">
+                            04 / 04
+                        </span>
+
+                        <p class="character-type">
+                            The Current
+                        </p>
+
+                        <h2 class="character-name">
+                            Rhea
+                        </h2>
+
+                        <p class="character-full-name">
+                            Rhea Galani
+                        </p>
+
+                        <p class="character-role">
+                            28+ · Founder &amp; Business Analyst
+                        </p>
+
+                        <p class="character-role">
+                            The Galene Corporation
+                        </p>
+
+                        <p class="character-essence">
+                            She can audit an entire room
+                            before anyone notices she has
+                            entered it.
+                        </p>
+
+                    </div>
+
+
+                    <div class="character-details">
+
+
+                        <div class="detail-block">
+
+                            <p class="detail-label">
+                                The Woman
+                            </p>
+
+                            <p>
+                                Rhea is bright, restless,
+                                perceptive, and considerably
+                                harder to fool than she first
+                                appears. She has built a life
+                                around competence, independence,
+                                and the ability to leave before
+                                anyone gets the chance to decide
+                                her worth.
+                            </p>
+
+                        </div>
+
+
+                        <div class="contradiction">
+
+                            <p class="detail-label">
+                                Her contradiction
+                            </p>
+
+                            <p>
+                                She insists she needs nobody,
+                                while secretly measuring safety
+                                by whether someone will stay
+                                when she stops being easy.
+                            </p>
+
+                        </div>
+
+
+                        <div class="trivia">
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Comfort language
+                                </strong>
+
+                                <p>
+                                    Giving hugs.
+                                    Reluctantly. Excessively.
+                                    And then pretending she
+                                    doesn't like them.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Default response to conflict
+                                </strong>
+
+                                <p>
+                                    Confrontation.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Cannot resist
+                                </strong>
+
+                                <p>
+                                    Passing a devastatingly
+                                    sassy comment to Hrishikesh.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Would never admit
+                                </strong>
+
+                                <p>
+                                    That she actually loves
+                                    being hugged.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Most likely to
+                                </strong>
+
+                                <p>
+                                    Be found going through an
+                                    unimaginable number of glasses
+                                    of wine while insisting she
+                                    is perfectly fine.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    Secretly terrible at
+                                </strong>
+
+                                <p>
+                                    Baking.
+                                </p>
+
+                            </div>
+
+
+                            <div class="trivia-item">
+
+                                <strong>
+                                    The thing that makes her soft
+                                </strong>
+
+                                <p>
+                                    She is a secret softy.
+                                    She simply considers this
+                                    information classified.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="unknown">
+
+                            <p class="detail-label">
+                                What she doesn't know about herself
+                            </p>
+
+                            <p>
+                                Rhea thinks independence means
+                                never needing to be held.
+                                She has yet to discover that
+                                choosing someone freely is not
+                                the same thing as needing them
+                                to survive.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             AUTHOR'S MARGIN
+             ================================================= -->
+
+        <section class="margin">
+
+            <div class="margin-inner">
+
+                <p class="margin-label">
+                    From the author's margin
+                </p>
+
+                <blockquote>
+                    "Some characters arrive as questions.
+                    Others arrive already knowing the answer."
+                </blockquote>
+
+                <p class="margin-note">
+                    Oakhaven began with people before it
+                    became a place. These four were never
+                    designed to fit neatly into archetypes.
+                    They were allowed to contradict themselves,
+                    disappoint themselves, and become people
+                    neither they nor I expected them to be.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CLOSING
+             ================================================= -->
+
+        <section class="closing">
+
+            <div class="closing-inner">
+
+                <p class="closing-label">
+                    The Oakhaven Duology
+                </p>
+
+                <h2>
+                    You can know a person
+                    for years and still
+                    discover them tomorrow.
+                </h2>
+
+                <p>
+                    That is the trouble with people.
+                    And perhaps the reason we keep
+                    writing about them.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <span>
+            © 2026 Srithea Seshen
+        </span>
+
+        <span>
+            The Oakhaven Duology · Character Archive
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>
